@@ -5,6 +5,7 @@ import time
 import thread
 from projectx.srv import *
 from projectx.msg import *
+from std_msgs.msg import *
 
 
 class MyProcess:
@@ -181,13 +182,21 @@ def handle_service(req):
 
 def start_server():
     global myprocess
-    rospy.init_node('speech_incoming')
+    rospy.init_node('speech_incoming', anonymous=True)
     s = rospy.Service('/service_speech_data', Speech, handle_service)
+    pub = rospy.Publisher('/service_tts', String, queue_size=10)
     rate = rospy.Rate(20)
 
     myprocess = MyProcess()
 
+    time.sleep(5)
+
     rospy.loginfo("READY: Speech Incoming Server")
+
+    data = String()
+    data.data = "add:Konusma tanima hazIr"
+    pub.publish(data)
+
     rospy.spin()
 
 

@@ -40,7 +40,7 @@ for i in range(5):
 
 	if play == 0:
 		print("START")
-		a = "Aleykum selam sen nasIlsIn"   
+		a = "Selam dostum sen kimsin"   
 		c = 'espeak -vtr -k5 -s150 "%s" 2>>/dev/null' % a #speak aloud
 		thread_single("Yeni",c)
 

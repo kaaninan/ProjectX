@@ -1,97 +1,113 @@
 #!/usr/bin/env python
-
-import subprocess
-import time
-import os
-import ros
-
-#!/usr/bin/python
-
 import rospy
-import thread
-import subprocess
-import os
-import time
 from projectx.msg import *
 from projectx.srv import *
 from std_msgs.msg import *
+import subprocess
+import time
+import thread
+import threading
+
+
+class My_Thread(threading.Thread):
+
+    def __init__(self,cumle):
+        threading.Thread.__init__(self)
+        self.process = None
+
+        self.kalinlik = str(rospy.get_param("/tts_server/tts_kalinlik", "40"))
+        self.hiz = str(rospy.get_param("/tts_server/tts_hiz", "160"))
+        
+        self.cumle = cumle
+        self.playing = 0
+
+    def run(self):
+        self.playing = 1
+        cmd = [ "espeak", "-vtr", "-p"+self.kalinlik, "-s"+self.hiz, self.cumle]
+        self.process = p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        p.wait()
+        self.playing = 0
+
+    def is_play(self):
+        return self.playing
+
+    def stop(self):
+        if self.process is not None:
+            try:
+                self.process.terminate()
+                self.process = None
+            except:
+                pass
 
 
 
 
 
-p = subprocess.Popen(["espeak -vtr -p40 -s160","Selam"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
-p.wait()
+# Main Subscriber
+def tts_callback(req):
+    global liste, thr
 
-
-
-
-## TERMINAL: RME ##
-
-def command_single(process, komut):
-    process.stdin.write(komut)
-    process.stdin.write('\n')
-
-def command_multi(process, komut, deger):
-    process.stdin.write(komut)
-    process.stdin.write(' ')
-    process.stdin.write(deger)
-    process.stdin.write('\n')
-
-def thread_single(process, komut):
-    try:
-        thread.start_new_thread( command_single, (process, komut,) )
-    except:
-        print "Error: unable to start thread"
-
-def thread_multi(process, komut, deger):
-    try:
-        thread.start_new_thread( command_multi, (process, komut, deger,) )
-    except:
-        print "Error: unable to start thread"
-
-def start():
-    terminal = subprocess.Popen(["sudo","$HOME/ProjectX/Motion/Linux/project/rme/rme"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-
-    return terminal
-
-
-
-
-
-
-
-
-# Main Service
-def service_motion_command(req):
-
-    komut = req.in_data
+    komut = req.data
     
-    if komut[:4] == "head":
-        rospy.loginfo("Head Access Opened: "+ str(komut[5:]))
-
-    return_data = "OK" # Simdilik
-
-    res = MotorBoostResponse()
-    res.out_data = return_data
-    return res
+    if komut[:3] == "add":
+        rospy.loginfo("Eklenecek Cumle: "+ str(komut[4:]))
+        liste.append(str(komut[4:]))
 
 
+    elif komut[:3] == "say":
+        rospy.loginfo("Hemen Soylenecek Cumle: "+ str(komut[4:]))
+        liste = list()
+        thr.stop()
+        time.sleep(3) # Bekleme Suresi 2
+        say(str(komut[4:]))
 
+
+
+
+
+def say(cumle):
+    global thr, delay_time
+    #print "START"
+    thr = My_Thread(cumle)
+    thr.start()
+
+    # Bitmesini bekle
+    while thr.is_play():
+        pass
+
+    #print "END"
+    thr.stop()
+    time.sleep(delay_time)
 
 
 
 def main():
+    global rate, liste, delay_time
 
-    global rate
-
-    rospy.Service('service_tts', MotorBoost, service_motion_command) # TTS Service
+    rospy.Subscriber("service_tts", String, tts_callback)
     
+    liste = list()
+
+    delay_time = rospy.get_param("/tts_server/tts_delay", 6) # Cumleler arasindaki bekleme suresi
 
     rospy.init_node('tts_server', anonymous=True)
     rate = rospy.Rate(100)
 
     rospy.loginfo("READY: Text To Speech Server")
+
+    liste.append("Sistem baslatIlIyor") # Bilgi icin konusma
+
+    while not rospy.is_shutdown():
+        sessiz = rospy.get_param("/tts_server/tts_quiet", 0)
+
+        boyut = len(liste)
+        if boyut > 0:
+            if sessiz == 0:
+                try:
+                    say(liste[0])
+                    del(liste[0])
+                except:
+                    pass
 
     rospy.spin()
 

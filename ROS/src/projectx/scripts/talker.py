@@ -1,33 +1,22 @@
 #!/usr/bin/env python
 
 import rospy
-import subprocess
-import time
-import signal
-import os
 from std_msgs.msg import *
-from projectx.msg import *
 
-def main():
+def talker():
+    pub = rospy.Publisher('/service_tts', String, queue_size=10)
+
     rospy.init_node('talker', anonymous=True)
     
-    rospy.loginfo("Aciliyor..")
-
-    p = subprocess.Popen(["rosrun face_recognition Fserver"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
-    time.sleep(1)
-    p2 = subprocess.Popen(["rosrun face_recognition Fclient"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
-
-
-    while not rospy.is_shutdown():
-        rospy.spin()
-
-    rospy.loginfo("Kapatiliyor..")
-    os.killpg(os.getpgid(p.pid), signal.SIGTERM)
-    os.killpg(os.getpgid(p2.pid), signal.SIGTERM)
-
+    rate = rospy.Rate(20) # 10hz
+    
+    data = String()
+    data.data = "add:Selam"
+    pub.publish(data)
+    rate.sleep()
 
 if __name__ == '__main__':
     try:
-        main()
+        talker()
     except rospy.ROSInterruptException:
         pass

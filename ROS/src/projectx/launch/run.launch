@@ -2,11 +2,12 @@
 
 
   <!-- STARTUP -->
-  <arg name="osc" value="true" />
-  <arg name="arduino" value="true" />
-  <arg name="motor" value="true" />
+  <arg name="tts" value="true" />
   <arg name="speak" value="true" />
-  <arg name="camera" value="true" />
+  <arg name="osc" value="false" />
+  <arg name="arduino" value="false" />
+  <arg name="motor" value="false" />
+  <arg name="camera" value="false" />
 
 
   <!-- Kamera Secimi -->
@@ -14,7 +15,49 @@
   <arg name="cam2" value="false" /> <!-- Logitech -->
 
 
+
+
+
+  <!-- TTS -->
+  <node pkg="projectx" type="tts_server.py" name="tts_server" if="$(arg tts)" output="screen">
+    <param name="tts_hiz" value="160" />                            
+    <param name="tts_kalinlik" value="40"/>
+    <param name="tts_delay" value="6" />
+    <param name="tts_quiet" value="0" />
+  </node>
+
+
+
+
+
+  <!-- SPEAK-->
+
+
+  <!-- ROS Bridge -->
+  <arg name="port" default="9090" />
+  <arg name="address" default="" />
+  <arg name="ssl" default="false" />
+  <arg name="certfile" default=""/>
+  <arg name="keyfile" default="" />
+  <arg name="authenticate" default="false" />
   
+  <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" output="screen" if="$(arg speak)">
+    <param name="authenticate" value="$(arg authenticate)" />
+    <param name="port" value="$(arg port)"/>
+    <param name="address" value="$(arg address)"/>
+  </node>
+
+  <node name="rosapi" pkg="rosapi" type="rosapi_node" if="$(arg speak)"/>
+
+  <param name="/open_speak" value="1"/>
+
+  <node pkg="projectx" type="speak_server.py" name="speak_server" if="$(arg speak)"/>
+  <node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" if="$(arg speak)"/>
+
+
+
+  
+
 
   <!-- ROS OSC -->
   <param name="layout_path" value="$(find projectx)/osc" />
@@ -47,10 +90,16 @@
 
 
 
+
+
+
   <!-- ARDUINO -->
   <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino" if="$(arg arduino)"/>
   <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen" if="$(arg arduino)"/>
   <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen" if="$(arg arduino)"/>
+
+
+
 
 
 
@@ -66,32 +115,7 @@
 
 
 
-  <!-- SPEAK-->
-
-
-  <!-- ROS Bridge -->
-  <arg name="port" default="9090" />
-  <arg name="address" default="" />
-  <arg name="ssl" default="false" />
-  <arg name="certfile" default=""/>
-  <arg name="keyfile" default="" />
-  <arg name="authenticate" default="false" />
   
-  <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" output="screen" if="$(arg speak)">
-    <param name="authenticate" value="$(arg authenticate)" />
-    <param name="port" value="$(arg port)"/>
-    <param name="address" value="$(arg address)"/>
-  </node>
-
-  <node name="rosapi" pkg="rosapi" type="rosapi_node" if="$(arg speak)"/>
-
-  <param name="/open_speak" value="1"/>
-
-  <node pkg="projectx" type="speak_server.py" name="speak_server" if="$(arg speak)"/>
-  <node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" if="$(arg speak)"/>
-
-
-
 
 
   <!-- GORUNTU ISLEME -->

@@ -1,7 +1,11 @@
 <launch>
 
-	<node name="soundplay_node" pkg="sound_play" type="soundplay_node.py"/>
-
-	<node name="tts" pkg="projectx" type="tts.py" args="kaan"/>
+  <!-- TTS -->
+  <node pkg="projectx" type="tts_server.py" name="tts_server" if="$(arg tts)">
+    <param name="tts_hiz" value="160" />                            
+    <param name="tts_kalinlik" value="40"/>
+    <param name="tts_delay" value="6" />
+    <param name="tts_quiet" value="0" />
+  </node>
 
 </launch>

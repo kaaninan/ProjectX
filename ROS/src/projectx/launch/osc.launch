@@ -1,12 +1,15 @@
 <launch>                                                                             
+
+  <!-- ROS OSC -->
+
   <param name="layout_path" value="$(find projectx)/osc" />
 
   <rosparam param="layouts">
-    [ "ProjectX.touchosc", "ProjectX.touchosc" ]
+    [ "Mind.touchosc", "ProjectX.touchosc", "Servo_Single.touchosc" ]
   </rosparam>
 
-  <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="screen">
-    <param name="osc_name" value="ProjectX OSC" />                            
+  <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="log">
+    <param name="osc_name" value="RoboMental OSC" />                            
     <param name="port" value="8000"/>
     <param name="print_fallback" value="True" />
     <param name="load_default" value="True" />
@@ -17,6 +20,17 @@
   </node>
                                                                                                 
   <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
-  <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/>
+
+  <!-- MIND -->
+  <node pkg="projectx" type="osc_mind_server.py" name="osc_mind_server" output="screen"/>
+
+  <!-- CONTROL -->
+  <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/> <!-- GENEL -->
+  <node pkg="projectx" type="osc_server_motor.py" name="osc_server_motor" output="screen"/>  <!-- MOTOR -->
+
+  <!-- ARDUINO -->
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino"/>
+  <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen"/>
+  <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen"/>
 
 </launch>

@@ -1,4 +1,7 @@
 <launch>
+  
+  <!-- GORUNTU ISLEME -->
+
 
   <!-- Kamera Secimi -->
   <arg name="cam" value="false" /> <!-- Plantronics -->
@@ -60,6 +63,7 @@
     <param name="encoding" value="bgr8" />
     <param name="filename_format" value="/home/ubuntu/Resimler/left%04d.%s" />
   </node>
+
 
 
 </launch>

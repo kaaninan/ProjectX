@@ -1,4 +1,4 @@
 vncserver :2
-sleep 8
+sleep 15
 export DISPLAY=:2.0
 actionaz -e $HOME/ProjectX/Speak/Script/RunSpeechChrome.ascr

@@ -1,7 +1,7 @@
 #include <DynamixelSerial1.h>
 
 
-int hiz = 110;
+int hiz = 900;
 
 void setup() {
   Dynamixel.begin(1000000, 2); // Inicialize the servo at 1Mbps and Pin Control 2

@@ -113,7 +113,7 @@ void msgMotorArrayIn( const projectx::IntArray& msg) {
 }
 
 void writeServoPos(int motor_id, int pos) {
-  Dynamixel.move(motor_id, pos);
+  Dynamixel.moveSpeed(motor_id, pos, 900);
   delay(5);
 }
 
@@ -176,14 +176,14 @@ void msgCallbackGsm( const std_msgs::String& msg) {
 // ################################         PUBLISHER         ################################ //
 
 int motorId = 1;
+int pos = 0;
 
 void publishServo() {
-  int pos = Dynamixel.readPosition(motorId);
+  pos = Dynamixel.readPosition(motorId);
   
   motorin_data.id = motorId;
   motorin_data.deger = pos;
   p_motor.publish(&motorin_data);
-  delay(5);
   
   motorId++;
   if (motorId == 21) motorId = 1;

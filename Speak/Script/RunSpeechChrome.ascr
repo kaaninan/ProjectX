@@ -9,7 +9,7 @@
     </actions>
     <parameters/>
     <script pauseBefore="0" pauseAfter="0">
-        <action name="ActionClick" comment="Open Chrome" pauseBefore="500" pauseAfter="20000">
+        <action name="ActionClick" comment="Open Chrome" pauseBefore="500" pauseAfter="35000">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>
@@ -59,7 +59,7 @@
             <exception id="2" action="1" line=""/>
             <exception id="32" action="0" line=""/>
             <parameter name="text">
-                <subParameter name="value" code="0">http://localhost:8008</subParameter>
+                <subParameter name="value" code="0">http://127.0.0.1:8008</subParameter>
             </parameter>
             <parameter name="pause">
                 <subParameter name="value" code="0">10</subParameter>

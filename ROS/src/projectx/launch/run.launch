@@ -1,13 +1,30 @@
 <launch>                        
 
-  <param name="/open_speak" value="1"/>
-  <param name="/arduino_out_data_auth" value="1" />
 
-  <!-- OSC -->
+  <!-- STARTUP -->
+  <arg name="osc" value="true" />
+  <arg name="arduino" value="true" />
+  <arg name="motor" value="true" />
+  <arg name="speak" value="true" />
+  <arg name="camera" value="true" />
+
+
+  <!-- Kamera Secimi -->
+  <arg name="cam" value="true" /> <!-- Plantronics -->
+  <arg name="cam2" value="false" /> <!-- Logitech -->
+
+
+  
+
+  <!-- ROS OSC -->
   <param name="layout_path" value="$(find projectx)/osc" />
-  <rosparam param="layouts">[ "ProjectX.touchosc", "ProjectX.touchosc" ]</rosparam>
-  <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="screen">
-    <param name="osc_name" value="ProjectX OSC" />                            
+
+  <rosparam param="layouts">
+    [ "Mind.touchosc", "ProjectX.touchosc", "Servo_Single.touchosc" ]
+  </rosparam>
+
+  <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="log" if="$(arg osc)">
+    <param name="osc_name" value="RoboMental OSC" />                            
     <param name="port" value="8000"/>
     <param name="print_fallback" value="True" />
     <param name="load_default" value="True" />
@@ -16,15 +33,41 @@
     <param name="vibrate" value="True" />
     <param name="tabpage_sub" value="True" />
   </node>
-  <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
-  <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/>
+
+  <!-- LAYOUT SERVER -->
+  <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver" if="$(arg osc)"/>
+
+  <!-- MIND -->
+  <node pkg="projectx" type="osc_mind_server.py" name="osc_mind_server" output="screen" if="$(arg osc)"/>
+
+  <!-- CONTROL -->
+  <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen" if="$(arg osc)"/> <!-- GENEL -->
+  <node pkg="projectx" type="osc_server_motor.py" name="osc_server_motor" output="screen" if="$(arg osc)"/>  <!-- MOTOR -->
+
+
+
+
+  <!-- ARDUINO -->
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino" if="$(arg arduino)"/>
+  <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen" if="$(arg arduino)"/>
+  <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen" if="$(arg arduino)"/>
+
+
+
+
+
+  <!-- MOTOR -->
+  <node pkg="projectx" type="motor_in_server.py" name="motor_in_server" output="screen" if="$(arg motor)"/>
+  <node pkg="projectx" type="motor_out_server.py" name="motor_out_server" output="screen" if="$(arg motor)"/>
+  <node pkg="projectx" type="motion_manager.py" name="motion_manager"  output="screen" if="$(arg motor)"/>
   
-                                                                                                
-  <!-- Arduino -->
-  <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino"/>
-  <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen"/>
-  <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen"/>
-  
+
+
+
+
+
+  <!-- SPEAK-->
+
 
   <!-- ROS Bridge -->
   <arg name="port" default="9090" />
@@ -33,25 +76,83 @@
   <arg name="certfile" default=""/>
   <arg name="keyfile" default="" />
   <arg name="authenticate" default="false" />
-  <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" output="screen">
+  
+  <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" output="screen" if="$(arg speak)">
     <param name="authenticate" value="$(arg authenticate)" />
     <param name="port" value="$(arg port)"/>
     <param name="address" value="$(arg address)"/>
   </node>
-  <node name="rosapi" pkg="rosapi" type="rosapi_node" />
-  
 
-  <!-- Motor -->
-  <node pkg="projectx" type="motor_in_server.py" name="motor_in_server" output="screen"/>
-  <node pkg="projectx" type="motor_service_server.py" name="motor_service_server"  output="screen"/>
-  <node pkg="projectx" type="motor_boost_server" name="motor_boost_server" output="screen" />
-  <node pkg="projectx" type="motor_command_server.py" name="motor_command_server" output="screen"/>
-  <node pkg="projectx" type="motor_out_server.py" name="motor_out_server" output="screen"/>
-  
+  <node name="rosapi" pkg="rosapi" type="rosapi_node" if="$(arg speak)"/>
 
-  <!-- Speak-->
-  <node pkg="projectx" type="speak_server.py" name="speak_server"/>
-  <node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" />
+  <param name="/open_speak" value="1"/>
+
+  <node pkg="projectx" type="speak_server.py" name="speak_server" if="$(arg speak)"/>
+  <node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" if="$(arg speak)"/>
+
+
+
+
+
+  <!-- GORUNTU ISLEME -->
+
+
+  <!-- Usb Cam -->
+  <node name="camera" pkg="usb_cam" type="usb_cam_node" if="$(arg camera)">
+    <param name="video_device" value="/dev/video1" if="$(arg cam)" />
+    <param name="video_device" value="/dev/video0" if="$(arg cam2)" />
+    <param name="image_width" value="640" />
+    <param name="image_height" value="480" />
+    <param name="pixel_format" value="yuyv" />
+    <param name="camera_frame_id" value="camera" />
+    <param name="io_method" value="mmap"/>
+    <param name="autofocus" value="false"/>
+  </node>
+
+
+  <!-- Stream -->
+  <node pkg="web_video_server" type="web_video_server" name="web_video_server" if="$(arg camera)"/>
+
   
+  <!-- Image Rotate -->
+  <arg name="image" value="camera/image_raw" />
+  <arg name="rotated_image" value="camera/rotated_image" />
+  
+  <node name="image_rotater_cam" pkg="image_rotate" type="image_rotate" if="$(arg cam)" args="image:=$(arg image) rotated/image:=$(arg rotated_image)">
+    <param name="target_frame_id" value="camera" />
+    <param name="target_x" value="-4.0" />
+    <param name="target_y" value="1.2" />
+    <param name="target_z" value="0.0" />
+    <param name="source_frame_id" value="camera" />
+    <param name="source_x" value="6.6" />
+    <param name="source_y" value="-2.0" />
+    <param name="source_z" value="0.0" />
+    <param name="output_image_size" value="1.0" />
+  </node>
+
+  <node name="image_rotater_cam2" pkg="image_rotate" type="image_rotate" if="$(arg cam2)" args="image:=$(arg image) rotated/image:=$(arg rotated_image)">
+    <param name="target_frame_id" value="camera" />
+    <param name="target_x" value="2.0" />
+    <param name="target_y" value="4.0" />
+    <param name="target_z" value="0.0" />
+    <param name="source_frame_id" value="camera" />
+    <param name="source_x" value="10.0" />
+    <param name="source_y" value="-5.0" />
+    <param name="source_z" value="0.0" />
+    <param name="output_image_size" value="1.0" />
+  </node>
+
+
+  <!-- Face Recognition -->
+  <node pkg="projectx" type="face_server.py" name="face_server" output="screen" if="$(arg camera)"/>
+
+
+  <!-- Image Saver -->
+  <node name="image_saver" pkg="image_view" type="image_saver" args="image:=$(arg rotated_image)" output="screen" if="$(arg camera)">
+    <param name="save_all_image" value="false" />
+    <param name="encoding" value="bgr8" />
+    <param name="filename_format" value="/home/ubuntu/Resimler/left%04d.%s" />
+  </node>
+
 
 </launch>

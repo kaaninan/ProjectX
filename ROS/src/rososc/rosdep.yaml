@@ -1,0 +1,26 @@
+pybonjour:
+  ubuntu:
+    pip:
+      packages: [ pybonjour ]
+      depends: [ libavahi-compat-libdnssd ] 
+  osxbrew:
+    pip:
+      packages: [ pybonjour ]
+txosc:
+  ubuntu:
+    pip:
+      packages: [ txosc ]
+  osxbrew:
+    pip:
+      packages: [ txosc ]
+lxml:
+  ubuntu:
+    apt:
+      packages: [ python-lxml ]
+  osxbrew:
+    pip:
+      packages: [ lxml ]
+libavahi-compat-libdnssd:
+  ubuntu: 
+    apt:
+      packages: [ libavahi-compat-libdnssd1 ]

@@ -1,0 +1,8 @@
+prefix=/home/rock/ProjectX/ROS/install
+
+Name: rosserial_windows
+Description: Description of rosserial_windows
+Version: 0.6.4
+Cflags: 
+Libs: -L/home/rock/ProjectX/ROS/install/lib 
+Requires: 

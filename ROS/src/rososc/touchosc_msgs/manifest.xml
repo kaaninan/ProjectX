@@ -1,0 +1,15 @@
+<package>
+  <description brief="touchosc_msgs">
+
+      Package containing messages Published and Subscribed to by the default tabpage
+      handler in touchosc_bridge.
+
+  </description>
+  <author>Michael Carroll</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/touchosc_msgs</url>
+
+</package>
+
+

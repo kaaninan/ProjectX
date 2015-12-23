@@ -1,0 +1,23 @@
+<package>
+  <description brief="osc_bridge">
+
+     osc_bridge contains the core functionality of ROS-to-OSC communication.
+
+  </description>
+  <author>Michael Carroll</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/osc_bridge</url>
+  <depend package="rospy" />
+  <depend package="pytouchosc"/>
+  <depend package="std_msgs" />
+  <depend package="sensor_msgs" />
+
+  <rosdep name="pybonjour" />
+  <rosdep name="txosc" />
+  <export>
+      <rosdoc config="rosdoc.yaml"/>
+  </export>
+</package>
+
+

@@ -1,0 +1,33 @@
+(cl:defpackage projectx-msg
+  (:use )
+  (:export
+   "<SCALABLECONTROL>"
+   "SCALABLECONTROL"
+   "<LABEL>"
+   "LABEL"
+   "<MOTORIN>"
+   "MOTORIN"
+   "<TOUCHOSC_COMMON>"
+   "TOUCHOSC_COMMON"
+   "<TABPAGE>"
+   "TABPAGE"
+   "<OSCDATA>"
+   "OSCDATA"
+   "<MOTOROUT>"
+   "MOTOROUT"
+   "<SENSOR>"
+   "SENSOR"
+   "<COMMONPROPERTIES>"
+   "COMMONPROPERTIES"
+   "<MULTIBUTTON>"
+   "MULTIBUTTON"
+   "<MULTIXYPAD>"
+   "MULTIXYPAD"
+   "<GYRO>"
+   "GYRO"
+   "<MULTIFADER>"
+   "MULTIFADER"
+   "<XYPAD>"
+   "XYPAD"
+  ))
+

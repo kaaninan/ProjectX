@@ -1,0 +1,5 @@
+<launch>
+
+	<node pkg="rosserial_arduino" name="make_libraries" type="make_libraries.py" />
+
+</launch>

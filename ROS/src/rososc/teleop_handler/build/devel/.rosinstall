@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rock/catkin-ws/src/rososc/teleop_handler/build/devel/setup.sh

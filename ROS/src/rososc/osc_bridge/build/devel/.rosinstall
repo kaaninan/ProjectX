@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rock/catkin-ws/src/rososc/osc_bridge/build/devel/setup.sh

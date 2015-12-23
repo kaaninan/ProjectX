@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rock/ProjectX/ROS/devel/setup.sh

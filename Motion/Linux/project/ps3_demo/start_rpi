@@ -1,0 +1,7 @@
+#!/bin/sh -e
+sudo killall demo &
+sudo killall bluetoothd &
+sleep 2
+sudo ./demo &
+sleep 3
+sudo bluetoothd &

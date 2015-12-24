@@ -15,11 +15,12 @@ TARGET = darwin.a
 
 INCLUDE_DIRS = -I../include -I../../Framework/include 
 
-CXXFLAGS += -fPIC -shared -O2 -DLINUX -D_GNU_SOURCE -Wall -g $(INCLUDE_DIRS) 
+CXXFLAGS += -fPIC -shared -O2 -DLINUX -D_GNU_SOURCE -Wall -g $(INCLUDE_DIRS)
 #CXXFLAGS += -O2 -DDEBUG -DLINUX -D_GNU_SOURCE -Wall -shared $(INCLUDE_DIRS)
-LFLAGS += -g -lpthread -ldl -lbluetooth -lncurses
+LFLAGS += -g -lpthread -ldl -lbluetooth -lncurses -lboost_system -lboost_thread
 
 OBJS =  ../../Framework/src/ArbotixPro.o     	\
+        ../../Framework/src/chat_client.o     	\
         ../../Framework/src/math/Matrix.o   \
         ../../Framework/src/math/Plane.o    \
         ../../Framework/src/math/Point.o    \

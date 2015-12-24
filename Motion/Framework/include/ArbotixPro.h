@@ -9,6 +9,9 @@
 #define _ARBOTIXPRO_H_
 
 #include "AXDXL.h"
+#include <fstream>
+#include <iostream>
+#include <sstream>
 
 #define MAXNUM_TXPARAM      (256)
 #define MAXNUM_RXPARAM      (1024)
@@ -163,6 +166,9 @@ namespace Robot
 
 			int TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int priority);
 			unsigned char CalculateChecksum(unsigned char *packet);
+        
+            std::ofstream outfile;
+            std::ifstream infile;
 
 		public:
 			bool DEBUG_PRINT;
@@ -171,6 +177,7 @@ namespace Robot
 			int m_DelayedAddress[10];
 			unsigned int m_DelayedWords;
 			bool m_bIncludeTempData;
+        
 
 			ArbotixPro(PlatformArbotixPro *platform);
 			~ArbotixPro();

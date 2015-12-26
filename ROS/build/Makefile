@@ -865,6 +865,19 @@ arduino_sicaklik/fast:
 .PHONY : arduino_sicaklik/fast
 
 #=============================================================================
+# Target rules for targets named chat_server
+
+# Build rule for target.
+chat_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chat_server
+.PHONY : chat_server
+
+# fast build rule for target.
+chat_server/fast:
+	$(MAKE) -f projectx/CMakeFiles/chat_server.dir/build.make projectx/CMakeFiles/chat_server.dir/build
+.PHONY : chat_server/fast
+
+#=============================================================================
 # Target rules for targets named motorSubscriber
 
 # Build rule for target.
@@ -1244,6 +1257,7 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"
 	@echo "... arduino_sicaklik"
+	@echo "... chat_server"
 	@echo "... motorSubscriber"
 	@echo "... projectx_gencpp"
 	@echo "... projectx_generate_messages"

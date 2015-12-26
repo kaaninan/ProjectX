@@ -200,34 +200,27 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
 	m_bIncludeTempData = false;
 	m_BulkReadTxPacket[LENGTH] = 0;
     
-    try{
-        boost::asio::io_service io_service;
+    
+    try
+    {
         
-        tcp::resolver resolver(io_service);
-        char myAddress[] = { '1', '2', '7', '.', '0', '.', '0', '.', '1'  };
-        char myPort[] = { '8', '2', '2', '3'};
-        tcp::resolver::query query(myAddress, myPort);
-        tcp::resolver::iterator iterator = resolver.resolve(query);
-        
-        chat_client c(io_service, iterator);
-        
-        boost::thread t(boost::bind(&boost::asio::io_service::run, &io_service));
-        
-        char line[chat_message::max_body_length + 1];
-        
-        while (std::cin.getline(line, chat_message::max_body_length + 1))
+        tcp::iostream s("127.0.0.1", "8225");
+        if (!s)
         {
-            using namespace std; // For strlen and memcpy.
-            chat_message msg;
-            msg.body_length(strlen(line));
-            memcpy(msg.body(), line, msg.body_length());
-            msg.encode_header();
-            c.write(msg);
+            std::cout << "Unable to connect: " << s.error().message() << std::endl;
         }
         
-    }catch( std::exception& e){
-        std::cerr << "Exception: " << e.what() << "\n";
+        std::string line;
+        std::getline(s, line);
+        std::cout << line << std::endl;
     }
+    catch (std::exception& e)
+    {
+        std::cout << "Exception: " << e.what() << std::endl;
+    }
+
+    
+    
     
 }
 

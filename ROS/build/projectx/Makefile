@@ -402,6 +402,20 @@ arduino_sicaklik/fast:
 .PHONY : arduino_sicaklik/fast
 
 # Convenience name for target.
+projectx/CMakeFiles/chat_server.dir/rule:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/chat_server.dir/rule
+.PHONY : projectx/CMakeFiles/chat_server.dir/rule
+
+# Convenience name for target.
+chat_server: projectx/CMakeFiles/chat_server.dir/rule
+.PHONY : chat_server
+
+# fast build rule for target.
+chat_server/fast:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/chat_server.dir/build.make projectx/CMakeFiles/chat_server.dir/build
+.PHONY : chat_server/fast
+
+# Convenience name for target.
 projectx/CMakeFiles/motorSubscriber.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motorSubscriber.dir/rule
 .PHONY : projectx/CMakeFiles/motorSubscriber.dir/rule
@@ -691,6 +705,30 @@ src/arduino_sicaklik.cpp.s:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.s
 .PHONY : src/arduino_sicaklik.cpp.s
 
+src/chat_server.o: src/chat_server.cpp.o
+.PHONY : src/chat_server.o
+
+# target to build an object file
+src/chat_server.cpp.o:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/chat_server.dir/build.make projectx/CMakeFiles/chat_server.dir/src/chat_server.cpp.o
+.PHONY : src/chat_server.cpp.o
+
+src/chat_server.i: src/chat_server.cpp.i
+.PHONY : src/chat_server.i
+
+# target to preprocess a source file
+src/chat_server.cpp.i:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/chat_server.dir/build.make projectx/CMakeFiles/chat_server.dir/src/chat_server.cpp.i
+.PHONY : src/chat_server.cpp.i
+
+src/chat_server.s: src/chat_server.cpp.s
+.PHONY : src/chat_server.s
+
+# target to generate assembly for a file
+src/chat_server.cpp.s:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/chat_server.dir/build.make projectx/CMakeFiles/chat_server.dir/src/chat_server.cpp.s
+.PHONY : src/chat_server.cpp.s
+
 src/motorSubscriber.o: src/motorSubscriber.cpp.o
 .PHONY : src/motorSubscriber.o
 
@@ -787,6 +825,7 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"
 	@echo "... arduino_sicaklik"
+	@echo "... chat_server"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -816,6 +855,9 @@ help:
 	@echo "... src/arduino_sicaklik.o"
 	@echo "... src/arduino_sicaklik.i"
 	@echo "... src/arduino_sicaklik.s"
+	@echo "... src/chat_server.o"
+	@echo "... src/chat_server.i"
+	@echo "... src/chat_server.s"
 	@echo "... src/motorSubscriber.o"
 	@echo "... src/motorSubscriber.i"
 	@echo "... src/motorSubscriber.s"

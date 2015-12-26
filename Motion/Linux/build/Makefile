@@ -21,6 +21,7 @@ LFLAGS += -g -lpthread -ldl -lbluetooth -lncurses -lboost_system -lboost_thread
 
 OBJS =  ../../Framework/src/ArbotixPro.o     	\
         ../../Framework/src/chat_client.o     	\
+        ../../Framework/src/chat_server.o     	\
         ../../Framework/src/math/Matrix.o   \
         ../../Framework/src/math/Plane.o    \
         ../../Framework/src/math/Point.o    \

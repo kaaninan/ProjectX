@@ -55,12 +55,17 @@ generate_messages(
 
 include_directories(
   ${catkin_INCLUDE_DIRS}
+  src/${PROJECT_NAME}/include
 )
 
 
 # add_library(projectx
 #   src/${PROJECT_NAME}/projectx.cpp
 # )
+
+add_executable(chat_server src/chat_server.cpp)
+target_link_libraries(chat_server ${catkin_LIBRARIES})
+add_dependencies(chat_server chat_server_generate_messages_cpp)
 
 add_executable(arduino_sicaklik src/arduino_sicaklik.cpp)
 target_link_libraries(arduino_sicaklik ${catkin_LIBRARIES})

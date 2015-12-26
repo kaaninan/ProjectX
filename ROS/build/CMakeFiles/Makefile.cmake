@@ -295,6 +295,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/DependInfo.cmake"
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/DependInfo.cmake"
   "projectx/CMakeFiles/arduino_sicaklik.dir/DependInfo.cmake"
+  "projectx/CMakeFiles/chat_server.dir/DependInfo.cmake"
   "projectx/CMakeFiles/motorSubscriber.dir/DependInfo.cmake"
   "projectx/CMakeFiles/projectx_gencpp.dir/DependInfo.cmake"
   "projectx/CMakeFiles/projectx_generate_messages.dir/DependInfo.cmake"

@@ -11,6 +11,7 @@
 #include <ctime>
 #include <iostream>
 #include <string>
+#include <sstream>
 #include <boost/asio.hpp>
 
 using boost::asio::ip::tcp;
@@ -31,14 +32,43 @@ int main()
         tcp::endpoint endpoint(tcp::v4(), 8225);
         tcp::acceptor acceptor(io_service, endpoint);
         
-        for (;;)
-        {
+        int a = 0, ok = 0;
+        
+        for (;;){
             tcp::iostream stream;
             boost::system::error_code ec;
             acceptor.accept(*stream.rdbuf(), ec);
-            if (!ec)
-            {
-                stream << make_daytime_string();
+            
+            if (!ec){
+                if(a == 1){
+                    
+                    std::ostringstream oss;
+                    oss << stream.rdbuf();
+                    std::string gelen = oss.str();
+                    
+                    std::cout << gelen << std::endl;
+                    
+                    
+                    
+//                    if ("STARTING" == gelen) {
+//                        ok = 1;
+//                        std::cout << "ok" << std::endl;
+//                    }
+                    
+                    a = 0;
+                }else{
+                    
+                    stream << make_daytime_string();
+                    
+//                    if(ok == 1){
+//                        stream << "OK \n";
+//                        ok = 0;
+//                    
+//                    }else {
+//                        stream << make_daytime_string();
+//                    }
+                    a = 1;
+                }
             }
         }
     }

@@ -200,19 +200,35 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
 	m_bIncludeTempData = false;
 	m_BulkReadTxPacket[LENGTH] = 0;
     
+    int devam = 1;
+    int a = 0;
     
     try
     {
         
-        tcp::iostream s("127.0.0.1", "8225");
-        if (!s)
-        {
-            std::cout << "Unable to connect: " << s.error().message() << std::endl;
+        while (devam) {
+            
+            tcp::iostream s("127.0.0.1", "8225");
+            if (!s)
+            {
+                std::cout << "Unable to connect: " << s.error().message() << std::endl;
+            }
+            
+            else if( a == 0){
+                std::string line;
+                std::getline(s, line);
+                std::cout << line << std::endl;
+                a = 1;
+            }
+            
+            else{
+                s << "STARTING";
+                a = 0;
+            }
+            
         }
         
-        std::string line;
-        std::getline(s, line);
-        std::cout << line << std::endl;
+        
     }
     catch (std::exception& e)
     {

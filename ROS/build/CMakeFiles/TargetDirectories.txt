@@ -70,7 +70,6 @@
 /home/rock/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir
 /home/rock/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/service_client.dir
-/home/rock/ProjectX/ROS/build/projectx/CMakeFiles/service_test.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/std_msgs_generate_messages_py.dir

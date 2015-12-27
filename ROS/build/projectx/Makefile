@@ -626,20 +626,6 @@ service_client/fast:
 .PHONY : service_client/fast
 
 # Convenience name for target.
-projectx/CMakeFiles/service_test.dir/rule:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/service_test.dir/rule
-.PHONY : projectx/CMakeFiles/service_test.dir/rule
-
-# Convenience name for target.
-service_test: projectx/CMakeFiles/service_test.dir/rule
-.PHONY : service_test
-
-# fast build rule for target.
-service_test/fast:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_test.dir/build.make projectx/CMakeFiles/service_test.dir/build
-.PHONY : service_test/fast
-
-# Convenience name for target.
 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
@@ -777,30 +763,6 @@ src/service_client.cpp.s:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_client.dir/build.make projectx/CMakeFiles/service_client.dir/src/service_client.cpp.s
 .PHONY : src/service_client.cpp.s
 
-src/service_test.o: src/service_test.cpp.o
-.PHONY : src/service_test.o
-
-# target to build an object file
-src/service_test.cpp.o:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_test.dir/build.make projectx/CMakeFiles/service_test.dir/src/service_test.cpp.o
-.PHONY : src/service_test.cpp.o
-
-src/service_test.i: src/service_test.cpp.i
-.PHONY : src/service_test.i
-
-# target to preprocess a source file
-src/service_test.cpp.i:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_test.dir/build.make projectx/CMakeFiles/service_test.dir/src/service_test.cpp.i
-.PHONY : src/service_test.cpp.i
-
-src/service_test.s: src/service_test.cpp.s
-.PHONY : src/service_test.s
-
-# target to generate assembly for a file
-src/service_test.cpp.s:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_test.dir/build.make projectx/CMakeFiles/service_test.dir/src/service_test.cpp.s
-.PHONY : src/service_test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -847,7 +809,6 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... service_client"
-	@echo "... service_test"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -864,9 +825,6 @@ help:
 	@echo "... src/service_client.o"
 	@echo "... src/service_client.i"
 	@echo "... src/service_client.s"
-	@echo "... src/service_test.o"
-	@echo "... src/service_test.i"
-	@echo "... src/service_test.s"
 .PHONY : help
 
 

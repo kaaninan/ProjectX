@@ -71,9 +71,6 @@ add_executable(arduino_sicaklik src/arduino_sicaklik.cpp)
 target_link_libraries(arduino_sicaklik ${catkin_LIBRARIES})
 add_dependencies(arduino_sicaklik arduino_sicaklik_generate_messages_cpp)
 
-add_executable(service_test src/service_test.cpp)
-target_link_libraries(service_test ${catkin_LIBRARIES})
-add_dependencies(service_test beginner_tutorials_gencpp)
 
 add_executable(service_client src/service_client.cpp)
 target_link_libraries(service_client ${catkin_LIBRARIES})

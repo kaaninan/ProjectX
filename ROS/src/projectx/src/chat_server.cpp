@@ -33,6 +33,8 @@ int main()
         tcp::acceptor acceptor(io_service, endpoint);
         
         int a = 0, ok = 0;
+        std::string dondur = "";
+        int motor_id = 0;
         
         for (;;){
             tcp::iostream stream;
@@ -49,8 +51,31 @@ int main()
                     if ("STARTING" == gelen) {
                         ok = 1;
                         std::cout << "ok" << std::endl;
-                    }else{
-                        std::cout << gelen << std::endl;
+                        
+                    }else {
+                        
+                        char parse[1024];
+                        strcpy(parse, gelen.c_str());
+                    
+                        if (parse[0] == 'S' && parse[1] == 'T' && parse[2] == 'O' && parse[3] == 'R' &&
+                            parse[4] == 'Q' && parse[5] == 'E' && parse[6] == 'R') {
+                        
+                            dondur = "read_torque";
+
+                            std::ostringstream oss2;
+                            oss2 << parse[7] << parse[8];
+                            std::string temp2 = oss2.str();
+                            
+                            std::stringstream s_str( temp2 );
+                            s_str >> motor_id;
+
+                            
+                            std::cout << "Reading Torque Enable: " << motor_id << std::endl;
+                            
+                        }
+                        
+                        std::cout << parse[1] << std::endl;
+                        
                     }
                     
                     a = 0;

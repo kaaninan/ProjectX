@@ -200,17 +200,15 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
 	m_bIncludeTempData = false;
 	m_BulkReadTxPacket[LENGTH] = 0;
     
+    // BOOST START
+    
     int devam = 1;
     int a = 0;
     
-    try
-    {
-        
+    try{
         while (devam) {
-            
             tcp::iostream s("127.0.0.1", "8225");
-            if (!s)
-            {
+            if (!s){
                 std::cout << "Unable to connect: " << s.error().message() << std::endl;
             }
             
@@ -232,17 +230,12 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
                 s << "STARTING";
                 a = 0;
             }
-            
         }
-        
-        
-    }
-    catch (std::exception& e)
-    {
+    }catch (std::exception& e){
         std::cout << "Exception: " << e.what() << std::endl;
     }
 
-    
+    // BOOST END
     
     
 }
@@ -337,7 +330,48 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 // WRITE - BYTE
             }else{
                 // READ - BYTE
-                rxpacket[PARAMETER] = 0x0;
+                
+                
+                // BOOST START
+                
+                int devam = 1;
+                int a = 1;
+                
+                try{
+                    while (devam) {
+                        tcp::iostream s("127.0.0.1", "8225");
+                        if (!s){
+                            std::cout << "Unable to connect: " << s.error().message() << std::endl;
+                        }
+                        
+                        else if( a == 0){
+                            std::string line;
+                            std::getline(s, line);
+                            
+                            if (line == "HATA ") {
+                                std::cout << "HATA" << std::endl;
+                                break;
+                            }else{
+                                std::cout << line << std::endl;
+                                devam = 0;
+                            }
+                            
+                            a = 1;
+                        }
+                        
+                        else{
+                            s << "STORQER0200000000";
+                            a = 0;
+                        }
+                    }
+                }catch (std::exception& e){
+                    std::cout << "Exception: " << e.what() << std::endl;
+                }
+                
+                // BOOST END
+                
+                
+                rxpacket[PARAMETER] = 0x1;
             }
         }
         

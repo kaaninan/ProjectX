@@ -38,7 +38,7 @@ ros.on('close', function() {
 var cmdVel = new ROSLIB.Topic({
     ros : ros,
     name : '/speech_data',
-    messageType : 'projectx/SpeechData'
+    messageType : 'std_msgs/String'
   });
 
 
@@ -197,14 +197,28 @@ if (!('webkitSpeechRecognition' in window)) {
 
       if(interim_transcript == ""){
 
-        ws.send("*-*");
+        // ws.send("*-*");
+
+        var twist = new ROSLIB.Message({
+          "-*-"
+        });
+
+      // And finally, publish.
+      cmdVel.publish(twist);
 
         $('div#son').append(" -- ");
         $('div#son').append("<br>");  
 
       }else{
 
-        ws.send(cumle+"-"+deger);
+        // ws.send(cumle+"-"+deger);
+
+        var twist = new ROSLIB.Message({
+          cumle
+        });
+
+      // And finally, publish.
+      cmdVel.publish(twist);
 
         $('div#son').append(cumle+" -- "+deger);
         $('div#son').append("<br>");  

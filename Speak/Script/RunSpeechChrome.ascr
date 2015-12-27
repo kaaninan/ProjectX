@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scriptfile>
+    <settings program="actionaz" version="3.7.0" scriptVersion="1.0.0" os="GNU/Linux"/>
+    <actions>
+        <action name="ActionClick" version="1.0.0"/>
+        <action name="ActionWriteText" version="1.0.0"/>
+        <action name="ActionExit" version="1.0.0"/>
+        <action name="ActionKey" version="1.0.0"/>
+    </actions>
+    <parameters/>
+    <script pauseBefore="0" pauseAfter="0">
+        <action name="ActionClick" pauseBefore="500" pauseAfter="10000">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">2</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">274:29</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="value" code="0">:</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" pauseBefore="1000" pauseAfter="200">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">653:58</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="value" code="0">:</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionWriteText" pauseBefore="1000" pauseAfter="200">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <parameter name="text">
+                <subParameter name="value" code="0">https://192.168.0.104:8000/speech_ros.html</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionKey" pauseBefore="200" pauseAfter="200">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="alt">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="meta">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="key">
+                <subParameter name="key" code="0">Return</subParameter>
+                <subParameter name="isQtKey" code="0">true</subParameter>
+            </parameter>
+            <parameter name="ctrl">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="shift">
+                <subParameter name="value" code="0">false</subParameter>
+            </parameter>
+            <parameter name="type">
+                <subParameter name="value" code="0">Win32</subParameter>
+            </parameter>
+            <parameter name="pause">
+                <subParameter name="value" code="0">10</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionClick" pauseBefore="4000" pauseAfter="500">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+            <exception id="32" action="0" line=""/>
+            <exception id="33" action="0" line=""/>
+            <parameter name="button">
+                <subParameter name="value" code="0">left</subParameter>
+            </parameter>
+            <parameter name="action">
+                <subParameter name="value" code="0">pressRelease</subParameter>
+            </parameter>
+            <parameter name="amount">
+                <subParameter name="value" code="0">1</subParameter>
+            </parameter>
+            <parameter name="position">
+                <subParameter name="value" code="0">253:305</subParameter>
+            </parameter>
+            <parameter name="positionOffset">
+                <subParameter name="value" code="0">:</subParameter>
+            </parameter>
+        </action>
+        <action name="ActionExit">
+            <exception id="0" action="0" line=""/>
+            <exception id="1" action="0" line=""/>
+            <exception id="2" action="1" line=""/>
+        </action>
+    </script>
+</scriptfile>

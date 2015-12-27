@@ -2,6 +2,8 @@ var ws = null;
 
 var recognizing = false;
 
+var twist;
+
 
 
 var ros = new ROSLIB.Ros();
@@ -199,12 +201,6 @@ if (!('webkitSpeechRecognition' in window)) {
 
         // ws.send("*-*");
 
-        var twist = new ROSLIB.Message({
-          "-*-"
-        });
-
-      // And finally, publish.
-      cmdVel.publish(twist);
 
         $('div#son').append(" -- ");
         $('div#son').append("<br>");  
@@ -213,9 +209,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
         // ws.send(cumle+"-"+deger);
 
-        var twist = new ROSLIB.Message({
-          cumle
-        });
+        twist = new ROSLIB.Message({data:cumle});
 
       // And finally, publish.
       cmdVel.publish(twist);

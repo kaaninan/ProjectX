@@ -46,27 +46,23 @@ int main()
                     oss << stream.rdbuf();
                     std::string gelen = oss.str();
                     
-                    std::cout << gelen << std::endl;
-                    
-                    
-                    
-//                    if ("STARTING" == gelen) {
-//                        ok = 1;
-//                        std::cout << "ok" << std::endl;
-//                    }
+                    if ("STARTING" == gelen) {
+                        ok = 1;
+                        std::cout << "ok" << std::endl;
+                    }else{
+                        std::cout << gelen << std::endl;
+                    }
                     
                     a = 0;
                 }else{
                     
-                    stream << make_daytime_string();
+                    if(ok == 1){
+                        stream << "OK \n";
+                        ok = 0;
                     
-//                    if(ok == 1){
-//                        stream << "OK \n";
-//                        ok = 0;
-//                    
-//                    }else {
-//                        stream << make_daytime_string();
-//                    }
+                    }else {
+                        stream << make_daytime_string();
+                    }
                     a = 1;
                 }
             }

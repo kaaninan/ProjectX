@@ -217,7 +217,14 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
             else if( a == 0){
                 std::string line;
                 std::getline(s, line);
-                std::cout << line << std::endl;
+                
+                if (line == "OK ") {
+                    std::cout << "OK" << std::endl;
+                    break;
+                }else{
+                    std::cout << line << std::endl;
+                }
+                
                 a = 1;
             }
             

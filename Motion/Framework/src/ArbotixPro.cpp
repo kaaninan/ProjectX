@@ -213,6 +213,9 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
             }
             
             else if( a == 0){
+                
+                // GELEN
+                
                 std::string line;
                 std::getline(s, line);
                 
@@ -227,6 +230,9 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
             }
             
             else{
+                
+                // GIDEN
+                
                 s << "STARTING";
                 a = 0;
             }
@@ -311,8 +317,71 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
         
         if (txpacket[PARAMETER] == AXDXL::P_PRESENT_POSITION_L) {
             // READ - WORD
-            rxpacket[PARAMETER] = 0x2;
-            rxpacket[PARAMETER + 1] = 0x3;
+            
+            int devam = 1;
+            int a = 1;
+
+            
+            try{
+                while (devam) {
+                    tcp::iostream s("127.0.0.1", "8225");
+                    
+                    if (!s){
+                        std::cout << "Unable to connect: " << s.error().message() << std::endl;
+                    }
+                    else if(a == 0){
+                        
+                        // GELEN
+                        std::string line;
+                        std::getline(s, line);
+                        
+                        std::cout << line << std::endl;
+                        
+                        if (line == "HATA ") {
+                            std::cout << "HATA" << std::endl;
+                            break;
+                            
+                        }else{
+                            std::cout << line << std::endl;
+                            
+                            char parse[1024];
+                            strcpy(parse, line.c_str());
+                            
+                            if (parse[0] == 'C' && parse[1] == 'P' && parse[2] == 'R' && parse[3] == 'E' &&
+                                parse[4] == 'P' && parse[5] == 'O' && parse[6] == 'S') {
+                                
+                                std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
+                                
+                                int value_motor = 599;
+                                
+                                rxpacket[PARAMETER] = GetLowByte(value_motor);
+                                rxpacket[PARAMETER + 1] = GetHighByte(value_motor);
+                                
+                                break;
+                                
+                            }
+                            
+                            devam = 0;
+                        }
+                        
+                        
+                        
+                        a = 1;
+                        
+                    }else{
+                        
+                        // GIDEN
+                        if(txpacket[ID] < 10) s << "S" << "PREPOS0" << (int)txpacket[ID] << "0000" << "0000";
+                        else{ s << "S" << "PREPOS" << (int)txpacket[ID] << "0000" << "0000"; }
+                        a = 0;
+                    }
+                }
+            }
+            catch (std::exception& e){
+                std::cout << "Exception: " << e.what() << std::endl;
+            }
+
+            
         }
         
         else if (txpacket[PARAMETER] == AXDXL::P_TORQUE_LIMIT_L) {
@@ -321,7 +390,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
         
         else if (txpacket[PARAMETER] == AXDXL::P_GOAL_POSITION_L) {
             // READ - WORD
-            rxpacket[PARAMETER] = 0x3;
+            rxpacket[PARAMETER] = 0x1;
             rxpacket[PARAMETER + 1] = 0x3;
         }
         
@@ -351,8 +420,31 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             if (line == "HATA ") {
                                 std::cout << "HATA" << std::endl;
                                 break;
+                                
                             }else{
                                 std::cout << line << std::endl;
+                                
+                                char parse[100];
+                                strcpy(parse, line.c_str());
+                                
+                                if (parse[0] == 'C' && parse[1] == 'T' && parse[2] == 'O' && parse[3] == 'R' &&
+                                    parse[4] == 'Q' && parse[5] == 'E' && parse[6] == 'R') {
+                                    
+                                    std::cout << "Cevap Torq: " << parse[16] << std::endl;
+                                    
+                                    if(parse[16] == '0'){
+                                        std::cout << "NO TORQUE" << std::endl;
+                                        rxpacket[PARAMETER] = 0x1;
+                                    }
+                                    else if(parse[16] == '1'){
+                                        std::cout << "OK TORQUE" << std::endl;
+                                        rxpacket[PARAMETER] = 0x0;
+                                    }
+                                    
+                                    break;
+                                    
+                                }
+                                
                                 devam = 0;
                             }
                             
@@ -360,7 +452,16 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                         }
                         
                         else{
-                            s << "STORQER0200000000";
+                            std::ostringstream oss;
+                            if(txpacket[ID] < 10){
+                                oss << "S" << "TORQER0" << (int)txpacket[ID] << "0000" << "0000";
+                            }else{
+                                oss << "S" << "TORQER" << (int)txpacket[ID] << "0000" << "0000";
+                            }
+                            
+                            std::string gelen = oss.str();
+                            s << gelen;
+                            
                             a = 0;
                         }
                     }
@@ -369,9 +470,8 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 }
                 
                 // BOOST END
-                
-                
                 rxpacket[PARAMETER] = 0x1;
+                
             }
         }
         
@@ -435,18 +535,9 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 //                printf("CCW: %d \n", ccw);
                 //                printf("POS: %d \n \n", pos);
                     
-
-                if (id != 0) {
-                    std::ostringstream oss;
-                    oss << id << " - " << pos << std::endl;
-                    yaz += oss.str();
-                }
-                    
+                
             }
             
-            outfile.open("/home/rock/test.txt", std::ios_base::app);
-            outfile << yaz << std::endl;
-            outfile.close();
             
         }
         

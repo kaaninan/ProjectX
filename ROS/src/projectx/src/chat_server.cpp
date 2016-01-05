@@ -1,13 +1,4 @@
-//
-// daytime_server.cpp
-// ~~~~~~~~~~~~~~~~~~
-//
-// Copyright (c) 2003-2015 Christopher M. Kohlhoff (chris at kohlhoff dot com)
-//
-// Distributed under the Boost Software License, Version 1.0. (See accompanying
-// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
-//
-
+#include "ros/ros.h"
 #include <ctime>
 #include <iostream>
 #include <string>
@@ -23,6 +14,11 @@ std::string make_daytime_string()
     return ctime(&now);
 }
 
+// Degiskenler
+int gelen_deger = 0;
+int giden_deger = 0;
+int motor_id = 0;
+
 int main()
 {
     try
@@ -34,7 +30,6 @@ int main()
         
         int a = 0, ok = 0;
         std::string dondur = "";
-        int motor_id = 0;
         
         for (;;){
             tcp::iostream stream;
@@ -44,15 +39,19 @@ int main()
             if (!ec){
                 if(a == 1){
                     
+                    // GELEN VERI
+                    
                     std::ostringstream oss;
                     oss << stream.rdbuf();
                     std::string gelen = oss.str();
                     
                     if ("STARTING" == gelen) {
                         ok = 1;
-                        std::cout << "ok" << std::endl;
+                        std::cout << "ok" << std::endl; // Info
                         
                     }else {
+                        
+                        std::cout << "Gelen Data: " << gelen << std::endl;
                         
                         char parse[1024];
                         strcpy(parse, gelen.c_str());
@@ -65,26 +64,76 @@ int main()
                             std::ostringstream oss2;
                             oss2 << parse[7] << parse[8];
                             std::string temp2 = oss2.str();
-                            
-                            std::stringstream s_str( temp2 );
-                            s_str >> motor_id;
+                            char id_temp[2];
+                            strcpy(id_temp, temp2.c_str());
+                            motor_id = atoi(id_temp);
 
                             
                             std::cout << "Reading Torque Enable: " << motor_id << std::endl;
                             
+                            
+                            
+                        }else if(parse[0] == 'S' && parse[1] == 'P' && parse[2] == 'R' && parse[3] == 'E' &&
+                                 parse[4] == 'P' && parse[5] == 'O' && parse[6] == 'S'){
+                            
+                            dondur = "read_present_pos";
+                            
+                            std::ostringstream oss2;
+                            oss2 << parse[7] << parse[8];
+                            std::string temp2 = oss2.str();
+                            char id_temp[2];
+                            strcpy(id_temp, temp2.c_str());
+                            motor_id = atoi(id_temp);
+                            
+                            std::cout << "Reading Present Position: " << motor_id << std::endl;
+                            
                         }
                         
-                        std::cout << parse[1] << std::endl;
-                        
+                        //std::cout << parse[1] << std::endl;
+                    
                     }
                     
                     a = 0;
                 }else{
                     
+                    // YOLLANACAK VERI
+                    
                     if(ok == 1){
                         stream << "OK \n";
                         ok = 0;
                     
+                    }else if(dondur == "read_torque"){
+                        
+                        std::cout << "Yolla Torque ID: " << motor_id << std::endl;
+
+                        std::ostringstream oss;
+                        if(motor_id < 10){
+                            oss << "C" << "TORQER0" << motor_id << "0000" << "0001";
+                        }else{
+                            oss << "C" << "TORQER" << motor_id << "0000" << "0001";
+                        }
+                        
+                        std::string gelen = oss.str();
+                        stream << gelen;
+                        
+                        dondur = "";
+                        
+                    }else if(dondur == "read_present_pos"){
+                        
+                        std::cout << "Yolla Pre Pos ID: " << motor_id << std::endl;
+                        
+                        std::ostringstream oss;
+                        if(motor_id < 10){
+                            oss << "C" << "PREPOS0" << motor_id << "0000" << "0123";
+                        }else{
+                            oss << "C" << "PREPOS" << motor_id << "0000" << "0123";
+                        }
+                        
+                        std::string gelen = oss.str();
+                        stream << gelen;
+                        
+                        dondur = "";
+                        
                     }else {
                         stream << make_daytime_string();
                     }

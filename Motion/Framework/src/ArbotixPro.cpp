@@ -215,6 +215,9 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
             }
             
             else if( a == 0){
+                
+                // GELEN
+                
                 std::string line;
                 std::getline(s, line);
                 
@@ -229,6 +232,9 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
             }
             
             else{
+                
+                // GIDEN
+                
                 s << "STARTING";
                 a = 0;
             }
@@ -318,6 +324,44 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
         
         if (txpacket[PARAMETER] == AXDXL::P_PRESENT_POSITION_L) {
             // READ - WORD
+            
+            int devam = 1;
+            int a = 0;
+            
+            try{
+                while (devam) {
+                    tcp::iostream s("127.0.0.1", "8225");
+                    
+                    if (!s){
+                        std::cout << "Unable to connect: " << s.error().message() << std::endl;
+                    }
+                    else if(a == 0){
+                        
+                        // GELEN
+                        std::string line;
+                        std::getline(s, line);
+                        
+                        char tab2[1024];
+                        strcpy(line, tmp.c_str());
+                        
+                        fprintf("GELEN VERI: %s", line);
+                        
+                        a = 1;
+                        
+                    }else{
+                        
+                        // GIDEN
+                        if(txpacket[ID] < 10) s << "S" << "PREPOS0" << txpacket[ID] << "0000" << "0000";
+                        else{ s << "S" << "PREPOS" << txpacket[ID] << "0000" << "0000"; }
+                        a = 0;
+                    }
+                }
+            }
+            catch (std::exception& e){
+                std::cout << "Exception: " << e.what() << std::endl;
+            }
+
+            
             rxpacket[PARAMETER] = 0x2;
             rxpacket[PARAMETER + 1] = 0x3;
         }
@@ -401,18 +445,9 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 //                printf("CCW: %d \n", ccw);
                 //                printf("POS: %d \n \n", pos);
                     
-
-                if (id != 0) {
-                    std::ostringstream oss;
-                    oss << id << " - " << pos << std::endl;
-                    yaz += oss.str();
-                }
-                    
+                
             }
             
-            outfile.open("/home/rock/test.txt", std::ios_base::app);
-            outfile << yaz << std::endl;
-            outfile.close();
             
         }
         

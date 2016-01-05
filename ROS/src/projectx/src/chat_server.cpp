@@ -1,13 +1,4 @@
-//
-// daytime_server.cpp
-// ~~~~~~~~~~~~~~~~~~
-//
-// Copyright (c) 2003-2015 Christopher M. Kohlhoff (chris at kohlhoff dot com)
-//
-// Distributed under the Boost Software License, Version 1.0. (See accompanying
-// file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
-//
-
+#include "ros/ros.h"
 #include <ctime>
 #include <iostream>
 #include <string>
@@ -42,6 +33,8 @@ int main()
             if (!ec){
                 if(a == 1){
                     
+                    // GELEN VERI
+                    
                     std::ostringstream oss;
                     oss << stream.rdbuf();
                     std::string gelen = oss.str();
@@ -50,11 +43,19 @@ int main()
                         ok = 1;
                         std::cout << "ok" << std::endl;
                     }else{
+                        
+                        char tab2[1024];
+                        strcpy(tab2, gelen.c_str());
+                        
+                        ROS_INFO("Gelen DATA: %s", gelen);
+                        
                         std::cout << gelen << std::endl;
                     }
                     
                     a = 0;
                 }else{
+                    
+                    // YOLLANACAK VERI
                     
                     if(ok == 1){
                         stream << "OK \n";

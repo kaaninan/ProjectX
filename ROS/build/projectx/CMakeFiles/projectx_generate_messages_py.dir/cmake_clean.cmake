@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiXYPad.py"
+  "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py"

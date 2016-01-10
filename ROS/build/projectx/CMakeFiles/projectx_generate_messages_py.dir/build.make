@@ -53,6 +53,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiXYPad.py
+projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py
@@ -124,35 +125,41 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MultiXYPad"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
+/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
+/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py: /home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MotorInArray"
+	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
+
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py: /home/rock/ProjectX/ROS/src/projectx/msg/Label.msg
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/Label"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/Label.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py: /home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/OscData"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py: /home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/Gyro"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorIn.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorIn.py: /home/rock/ProjectX/ROS/src/projectx/msg/MotorIn.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MotorIn"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/MotorIn.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_CommonProperties.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_CommonProperties.py: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/CommonProperties"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
@@ -160,25 +167,25 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiFader.py: /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiFader.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiFader.py: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MultiFader"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py: /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV projectx/Pin"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_AddTwoInts.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_AddTwoInts.py: /home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV projectx/AddTwoInts"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv
 
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py: /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV projectx/SensorTemp"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv
 
@@ -191,6 +198,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiXYPad.py
+/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py
@@ -200,7 +208,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_AddTwoInts.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for projectx"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg --initpy
 
@@ -213,6 +221,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiXYPad.py
+/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py
@@ -222,7 +231,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_AddTwoInts.py
 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for projectx"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv --initpy
 
@@ -235,6 +244,7 @@ projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-
 projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py
 projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiXYPad.py
+projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py
 projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_OscData.py
 projectx_generate_messages_py: /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py

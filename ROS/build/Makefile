@@ -696,6 +696,19 @@ _projectx_generate_messages_check_deps_MotorIn/fast:
 .PHONY : _projectx_generate_messages_check_deps_MotorIn/fast
 
 #=============================================================================
+# Target rules for targets named _projectx_generate_messages_check_deps_MotorInArray
+
+# Build rule for target.
+_projectx_generate_messages_check_deps_MotorInArray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_MotorInArray
+.PHONY : _projectx_generate_messages_check_deps_MotorInArray
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_MotorInArray/fast:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/build
+.PHONY : _projectx_generate_messages_check_deps_MotorInArray/fast
+
+#=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_MotorOut
 
 # Build rule for target.
@@ -1231,6 +1244,7 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_Gyro"
 	@echo "... _projectx_generate_messages_check_deps_Label"
 	@echo "... _projectx_generate_messages_check_deps_MotorIn"
+	@echo "... _projectx_generate_messages_check_deps_MotorInArray"
 	@echo "... _projectx_generate_messages_check_deps_MotorOut"
 	@echo "... _projectx_generate_messages_check_deps_MultiButton"
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"

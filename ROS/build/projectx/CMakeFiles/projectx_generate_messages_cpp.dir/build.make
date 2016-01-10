@@ -53,6 +53,7 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/ScalableControl.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MultiXYPad.h
+projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/Label.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/OscData.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h
@@ -130,40 +131,47 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/MultiXYPad.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h: /home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/MotorInArray.msg"
+	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
+
 /home/rock/ProjectX/ROS/devel/include/projectx/Label.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/rock/ProjectX/ROS/devel/include/projectx/Label.h: /home/rock/ProjectX/ROS/src/projectx/msg/Label.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/Label.h: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/Label.h: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/Label.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_10)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/Label.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/Label.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/rock/ProjectX/ROS/devel/include/projectx/OscData.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/rock/ProjectX/ROS/devel/include/projectx/OscData.h: /home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/OscData.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_10)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_11)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/OscData.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h: /home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_11)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_12)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/Gyro.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/rock/ProjectX/ROS/devel/include/projectx/MotorIn.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/rock/ProjectX/ROS/devel/include/projectx/MotorIn.h: /home/rock/ProjectX/ROS/src/projectx/msg/MotorIn.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/MotorIn.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_12)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/MotorIn.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/MotorIn.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/rock/ProjectX/ROS/devel/include/projectx/CommonProperties.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/rock/ProjectX/ROS/devel/include/projectx/CommonProperties.h: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/CommonProperties.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/CommonProperties.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -172,7 +180,7 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 /home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
 /home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/MultiFader.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -180,7 +188,7 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 /home/rock/ProjectX/ROS/devel/include/projectx/Pin.h: /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv
 /home/rock/ProjectX/ROS/devel/include/projectx/Pin.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/rock/ProjectX/ROS/devel/include/projectx/Pin.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/Pin.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -188,7 +196,7 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 /home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv
 /home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/AddTwoInts.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -196,7 +204,7 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h: /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv
 /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
 /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/SensorTemp.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
@@ -209,6 +217,7 @@ projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/T
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/ScalableControl.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MultiXYPad.h
+projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/Label.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/OscData.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h

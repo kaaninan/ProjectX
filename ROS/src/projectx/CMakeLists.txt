@@ -21,6 +21,7 @@ add_message_files(
   FILES
   Sensor.msg
   MotorIn.msg
+  MotorInArray.msg
   MotorOut.msg
   Gyro.msg
   OscData.msg

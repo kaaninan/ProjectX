@@ -4,6 +4,7 @@ b320724af646853afd166bfad93f002f /home/rock/ProjectX/ROS/devel/include/projectx/
 e06e39b98ddf24e709a0d90593b20a1d /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h
 4d09603dd6ad4a5a5f0a1d60ef34db5f /home/rock/ProjectX/ROS/devel/include/projectx/Label.h
 435009eaf51a24ebfb23ca43f32ac15b /home/rock/ProjectX/ROS/devel/include/projectx/MotorIn.h
+96491a7f3b1e442f1d1f95543c49617b /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 d1e4136224ef8cf45822179136d1972b /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
 61c8f06f9e861510fd101441fb695639 /home/rock/ProjectX/ROS/devel/include/projectx/MultiButton.h
 ad5a7f7200a464ea4587015db9faf7e6 /home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h
@@ -27,6 +28,7 @@ ca348906f68efc6e5d64c16ff36af1fc /home/rock/ProjectX/ROS/devel/include/rosserial
 70b7c3f44c80833436e9247231c28087 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Gyro.py
 6314308040401380958b019ef157fecd /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 6710024cd7c4e187c35f2933b4ad7f38 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorIn.py
+580b19d475510882cc3e89f00e24080c /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorInArray.py
 095334b8cb064e106cd8df424bfc4b7c /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py
 83b4ba41660ce9c8b96a6f5bba1ea111 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py
 444ccbeb5e436cb2896ceb361737992c /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiFader.py
@@ -57,6 +59,7 @@ f6fb2463bee2d8cca09f3adc30aff6ac /home/rock/ProjectX/ROS/devel/lib/python2.7/dis
 6a36e590ad7c1aeb43b90734f0a235a8 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Gyro.lisp
 85a7dd3b57f5c4bc0ff77e35e69e8e3d /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Label.lisp
 5fae3500f0a079d6560b69ec63f978eb /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorIn.lisp
+da2fd947a3727a57a2139703165ddeee /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorInArray.lisp
 dc60c6521fc21764f0a81f23e32aec5c /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOut.lisp
 37b9ef8df31265faba9b63dceedfb1e3 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp
 1cf453f21951a4ab53ea48a48371e6ea /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp
@@ -89,6 +92,7 @@ ef648c4949cfdbd27ffa3a2959df73b5 /home/rock/ProjectX/ROS/devel/share/common-lisp
 7806c2a0eed5b34f7c3480d8fc763099 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro
 4502ea130e07c2f4a783d0fc3560e35a projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label
 8600c71d3d577678cd1e25350fe74c5b projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn
+5f033141aa122aa281280cd4683565fa projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray
 c9383f484091af4b6559e779a470dd39 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut
 39f47eb755626b73749fae947626da14 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton
 72bbf473228de7df8b2075a567abb6de projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader

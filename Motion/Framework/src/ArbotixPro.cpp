@@ -18,11 +18,6 @@
 #include "boost/thread/thread.hpp"
 #include "chat_message.hpp"
 
-//// JSON
-//#include "rapidjson/document.h"
-//#include "rapidjson/writer.h"
-//#include "rapidjson/stringbuffer.h"
-//#include <iostream>
 
 
 using namespace Robot;

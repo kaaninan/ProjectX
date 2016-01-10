@@ -44,6 +44,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/projectx/msg" TYPE FILE FILES
     "/home/rock/ProjectX/ROS/src/projectx/msg/Sensor.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/MotorIn.msg"
+    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg"

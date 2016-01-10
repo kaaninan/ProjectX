@@ -8,6 +8,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/include/projectx/ScalableControl.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MultiXYPad.h"
+  "/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/Label.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/OscData.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h"

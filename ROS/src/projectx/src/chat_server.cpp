@@ -27,7 +27,7 @@ class Veri
 {
 public:
     Veri();
-    void gonder(); // Veri gonder
+    void gonder(std::string type_char ,int motor_id, int in_data); // Veri gonder
     void al(); // Veri al
     
     void processing(std::string type, int out_data); // Gelen veriyi isle
@@ -57,6 +57,35 @@ void Veri::callback(const projectx::MotorIn::ConstPtr& msg){
 }
 
 
+void Veri::gonder(std::string type_char ,int motor_id, int in_data){
+    
+    try{
+        boost::asio::io_service io_service;
+        
+        tcp::endpoint endpoint(tcp::v4(), 8225);
+        tcp::acceptor acceptor(io_service, endpoint);
+        
+        tcp::iostream stream;
+        boost::system::error_code ec;
+        acceptor.accept(*stream.rdbuf(), ec);
+        
+        std::ostringstream oss;
+        oss << "C" << type_char << motor_id << "0000" << in_data;
+        
+        std::string gelen = oss.str();
+        
+        stream << gelen;
+        
+    }
+    catch (std::exception& e){
+        std::cerr << e.what() << std::endl;
+    }
+
+
+
+}
+
+
 void Veri::processing(std::string type, int out_data){
     
     std::string type_char = "";
@@ -83,12 +112,7 @@ void Veri::processing(std::string type, int out_data){
     // String Hazirla
     std::cout << "Yolla Torque ID: " << motor_id << std::endl; // LOG
     
-    std::ostringstream oss;
-    oss << "C" << type_char << motor_id << "0000" << in_data;
-    
-    std::string gelen = oss.str();
-    
-    
+    gonder(type_char, motor_id, in_data);
     
     
 }
@@ -144,6 +168,8 @@ void Veri::al(){
                 std::cout << "Reading Present Position: " << motor_id << std::endl;
             }
             
+            std::cout << "Geçti" << std::endl;
+            
             
             // KOMUTU ISLE
             processing(dondur, 123);
@@ -165,6 +191,12 @@ void Veri::al(){
 int main(int argc, char **argv){
     
     ros::init(argc, argv, "Motion_Data_Server");
+    
+    Veri veri = Veri();
+
+    while (true) {
+        veri.al();
+    }
     
     ros::spin();
     

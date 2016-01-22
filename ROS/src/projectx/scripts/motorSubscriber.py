@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import rospy
 from projectx.msg import MotorIn
+from projectx.msg import MotorInArray
+import thread
 
 motor_values = {}
 
@@ -14,7 +16,7 @@ def dogrula():
         try:
             if motor_values[i].get("pos") and motor_values[i].get("temp") and motor_values[i].get("voltage"):
                 don = 1 # Bos Durmasin Diye
-                # Sorun Yok
+        # Sorun Yok
         except:
             rospy.logerr("motorSubscriber.py -> Arduino'dan gelen motor verileri eksik! (topic: arduinoMotorIncoming) - Motor ID: [%s]",str(i))
             return 0
@@ -23,29 +25,39 @@ def dogrula():
 
 
 
+
+def publish_data(thread_name,delay):
+    global ok_
+    global motor_values
+
+    while  1:
+        if ok_ == 1:
+            motorData = MotorInArray()
+
+            for i in range(1,21):
+                
+                # if i == 1:
+                #     print (i, ' ',int(motor_values[i].get("pos")))
+
+                motorData.id.append(int(i))
+                motorData.temp.append(int(motor_values[i].get("temp")))
+                motorData.voltage.append(int(motor_values[i].get("voltage")))
+                motorData.pos.append(int(motor_values[i].get("pos")))
+
+            global pub
+            global rate
+            pub.publish(motorData)
+            rate.sleep()
+
+
+
+
 ok_ = -1 # Her Seferinde dogrula() fonk. calismamasi icin
 
 def yazdir():
-    global motor_values
     global ok_
     
-    if ok_ == 1:
-        for i in range(1,21):
-            # Tum Degerler Dogrulandiginda Surekli Parametre Guncelleniyor
-#            print (i, ' ',motor_values[i])
-
-            _name_temp = "/motor_" + str(i) + "/temp"
-            _name_volt = "/motor_" + str(i) + "/voltage"
-            _name_pos = "/motor_" + str(i) + "/pos"
-            
-#            try:
-#                rospy.set_param(_name_temp, motor_values[i].get("temp"))
-#                rospy.set_param(_name_volt, motor_values[i].get("voltage"))
-#                rospy.set_param(_name_pos, motor_values[i].get("pos"))
-#            except:
-#                rospy.logerr("PARAM SET ERROR");
-
-    else:
+    if ok_ != 1:
         ok_ = dogrula()
         #print "Tum Degerler Dogrulanmadi!"
 
@@ -65,8 +77,8 @@ def deger_bul(id, bolum):
 def callback(data):
     
     #    rospy.loginfo("%s, %s, %s, %s", data.id, data.temp, data.voltage, data.pos)
-
-
+    
+    
     # Gelen Verinin Dogruluk Kontrolu
     # TECRUBE: Ilk basta tum veriler tam gelene kadar yaklasik 2sn geciyor.
     # Eger gecersiz deger gelirse varolan degeri koru
@@ -75,30 +87,30 @@ def callback(data):
         deger = deger_bul(data.id, "temp")
         temp_ = deger
     else:
-        temp_ = data.temp
-
-
+        temp_ = int(data.temp)
+    
+    
     if data.voltage < 1 or data.voltage > 200:
         deger = deger_bul(data.id, "voltage")
         voltage_ = deger
     else:
-        voltage_ = data.voltage
-
-
+        voltage_ = int(data.voltage)
+    
+    
     if data.pos < 0 or data.pos > 2000:
         deger = deger_bul(data.id, "pos")
         pos_ = deger
     else:
-        pos_ = data.pos
+        pos_ = int(data.pos)
 
 
-    if data.id == 1:
-        print("1 -> ", data.pos, " -- ", pos_);
-
+    # if data.id == 2:
+    #     print("2 -> ", data.pos, " -- ", pos_);
+    
     global motor_values
 
     motor_values[data.id] = {"temp":temp_, "voltage":voltage_, "pos": pos_}
-
+    
     yazdir()
 
 
@@ -107,6 +119,16 @@ def listener():
     rospy.init_node('motor_values_listener', anonymous=True)
     
     rospy.Subscriber("arduinoMotorIncoming", MotorIn, callback)
+
+    try:
+        thread.start_new_thread(publish_data, ("Thread-1",2))
+    except:
+        rospy.logerr("Thread Error");
+    
+    global pub
+    global rate
+    pub = rospy.Publisher('motorIncomingData', MotorInArray, queue_size=10)
+    rate = rospy.Rate(100)
     
     rospy.spin()
 

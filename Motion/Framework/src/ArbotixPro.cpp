@@ -18,6 +18,11 @@
 #include "boost/thread/thread.hpp"
 #include "chat_message.hpp"
 
+//// JSON
+//#include "rapidjson/document.h"
+//#include "rapidjson/writer.h"
+//#include "rapidjson/stringbuffer.h"
+//#include <iostream>
 
 
 using namespace Robot;
@@ -194,49 +199,49 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
 	m_DelayedWords = 0;
 	m_bIncludeTempData = false;
 	m_BulkReadTxPacket[LENGTH] = 0;
-//    
-//    // BOOST START
-//    
-//    int devam = 1;
-//    int a = 0;
-//    
-//    try{
-//        while (devam) {
-//            tcp::iostream s("127.0.0.1", "8225");
-//            if (!s){
-//                std::cout << "Unable to connect: " << s.error().message() << std::endl;
-//            }
-//            
-//            else if( a == 0){
-//                
-//                // GELEN
-//                
-//                std::string line;
-//                std::getline(s, line);
-//                
-//                if (line == "OK ") {
-//                    std::cout << "OK" << std::endl;
-//                    break;
-//                }else{
-//                    std::cout << line << std::endl;
-//                }
-//                
-//                a = 1;
-//            }
-//            
-//            else{
-//                
-//                // GIDEN
-//                
-//                s << "STARTING";
-//                a = 0;
-//            }
-//        }
-//    }catch (std::exception& e){
-//        std::cout << "Exception: " << e.what() << std::endl;
-//    }
-//
-//    // BOOST END
+    
+    // BOOST START
+    
+    int devam = 1;
+    int a = 0;
+    
+    try{
+        while (devam) {
+            tcp::iostream s("127.0.0.1", "8225");
+            if (!s){
+                std::cout << "Unable to connect: " << s.error().message() << std::endl;
+            }
+            
+            else if( a == 0){
+                
+                // GELEN
+                
+                std::string line;
+                std::getline(s, line);
+                
+                if (line == "OK ") {
+                    std::cout << "OK" << std::endl;
+                    break;
+                }else{
+                    std::cout << line << std::endl;
+                }
+                
+                a = 1;
+            }
+            
+            else{
+                
+                // GIDEN
+                
+                s << "STARTING";
+                a = 0;
+            }
+        }
+    }catch (std::exception& e){
+        std::cout << "Exception: " << e.what() << std::endl;
+    }
+
+    // BOOST END
     
     
 }

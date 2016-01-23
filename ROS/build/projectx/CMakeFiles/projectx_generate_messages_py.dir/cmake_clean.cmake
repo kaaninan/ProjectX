@@ -15,6 +15,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorIn.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_CommonProperties.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiFader.py"
+  "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_AddTwoInts.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py"

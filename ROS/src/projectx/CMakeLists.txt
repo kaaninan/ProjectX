@@ -23,6 +23,7 @@ add_message_files(
   MotorIn.msg
   MotorInArray.msg
   MotorOut.msg
+  MotorOutArray.msg
   Gyro.msg
   OscData.msg
   CommonProperties.msg

@@ -1,40 +1,51 @@
 #include "ros/ros.h"
+#include "projectx/MotorOutArray.h"
+#include "projectx/MotorInArray.h"
 #include <ctime>
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <stdlib.h>
 #include <boost/asio.hpp>
 
 using boost::asio::ip::tcp;
 
-std::string make_daytime_string()
-{
-    using namespace std; // For time_t, time and ctime;
-    time_t now = time(0);
-    return ctime(&now);
+class Veri{
+public:
+    Veri();
+    void veri_al();
+private:
+    ros::NodeHandle n;
+    int gelen_deger ;
+    int giden_deger;
+    int motor_id;
+};
+ 
+Veri::Veri(){
+    printf("Start");
 }
 
-// Degiskenler
-int gelen_deger = 0;
-int giden_deger = 0;
-int motor_id = 0;
 
-int main()
-{
-    try
-    {
+void Veri::veri_al(){
+    try{
         boost::asio::io_service io_service;
         
-        tcp::endpoint endpoint(tcp::v4(), 8225);
+        tcp::endpoint endpoint(tcp::v4(), 8243);
         tcp::acceptor acceptor(io_service, endpoint);
         
         int a = 0, ok = 0;
         std::string dondur = "";
         
-        for (;;){
+        while(ros::ok()){
+            ros::spinOnce();
+
             tcp::iostream stream;
             boost::system::error_code ec;
-            acceptor.accept(*stream.rdbuf(), ec);
+            try{
+                acceptor.accept(*stream.rdbuf(), ec);
+            }catch (std::exception& e){
+                printf("Hatanin Dibi");
+            }
             
             if (!ec){
                 if(a == 1){
@@ -135,7 +146,7 @@ int main()
                         dondur = "";
                         
                     }else {
-                        stream << make_daytime_string();
+                        // stream << "TEST";
                     }
                     a = 1;
                 }
@@ -146,6 +157,16 @@ int main()
     {
         std::cerr << e.what() << std::endl;
     }
+}
+
+
+
+int main(int argc, char **argv){
+
+    ros::init(argc, argv, "motor_chat_server");
+    
+    Veri veri;
+    veri.veri_al();
     
     return 0;
 }

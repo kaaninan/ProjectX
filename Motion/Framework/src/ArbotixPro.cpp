@@ -207,7 +207,7 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
     
     try{
         while (devam) {
-            tcp::iostream s("127.0.0.1", "8225");
+            tcp::iostream s("127.0.0.1", "8243");
             if (!s){
                 std::cout << "Unable to connect: " << s.error().message() << std::endl;
             }
@@ -324,7 +324,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
             
             try{
                 while (devam) {
-                    tcp::iostream s("127.0.0.1", "8225");
+                    tcp::iostream s("127.0.0.1", "8243");
                     
                     if (!s){
                         std::cout << "Unable to connect: " << s.error().message() << std::endl;
@@ -408,7 +408,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 
                 try{
                     while (devam) {
-                        tcp::iostream s("127.0.0.1", "8225");
+                        tcp::iostream s("127.0.0.1", "8243");
                         if (!s){
                             std::cout << "Unable to connect: " << s.error().message() << std::endl;
                         }

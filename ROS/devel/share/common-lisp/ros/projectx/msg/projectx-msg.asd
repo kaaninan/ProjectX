@@ -15,6 +15,8 @@
     (:file "_package_MotorInArray" :depends-on ("_package"))
     (:file "TouchOSC_Common" :depends-on ("_package_TouchOSC_Common"))
     (:file "_package_TouchOSC_Common" :depends-on ("_package"))
+    (:file "MotorOutArray" :depends-on ("_package_MotorOutArray"))
+    (:file "_package_MotorOutArray" :depends-on ("_package"))
     (:file "Tabpage" :depends-on ("_package_Tabpage"))
     (:file "_package_Tabpage" :depends-on ("_package"))
     (:file "OscData" :depends-on ("_package_OscData"))

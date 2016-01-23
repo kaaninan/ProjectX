@@ -6,9 +6,45 @@
 
 #IncludeRegexTransform: 
 
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/rock/ProjectX/ROS/src/projectx/src/chat_server.cpp
 ros/ros.h
 /home/rock/ProjectX/ROS/src/projectx/src/ros/ros.h
+projectx/MotorOutArray.h
+/home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorOutArray.h
+projectx/MotorInArray.h
+/home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorInArray.h
 ctime
 -
 iostream
@@ -16,6 +52,8 @@ iostream
 string
 -
 sstream
+-
+stdlib.h
 -
 boost/asio.hpp
 -
@@ -238,6 +276,10 @@ boost/make_shared.hpp
 cstddef
 -
 memory
+-
+
+/opt/ros/indigo/include/ros/message_operations.h
+ostream
 -
 
 /opt/ros/indigo/include/ros/message_traits.h

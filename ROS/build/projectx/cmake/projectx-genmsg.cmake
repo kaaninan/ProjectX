@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "projectx: 15 messages, 3 services")
+message(STATUS "projectx: 16 messages, 3 services")
 
 set(MSG_I_FLAGS "-Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -38,6 +38,11 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" "std_msgs/Header:projectx/CommonProperties"
+)
+
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" ""
 )
 
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
@@ -95,9 +100,9 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" ""
 )
 
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" ""
 )
 
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
@@ -201,6 +206,12 @@ _generate_msg_cpp(projectx
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
 )
+_generate_msg_cpp(projectx
+  "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
+)
 
 ### Generating Services
 _generate_srv_cpp(projectx
@@ -244,6 +255,8 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Multi
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
@@ -266,7 +279,7 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Multi
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
@@ -370,6 +383,12 @@ _generate_msg_lisp(projectx
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
 )
+_generate_msg_lisp(projectx
+  "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
+)
 
 ### Generating Services
 _generate_srv_lisp(projectx
@@ -413,6 +432,8 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Multi
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
@@ -435,7 +456,7 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Multi
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
@@ -539,6 +560,12 @@ _generate_msg_py(projectx
   "/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg;/home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
 )
+_generate_msg_py(projectx
+  "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
+)
 
 ### Generating Services
 _generate_srv_py(projectx
@@ -582,6 +609,8 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Multi
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
@@ -604,7 +633,7 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Multi
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})

@@ -7,9 +7,6 @@ import thread
 motor_values = {}
 
 
-# PARAM Kullanilmiyor -- Cok Yavas
-
-
 def dogrula():
     global motor_values
     for i in range(1,21):
@@ -38,11 +35,13 @@ def publish_data(thread_name,delay):
                 
                 # if i == 1:
                 #     print (i, ' ',int(motor_values[i].get("pos")))
-
-                motorData.id.append(int(i))
-                motorData.temp.append(int(motor_values[i].get("temp")))
-                motorData.voltage.append(int(motor_values[i].get("voltage")))
-                motorData.pos.append(int(motor_values[i].get("pos")))
+                try:
+                    motorData.id.append(int(i))
+                    motorData.temp.append(int(motor_values[i].get("temp")))
+                    motorData.voltage.append(int(motor_values[i].get("voltage")))
+                    motorData.pos.append(int(motor_values[i].get("pos")))
+                except:
+                    # NULL
 
             global pub
             global rate

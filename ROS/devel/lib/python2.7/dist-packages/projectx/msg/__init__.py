@@ -13,3 +13,4 @@ from ._MotorOut import *
 from ._XYPad import *
 from ._Label import *
 from ._MotorIn import *
+from ._MotorOutArray import *

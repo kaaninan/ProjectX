@@ -654,6 +654,20 @@ service_client/fast:
 .PHONY : service_client/fast
 
 # Convenience name for target.
+projectx/CMakeFiles/service_server.dir/rule:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/service_server.dir/rule
+.PHONY : projectx/CMakeFiles/service_server.dir/rule
+
+# Convenience name for target.
+service_server: projectx/CMakeFiles/service_server.dir/rule
+.PHONY : service_server
+
+# fast build rule for target.
+service_server/fast:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/build
+.PHONY : service_server/fast
+
+# Convenience name for target.
 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 .PHONY : projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
@@ -791,6 +805,30 @@ src/service_client.cpp.s:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_client.dir/build.make projectx/CMakeFiles/service_client.dir/src/service_client.cpp.s
 .PHONY : src/service_client.cpp.s
 
+src/service_server.o: src/service_server.cpp.o
+.PHONY : src/service_server.o
+
+# target to build an object file
+src/service_server.cpp.o:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o
+.PHONY : src/service_server.cpp.o
+
+src/service_server.i: src/service_server.cpp.i
+.PHONY : src/service_server.i
+
+# target to preprocess a source file
+src/service_server.cpp.i:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/src/service_server.cpp.i
+.PHONY : src/service_server.cpp.i
+
+src/service_server.s: src/service_server.cpp.s
+.PHONY : src/service_server.s
+
+# target to generate assembly for a file
+src/service_server.cpp.s:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/src/service_server.cpp.s
+.PHONY : src/service_server.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -839,6 +877,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... service_client"
+	@echo "... service_server"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
@@ -855,6 +894,9 @@ help:
 	@echo "... src/service_client.o"
 	@echo "... src/service_client.i"
 	@echo "... src/service_client.s"
+	@echo "... src/service_server.o"
+	@echo "... src/service_server.i"
+	@echo "... src/service_server.s"
 .PHONY : help
 
 

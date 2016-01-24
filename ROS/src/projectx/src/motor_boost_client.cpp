@@ -38,14 +38,14 @@ Veri::Veri(){
 void Veri::loop(){
     ROS_INFO("1");
     devam = 1;
-    while (devam) {
+    a = 1;
+    while (1) {
         ROS_INFO("2");
-        a = 1;
         try{
 
             ROS_INFO("3");
 
-            tcp::iostream s("127.0.0.1", "8300");
+            tcp::iostream s("127.0.0.1", "8301");
             
             if (!s){
                 std::cout << "Unable to connect: " << s.error().message() << std::endl;
@@ -89,16 +89,20 @@ void Veri::loop(){
             }else{
                 
                 // GIDEN
-                s << "BOS";
+                std::ostringstream oss;
+                oss << "C" << "PREPOS" << 10 << "0000" << "0123";
+                
+                std::string gelen = oss.str();
+                //s << gelen;
+
                 a = 0;
             }
-            ros::spin();
         }
         catch (std::exception& e){
             std::cout << "Exception: " << e.what() << std::endl;
         }
 
-        ros::spin();
+        ros::spinOnce();
     }
 }
 

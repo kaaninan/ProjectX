@@ -6,6 +6,46 @@
 
 #IncludeRegexTransform: 
 
+/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h
+ros/service_traits.h
+-
+projectx/AddTwoIntsRequest.h
+-
+projectx/AddTwoIntsResponse.h
+-
+
+/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoIntsRequest.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
+/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoIntsResponse.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 string
 -
@@ -53,6 +93,8 @@ string
 -
 boost/asio.hpp
 -
+projectx/AddTwoInts.h
+/home/rock/ProjectX/ROS/src/projectx/src/projectx/AddTwoInts.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

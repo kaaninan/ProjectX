@@ -1383,6 +1383,7 @@ projectx/all: projectx/CMakeFiles/motor_boost_client.dir/all
 projectx/all: projectx/CMakeFiles/motor_boost_server.dir/all
 projectx/all: projectx/CMakeFiles/projectx_generate_messages.dir/all
 projectx/all: projectx/CMakeFiles/service_client.dir/all
+projectx/all: projectx/CMakeFiles/service_server.dir/all
 .PHONY : projectx/all
 
 # Convenience name for "clean" pass in the directory.
@@ -1422,6 +1423,7 @@ projectx/clean: projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clea
 projectx/clean: projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 projectx/clean: projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 projectx/clean: projectx/CMakeFiles/service_client.dir/clean
+projectx/clean: projectx/CMakeFiles/service_server.dir/clean
 projectx/clean: projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 projectx/clean: projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 projectx/clean: projectx/CMakeFiles/std_msgs_generate_messages_py.dir/clean
@@ -2197,26 +2199,26 @@ clean: projectx/CMakeFiles/projectx_generate_messages.dir/clean
 # Target rules for target projectx/CMakeFiles/projectx_generate_messages_cpp.dir
 
 # All Build rule for target.
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_AddTwoInts.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_cpp.dir/depend
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
@@ -2247,26 +2249,26 @@ clean: projectx/CMakeFiles/projectx_generate_messages_cpp.dir/clean
 # Target rules for target projectx/CMakeFiles/projectx_generate_messages_lisp.dir
 
 # All Build rule for target.
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_AddTwoInts.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_lisp.dir/depend
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44
@@ -2297,26 +2299,26 @@ clean: projectx/CMakeFiles/projectx_generate_messages_lisp.dir/clean
 # Target rules for target projectx/CMakeFiles/projectx_generate_messages_py.dir
 
 # All Build rule for target.
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_py.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_AddTwoInts.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_py.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_py.dir/build.make projectx/CMakeFiles/projectx_generate_messages_py.dir/depend
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_py.dir/build.make projectx/CMakeFiles/projectx_generate_messages_py.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65
@@ -2624,6 +2626,41 @@ projectx/CMakeFiles/service_client.dir/clean:
 
 # clean rule for target.
 clean: projectx/CMakeFiles/service_client.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target projectx/CMakeFiles/service_server.dir
+
+# All Build rule for target.
+projectx/CMakeFiles/service_server.dir/all: projectx/CMakeFiles/projectx_gencpp.dir/all
+	$(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/depend
+	$(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  94
+	@echo "Built target service_server"
+.PHONY : projectx/CMakeFiles/service_server.dir/all
+
+# Include target in all.
+all: projectx/CMakeFiles/service_server.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+projectx/CMakeFiles/service_server.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/build/CMakeFiles 20
+	$(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/service_server.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/build/CMakeFiles 0
+.PHONY : projectx/CMakeFiles/service_server.dir/rule
+
+# Convenience name for target.
+service_server: projectx/CMakeFiles/service_server.dir/rule
+.PHONY : service_server
+
+# clean rule for target.
+projectx/CMakeFiles/service_server.dir/clean:
+	$(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/clean
+.PHONY : projectx/CMakeFiles/service_server.dir/clean
+
+# clean rule for target.
+clean: projectx/CMakeFiles/service_server.dir/clean
 .PHONY : clean
 
 #=============================================================================

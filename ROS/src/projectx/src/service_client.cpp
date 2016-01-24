@@ -14,11 +14,11 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   ros::ServiceClient client = n.serviceClient<projectx::AddTwoInts>("add_two_ints");
   
-  for (int i = 0; i< 20; i++){
+  for (int i = 0; i< 200; i++){
 
       projectx::AddTwoInts srv;
-      srv.request.a = atoll(argv[1]);
-      srv.request.b = atoll(argv[2]);
+      srv.request.a = i;
+      srv.request.b = 0;
       if (client.call(srv))
       {
         ROS_INFO("Sum: %ld", (long int)srv.response.sum);

@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(projectx)
 
+set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
+
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -8,7 +10,6 @@ find_package(catkin REQUIRED COMPONENTS
   rosparam
   message_generation
 )
-
 
 add_service_files(
   FILES
@@ -86,3 +87,7 @@ add_dependencies(arduino_sicaklik projectx_gencpp)
 add_executable(service_client src/service_client.cpp)
 target_link_libraries(service_client ${catkin_LIBRARIES})
 add_dependencies(service_client projectx_gencpp)
+
+add_executable(service_server src/service_server.cpp)
+target_link_libraries(service_server ${catkin_LIBRARIES})
+add_dependencies(service_server projectx_gencpp)

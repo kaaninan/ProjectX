@@ -1099,6 +1099,19 @@ service_client/fast:
 .PHONY : service_client/fast
 
 #=============================================================================
+# Target rules for targets named service_server
+
+# Build rule for target.
+service_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 service_server
+.PHONY : service_server
+
+# fast build rule for target.
+service_server/fast:
+	$(MAKE) -f projectx/CMakeFiles/service_server.dir/build.make projectx/CMakeFiles/service_server.dir/build
+.PHONY : service_server/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1288,6 +1301,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... service_client"
+	@echo "... service_server"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"

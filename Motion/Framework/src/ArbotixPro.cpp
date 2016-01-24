@@ -18,13 +18,6 @@
 #include "boost/thread/thread.hpp"
 #include "chat_message.hpp"
 
-//// JSON
-//#include "rapidjson/document.h"
-//#include "rapidjson/writer.h"
-//#include "rapidjson/stringbuffer.h"
-//#include <iostream>
-
-
 using namespace Robot;
 
 using boost::asio::ip::tcp;
@@ -47,122 +40,6 @@ typedef std::deque<chat_message> chat_message_queue;
 #define INST_RESET			(6)
 #define INST_SYNC_WRITE		(131)   // 0x83
 #define INST_BULK_READ      (146)   // 0x92
-
-//MySocket mySocket;
-
-class chat_client
-{
-public:
-    chat_client(boost::asio::io_service& io_service,
-                tcp::resolver::iterator endpoint_iterator)
-    : io_service_(io_service),
-    socket_(io_service)
-    {
-        boost::asio::async_connect(socket_, endpoint_iterator,
-                                   boost::bind(&chat_client::handle_connect, this,
-                                               boost::asio::placeholders::error));
-    }
-    
-    void write(const chat_message& msg)
-    {
-        io_service_.post(boost::bind(&chat_client::do_write, this, msg));
-    }
-    
-    void close()
-    {
-        io_service_.post(boost::bind(&chat_client::do_close, this));
-    }
-    
-private:
-    
-    void handle_connect(const boost::system::error_code& error)
-    {
-        if (!error)
-        {
-            boost::asio::async_read(socket_,
-                                    boost::asio::buffer(read_msg_.data(), chat_message::header_length),
-                                    boost::bind(&chat_client::handle_read_header, this,
-                                                boost::asio::placeholders::error));
-        }
-    }
-    
-    void handle_read_header(const boost::system::error_code& error)
-    {
-        if (!error && read_msg_.decode_header())
-        {
-            boost::asio::async_read(socket_,
-                                    boost::asio::buffer(read_msg_.body(), read_msg_.body_length()),
-                                    boost::bind(&chat_client::handle_read_body, this,
-                                                boost::asio::placeholders::error));
-        }
-        else
-        {
-            do_close();
-        }
-    }
-    
-    void handle_read_body(const boost::system::error_code& error)
-    {
-        if (!error)
-        {
-            std::cout.write(read_msg_.body(), read_msg_.body_length());
-            std::cout << "\n";
-            boost::asio::async_read(socket_,
-                                    boost::asio::buffer(read_msg_.data(), chat_message::header_length),
-                                    boost::bind(&chat_client::handle_read_header, this,
-                                                boost::asio::placeholders::error));
-        }
-        else
-        {
-            do_close();
-        }
-    }
-    
-    void do_write(chat_message msg)
-    {
-        bool write_in_progress = !write_msgs_.empty();
-        write_msgs_.push_back(msg);
-        if (!write_in_progress)
-        {
-            boost::asio::async_write(socket_,
-                                     boost::asio::buffer(write_msgs_.front().data(),
-                                                         write_msgs_.front().length()),
-                                     boost::bind(&chat_client::handle_write, this,
-                                                 boost::asio::placeholders::error));
-        }
-    }
-    
-    void handle_write(const boost::system::error_code& error)
-    {
-        if (!error)
-        {
-            write_msgs_.pop_front();
-            if (!write_msgs_.empty())
-            {
-                boost::asio::async_write(socket_,
-                                         boost::asio::buffer(write_msgs_.front().data(),
-                                                             write_msgs_.front().length()),
-                                         boost::bind(&chat_client::handle_write, this,
-                                                     boost::asio::placeholders::error));
-            }
-        }
-        else
-        {
-            do_close();
-        }
-    }
-    
-    void do_close()
-    {
-        socket_.close();
-    }
-    
-private:
-    boost::asio::io_service& io_service_;
-    tcp::socket socket_;
-    chat_message read_msg_;
-    chat_message_queue write_msgs_;
-};
 
 
 
@@ -246,8 +123,22 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
     
 }
 
-ArbotixPro::~ArbotixPro()
-{
+ArbotixPro::~ArbotixPro(){
+    
+    // BOOST START
+    try{
+        tcp::iostream s("127.0.0.1", "8243");
+        if (!s){
+            std::cout << "Unable to connect: " << s.error().message() << std::endl;
+        }
+
+        s << "END";
+    }catch (std::exception& e){
+        std::cout << "Exception: " << e.what() << std::endl;
+    }
+
+    // BOOST END
+
 	Disconnect();
 	exit(0);
 }

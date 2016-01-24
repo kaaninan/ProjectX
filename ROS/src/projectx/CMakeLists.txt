@@ -65,19 +65,24 @@ include_directories(
 #   src/${PROJECT_NAME}/projectx.cpp
 # )
 
-add_executable(chat_server src/chat_server.cpp)
-target_link_libraries(chat_server ${catkin_LIBRARIES})
-add_dependencies(chat_server chat_server_generate_messages_cpp)
+
+
+add_executable(motor_boost_client src/motor_boost_client.cpp)
+target_link_libraries(motor_boost_client ${catkin_LIBRARIES})
+add_dependencies(motor_boost_client projectx_gencpp)
+
+add_executable(motor_boost_server src/motor_boost_server.cpp)
+target_link_libraries(motor_boost_server ${catkin_LIBRARIES})
+add_dependencies(motor_boost_server projectx_gencpp)
+
+
+
 
 add_executable(arduino_sicaklik src/arduino_sicaklik.cpp)
 target_link_libraries(arduino_sicaklik ${catkin_LIBRARIES})
-add_dependencies(arduino_sicaklik arduino_sicaklik_generate_messages_cpp)
+add_dependencies(arduino_sicaklik projectx_gencpp)
 
 
 add_executable(service_client src/service_client.cpp)
 target_link_libraries(service_client ${catkin_LIBRARIES})
-add_dependencies(service_client beginner_tutorials_gencpp)
-
-add_executable(motorSubscriber src/motorSubscriber.cpp)
-target_link_libraries(motorSubscriber ${catkin_LIBRARIES})
-add_dependencies(motorSubscriber beginner_tutorials_gencpp)
+add_dependencies(service_client projectx_gencpp)

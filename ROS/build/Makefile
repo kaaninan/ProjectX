@@ -891,30 +891,30 @@ arduino_sicaklik/fast:
 .PHONY : arduino_sicaklik/fast
 
 #=============================================================================
-# Target rules for targets named chat_server
+# Target rules for targets named motor_boost_client
 
 # Build rule for target.
-chat_server: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 chat_server
-.PHONY : chat_server
+motor_boost_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 motor_boost_client
+.PHONY : motor_boost_client
 
 # fast build rule for target.
-chat_server/fast:
-	$(MAKE) -f projectx/CMakeFiles/chat_server.dir/build.make projectx/CMakeFiles/chat_server.dir/build
-.PHONY : chat_server/fast
+motor_boost_client/fast:
+	$(MAKE) -f projectx/CMakeFiles/motor_boost_client.dir/build.make projectx/CMakeFiles/motor_boost_client.dir/build
+.PHONY : motor_boost_client/fast
 
 #=============================================================================
-# Target rules for targets named motorSubscriber
+# Target rules for targets named motor_boost_server
 
 # Build rule for target.
-motorSubscriber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 motorSubscriber
-.PHONY : motorSubscriber
+motor_boost_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 motor_boost_server
+.PHONY : motor_boost_server
 
 # fast build rule for target.
-motorSubscriber/fast:
-	$(MAKE) -f projectx/CMakeFiles/motorSubscriber.dir/build.make projectx/CMakeFiles/motorSubscriber.dir/build
-.PHONY : motorSubscriber/fast
+motor_boost_server/fast:
+	$(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/build
+.PHONY : motor_boost_server/fast
 
 #=============================================================================
 # Target rules for targets named projectx_gencpp
@@ -1272,8 +1272,8 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"
 	@echo "... arduino_sicaklik"
-	@echo "... chat_server"
-	@echo "... motorSubscriber"
+	@echo "... motor_boost_client"
+	@echo "... motor_boost_server"
 	@echo "... projectx_gencpp"
 	@echo "... projectx_generate_messages"
 	@echo "... projectx_generate_messages_cpp"

@@ -41,6 +41,7 @@ def publish_data(thread_name,delay):
                     motorData.voltage.append(int(motor_values[i].get("voltage")))
                     motorData.pos.append(int(motor_values[i].get("pos")))
                 except:
+                    tamam = 0
                     # NULL
 
             global pub

@@ -62,7 +62,7 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/Pin.h
-projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h
+projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h
 projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h
 
 /home/rock/ProjectX/ROS/devel/include/projectx/XYPad.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
@@ -200,13 +200,13 @@ projectx/CMakeFiles/projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/deve
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/Pin.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h: /home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h: /opt/ros/indigo/share/gencpp/cmake/../msg.h.template
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h: /opt/ros/indigo/share/gencpp/cmake/../srv.h.template
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/AddTwoInts.srv"
-	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating C++ code from projectx/MotorBoost.srv"
+	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/include/projectx -e /opt/ros/indigo/share/gencpp/cmake/..
 
 /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h: /opt/ros/indigo/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py
 /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h: /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv
@@ -234,7 +234,7 @@ projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/C
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/Pin.h
-projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h
+projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h
 projectx_generate_messages_cpp: /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h
 projectx_generate_messages_cpp: projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make
 .PHONY : projectx_generate_messages_cpp

@@ -5,27 +5,18 @@
 #include <iostream>
 #include <string>
 #include <boost/asio.hpp>
-#include "projectx/AddTwoInts.h"
+#include "projectx/MotorBoost.h"
 
 using boost::asio::ip::tcp;
 
 int motor_id = 0;
-
-bool add(projectx::AddTwoInts::Request  &req,
-         projectx::AddTwoInts::Response &res)
-{
-  res.sum = req.a + req.b;
-  ROS_INFO("request: x=%ld, y=%ld", (long int)req.a, (long int)req.b);
-  ROS_INFO("sending back response: [%ld]", (long int)res.sum);
-  return true;
-}
 
 
 int main(int argc, char **argv){
 
   ros::init(argc, argv, "motor_boost_server2");
   ros::NodeHandle n;
-  ros::ServiceClient client = n.serviceClient<projectx::AddTwoInts>("add_two_ints");
+  ros::ServiceClient client = n.serviceClient<projectx::MotorBoost>("server_motor_boost");
   ROS_INFO("Service Client Hazir");
 
   try{
@@ -66,26 +57,24 @@ int main(int argc, char **argv){
       }else{
           // YOLLANACAK VERI
         
+          std::string giden = "";
 
-      projectx::AddTwoInts srv;
-      srv.request.a = 2;
-      srv.request.b = 0;
-      if (client.call(srv))
-      {
-        ROS_INFO("Sum: %ld", (long int)srv.response.sum);
-      }
-      else
-      {
-        ROS_ERROR("Failed to call service add_two_ints");
-        return 1;
-      }
+          projectx::MotorBoost srv;
+          srv.request.in = gelen;
+          if (client.call(srv)){
+            // ROS_INFO("Sum: %ld", (long int)srv.response.sum);
+            giden = srv.response.out;
+          }else{
+            ROS_ERROR("Failed to call service add_two_ints");
+            return 1;
+          }
 
   
           if(ok == 1){
             stream << "OK \n";
             ok = 0;
           }else {
-            stream << gelen;
+            stream << giden;
           }
           a = 1;
         }

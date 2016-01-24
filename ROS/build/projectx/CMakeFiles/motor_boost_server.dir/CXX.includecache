@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h
 ros/service_traits.h
 -
-projectx/AddTwoIntsRequest.h
+projectx/MotorBoostRequest.h
 -
-projectx/AddTwoIntsResponse.h
+projectx/MotorBoostResponse.h
 -
 
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoIntsRequest.h
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostRequest.h
 string
 -
 vector
@@ -30,7 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoIntsResponse.h
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostResponse.h
 string
 -
 vector
@@ -93,8 +93,8 @@ string
 -
 boost/asio.hpp
 -
-projectx/AddTwoInts.h
-/home/rock/ProjectX/ROS/src/projectx/src/projectx/AddTwoInts.h
+projectx/MotorBoost.h
+/home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorBoost.h
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

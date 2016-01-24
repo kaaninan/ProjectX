@@ -3,6 +3,7 @@ b320724af646853afd166bfad93f002f /home/rock/ProjectX/ROS/devel/include/projectx/
 4427052565b664671a14f8a2c155a3b2 /home/rock/ProjectX/ROS/devel/include/projectx/CommonProperties.h
 e06e39b98ddf24e709a0d90593b20a1d /home/rock/ProjectX/ROS/devel/include/projectx/Gyro.h
 4d09603dd6ad4a5a5f0a1d60ef34db5f /home/rock/ProjectX/ROS/devel/include/projectx/Label.h
+b74daf7ae65899585794226679af2490 /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h
 435009eaf51a24ebfb23ca43f32ac15b /home/rock/ProjectX/ROS/devel/include/projectx/MotorIn.h
 96491a7f3b1e442f1d1f95543c49617b /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 d1e4136224ef8cf45822179136d1972b /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
@@ -43,6 +44,7 @@ a6be4e32f734eeeab059077e645f7743 /home/rock/ProjectX/ROS/devel/lib/python2.7/dis
 48c870c45b51b3523358d807fd3495f7 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_XYPad.py
 2fac4012f2a3873337e359c6ccc651c9 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py
 7291f0ec59371174d1d28264b247b9df /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_AddTwoInts.py
+d8ebfeb860fa170930c1809149aca2c1 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py
 92db21f0f43dfce6283d9ff02cc7753a /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py
 2b821a513afa3490804b9746adf49d93 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py
 79a30f98d26ff2d6b6757725e8181bca /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py
@@ -74,6 +76,7 @@ f231e05e4716e5afc5b6202ebc21725d /home/rock/ProjectX/ROS/devel/share/common-lisp
 b37c6cbcefde30157aee5a6fa92a3046 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/TouchOSC_Common.lisp
 9dd21075da84098cfc24988229981d9f /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/XYPad.lisp
 61c263516c49e4c8857febd624c2275a /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/AddTwoInts.lisp
+b25b83feaa5b362910be79de29310efc /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp
 db9db6983fc54395f64c23068d464c62 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp
 f3fea3cc3b8f77bc30c87380e591a35c /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp
 1b3f3ddf586ae80bbd4a125afc29bccf /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/rosserial_arduino/msg/Adc.lisp
@@ -90,10 +93,10 @@ ef648c4949cfdbd27ffa3a2959df73b5 /home/rock/ProjectX/ROS/devel/share/common-lisp
 329b03dd7e961897f6bb3a811d4899c2 CMakeFiles/run_tests
 329b03dd7e961897f6bb3a811d4899c2 CMakeFiles/tests
 86f2e391d5dbdd75d1002df493e81fe5 pocketsphinx/CMakeFiles/_catkin_empty_exported_target
-3f41a9a20e399d6e190cacbe6de52e9c projectx/CMakeFiles/_projectx_generate_messages_check_deps_AddTwoInts
 142d7ca0b3a2d49373f7e71ded6a12d3 projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties
 7806c2a0eed5b34f7c3480d8fc763099 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro
 4502ea130e07c2f4a783d0fc3560e35a projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label
+54422dfb1c3603828f1f953705039b97 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost
 8600c71d3d577678cd1e25350fe74c5b projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn
 5f033141aa122aa281280cd4683565fa projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray
 c9383f484091af4b6559e779a470dd39 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut

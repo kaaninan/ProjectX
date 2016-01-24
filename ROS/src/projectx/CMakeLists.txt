@@ -15,7 +15,7 @@ add_service_files(
   FILES
   Pin.srv
   SensorTemp.srv
-  AddTwoInts.srv
+  MotorBoost.srv
 )
 
 add_message_files(

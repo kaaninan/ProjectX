@@ -30,6 +30,11 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" "std_msgs/Header:projectx/CommonProperties"
 )
 
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" ""
+)
+
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/MultiButton.msg" "std_msgs/Header:projectx/CommonProperties"
@@ -38,11 +43,6 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" "std_msgs/Header:projectx/CommonProperties"
-)
-
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" ""
 )
 
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
@@ -221,7 +221,7 @@ _generate_srv_cpp(projectx
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
 )
 _generate_srv_cpp(projectx
-  "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv"
+  "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
@@ -251,11 +251,11 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Senso
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
@@ -398,7 +398,7 @@ _generate_srv_lisp(projectx
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
 )
 _generate_srv_lisp(projectx
-  "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv"
+  "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
@@ -428,11 +428,11 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Senso
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
@@ -575,7 +575,7 @@ _generate_srv_py(projectx
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
 )
 _generate_srv_py(projectx
-  "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv"
+  "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
@@ -605,11 +605,11 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Senso
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/AddTwoInts.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})

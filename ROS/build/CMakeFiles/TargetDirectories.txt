@@ -36,7 +36,6 @@
 /home/rock/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/float64_test.dir
 /home/rock/ProjectX/ROS/build/gtest/CMakeFiles/gtest.dir
 /home/rock/ProjectX/ROS/build/gtest/CMakeFiles/gtest_main.dir
-/home/rock/ProjectX/ROS/build/projectx/CMakeFiles/motor_boost_client.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/motor_boost_server.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/projectx_gencpp.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/projectx_generate_messages.dir

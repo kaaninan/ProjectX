@@ -15,7 +15,7 @@ def dogrula():
                 don = 1 # Bos Durmasin Diye
         # Sorun Yok
         except:
-            rospy.logerr("motorSubscriber.py -> Arduino'dan gelen motor verileri eksik! (topic: arduinoMotorIncoming) - Motor ID: [%s]",str(i))
+            rospy.loginfo("motorSubscriber.py -> Arduino'dan gelen motor verileri eksik! (topic: arduinoMotorIncoming) - Motor ID: [%s]",str(i))
             return 0
     rospy.loginfo("motorSubscriber.py -> SERVO MOTOR OK")
     return 1
@@ -129,6 +129,8 @@ def listener():
     global rate
     pub = rospy.Publisher('motorIncomingData', MotorInArray, queue_size=10)
     rate = rospy.Rate(100)
+
+    rospy.loginfo("READY: Motor Incoming Server")
     
     rospy.spin()
 

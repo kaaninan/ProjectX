@@ -13,17 +13,17 @@
 #include <cstdlib>
 #include <deque>
 #include <iostream>
+ #include <string>
 #include "boost/bind.hpp"
 #include "boost/asio.hpp"
 #include "boost/thread/thread.hpp"
-#include "chat_message.hpp"
 
 using namespace Robot;
 
 using boost::asio::ip::tcp;
 
-typedef std::deque<chat_message> chat_message_queue;
 
+#define PORT_NO             "8302"
 
 #define ID					(2)
 #define LENGTH				(3)
@@ -84,15 +84,12 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
     
     try{
         while (devam) {
-            tcp::iostream s("127.0.0.1", "8302");
-            if (!s){
-                std::cout << "Unable to connect: " << s.error().message() << std::endl;
-            }
+            tcp::iostream s("127.0.0.1", PORT_NO);
+            if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl;}
             
             else if( a == 0){
                 
                 // GELEN
-                
                 std::string line;
                 std::getline(s, line);
                 
@@ -107,16 +104,12 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
             }
             
             else{
-                
                 // GIDEN
-                
                 s << "STARTING";
                 a = 0;
             }
         }
-    }catch (std::exception& e){
-        std::cout << "Exception: " << e.what() << std::endl;
-    }
+    }catch (std::exception& e){ std::cout << "Exception: " << e.what() << std::endl; }
 
     // BOOST END
     
@@ -127,7 +120,7 @@ ArbotixPro::~ArbotixPro(){
     
     // BOOST START
     try{
-        tcp::iostream s("127.0.0.1", "8302");
+        tcp::iostream s("127.0.0.1", PORT_NO);
         if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
         s << "END";
     }catch (std::exception& e){
@@ -203,20 +196,17 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
     if (txpacket[ID] != ID_BROADCAST){
         
         if (txpacket[PARAMETER] == AXDXL::P_PRESENT_POSITION_L) {
-            // READ - WORD
             
+            // READ - WORD
 
+            // BOOST START
             int devam = 1;
             int a = 1;
-
             try{
                 while (devam) {
-                    tcp::iostream s("127.0.0.1", "8302");
+                    tcp::iostream s("127.0.0.1", PORT_NO);
+                    if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
                     
-                    if (!s){
-                        std::cout << "Unable to connect: " << s.error().message() << std::endl;
-                    }
-
                     else if(a == 0){
                         
                         // GELEN
@@ -233,10 +223,16 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             
                             std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
                             
-                            int value_motor = 599;
+                            // Donustur
+                            std::ostringstream oss2;
+                            oss2 << parse[14] << parse[15] << parse[16];
+                            std::string temp2 = oss2.str();
+                            char id_temp[4];
+                            strcpy(id_temp, temp2.c_str());
+                            int id = atoi(id_temp);
                             
-                            rxpacket[PARAMETER] = GetLowByte(value_motor);
-                            rxpacket[PARAMETER + 1] = GetHighByte(value_motor);
+                            rxpacket[PARAMETER] = GetLowByte(id);
+                            rxpacket[PARAMETER + 1] = GetHighByte(id);
                             
                             break;
                         }
@@ -253,31 +249,191 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                     }
                 }
             }
-            catch (std::exception& e){
-                std::cout << "Exception: " << e.what() << std::endl;
-            }
-
+            catch (std::exception& e){std::cout << "Exception: " << e.what() << std::endl;}
+            // BOOST END
             
         }
-        
+
         else if (txpacket[PARAMETER] == AXDXL::P_TORQUE_LIMIT_L) {
             // WRITE - WORD
         }
         
         else if (txpacket[PARAMETER] == AXDXL::P_GOAL_POSITION_L) {
-            // READ - WORD
-            int value_motor = 611;
+
+            if (txpacket[INSTRUCTION] == INST_WRITE) {
+                // WRITE - WORD
+
+                // BOOST START
+                int devam = 1;
+                int a = 1;
+                try{
+                    while (devam) {
+                        tcp::iostream s("127.0.0.1", PORT_NO);
+                        if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
+                        
+                        else if(a == 0){
+                            
+                            // GELEN
+                            std::string line;
+                            std::getline(s, line);
+                            
+                            std::cout << line << std::endl;
+                            
+                            char parse[1024];
+                            strcpy(parse, line.c_str());
+                            
+                            if (parse[0] == 'C' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' &&
+                                parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'W') {
                                 
-            rxpacket[PARAMETER] = GetLowByte(value_motor);
-            rxpacket[PARAMETER + 1] = GetHighByte(value_motor);
+                                break;
+                            }
+                            
+                            devam = 0;
+                            a = 1;
+                            
+                        }else{
+                            
+                            // GIDEN
+
+                            // Basamak icin ayar cek
+                            int goal_pos = MakeWord(txpacket[PARAMETER + 1], txpacket[PARAMETER + 2]), sart = 0;
+                            if(goal_pos < 10){ sart = 1; }
+                            else if(goal_pos < 100){ sart = 2; }
+                            else { sart = 3; }
+
+
+                            if(txpacket[ID] < 10){
+                                if(sart == 1){
+                                    s << "S" << "GOALPW0" << (int)txpacket[ID] << "000" << goal_pos << "0000";
+                                }else if(sart == 2){
+                                    s << "S" << "GOALPW0" << (int)txpacket[ID] << "00" << goal_pos << "0000";
+                                }else if(sart == 3){
+                                    s << "S" << "GOALPW0" << (int)txpacket[ID] << "0" << goal_pos << "0000";
+                                }
+                            }
+                            else{
+                                if(sart == 1){
+                                    s << "S" << "GOALPW" << (int)txpacket[ID] << "000" << goal_pos << "0000";
+                                }else if(sart == 2){
+                                    s << "S" << "GOALPW" << (int)txpacket[ID] << "00" << goal_pos << "0000";
+                                }else if(sart == 3){
+                                    s << "S" << "GOALPW" << (int)txpacket[ID] << "0" << goal_pos << "0000";
+                                }
+                            }
+                            a = 0;
+                        }
+                    }
+                }catch (std::exception& e){ std::cout << "Exception: " << e.what() << std::endl; }
+                // BOOST END
+
+
+            }else{
+                // READ - WORD
+
+                // BOOST START
+                int devam = 1;
+                int a = 1;
+                try{
+                    while (devam) {
+                        tcp::iostream s("127.0.0.1", PORT_NO);
+                        if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
+                        
+                        else if(a == 0){
+                            
+                            // GELEN
+                            std::string line;
+                            std::getline(s, line);
+                            
+                            std::cout << line << std::endl;
+                            
+                            char parse[1024];
+                            strcpy(parse, line.c_str());
+                            
+                            if (parse[0] == 'C' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' &&
+                                parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'S') {
+                                
+                                std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
+                                
+                                // Donustur
+                                std::ostringstream oss2;
+                                oss2 << parse[14] << parse[15] << parse[16];
+                                std::string temp2 = oss2.str();
+                                char id_temp[4];
+                                strcpy(id_temp, temp2.c_str());
+                                int id = atoi(id_temp);
+                                
+                                rxpacket[PARAMETER] = GetLowByte(id);
+                                rxpacket[PARAMETER + 1] = GetHighByte(id);
+                                
+                                break;
+                            }
+                            
+                            devam = 0;
+                            a = 1;
+                            
+                        }else{
+                            
+                            // GIDEN
+                            if(txpacket[ID] < 10) s << "S" << "GOALPS0" << (int)txpacket[ID] << "0000" << "0000";
+                            else{ s << "S" << "GOALPS" << (int)txpacket[ID] << "0000" << "0000"; }
+                            a = 0;
+                        }
+                    }
+                }catch (std::exception& e){ std::cout << "Exception: " << e.what() << std::endl; }
+                // BOOST END
+            }
         }
         
+
         else if (txpacket[PARAMETER] == AXDXL::P_TORQUE_ENABLE) {
+
             if (txpacket[INSTRUCTION] == INST_WRITE) {
                 // WRITE - BYTE
+
+                // BOOST START
+                int devam = 1;
+                int a = 1;
+                try{
+                    while (devam) {
+                        tcp::iostream s("127.0.0.1", PORT_NO);
+                        if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
+                        
+                        else if(a == 0){
+                            
+                            // GELEN
+                            std::string line;
+                            std::getline(s, line);
+                            
+                            std::cout << line << std::endl;
+                            
+                            char parse[1024];
+                            strcpy(parse, line.c_str());
+                            
+                            if (parse[0] == 'C' && parse[1] == 'T' && parse[2] == 'O' && parse[3] == 'R' &&
+                                parse[4] == 'Q' && parse[5] == 'E' && parse[6] == 'W') {
+                                
+                                break;
+                            }
+                            
+                            devam = 0;
+                            a = 1;
+                            
+                        }else{
+                            
+                            // GIDEN
+                            if(txpacket[ID] < 10) s << "S" << "TORQEW0" << (int)txpacket[ID] << "000" << (int)txpacket[PARAMETER+1] << "0000";
+                            else{ s << "S" << "TORQEW" << (int)txpacket[ID] << "000" << (int)txpacket[PARAMETER+1] << "0000"; }
+                            a = 0;
+                        }
+                    }
+                }
+                catch (std::exception& e){
+                    std::cout << "Exception: " << e.what() << std::endl;
+                }
+                // BOOST END
+
             }else{
                 // READ - BYTE
-                
                 
                 // BOOST START
                 
@@ -286,7 +442,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 
                 try{
                     while (devam) {
-                        tcp::iostream s("127.0.0.1", "8302");
+                        tcp::iostream s("127.0.0.1", PORT_NO);
                         if (!s){
                             std::cout << "Unable to connect: " << s.error().message() << std::endl;
                         }
@@ -312,11 +468,11 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                                     
                                     if(parse[16] == '0'){
                                         std::cout << "NO TORQUE" << std::endl;
-                                        rxpacket[PARAMETER] = 0x1;
+                                        rxpacket[PARAMETER] = 0x0;
                                     }
                                     else if(parse[16] == '1'){
                                         std::cout << "OK TORQUE" << std::endl;
-                                        rxpacket[PARAMETER] = 0x0;
+                                        rxpacket[PARAMETER] = 0x1;
                                     }
                                     
                                     break;
@@ -348,7 +504,6 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 }
                 
                 // BOOST END
-                rxpacket[PARAMETER] = 0x1;
                 
             }
         }

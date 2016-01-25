@@ -25,6 +25,16 @@ int get_motor_id(char* parse){
     return id;
 }
 
+// Parse ile hedeflenen deger bulunuyor
+int get_goal(char* parse){
+    std::ostringstream oss2;
+    oss2 << parse[9] << parse[10] << parse[11] << parse[12];
+    std::string temp2 = oss2.str();
+    char id_temp[4];
+    strcpy(id_temp, temp2.c_str());
+    int id = atoi(id_temp);
+    return id;
+}
 
 // Gelen Data Parse edilerek turu bulunuyor
 std::string karsilastir(char* parse){
@@ -35,6 +45,15 @@ std::string karsilastir(char* parse){
   
   }else if(parse[0] == 'S' && parse[1] == 'P' && parse[2] == 'R' && parse[3] == 'E' && parse[4] == 'P' && parse[5] == 'O' && parse[6] == 'S'){
     dondur = "read_present_pos";
+  
+  }else if(parse[0] == 'S' && parse[1] == 'T' && parse[2] == 'O' && parse[3] == 'R' && parse[4] == 'Q' && parse[5] == 'E' && parse[6] == 'W') {
+    dondur = "write_torque";
+  
+  }else if(parse[0] == 'S' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' && parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'S') {
+    dondur = "read_goal_pos";
+
+  }else if(parse[0] == 'S' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' && parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'W') {
+    dondur = "write_goal_pos";
   }
 
   return dondur;
@@ -66,7 +85,7 @@ int main(int argc, char **argv){
   ros::init(argc, argv, node_name);
   ros::NodeHandle n;
   client = n.serviceClient<projectx::MotorBoost>("server_motor_boost");
-  ROS_INFO("Service Client Hazir");
+  ROS_INFO("READY: Motor Boost Server ");
 
   try{
     boost::asio::io_service io_service;
@@ -140,6 +159,53 @@ int main(int argc, char **argv){
                 // LOG
                 std::cout << "Reading Present Position: " << motor_id << " Return: " << dondur << std::endl;
                 
+            }else if (veri_turu == "read_goal_pos") {
+
+                // Verileri Al
+                int motor_id = get_motor_id(parse);
+                std::string cevap = motor_service(veri_turu, motor_id, 0);
+                
+                // Cevap Hazirla
+                std::ostringstream oss;
+                if(motor_id < 10){ oss << "C" << "GOALPS0" << motor_id << "0000" << cevap; }
+                else{ oss << "C" << "GOALPS" << motor_id << "0000" << cevap; }
+                dondur = oss.str();
+
+                // LOG
+                std::cout << "Reading Goal Position: " << motor_id << " Return: " << dondur << std::endl;
+
+            }else if (veri_turu == "write_goal_pos") {
+
+                // Verileri Al
+                int motor_id = get_motor_id(parse);
+                int goal = get_goal(parse);
+                std::string cevap = motor_service(veri_turu, motor_id, goal);
+                
+                // Cevap Hazirla
+                std::ostringstream oss;
+                if(motor_id < 10){ oss << "C" << "GOALPW0" << motor_id << "0000" << cevap; }
+                else{ oss << "C" << "GOALPW" << motor_id << "0000" << cevap; }
+                dondur = oss.str();
+
+                // LOG
+                std::cout << "Write Goal Position: " << motor_id << " Return: " << dondur << std::endl;
+                
+            }else if (veri_turu == "write_torque") {
+
+                // Verileri Al
+                int motor_id = get_motor_id(parse);
+                int goal = get_goal(parse);
+                std::string cevap = motor_service(veri_turu, motor_id, goal);
+                
+                // Cevap Hazirla
+                std::ostringstream oss;
+                if(motor_id < 10){ oss << "C" << "TORQEW0" << motor_id << "0000" << cevap; }
+                else{ oss << "C" << "TORQEW" << motor_id << "0000" << cevap; }
+                dondur = oss.str();
+
+                // LOG
+                std::cout << "Write Torque Status: " << motor_id << " Return: " << dondur << std::endl;
+
             }
           }
           a = 0;

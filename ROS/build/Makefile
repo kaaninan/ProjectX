@@ -891,19 +891,6 @@ arduino_sicaklik/fast:
 .PHONY : arduino_sicaklik/fast
 
 #=============================================================================
-# Target rules for targets named motor_boost_client
-
-# Build rule for target.
-motor_boost_client: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 motor_boost_client
-.PHONY : motor_boost_client
-
-# fast build rule for target.
-motor_boost_client/fast:
-	$(MAKE) -f projectx/CMakeFiles/motor_boost_client.dir/build.make projectx/CMakeFiles/motor_boost_client.dir/build
-.PHONY : motor_boost_client/fast
-
-#=============================================================================
 # Target rules for targets named motor_boost_server
 
 # Build rule for target.
@@ -1272,7 +1259,6 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"
 	@echo "... arduino_sicaklik"
-	@echo "... motor_boost_client"
 	@echo "... motor_boost_server"
 	@echo "... projectx_gencpp"
 	@echo "... projectx_generate_messages"

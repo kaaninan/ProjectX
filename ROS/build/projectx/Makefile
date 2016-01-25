@@ -430,20 +430,6 @@ arduino_sicaklik/fast:
 .PHONY : arduino_sicaklik/fast
 
 # Convenience name for target.
-projectx/CMakeFiles/motor_boost_client.dir/rule:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motor_boost_client.dir/rule
-.PHONY : projectx/CMakeFiles/motor_boost_client.dir/rule
-
-# Convenience name for target.
-motor_boost_client: projectx/CMakeFiles/motor_boost_client.dir/rule
-.PHONY : motor_boost_client
-
-# fast build rule for target.
-motor_boost_client/fast:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_client.dir/build.make projectx/CMakeFiles/motor_boost_client.dir/build
-.PHONY : motor_boost_client/fast
-
-# Convenience name for target.
 projectx/CMakeFiles/motor_boost_server.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motor_boost_server.dir/rule
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/rule
@@ -719,30 +705,6 @@ src/arduino_sicaklik.cpp.s:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.s
 .PHONY : src/arduino_sicaklik.cpp.s
 
-src/motor_boost_client.o: src/motor_boost_client.cpp.o
-.PHONY : src/motor_boost_client.o
-
-# target to build an object file
-src/motor_boost_client.cpp.o:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_client.dir/build.make projectx/CMakeFiles/motor_boost_client.dir/src/motor_boost_client.cpp.o
-.PHONY : src/motor_boost_client.cpp.o
-
-src/motor_boost_client.i: src/motor_boost_client.cpp.i
-.PHONY : src/motor_boost_client.i
-
-# target to preprocess a source file
-src/motor_boost_client.cpp.i:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_client.dir/build.make projectx/CMakeFiles/motor_boost_client.dir/src/motor_boost_client.cpp.i
-.PHONY : src/motor_boost_client.cpp.i
-
-src/motor_boost_client.s: src/motor_boost_client.cpp.s
-.PHONY : src/motor_boost_client.s
-
-# target to generate assembly for a file
-src/motor_boost_client.cpp.s:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_client.dir/build.make projectx/CMakeFiles/motor_boost_client.dir/src/motor_boost_client.cpp.s
-.PHONY : src/motor_boost_client.cpp.s
-
 src/motor_boost_server.o: src/motor_boost_server.cpp.o
 .PHONY : src/motor_boost_server.o
 
@@ -822,7 +784,6 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... motor_boost_client"
 	@echo "... motor_boost_server"
 	@echo "... projectx_gencpp"
 	@echo "... projectx_generate_messages"
@@ -846,9 +807,6 @@ help:
 	@echo "... src/arduino_sicaklik.o"
 	@echo "... src/arduino_sicaklik.i"
 	@echo "... src/arduino_sicaklik.s"
-	@echo "... src/motor_boost_client.o"
-	@echo "... src/motor_boost_client.i"
-	@echo "... src/motor_boost_client.s"
 	@echo "... src/motor_boost_server.o"
 	@echo "... src/motor_boost_server.i"
 	@echo "... src/motor_boost_server.s"

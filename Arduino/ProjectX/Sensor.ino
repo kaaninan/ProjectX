@@ -1,8 +1,8 @@
 // PIN
-OneWire  temp_pin(22);
-SharpIR sharp(3, 25, 93, 1080);
+OneWire temp_pin(22);
+SharpIR sharp(A1, 25, 93, 1080);
 int ldr_pin = 0;
-int gaz_pin = 1;
+int gaz_pin = 2;
 
 
 // VALUE (with Default Values)

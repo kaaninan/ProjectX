@@ -46,11 +46,31 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+
 /home/rock/ProjectX/ROS/src/projectx/src/service_server.cpp
 ros/ros.h
 /home/rock/ProjectX/ROS/src/projectx/src/ros/ros.h
 projectx/MotorBoost.h
 /home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorBoost.h
+projectx/MotorInArray.h
+/home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorInArray.h
+typeinfo
+-
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

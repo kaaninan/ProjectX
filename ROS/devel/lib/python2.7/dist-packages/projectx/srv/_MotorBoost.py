@@ -7,13 +7,13 @@ import struct
 
 
 class MotorBoostRequest(genpy.Message):
-  _md5sum = "2718218ecd3037e7050a0e8416c50c33"
+  _md5sum = "aa8dbb3b5f7aa1f6837fee066be612c8"
   _type = "projectx/MotorBoostRequest"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """string in
+  _full_text = """string in_data
 
 """
-  __slots__ = ['in_']
+  __slots__ = ['in_data']
   _slot_types = ['string']
 
   def __init__(self, *args, **kwds):
@@ -24,7 +24,7 @@ class MotorBoostRequest(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       in_
+       in_data
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -33,10 +33,10 @@ class MotorBoostRequest(genpy.Message):
     if args or kwds:
       super(MotorBoostRequest, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.in_ is None:
-        self.in_ = ''
+      if self.in_data is None:
+        self.in_data = ''
     else:
-      self.in_ = ''
+      self.in_data = ''
 
   def _get_types(self):
     """
@@ -50,7 +50,7 @@ class MotorBoostRequest(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.in_
+      _x = self.in_data
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -75,9 +75,9 @@ class MotorBoostRequest(genpy.Message):
       start = end
       end += length
       if python3:
-        self.in_ = str[start:end].decode('utf-8')
+        self.in_data = str[start:end].decode('utf-8')
       else:
-        self.in_ = str[start:end]
+        self.in_data = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -90,7 +90,7 @@ class MotorBoostRequest(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.in_
+      _x = self.in_data
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -116,9 +116,9 @@ class MotorBoostRequest(genpy.Message):
       start = end
       end += length
       if python3:
-        self.in_ = str[start:end].decode('utf-8')
+        self.in_data = str[start:end].decode('utf-8')
       else:
-        self.in_ = str[start:end]
+        self.in_data = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -133,13 +133,13 @@ import struct
 
 
 class MotorBoostResponse(genpy.Message):
-  _md5sum = "da0977a72deba269ef1a5e91941513be"
+  _md5sum = "616a79ae09e0166195481d0fb8b7b20c"
   _type = "projectx/MotorBoostResponse"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """string out
+  _full_text = """string out_data
 
 """
-  __slots__ = ['out']
+  __slots__ = ['out_data']
   _slot_types = ['string']
 
   def __init__(self, *args, **kwds):
@@ -150,7 +150,7 @@ class MotorBoostResponse(genpy.Message):
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       out
+       out_data
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -159,10 +159,10 @@ class MotorBoostResponse(genpy.Message):
     if args or kwds:
       super(MotorBoostResponse, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.out is None:
-        self.out = ''
+      if self.out_data is None:
+        self.out_data = ''
     else:
-      self.out = ''
+      self.out_data = ''
 
   def _get_types(self):
     """
@@ -176,7 +176,7 @@ class MotorBoostResponse(genpy.Message):
     :param buff: buffer, ``StringIO``
     """
     try:
-      _x = self.out
+      _x = self.out_data
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -201,9 +201,9 @@ class MotorBoostResponse(genpy.Message):
       start = end
       end += length
       if python3:
-        self.out = str[start:end].decode('utf-8')
+        self.out_data = str[start:end].decode('utf-8')
       else:
-        self.out = str[start:end]
+        self.out_data = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -216,7 +216,7 @@ class MotorBoostResponse(genpy.Message):
     :param numpy: numpy python module
     """
     try:
-      _x = self.out
+      _x = self.out_data
       length = len(_x)
       if python3 or type(_x) == unicode:
         _x = _x.encode('utf-8')
@@ -242,9 +242,9 @@ class MotorBoostResponse(genpy.Message):
       start = end
       end += length
       if python3:
-        self.out = str[start:end].decode('utf-8')
+        self.out_data = str[start:end].decode('utf-8')
       else:
-        self.out = str[start:end]
+        self.out_data = str[start:end]
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -252,6 +252,6 @@ class MotorBoostResponse(genpy.Message):
 _struct_I = genpy.struct_I
 class MotorBoost(object):
   _type          = 'projectx/MotorBoost'
-  _md5sum = 'e21fb7853ad73d6d988d6371d4fed1e2'
+  _md5sum = '22188d050a80d588351715cedf3044c4'
   _request_class  = MotorBoostRequest
   _response_class = MotorBoostResponse

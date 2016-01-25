@@ -4,6 +4,7 @@
 projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h
 projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostRequest.h
 projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostResponse.h
+projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /home/rock/ProjectX/ROS/src/projectx/src/service_server.cpp
 projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 projectx/CMakeFiles/service_server.dir/src/service_server.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h

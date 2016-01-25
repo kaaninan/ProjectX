@@ -24,16 +24,16 @@ struct MotorBoostResponse_
   typedef MotorBoostResponse_<ContainerAllocator> Type;
 
   MotorBoostResponse_()
-    : out()  {
+    : out_data()  {
     }
   MotorBoostResponse_(const ContainerAllocator& _alloc)
-    : out(_alloc)  {
+    : out_data(_alloc)  {
     }
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _out_type;
-  _out_type out;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _out_data_type;
+  _out_data_type out_data;
 
 
 
@@ -112,12 +112,12 @@ struct MD5Sum< ::projectx::MotorBoostResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "da0977a72deba269ef1a5e91941513be";
+    return "616a79ae09e0166195481d0fb8b7b20c";
   }
 
   static const char* value(const ::projectx::MotorBoostResponse_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xda0977a72deba269ULL;
-  static const uint64_t static_value2 = 0xef1a5e91941513beULL;
+  static const uint64_t static_value1 = 0x616a79ae09e01661ULL;
+  static const uint64_t static_value2 = 0x95481d0fb8b7b20cULL;
 };
 
 template<class ContainerAllocator>
@@ -136,7 +136,7 @@ struct Definition< ::projectx::MotorBoostResponse_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string out\n\
+    return "string out_data\n\
 ";
   }
 
@@ -155,7 +155,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.out);
+      stream.next(m.out_data);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -174,8 +174,8 @@ struct Printer< ::projectx::MotorBoostResponse_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::projectx::MotorBoostResponse_<ContainerAllocator>& v)
   {
-    s << indent << "out: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.out);
+    s << indent << "out_data: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.out_data);
   }
 };
 

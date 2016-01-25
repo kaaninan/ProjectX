@@ -220,6 +220,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                     if (!s){
                         std::cout << "Unable to connect: " << s.error().message() << std::endl;
                     }
+
                     else if(a == 0){
                         
                         // GELEN
@@ -228,35 +229,23 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                         
                         std::cout << line << std::endl;
                         
-                        if (line == "HATA ") {
-                            std::cout << "HATA" << std::endl;
+                        char parse[1024];
+                        strcpy(parse, line.c_str());
+                        
+                        if (parse[0] == 'C' && parse[1] == 'P' && parse[2] == 'R' && parse[3] == 'E' &&
+                            parse[4] == 'P' && parse[5] == 'O' && parse[6] == 'S') {
+                            
+                            std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
+                            
+                            int value_motor = 599;
+                            
+                            rxpacket[PARAMETER] = GetLowByte(value_motor);
+                            rxpacket[PARAMETER + 1] = GetHighByte(value_motor);
+                            
                             break;
-                            
-                        }else{
-                            std::cout << line << std::endl;
-                            
-                            char parse[1024];
-                            strcpy(parse, line.c_str());
-                            
-                            if (parse[0] == 'C' && parse[1] == 'P' && parse[2] == 'R' && parse[3] == 'E' &&
-                                parse[4] == 'P' && parse[5] == 'O' && parse[6] == 'S') {
-                                
-                                std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
-                                
-                                int value_motor = 599;
-                                
-                                rxpacket[PARAMETER] = GetLowByte(value_motor);
-                                rxpacket[PARAMETER + 1] = GetHighByte(value_motor);
-                                
-                                break;
-                                
-                            }
-                            
-                            devam = 0;
                         }
                         
-                        
-                        
+                        devam = 0;
                         a = 1;
                         
                     }else{
@@ -281,8 +270,10 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
         
         else if (txpacket[PARAMETER] == AXDXL::P_GOAL_POSITION_L) {
             // READ - WORD
-            rxpacket[PARAMETER] = 0x1;
-            rxpacket[PARAMETER + 1] = 0x3;
+            int value_motor = 611;
+                                
+            rxpacket[PARAMETER] = GetLowByte(value_motor);
+            rxpacket[PARAMETER + 1] = GetHighByte(value_motor);
         }
         
         else if (txpacket[PARAMETER] == AXDXL::P_TORQUE_ENABLE) {

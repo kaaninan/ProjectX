@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::projectx::MotorBoost > {
   static const char* value()
   {
-    return "e21fb7853ad73d6d988d6371d4fed1e2";
+    return "22188d050a80d588351715cedf3044c4";
   }
 
   static const char* value(const ::projectx::MotorBoost&) { return value(); }

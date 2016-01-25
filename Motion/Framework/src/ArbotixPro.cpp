@@ -128,15 +128,11 @@ ArbotixPro::~ArbotixPro(){
     // BOOST START
     try{
         tcp::iostream s("127.0.0.1", "8302");
-        if (!s){
-            std::cout << "Unable to connect: " << s.error().message() << std::endl;
-        }
-
+        if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
         s << "END";
     }catch (std::exception& e){
         std::cout << "Exception: " << e.what() << std::endl;
     }
-
     // BOOST END
 
 	Disconnect();
@@ -209,10 +205,10 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
         if (txpacket[PARAMETER] == AXDXL::P_PRESENT_POSITION_L) {
             // READ - WORD
             
+
             int devam = 1;
             int a = 1;
 
-            
             try{
                 while (devam) {
                     tcp::iostream s("127.0.0.1", "8302");

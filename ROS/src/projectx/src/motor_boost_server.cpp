@@ -13,6 +13,8 @@ std::string node_name = "node_motor_boost_server";
 
 ros::ServiceClient client;
 
+
+// Parse ile Motor ID bulunuyor
 int get_motor_id(char* parse){
     std::ostringstream oss2;
     oss2 << parse[7] << parse[8];
@@ -24,7 +26,7 @@ int get_motor_id(char* parse){
 }
 
 
-
+// Gelen Data Parse edilerek turu bulunuyor
 std::string karsilastir(char* parse){
   std::string dondur = "";
   
@@ -39,6 +41,7 @@ std::string karsilastir(char* parse){
 }
 
 
+// ROS Servisi ile Motorlardan bilgi aliniyor
 std::string motor_service(std::string veri_turu, int motor_id, int komut){
   projectx::MotorBoost srv;
   std::string cevap = "";
@@ -73,10 +76,9 @@ int main(int argc, char **argv){
     int a = 0, ok = 0;
 
     std::string gelen = ""; // Gelen Data
+    std::string dondur = ""; // Gidecek Data
     
     for(;;){
-
-      // MOTION - SERVER
 
       tcp::iostream stream;
       boost::system::error_code ec;
@@ -84,17 +86,20 @@ int main(int argc, char **argv){
       
       if (!ec){
         if(a == 1){
-          // GELEN VERI
+          
+          // GELEN YOLCU
+
           std::ostringstream oss;
           oss << stream.rdbuf();
           gelen = oss.str();
 
+          // Motion Programin Acilmasi Icin
           if ("STARTING" == gelen) {
             ok = 1;
             std::cout << "MOTION STARTING" << std::endl; // Info
 
+          // TODO: TEST1
           }else if ("END" == gelen) {
-
             exit(0);
 
           }else {
@@ -106,47 +111,50 @@ int main(int argc, char **argv){
 
             if (veri_turu == "read_torque") {
 
+                // Verileri Al
                 int motor_id = get_motor_id(parse);
+                std::string cevap = motor_service(veri_turu, motor_id, 0);
+                
+                // Cevap Hazirla
+                std::ostringstream oss;
+                if(motor_id < 10){ oss << "C" << "TORQER0" << motor_id << "0000" << cevap;
+                }else{ oss << "C" << "TORQER" << motor_id << "0000" << cevap; }
+                dondur = oss.str();
 
-                
-                std::cout << "Reading Torque Enable: " << motor_id << std::endl;
-                
+                // LOG
+                std::cout << "Reading Torque Status: " << motor_id << " Return: " << dondur << std::endl;
                 
                 
             }else if (veri_turu == "read_present_pos") {
-                
-                int motor_id = get_motor_id(parse);
-                
-                std::cout << "Reading Present Position: " << motor_id << std::endl;
 
+                // Verileri Al
+                int motor_id = get_motor_id(parse);
                 std::string cevap = motor_service(veri_turu, motor_id, 0);
-                    
-                std::ostringstream oss;
-                if(motor_id < 10){
-                    oss << "C" << "PREPOS0" << motor_id << "0000" << cevap;
-                }else{
-                    oss << "C" << "PREPOS" << motor_id << "0000" << cevap;
-                }
                 
-                std::string dondur = oss.str();
+                // Cevap Hazirla
+                std::ostringstream oss;
+                if(motor_id < 10){ oss << "C" << "PREPOS0" << motor_id << "0000" << cevap; }
+                else{ oss << "C" << "PREPOS" << motor_id << "0000" << cevap; }
+                dondur = oss.str();
+
+                // LOG
+                std::cout << "Reading Present Position: " << motor_id << " Return: " << dondur << std::endl;
                 
             }
-
-
-
           }
           a = 0;
-      }else{
-          // YOLLANACAK VERI
-        
-          std::string giden = "";
 
+        }else{
+          
+          // GIDEN YOLCU
   
           if(ok == 1){
             stream << "OK \n";
             ok = 0;
+
           }else {
-            stream << giden;
+            stream << dondur;
+            dondur = "";
           }
           a = 1;
         }

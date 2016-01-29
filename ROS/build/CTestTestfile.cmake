@@ -5,7 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 SUBDIRS(gtest)
-SUBDIRS(pocketsphinx)
 SUBDIRS(rosserial/rosserial)
 SUBDIRS(rosserial/rosserial_arduino)
 SUBDIRS(rosserial/rosserial_client)

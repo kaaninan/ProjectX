@@ -11,11 +11,15 @@ def handle_service(req):
 	motor_id = parseList[1]
 	komut = parseList[2]
 
+	print motor_data
+
 	if veri_turu == "read_present_pos":
-		return_data = motor_data.pos[int(motor_id)-1]
+		list_sira = int(motor_id)-1
+		return_data = motor_data.pos[list_sira]
 
 	elif veri_turu == "read_goal_pos":
-		return_data = motor_data.pos[int(motor_id)-1]
+		list_sira = int(motor_id)-1
+		return_data = motor_data.pos[list_sira]
 
 	elif veri_turu == "read_torque":
 		return_data = rospy.get_param("/motor_"+motor_id+"_torque", "0")
@@ -47,6 +51,8 @@ def handle_service(req):
 		data.rw = 0
 		data.action = 0
 
+		print "ID: "+str(motor_id)+" - POS: "+str(komut)
+
 		pubSingle.publish(data)
 		rate.sleep()
 		return_data = 0 # Geri Donen Veri Yok
@@ -65,7 +71,7 @@ def handle_service(req):
 	res = MotorBoostResponse()
 	res.out_data = str(son_return)
 
-	print "Motor ID: " + motor_id + " - Sorgu: " + veri_turu + " - Komut: " + str(komut) +" - Sonuc: " + str(son_return)
+	# print "Motor ID: " + motor_id + " - Sorgu: " + veri_turu + " - Komut: " + str(komut) +" - Sonuc: " + str(son_return)
 
 	return res
 
@@ -82,13 +88,13 @@ def start_server():
 
     global pubSingle, rate
     
-    pubSingle = rospy.Publisher('motor_out_single_server', MotorOut, queue_size=10)
+    pubSingle = rospy.Publisher('motor_out_single_server', MotorOut, queue_size=100)
 
     rospy.Subscriber("motorIncomingData", MotorInArray, callbackMotor)
 
     s = rospy.Service('server_motor_boost', MotorBoost, handle_service)
     
-    rate = rospy.Rate(100)
+    rate = rospy.Rate(20)
 
     rospy.loginfo("READY: Motor Service Server")
     

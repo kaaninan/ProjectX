@@ -94,10 +94,10 @@ ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
                 std::getline(s, line);
                 
                 if (line == "OK ") {
-                    std::cout << "OK" << std::endl;
+                    // std::cout << "OK" << std::endl;
                     break;
                 }else{
-                    std::cout << line << std::endl;
+                    // std::cout << line << std::endl;
                 }
                 
                 a = 1;
@@ -213,7 +213,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                         std::string line;
                         std::getline(s, line);
                         
-                        std::cout << line << std::endl;
+                        // std::cout << line << std::endl;
                         
                         char parse[1024];
                         strcpy(parse, line.c_str());
@@ -221,7 +221,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                         if (parse[0] == 'C' && parse[1] == 'P' && parse[2] == 'R' && parse[3] == 'E' &&
                             parse[4] == 'P' && parse[5] == 'O' && parse[6] == 'S') {
                             
-                            std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
+                            //std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
                             
                             // Donustur
                             std::ostringstream oss2;
@@ -277,7 +277,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             std::string line;
                             std::getline(s, line);
                             
-                            std::cout << line << std::endl;
+                            // std::cout << line << std::endl;
                             
                             char parse[1024];
                             strcpy(parse, line.c_str());
@@ -344,7 +344,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             std::string line;
                             std::getline(s, line);
                             
-                            std::cout << line << std::endl;
+                            // std::cout << line << std::endl;
                             
                             char parse[1024];
                             strcpy(parse, line.c_str());
@@ -352,7 +352,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             if (parse[0] == 'C' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' &&
                                 parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'S') {
                                 
-                                std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
+                                // std::cout << "Cevap Pos: "<< parse[14] << parse[15] << parse[16] << std::endl;
                                 
                                 // Donustur
                                 std::ostringstream oss2;
@@ -404,7 +404,7 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             std::string line;
                             std::getline(s, line);
                             
-                            std::cout << line << std::endl;
+                            // std::cout << line << std::endl;
                             
                             char parse[1024];
                             strcpy(parse, line.c_str());
@@ -452,11 +452,11 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             std::getline(s, line);
                             
                             if (line == "HATA ") {
-                                std::cout << "HATA" << std::endl;
+                                // std::cout << "HATA" << std::endl;
                                 break;
                                 
                             }else{
-                                std::cout << line << std::endl;
+                                // std::cout << line << std::endl;
                                 
                                 char parse[100];
                                 strcpy(parse, line.c_str());
@@ -464,14 +464,14 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                                 if (parse[0] == 'C' && parse[1] == 'T' && parse[2] == 'O' && parse[3] == 'R' &&
                                     parse[4] == 'Q' && parse[5] == 'E' && parse[6] == 'R') {
                                     
-                                    std::cout << "Cevap Torq: " << parse[16] << std::endl;
+                                    // std::cout << "Cevap Torq: " << parse[16] << std::endl;
                                     
                                     if(parse[16] == '0'){
-                                        std::cout << "NO TORQUE" << std::endl;
+                                        // std::cout << "NO TORQUE" << std::endl;
                                         rxpacket[PARAMETER] = 0x0;
                                     }
                                     else if(parse[16] == '1'){
-                                        std::cout << "OK TORQUE" << std::endl;
+                                        // std::cout << "OK TORQUE" << std::endl;
                                         rxpacket[PARAMETER] = 0x1;
                                     }
                                     
@@ -563,10 +563,77 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 pos = MakeWord(txpacket[i++], txpacket[i]);
                     
                     
-                //                printf("ID: %d \n", id);
-                //                printf("CW: %d \n", cw);
-                //                printf("CCW: %d \n", ccw);
-                //                printf("POS: %d \n \n", pos);
+                                // printf("ID: %d \n", id);
+                                // printf("CW: %d \n", cw);
+                                // printf("CCW: %d \n", ccw);
+                                // printf("POS: %d \n \n", pos);
+
+
+
+
+                // BOOST START
+                int devam = 1;
+                int a = 1;
+                try{
+                    while (devam) {
+                        tcp::iostream s("127.0.0.1", PORT_NO);
+                        if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
+                        
+                        else if(a == 0){
+                            
+                            // GELEN
+                            std::string line;
+                            std::getline(s, line);
+                            
+                            // std::cout << line << std::endl;
+                            
+                            char parse[1024];
+                            strcpy(parse, line.c_str());
+                            
+                            if (parse[0] == 'C' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' &&
+                                parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'W') {
+                                
+                                break;
+                            }
+                            
+                            devam = 0;
+                            a = 1;
+                            
+                        }else{
+                            
+                            // GIDEN
+
+                            // Basamak icin ayar cek
+                            int goal_pos = pos, sart = 0;
+                            if(goal_pos < 10){ sart = 1; }
+                            else if(goal_pos < 100){ sart = 2; }
+                            else { sart = 3; }
+
+
+                            if(id < 10){
+                                if(sart == 1){
+                                    s << "S" << "GOALPW0" << id << "000" << goal_pos << "0000";
+                                }else if(sart == 2){
+                                    s << "S" << "GOALPW0" << id << "00" << goal_pos << "0000";
+                                }else if(sart == 3){
+                                    s << "S" << "GOALPW0" << id << "0" << goal_pos << "0000";
+                                }
+                            }
+                            else{
+                                if(sart == 1){
+                                    s << "S" << "GOALPW" << id << "000" << goal_pos << "0000";
+                                }else if(sart == 2){
+                                    s << "S" << "GOALPW" << id << "00" << goal_pos << "0000";
+                                }else if(sart == 3){
+                                    s << "S" << "GOALPW" << id << "0" << goal_pos << "0000";
+                                }
+                            }
+                            break;
+                            a = 0;
+                        }
+                    }
+                }catch (std::exception& e){ std::cout << "Exception: " << e.what() << std::endl; }
+                // BOOST END
                     
                 
             }

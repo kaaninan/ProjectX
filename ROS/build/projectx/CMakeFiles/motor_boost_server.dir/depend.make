@@ -5,6 +5,7 @@ projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/r
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostRequest.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostResponse.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
+projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h

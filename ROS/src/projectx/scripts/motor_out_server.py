@@ -30,7 +30,7 @@ def arduinoMotor():
         data.rw = int(motor_values[motor_id].get("rw"))
         data.action = 0
         
-        #print("PUBLISH: "+ str(data.id) + " - " + str(data.pos) + " - " + str(data.speed) + " - " + str(data.torque) + " - " + str(data.rw) + " - " + str(data.action))
+        print("PUBLISH: "+ str(data.id) + " - " + str(data.pos) + " - " + str(data.speed) + " - " + str(data.torque) + " - " + str(data.rw) + " - " + str(data.action))
 
         pub.publish(data)
         rate.sleep()
@@ -66,14 +66,14 @@ def talker():
 
     rospy.init_node('motor_out_server', anonymous=True)
 
-    rate = rospy.Rate(100)
+    rate = rospy.Rate(20)
 
     rospy.loginfo("READY: Motor Outgoing Server")
 
     default_deger()
 
-    while 1:
-        arduinoMotor()
+    # while 1:
+    #     arduinoMotor()
 
 if __name__ == '__main__':
     try:

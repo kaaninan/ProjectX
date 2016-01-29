@@ -117,7 +117,6 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   INCLUDE("/home/rock/ProjectX/ROS/build/gtest/cmake_install.cmake")
-  INCLUDE("/home/rock/ProjectX/ROS/build/pocketsphinx/cmake_install.cmake")
   INCLUDE("/home/rock/ProjectX/ROS/build/rosserial/rosserial/cmake_install.cmake")
   INCLUDE("/home/rock/ProjectX/ROS/build/rosserial/rosserial_arduino/cmake_install.cmake")
   INCLUDE("/home/rock/ProjectX/ROS/build/rosserial/rosserial_client/cmake_install.cmake")

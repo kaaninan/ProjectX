@@ -8,7 +8,6 @@
 #include <signal.h>
 #include <libgen.h>
 #include "cmd_process.h"
-#include "mjpg_streamer.h"
 
 #define INI_FILE_PATH       "../../../Data/config.ini"
 
@@ -48,8 +47,6 @@ int main(int argc, char *argv[])
     else
         ini = new minIni(INI_FILE_PATH);
 
-    mjpg_streamer* streamer = new mjpg_streamer(0, 0);
-    httpd::ini = ini;
 
     //////////////////// Framework Initialize ////////////////////////////
     if (MotionManager::GetInstance()->Initialize(&arbotixpro) == false)

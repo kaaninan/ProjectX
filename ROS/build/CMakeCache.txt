@@ -251,6 +251,23 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
 
+//Path where debug 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
+
+//Path where release 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
+
+OpenCV_CONFIG_PATH:FILEPATH=/usr/share/OpenCV
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
+
+//Path where debug OpenCV libraries are located
+OpenCV_LIB_DIR_DBG:PATH=
+
+//Path where release OpenCV libraries are located
+OpenCV_LIB_DIR_OPT:PATH=
+
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
 
@@ -275,11 +292,32 @@ _CATKIN_GTEST_INCLUDE:FILEPATH=/usr/include/gtest/gtest.h
 //Path to a file.
 _CATKIN_GTEST_SRC:FILEPATH=/usr/src/gtest/src/gtest.cc
 
+//The directory containing a CMake configuration file for actionlib.
+actionlib_DIR:PATH=/opt/ros/indigo/share/actionlib/cmake
+
+//The directory containing a CMake configuration file for actionlib_msgs.
+actionlib_msgs_DIR:PATH=/opt/ros/indigo/share/actionlib_msgs/cmake
+
+//The directory containing a CMake configuration file for camera_info_manager.
+camera_info_manager_DIR:PATH=camera_info_manager_DIR-NOTFOUND
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/indigo/share/class_loader/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/indigo/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/opt/ros/indigo/share/cv_bridge/cmake
+
+//The directory containing a CMake configuration file for dynamic_reconfigure.
+dynamic_reconfigure_DIR:PATH=/opt/ros/indigo/share/dynamic_reconfigure/cmake
+
+//The directory containing a CMake configuration file for gazebo_ros.
+gazebo_ros_DIR:PATH=gazebo_ros_DIR-NOTFOUND
 
 //The directory containing a CMake configuration file for gencpp.
 gencpp_DIR:PATH=/opt/ros/indigo/share/gencpp/cmake
@@ -292,6 +330,9 @@ genmsg_DIR:PATH=/opt/ros/indigo/share/genmsg/cmake
 
 //The directory containing a CMake configuration file for genpy.
 genpy_DIR:PATH=/opt/ros/indigo/share/genpy/cmake
+
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/indigo/share/geometry_msgs/cmake
 
 //Value Computed by CMake
 gtest_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/gtest
@@ -318,8 +359,47 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for hardware_interface.
+hardware_interface_DIR:PATH=hardware_interface_DIR-NOTFOUND
+
+//Value Computed by CMake
+hros5_bringup_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_robot/hros5_bringup
+
+//Value Computed by CMake
+hros5_bringup_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_robot/hros5_bringup
+
+//Value Computed by CMake
+hros5_camera_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_apps/hros5_camera
+
+//Value Computed by CMake
+hros5_camera_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_apps/hros5_camera
+
+//Value Computed by CMake
+hros5_description_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_common/hros5_description
+
+//Value Computed by CMake
+hros5_description_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_common/hros5_description
+
+//Value Computed by CMake
+hros5_gazebo_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_apps/hros5_gazebo
+
+//Value Computed by CMake
+hros5_gazebo_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_apps/hros5_gazebo
+
+//Value Computed by CMake
+hros5_ros_control_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_robot/hros5_ros_control
+
+//Value Computed by CMake
+hros5_ros_control_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_robot/hros5_ros_control
+
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/indigo/share/image_transport/cmake
+
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/libtopic_tools.so
+
+//The directory containing a CMake configuration file for message_filters.
+message_filters_DIR:PATH=/opt/ros/indigo/share/message_filters/cmake
 
 //The directory containing a CMake configuration file for message_generation.
 message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
@@ -327,17 +407,26 @@ message_generation_DIR:PATH=/opt/ros/indigo/share/message_generation/cmake
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/indigo/share/message_runtime/cmake
 
-//Value Computed by CMake
-pocketsphinx_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/pocketsphinx
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/indigo/share/pluginlib/cmake
 
 //Value Computed by CMake
-pocketsphinx_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/pocketsphinx
+pocketsphinx_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_misc/pocketsphinx
+
+//Value Computed by CMake
+pocketsphinx_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_misc/pocketsphinx
 
 //Value Computed by CMake
 projectx_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/projectx
 
 //Value Computed by CMake
 projectx_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/projectx
+
+//Value Computed by CMake
+resize_image_BINARY_DIR:STATIC=/home/rock/ProjectX/ROS/build/hros5_misc/resize_image
+
+//Value Computed by CMake
+resize_image_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/hros5_misc/resize_image
 
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/indigo/share/rosconsole/cmake
@@ -353,6 +442,9 @@ roscpp_traits_DIR:PATH=/opt/ros/indigo/share/roscpp_traits/cmake
 
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/indigo/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/indigo/share/roslib/cmake
 
 //The directory containing a CMake configuration file for rosparam.
 rosparam_DIR:PATH=/opt/ros/indigo/share/rosparam/cmake
@@ -419,6 +511,9 @@ rosserial_xbee_SOURCE_DIR:STATIC=/home/rock/ProjectX/ROS/src/rosserial/rosserial
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/indigo/share/rostime/cmake
+
+//The directory containing a CMake configuration file for sensor_msgs.
+sensor_msgs_DIR:PATH=/opt/ros/indigo/share/sensor_msgs/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/indigo/share/std_msgs/cmake
@@ -545,7 +640,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=13
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -605,6 +700,16 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
+OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
+OpenCV_3RDPARTY_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_CONFIG_PATH
+OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_DBG
+OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_OPT
+OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.

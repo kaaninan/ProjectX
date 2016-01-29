@@ -209,6 +209,10 @@ void MotionManager::Process()
 
     m_IsRunning = true;
 
+    //TEST
+    m_CalibrationStatus = 1;
+    // TEST SONU
+
     // calibrate gyro sensor
     if (m_CalibrationStatus == 0 || m_CalibrationStatus == -1)
         {
@@ -273,134 +277,111 @@ void MotionManager::Process()
                 }
         }
 
-    if (m_CalibrationStatus == 1 && m_Enabled == true)
-        {
-            static int fb_array[ACCEL_WINDOW_SIZE] = {512,};
-            static int buf_idx = 0;
-//            if (m_ArbotixPro->m_BulkReadData[ArbotixPro::ID_CM].error == 0)
-//                {
-                    const double GYRO_ALPHA = 0.1;
+    if (m_CalibrationStatus == 1 && m_Enabled == true){
+        static int fb_array[ACCEL_WINDOW_SIZE] = {512,};
+        static int buf_idx = 0;
+        const double GYRO_ALPHA = 0.1;
 
-            int gyroValFB2, gyroValRL2, error;
-            
-            m_ArbotixPro->ReadWord(0, ArbotixPro::P_GYRO_Y_L, &gyroValFB2, &error);
-            m_ArbotixPro->ReadWord(0, ArbotixPro::P_GYRO_X_L, &gyroValRL2, &error);
+        int gyroValFB2 = 0, gyroValRL2 = 0, error;
+        
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_GYRO_Y_L, &gyroValFB2, &error);
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_GYRO_X_L, &gyroValRL2, &error);
 
-                    int gyroValFB = gyroValFB2 - m_FBGyroCenter;
-                    int gyroValRL = gyroValRL2 - m_RLGyroCenter;
+        int gyroValFB = gyroValFB2 - m_FBGyroCenter;
+        int gyroValRL = gyroValRL2 - m_RLGyroCenter;
 
-                    MotionStatus::FB_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::FB_GYRO + GYRO_ALPHA * gyroValFB;
-                    MotionStatus::RL_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::RL_GYRO + GYRO_ALPHA * gyroValRL;;
-            
-            
-            int a1, a2;
-            
-            m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_X_L, &a1, &error);
-            MotionStatus::RL_ACCEL = a1;
-            
-            m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_Y_L, &a2, &error);
-            MotionStatus::RL_ACCEL = 1024 - a2;
-            
+        MotionStatus::FB_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::FB_GYRO + GYRO_ALPHA * gyroValFB;
+        MotionStatus::RL_GYRO = (1.0 - GYRO_ALPHA) * MotionStatus::RL_GYRO + GYRO_ALPHA * gyroValRL;;
+        
+        int a1 = 0, a2 = 0;
+        
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_X_L, &a1, &error);
+        MotionStatus::RL_ACCEL = a1;
+        
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_Y_L, &a2, &error);
+        MotionStatus::RL_ACCEL = 1024 - a2;
 
-                    fb_array[buf_idx] = MotionStatus::FB_ACCEL;
+        fb_array[buf_idx] = MotionStatus::FB_ACCEL;
 
-                    if (++buf_idx >= ACCEL_WINDOW_SIZE) buf_idx = 0;
+        if (++buf_idx >= ACCEL_WINDOW_SIZE) buf_idx = 0;
 
-                    const double TICKS_TO_RADIANS_PER_STEP = (M_PI / 180.0) * 250.0 / 512.0 * (0.001 * MotionModule::TIME_UNIT);
-                    m_angleEstimator.predict(
-                        -TICKS_TO_RADIANS_PER_STEP * gyroValFB,
-                        TICKS_TO_RADIANS_PER_STEP * gyroValRL,
-                        0
-                    );
-            
-            int b1, b2, b3;
-            
-                    m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_X_L, &b1, &error);
-                    m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_Y_L, &b2, &error);
-                    m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_Z_L, &b3, &error);
+        const double TICKS_TO_RADIANS_PER_STEP = (M_PI / 180.0) * 250.0 / 512.0 * (0.001 * MotionModule::TIME_UNIT);
+        m_angleEstimator.predict(
+            -TICKS_TO_RADIANS_PER_STEP * gyroValFB,
+            TICKS_TO_RADIANS_PER_STEP * gyroValRL,
+            0
+        );
+        
+        int b1 = 0, b2 = 0, b3 = 0;
+        
+        // KALDIR
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_X_L, &b1, &error);
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_Y_L, &b2, &error);
+        // m_ArbotixPro->ReadWord(0, ArbotixPro::P_ACCEL_Z_L, &b3, &error);
 
-                    m_angleEstimator.update(
-                        (b1 - 512),
-                        (b2 - 512),
-                        (b3 - 512)
-                    );
+        m_angleEstimator.update(
+            (b1 - 512),
+            (b2 - 512),
+            (b3 - 512)
+        );
 
-                    MotionStatus::ANGLE_PITCH = m_angleEstimator.pitch();
-                    MotionStatus::ANGLE_ROLL  = m_angleEstimator.roll();
-//                }
+        MotionStatus::ANGLE_PITCH = m_angleEstimator.pitch();
+        MotionStatus::ANGLE_ROLL  = m_angleEstimator.roll();
 
-            int sum = 0, avr = 512;
-            for (int idx = 0; idx < ACCEL_WINDOW_SIZE; idx++)
-                sum += fb_array[idx];
-            avr = sum / ACCEL_WINDOW_SIZE;
+        int sum = 0, avr = 512;
+        for (int idx = 0; idx < ACCEL_WINDOW_SIZE; idx++)
+            sum += fb_array[idx];
 
-            if (avr < MotionStatus::FALLEN_F_LIMIT)
-                {
-                    MotionStatus::FALLEN = FORWARD;
-//DEBUG:
-//printf( "I've fallen forward\r\n" );
-                }
-            else if (avr > MotionStatus::FALLEN_B_LIMIT)
-                {
-                    MotionStatus::FALLEN = BACKWARD;
-//DEBUG:
-//printf( "I've fallen backward\r\n" );
-                }
-            else
-                MotionStatus::FALLEN = STANDUP;
+        avr = sum / ACCEL_WINDOW_SIZE;
 
-            if (m_Modules.size() != 0)
-                {
-                    for (std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
-                        {
-                            (*i)->Process();
-                            for (int id = JointData::ID_MIN; id <= JointData::ID_MAX; id++)
-                                {
-                                    if ((*i)->m_Joint.GetEnable(id) == true)
-                                        {
-                                            MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
-                                            MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
+        if (avr < MotionStatus::FALLEN_F_LIMIT){ MotionStatus::FALLEN = FORWARD; }
+        else if (avr > MotionStatus::FALLEN_B_LIMIT){ MotionStatus::FALLEN = BACKWARD; }
+        else{ MotionStatus::FALLEN = STANDUP; }
 
-                                            // MotionStatus::m_CurrentJoints.SetPGain(id, (*i)->m_Joint.GetPGain(id));
-                                            // MotionStatus::m_CurrentJoints.SetIGain(id, (*i)->m_Joint.GetIGain(id));
-                                            // MotionStatus::m_CurrentJoints.SetDGain(id, (*i)->m_Joint.GetDGain(id));
-                                        }
-                                }
-                        }
-                }
+        if (m_Modules.size() != 0)
+            {
+                for (std::list<MotionModule*>::iterator i = m_Modules.begin(); i != m_Modules.end(); i++)
+                    {
+                        (*i)->Process();
+                        for (int id = JointData::ID_MIN; id <= JointData::ID_MAX; id++)
+                            {
+                                if ((*i)->m_Joint.GetEnable(id) == true)
+                                    {
+                                        MotionStatus::m_CurrentJoints.SetSlope(id, (*i)->m_Joint.GetCWSlope(id), (*i)->m_Joint.GetCCWSlope(id));
+                                        MotionStatus::m_CurrentJoints.SetValue(id, (*i)->m_Joint.GetValue(id));
 
-            int param[JointData::NUMBER_OF_JOINTS * AXDXL::PARAM_BYTES];
-            int n = 0;
-            int joint_num = 0;
-            for (int id = JointData::ID_MIN; id <= JointData::ID_MAX; id++)
-                {
-                    if (MotionStatus::m_CurrentJoints.GetEnable(id) == true)
-                        {
-                            param[n++] = id;
+                                        // MotionStatus::m_CurrentJoints.SetPGain(id, (*i)->m_Joint.GetPGain(id));
+                                        // MotionStatus::m_CurrentJoints.SetIGain(id, (*i)->m_Joint.GetIGain(id));
+                                        // MotionStatus::m_CurrentJoints.SetDGain(id, (*i)->m_Joint.GetDGain(id));
+                                    }
+                            }
+                    }
+            }
 
-                            param[n++] = MotionStatus::m_CurrentJoints.GetCWSlope(id);
-                            param[n++] = MotionStatus::m_CurrentJoints.GetCCWSlope(id);
+        int param[JointData::NUMBER_OF_JOINTS * AXDXL::PARAM_BYTES];
+        int n = 0;
+        int joint_num = 0;
+        for (int id = JointData::ID_MIN; id <= JointData::ID_MAX; id++)
+            {
+                if (MotionStatus::m_CurrentJoints.GetEnable(id) == true)
+                    {
+                        param[n++] = id;
 
-                            param[n++] = ArbotixPro::GetLowByte(MotionStatus::m_CurrentJoints.GetValue(id) + m_Offset[id]);
-                            param[n++] = ArbotixPro::GetHighByte(MotionStatus::m_CurrentJoints.GetValue(id) + m_Offset[id]);
-                            joint_num++;
-                        }
+                        param[n++] = MotionStatus::m_CurrentJoints.GetCWSlope(id);
+                        param[n++] = MotionStatus::m_CurrentJoints.GetCCWSlope(id);
 
-                    if (DEBUG_PRINT == true)
-                        fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
-                }
+                        param[n++] = ArbotixPro::GetLowByte(MotionStatus::m_CurrentJoints.GetValue(id) + m_Offset[id]);
+                        param[n++] = ArbotixPro::GetHighByte(MotionStatus::m_CurrentJoints.GetValue(id) + m_Offset[id]);
+                        joint_num++;
+                    }
 
-            if (joint_num > 0)
-                m_ArbotixPro->SyncWrite(AXDXL::P_CW_COMPLIANCE_SLOPE, AXDXL::PARAM_BYTES, joint_num, param);
+                if (DEBUG_PRINT == true)
+                    fprintf(stderr, "ID[%d] : %d \n", id, MotionStatus::m_CurrentJoints.GetValue(id));
+            }
 
-//            unsigned int ic = 0;
-//            while (ic < m_ArbotixPro->m_DelayedWords)
-//                {
-//                    m_ArbotixPro->WriteWord(m_ArbotixPro->m_DelayedAddress[ic], m_ArbotixPro->m_DelayedWord[ic], 0);
-//                    ic++;
-//                }
-//            m_ArbotixPro->m_DelayedWords = 0;
-        }
+        if (joint_num > 0)
+            m_ArbotixPro->SyncWrite(AXDXL::P_CW_COMPLIANCE_SLOPE, AXDXL::PARAM_BYTES, joint_num, param);
+    }
     
     
     
@@ -412,7 +393,7 @@ void MotionManager::Process()
                 {
                     int value, error;
                     m_ArbotixPro->ReadWord(id, AXDXL::P_PRESENT_TEMPERATURE, &value, &error);
-                    MotionStatus::m_CurrentJoints.SetTemp(id, value);
+                    MotionStatus::m_CurrentJoints.SetTemp(id, 30);
                 }
         }
 //    if (m_IsLogging)

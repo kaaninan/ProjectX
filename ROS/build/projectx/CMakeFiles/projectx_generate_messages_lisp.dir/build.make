@@ -59,8 +59,9 @@ projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/dev
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Gyro.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorIn.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/CommonProperties.lisp
-projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp
+projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp
+projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp
@@ -162,13 +163,11 @@ projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/CommonProperties.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
-/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg
-/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
+/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp: /home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MultiFader.msg"
-	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorOutSingleArray.msg"
+	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp: /home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg
@@ -176,21 +175,29 @@ projectx/CMakeFiles/projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/dev
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorOutArray.msg"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
+/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
+/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg
+/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
+/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp: /home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MultiFader.msg"
+	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
+
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp: /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/Pin.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv
 
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp: /home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorBoost.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv
 
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp: /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/SensorTemp.srv"
 	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv -Iprojectx:/home/rock/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv
 
@@ -209,8 +216,9 @@ projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Gyro.lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorIn.lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/CommonProperties.lisp
-projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp
+projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp
+projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp
 projectx_generate_messages_lisp: /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp

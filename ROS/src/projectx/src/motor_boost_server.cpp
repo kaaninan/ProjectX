@@ -205,9 +205,9 @@ int main(int argc, char **argv){
                 motorData.rw = 0;
                 motorData.action = 0;
 
-                // ROS_INFO("WRITE GOAL - %d -> %d",motor_id, goal);
+                ROS_INFO("WRITE GOAL - %d -> %d",motor_id, goal);
 
-                motor_pub.publish(motorData);
+                // motor_pub.publish(motorData);
                 ros::spinOnce();
                 loop_rate.sleep();
 

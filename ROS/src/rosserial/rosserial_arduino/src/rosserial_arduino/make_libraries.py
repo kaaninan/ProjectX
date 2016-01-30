@@ -76,10 +76,10 @@ if (len(sys.argv) < 2):
     exit()
 
 
-os.system('rm -rf /home/rock/sketchbook/libraries/ros_lib/')
+os.system('rm -rf /home/rock/ProjectX/Arduino/libraries/ros_lib/')
 
 # get output path
-path = "/home/rock/sketchbook/libraries/"
+path = "/home/rock/ProjectX/Arduino/libraries/"
 if path[-1] == "/":
     path = path[0:-1]
 print "\nExporting to %s" % path

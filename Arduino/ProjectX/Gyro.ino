@@ -545,7 +545,7 @@ void publish_data(void)
   Serial.print (",");
   Serial.print(convert_to_dec(DCM_Matrix[2][2]));
   #endif*/
-  Serial.println();
+  //Serial.println();
 
 }
 

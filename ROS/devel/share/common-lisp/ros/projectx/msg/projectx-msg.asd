@@ -27,6 +27,8 @@
     (:file "_package_Sensor" :depends-on ("_package"))
     (:file "CommonProperties" :depends-on ("_package_CommonProperties"))
     (:file "_package_CommonProperties" :depends-on ("_package"))
+    (:file "MotorOutSingleArray" :depends-on ("_package_MotorOutSingleArray"))
+    (:file "_package_MotorOutSingleArray" :depends-on ("_package"))
     (:file "MultiButton" :depends-on ("_package_MultiButton"))
     (:file "_package_MultiButton" :depends-on ("_package"))
     (:file "MultiXYPad" :depends-on ("_package_MultiXYPad"))

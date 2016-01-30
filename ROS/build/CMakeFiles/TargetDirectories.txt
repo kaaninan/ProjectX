@@ -7,6 +7,7 @@
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir
+/home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir

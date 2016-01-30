@@ -7,14 +7,14 @@ void setup() {
   Dynamixel.begin(1000000, 2); // Inicialize the servo at 1Mbps and Pin Control 2
   delay(100);
 
-  Dynamixel.moveSpeed(17, 520, hiz);
+  Dynamixel.moveSpeed(17, 512, hiz);
   delay(10);
-  Dynamixel.moveSpeed(18, 520, hiz);
+  Dynamixel.moveSpeed(18, 512, hiz);
   delay(10);
 
-  Dynamixel.moveSpeed(9, 500, hiz);
+  Dynamixel.moveSpeed(9, 480, hiz);
   delay(10);
-  Dynamixel.moveSpeed(10, 500, hiz);
+  Dynamixel.moveSpeed(10, 520, hiz);
   delay(10);
  
   Dynamixel.moveSpeed(7, 512, hiz);
@@ -29,11 +29,7 @@ void setup() {
 
   // KOL
 
-  Dynamixel.moveSpeed(1, random(400,600), hiz);
-  Dynamixel.torqueStatus(1, true);
-  Dynamixel.setCSlope(1, 1, 1);
-  delay(2000);
-  Dynamixel.torqueStatus(1, true);
+  Dynamixel.moveSpeed(1, 512, hiz);
   delay(10);
   Dynamixel.moveSpeed(2, 512, hiz);
   delay(10);
@@ -53,9 +49,6 @@ void setup() {
 
 void loop() {
 
-  Dynamixel.moveSpeed(1, random(300,700), 1);
-
-
   Dynamixel.moveSpeedRW(15, 430, 150);
   delay(10);
   Dynamixel.moveSpeedRW(16, 430, 150);
@@ -72,6 +65,8 @@ void loop() {
   delay(10);
 
   Dynamixel.action();
+  
+  while(1){}
 
   
 

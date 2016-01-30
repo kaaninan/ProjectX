@@ -735,6 +735,19 @@ _projectx_generate_messages_check_deps_MotorOutArray/fast:
 .PHONY : _projectx_generate_messages_check_deps_MotorOutArray/fast
 
 #=============================================================================
+# Target rules for targets named _projectx_generate_messages_check_deps_MotorOutSingleArray
+
+# Build rule for target.
+_projectx_generate_messages_check_deps_MotorOutSingleArray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_MotorOutSingleArray
+.PHONY : _projectx_generate_messages_check_deps_MotorOutSingleArray
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_MotorOutSingleArray/fast:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/build
+.PHONY : _projectx_generate_messages_check_deps_MotorOutSingleArray/fast
+
+#=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_MultiButton
 
 # Build rule for target.
@@ -1247,6 +1260,7 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_MotorInArray"
 	@echo "... _projectx_generate_messages_check_deps_MotorOut"
 	@echo "... _projectx_generate_messages_check_deps_MotorOutArray"
+	@echo "... _projectx_generate_messages_check_deps_MotorOutSingleArray"
 	@echo "... _projectx_generate_messages_check_deps_MultiButton"
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"
 	@echo "... _projectx_generate_messages_check_deps_MultiXYPad"

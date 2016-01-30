@@ -47,6 +47,7 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
     "/home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
+    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg"
     "/home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg"

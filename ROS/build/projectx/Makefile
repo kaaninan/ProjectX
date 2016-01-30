@@ -262,6 +262,20 @@ _projectx_generate_messages_check_deps_MotorOutArray/fast:
 .PHONY : _projectx_generate_messages_check_deps_MotorOutArray/fast
 
 # Convenience name for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/rule:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/rule
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/rule
+
+# Convenience name for target.
+_projectx_generate_messages_check_deps_MotorOutSingleArray: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/rule
+.PHONY : _projectx_generate_messages_check_deps_MotorOutSingleArray
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_MotorOutSingleArray/fast:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/build
+.PHONY : _projectx_generate_messages_check_deps_MotorOutSingleArray/fast
+
+# Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule
@@ -767,6 +781,7 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_MotorInArray"
 	@echo "... _projectx_generate_messages_check_deps_MotorOut"
 	@echo "... _projectx_generate_messages_check_deps_MotorOutArray"
+	@echo "... _projectx_generate_messages_check_deps_MotorOutSingleArray"
 	@echo "... _projectx_generate_messages_check_deps_MultiButton"
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"
 	@echo "... _projectx_generate_messages_check_deps_MultiXYPad"

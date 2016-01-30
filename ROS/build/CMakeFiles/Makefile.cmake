@@ -281,6 +281,7 @@ SET(CMAKE_DEPEND_INFO_FILES
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/DependInfo.cmake"
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/DependInfo.cmake"
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/DependInfo.cmake"
+  "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/DependInfo.cmake"
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/DependInfo.cmake"
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/DependInfo.cmake"
   "projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/DependInfo.cmake"

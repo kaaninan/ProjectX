@@ -17,6 +17,7 @@
 #include "boost/bind.hpp"
 #include "boost/asio.hpp"
 #include "boost/thread/thread.hpp"
+ #include <fstream>
 
 using namespace Robot;
 
@@ -563,76 +564,84 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 pos = MakeWord(txpacket[i++], txpacket[i]);
                     
                     
-                                // printf("ID: %d \n", id);
-                                // printf("CW: %d \n", cw);
-                                // printf("CCW: %d \n", ccw);
-                                // printf("POS: %d \n \n", pos);
+                printf("ID: %d \n", id);
+                // printf("CW: %d \n", cw);
+                // printf("CCW: %d \n", ccw);
+                printf("POS: %d \n \n", pos);
+
+                if(id != 0){
+                    std::ofstream myfile;
+                    myfile.open ("/home/rock/Motor_Test.txt", std::ios_base::app);
+                    myfile << "ID:" << id << ":POS:" << pos << ":\n";
+                    myfile.close();
+                }
+            
 
 
 
 
                 // BOOST START
-                int devam = 1;
-                int a = 1;
-                try{
-                    while (devam) {
-                        tcp::iostream s("127.0.0.1", PORT_NO);
-                        if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
+                // int devam = 1;
+                // int a = 1;
+                // try{
+                //     while (devam) {
+                //         tcp::iostream s("127.0.0.1", PORT_NO);
+                //         if (!s){ std::cout << "Unable to connect: " << s.error().message() << std::endl; }
                         
-                        else if(a == 0){
+                //         else if(a == 0){
                             
-                            // GELEN
-                            std::string line;
-                            std::getline(s, line);
+                //             // GELEN
+                //             std::string line;
+                //             std::getline(s, line);
                             
-                            // std::cout << line << std::endl;
+                //             // std::cout << line << std::endl;
                             
-                            char parse[1024];
-                            strcpy(parse, line.c_str());
+                //             char parse[1024];
+                //             strcpy(parse, line.c_str());
                             
-                            if (parse[0] == 'C' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' &&
-                                parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'W') {
+                //             if (parse[0] == 'C' && parse[1] == 'G' && parse[2] == 'O' && parse[3] == 'A' &&
+                //                 parse[4] == 'L' && parse[5] == 'P' && parse[6] == 'W') {
                                 
-                                break;
-                            }
+                //                 break;
+                //             }
                             
-                            devam = 0;
-                            a = 1;
+                //             devam = 0;
+                //             a = 1;
                             
-                        }else{
+                //         }else{
                             
-                            // GIDEN
+                //             // GIDEN
 
-                            // Basamak icin ayar cek
-                            int goal_pos = pos, sart = 0;
-                            if(goal_pos < 10){ sart = 1; }
-                            else if(goal_pos < 100){ sart = 2; }
-                            else { sart = 3; }
+                //             // Basamak icin ayar cek
+                //             int goal_pos = pos, sart = 0;
+                //             if(goal_pos < 10){ sart = 1; }
+                //             else if(goal_pos < 100){ sart = 2; }
+                //             else { sart = 3; }
 
 
-                            if(id < 10){
-                                if(sart == 1){
-                                    s << "S" << "GOALPW0" << id << "000" << goal_pos << "0000";
-                                }else if(sart == 2){
-                                    s << "S" << "GOALPW0" << id << "00" << goal_pos << "0000";
-                                }else if(sart == 3){
-                                    s << "S" << "GOALPW0" << id << "0" << goal_pos << "0000";
-                                }
-                            }
-                            else{
-                                if(sart == 1){
-                                    s << "S" << "GOALPW" << id << "000" << goal_pos << "0000";
-                                }else if(sart == 2){
-                                    s << "S" << "GOALPW" << id << "00" << goal_pos << "0000";
-                                }else if(sart == 3){
-                                    s << "S" << "GOALPW" << id << "0" << goal_pos << "0000";
-                                }
-                            }
-                            break;
-                            a = 0;
-                        }
-                    }
-                }catch (std::exception& e){ std::cout << "Exception: " << e.what() << std::endl; }
+                //             if(id < 10){
+                //                 if(sart == 1){
+                //                     s << "S" << "GOALPW0" << id << "000" << goal_pos << "0000";
+                //                 }else if(sart == 2){
+                //                     s << "S" << "GOALPW0" << id << "00" << goal_pos << "0000";
+                //                 }else if(sart == 3){
+                //                     s << "S" << "GOALPW0" << id << "0" << goal_pos << "0000";
+                //                 }
+                //             }
+                //             else{
+                //                 if(sart == 1){
+                //                     s << "S" << "GOALPW" << id << "000" << goal_pos << "0000";
+                //                 }else if(sart == 2){
+                //                     s << "S" << "GOALPW" << id << "00" << goal_pos << "0000";
+                //                 }else if(sart == 3){
+                //                     s << "S" << "GOALPW" << id << "0" << goal_pos << "0000";
+                //                 }
+                //             }
+                //             break;
+                //             a = 0;
+                //         }
+                //     }
+                // }catch (std::exception& e){ std::cout << "Exception: " << e.what() << std::endl; }
                 // BOOST END
                     
                 

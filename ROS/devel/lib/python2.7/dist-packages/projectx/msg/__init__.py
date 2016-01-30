@@ -2,6 +2,7 @@ from ._MultiButton import *
 from ._MultiFader import *
 from ._MotorInArray import *
 from ._TouchOSC_Common import *
+from ._MotorOutSingleArray import *
 from ._Gyro import *
 from ._Tabpage import *
 from ._Sensor import *

@@ -15,7 +15,7 @@ int gaz = -1;
 
 // MAIN
 
-void read_sensor() {
+void publishSensor() {
   read_uzaklik();
   read_gaz();
   read_ldr();

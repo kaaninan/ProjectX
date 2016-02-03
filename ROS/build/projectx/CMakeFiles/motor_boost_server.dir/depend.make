@@ -4,9 +4,7 @@
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostRequest.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorBoostResponse.h
-projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
-projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/XmlRpcDecl.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/XmlRpcValue.h
@@ -64,4 +62,5 @@ projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ro
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/ros/wall_timer.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/ros/wall_timer_options.h
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/rosconsole/macros_generated.h
+projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /opt/ros/indigo/include/std_msgs/Int64.h
 

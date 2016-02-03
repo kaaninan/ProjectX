@@ -5,6 +5,8 @@
   :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
 )
   :components ((:file "_package")
+    (:file "DataControl" :depends-on ("_package_DataControl"))
+    (:file "_package_DataControl" :depends-on ("_package"))
     (:file "ScalableControl" :depends-on ("_package_ScalableControl"))
     (:file "_package_ScalableControl" :depends-on ("_package"))
     (:file "Label" :depends-on ("_package_Label"))
@@ -39,4 +41,6 @@
     (:file "_package_MultiFader" :depends-on ("_package"))
     (:file "XYPad" :depends-on ("_package_XYPad"))
     (:file "_package_XYPad" :depends-on ("_package"))
+    (:file "IntArray" :depends-on ("_package_IntArray"))
+    (:file "_package_IntArray" :depends-on ("_package"))
   ))

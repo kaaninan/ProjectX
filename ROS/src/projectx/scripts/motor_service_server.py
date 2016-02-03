@@ -25,22 +25,23 @@ def handle_service(req):
 		return_data = rospy.get_param("/motor_"+motor_id+"_torque", "0")
 
 	elif veri_turu == "write_torque":
+
+		# AKTARMA
+
 		rospy.set_param("/motor_"+motor_id+"_torque", int(komut))
 
 		data = MotorOut()
 
 		data.id = int(motor_id)
-		data.pos = 0
-		data.speed = 0
 		data.torque = int(komut)
-		data.rw = 1
-		data.action = 0
 
 		pubSingle.publish(data)
 		rate.sleep()
 		return_data = 0 # Geri Donen Veri Yok
 
 	elif veri_turu == "write_goal_pos":
+
+		IPTAL
 
 		data = MotorOut()
 
@@ -88,7 +89,7 @@ def start_server():
 
     global pubSingle, rate
     
-    pubSingle = rospy.Publisher('motor_out_single_server', MotorOut, queue_size=100)
+    pubSingle = rospy.Publisher('motor_out_torque', MotorOut, queue_size=100)
 
     rospy.Subscriber("motorIncomingData", MotorInArray, callbackMotor)
 

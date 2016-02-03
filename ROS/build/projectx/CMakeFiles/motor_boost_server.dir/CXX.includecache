@@ -46,39 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/rock/ProjectX/ROS/devel/include/projectx/MotorInArray.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
 /home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h
 string
 -
 vector
@@ -97,10 +65,6 @@ ros/message_operations.h
 /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
 ros/ros.h
 /home/rock/ProjectX/ROS/src/projectx/src/ros/ros.h
-projectx/MotorOutArray.h
-/home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorOutArray.h
-projectx/MotorInArray.h
-/home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorInArray.h
 ctime
 -
 iostream
@@ -111,6 +75,8 @@ boost/asio.hpp
 -
 projectx/MotorBoost.h
 /home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorBoost.h
+std_msgs/Int64.h
+/home/rock/ProjectX/ROS/src/projectx/src/std_msgs/Int64.h
 projectx/MotorOut.h
 /home/rock/ProjectX/ROS/src/projectx/src/projectx/MotorOut.h
 
@@ -755,4 +721,20 @@ ros/forwards.h
 /opt/ros/indigo/include/ros/ros/forwards.h
 
 /opt/ros/indigo/include/rosconsole/macros_generated.h
+
+/opt/ros/indigo/include/std_msgs/Int64.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 

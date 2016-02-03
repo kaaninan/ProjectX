@@ -1,9 +1,3 @@
-/*
- *   ArbotixPro.cpp
- *
- *   Author: ROBOTIS
- *
- */
 #include <stdio.h>
 #include "FSR.h"
 #include "ArbotixPro.h"
@@ -26,57 +20,59 @@ using boost::asio::ip::tcp;
 
 #define PORT_NO             "8302"
 
-#define ID					(2)
-#define LENGTH				(3)
-#define INSTRUCTION			(4)
-#define ERRBIT				(4)
-#define PARAMETER			(5)
-#define DEFAULT_BAUDNUMBER	(1)
+#define ID                  (2)
+#define LENGTH              (3)
+#define INSTRUCTION         (4)
+#define ERRBIT              (4)
+#define PARAMETER           (5)
+#define DEFAULT_BAUDNUMBER  (1)
 
-#define INST_PING			(1)
-#define INST_READ			(2)
-#define INST_WRITE			(3)
-#define INST_REG_WRITE		(4)
-#define INST_ACTION			(5)
-#define INST_RESET			(6)
-#define INST_SYNC_WRITE		(131)   // 0x83
+#define INST_PING           (1)
+#define INST_READ           (2)
+#define INST_WRITE          (3)
+#define INST_REG_WRITE      (4)
+#define INST_ACTION         (5)
+#define INST_RESET          (6)
+#define INST_SYNC_WRITE     (131)   // 0x83
 #define INST_BULK_READ      (146)   // 0x92
 
 
 
 BulkReadData::BulkReadData() :
-	start_address(0),
-	length(0),
-	error(-1)
+    start_address(0),
+    length(0),
+    error(-1)
 {
-	for (int i = 0; i < AXDXL::MAXNUM_ADDRESS; i++)
-		table[i] = 0;
+    for (int i = 0; i < AXDXL::MAXNUM_ADDRESS; i++)
+        table[i] = 0;
 }
 
 int BulkReadData::ReadByte(int address)
 {
-	if (address >= start_address && address < (start_address + length))
-		return (int)table[address];
+    if (address >= start_address && address < (start_address + length))
+        return (int)table[address];
 
-	return 0;
+    return 0;
 }
 
 int BulkReadData::ReadWord(int address)
 {
-	if (address >= start_address && address < (start_address + length))
-		return ArbotixPro::MakeWord(table[address], table[address + 1]);
+    if (address >= start_address && address < (start_address + length))
+        return ArbotixPro::MakeWord(table[address], table[address + 1]);
 
-	return 0;
+    return 0;
 }
 
 
 ArbotixPro::ArbotixPro(PlatformArbotixPro *platform)
 {
-	m_Platform = platform;
-	DEBUG_PRINT = false;
-	m_DelayedWords = 0;
-	m_bIncludeTempData = false;
-	m_BulkReadTxPacket[LENGTH] = 0;
+    m_Platform = platform;
+    DEBUG_PRINT = false;
+    m_DelayedWords = 0;
+    m_bIncludeTempData = false;
+    m_BulkReadTxPacket[LENGTH] = 0;
+
+    played = 0;
     
     // BOOST START
     
@@ -129,66 +125,66 @@ ArbotixPro::~ArbotixPro(){
     }
     // BOOST END
 
-	Disconnect();
-	exit(0);
+    Disconnect();
+    exit(0);
 }
 
 
 int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int priority)
 {
 
-	int res = SUCCESS;
-	int length = txpacket[LENGTH] + 4;
+    int res = SUCCESS;
+    int length = txpacket[LENGTH] + 4;
 
-	txpacket[0] = 0xFF;
-	txpacket[1] = 0xFF;
+    txpacket[0] = 0xFF;
+    txpacket[1] = 0xFF;
 
-	if (DEBUG_PRINT == true)
-		{
-			fprintf(stderr, "\nTX: ");
-			for (int n = 0; n < length; n++)
-				fprintf(stderr, "%.2X ", txpacket[n]);
+    if (DEBUG_PRINT == true)
+        {
+            fprintf(stderr, "\nTX: ");
+            for (int n = 0; n < length; n++)
+                fprintf(stderr, "%.2X ", txpacket[n]);
 
-			fprintf(stderr, "INST: ");
-			switch (txpacket[INSTRUCTION])
-				{
-				case INST_PING:
-					fprintf(stderr, "PING\n");
-					break;
+            fprintf(stderr, "INST: ");
+            switch (txpacket[INSTRUCTION])
+                {
+                case INST_PING:
+                    fprintf(stderr, "PING\n");
+                    break;
 
-				case INST_READ:
-					fprintf(stderr, "READ\n");
-					break;
+                case INST_READ:
+                    fprintf(stderr, "READ\n");
+                    break;
 
-				case INST_WRITE:
-					fprintf(stderr, "WRITE\n");
-					break;
+                case INST_WRITE:
+                    fprintf(stderr, "WRITE\n");
+                    break;
 
-				case INST_REG_WRITE:
-					fprintf(stderr, "REG_WRITE\n");
-					break;
+                case INST_REG_WRITE:
+                    fprintf(stderr, "REG_WRITE\n");
+                    break;
 
-				case INST_ACTION:
-					fprintf(stderr, "ACTION\n");
-					break;
+                case INST_ACTION:
+                    fprintf(stderr, "ACTION\n");
+                    break;
 
-				case INST_RESET:
-					fprintf(stderr, "RESET\n");
-					break;
+                case INST_RESET:
+                    fprintf(stderr, "RESET\n");
+                    break;
 
-				case INST_SYNC_WRITE:
-					fprintf(stderr, "SYNC_WRITE\n");
-					break;
+                case INST_SYNC_WRITE:
+                    fprintf(stderr, "SYNC_WRITE\n");
+                    break;
 
-				case INST_BULK_READ:
-					fprintf(stderr, "BULK_READ\n");
-					break;
+                case INST_BULK_READ:
+                    fprintf(stderr, "BULK_READ\n");
+                    break;
 
-				default:
-					fprintf(stderr, "UNKNOWN\n");
-					break;
-				}
-		}
+                default:
+                    fprintf(stderr, "UNKNOWN\n");
+                    break;
+                }
+        }
 
     
 
@@ -405,8 +401,6 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             std::string line;
                             std::getline(s, line);
                             
-                            // std::cout << line << std::endl;
-                            
                             char parse[1024];
                             strcpy(parse, line.c_str());
                             
@@ -420,11 +414,14 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                             a = 1;
                             
                         }else{
+
+                            // std::cout << "ArbotixPRO Write Torque - Motor ID: " << (int)txpacket[ID] << " -> " <<(int)txpacket[PARAMETER+1] << std::endl;
                             
                             // GIDEN
                             if(txpacket[ID] < 10) s << "S" << "TORQEW0" << (int)txpacket[ID] << "000" << (int)txpacket[PARAMETER+1] << "0000";
                             else{ s << "S" << "TORQEW" << (int)txpacket[ID] << "000" << (int)txpacket[PARAMETER+1] << "0000"; }
                             a = 0;
+
                         }
                     }
                 }
@@ -489,10 +486,12 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                         else{
                             std::ostringstream oss;
                             if(txpacket[ID] < 10){
-                                oss << "S" << "TORQER0" << (int)txpacket[ID] << "0000" << "0000";
+                                oss << "S" << "TORQER0" << (int)txpacket[ID] << "000" << played << "0000";
                             }else{
-                                oss << "S" << "TORQER" << (int)txpacket[ID] << "0000" << "0000";
+                                oss << "S" << "TORQER" << (int)txpacket[ID] << "000" << played << "0000";
                             }
+
+                            played = 0;
                             
                             std::string gelen = oss.str();
                             s << gelen;
@@ -564,12 +563,13 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 pos = MakeWord(txpacket[i++], txpacket[i]);
                     
                     
-                printf("ID: %d \n", id);
+                // printf("ID: %d \n", id);
                 // printf("CW: %d \n", cw);
                 // printf("CCW: %d \n", ccw);
-                printf("POS: %d \n \n", pos);
+                // printf("POS: %d \n \n", pos);
 
                 if(id != 0){
+                    played = 1;
                     std::ofstream myfile;
                     myfile.open ("/home/rock/Motor_Test.txt", std::ios_base::app);
                     myfile << "ID:" << id << ":POS:" << pos << ":\n";
@@ -668,68 +668,68 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
     
     
     
-//	if (DEBUG_PRINT == true)
-//		{
-//			fprintf(stderr, "Time:%.2fms  ", m_Platform->GetPacketTime());
-//			fprintf(stderr, "RETURN: ");
-//			switch (res)
-//				{
-//				case SUCCESS:
-//					fprintf(stderr, "SUCCESS\n");
-//					break;
+//  if (DEBUG_PRINT == true)
+//      {
+//          fprintf(stderr, "Time:%.2fms  ", m_Platform->GetPacketTime());
+//          fprintf(stderr, "RETURN: ");
+//          switch (res)
+//              {
+//              case SUCCESS:
+//                  fprintf(stderr, "SUCCESS\n");
+//                  break;
 //
-//				case TX_CORRUPT:
-//					fprintf(stderr, "TX_CORRUPT\n");
-//					break;
+//              case TX_CORRUPT:
+//                  fprintf(stderr, "TX_CORRUPT\n");
+//                  break;
 //
-//				case TX_FAIL:
-//					fprintf(stderr, "TX_FAIL\n");
-//					break;
+//              case TX_FAIL:
+//                  fprintf(stderr, "TX_FAIL\n");
+//                  break;
 //
-//				case RX_FAIL:
-//					fprintf(stderr, "RX_FAIL\n");
-//					break;
+//              case RX_FAIL:
+//                  fprintf(stderr, "RX_FAIL\n");
+//                  break;
 //
-//				case RX_TIMEOUT:
-//					fprintf(stderr, "RX_TIMEOUT\n");
-//					break;
+//              case RX_TIMEOUT:
+//                  fprintf(stderr, "RX_TIMEOUT\n");
+//                  break;
 //
-//				case RX_CORRUPT:
-//					fprintf(stderr, "RX_CORRUPT\n");
-//					break;
+//              case RX_CORRUPT:
+//                  fprintf(stderr, "RX_CORRUPT\n");
+//                  break;
 //
-//				default:
-//					fprintf(stderr, "UNKNOWN\n");
-//					break;
-//				}
-//		}
+//              default:
+//                  fprintf(stderr, "UNKNOWN\n");
+//                  break;
+//              }
+//      }
 
-	return res;
+    return res;
 }
 
 unsigned char ArbotixPro::CalculateChecksum(unsigned char *packet)
 {
-	unsigned char checksum = 0x00;
-	for (int i = 2; i < packet[LENGTH] + 3; i++ )
-		checksum += packet[i];
-	return (~checksum);
+    unsigned char checksum = 0x00;
+    for (int i = 2; i < packet[LENGTH] + 3; i++ )
+        checksum += packet[i];
+    return (~checksum);
 }
 
 void ArbotixPro::MakeBulkReadPacket()
 {
-	int number = 0;
+    int number = 0;
 
-	m_BulkReadTxPacket[ID]              = (unsigned char)ID_BROADCAST;
-	m_BulkReadTxPacket[INSTRUCTION]     = INST_BULK_READ;
-	m_BulkReadTxPacket[PARAMETER]       = (unsigned char)0x0;
+    m_BulkReadTxPacket[ID]              = (unsigned char)ID_BROADCAST;
+    m_BulkReadTxPacket[INSTRUCTION]     = INST_BULK_READ;
+    m_BulkReadTxPacket[PARAMETER]       = (unsigned char)0x0;
 
-	//if(Ping(ArbotixPro::ID_CM, 0) == SUCCESS)
-	{
-		m_BulkReadTxPacket[PARAMETER + 3 * number + 1] = 30;
-		m_BulkReadTxPacket[PARAMETER + 3 * number + 2] = ArbotixPro::ID_CM;
-		m_BulkReadTxPacket[PARAMETER + 3 * number + 3] = ArbotixPro::P_DXL_POWER;
-		number++;
-	}
+    //if(Ping(ArbotixPro::ID_CM, 0) == SUCCESS)
+    {
+        m_BulkReadTxPacket[PARAMETER + 3 * number + 1] = 30;
+        m_BulkReadTxPacket[PARAMETER + 3 * number + 2] = ArbotixPro::ID_CM;
+        m_BulkReadTxPacket[PARAMETER + 3 * number + 3] = ArbotixPro::P_DXL_POWER;
+        number++;
+    }
 
 //    for(int id = 1; id < JointData::NUMBER_OF_JOINTS; id++)
 //    {
@@ -741,89 +741,89 @@ void ArbotixPro::MakeBulkReadPacket()
 //            number++;
 //        }
 //    }
-	if (m_bIncludeTempData == true)
-		{
-			for (int id = JointData::ID_MIN; id <= JointData::ID_MAX; id++)
-				{
-					if (MotionStatus::m_CurrentJoints.GetEnable(id))
-						{
-							m_BulkReadTxPacket[PARAMETER + 3 * number + 1] = 1; // length
-							m_BulkReadTxPacket[PARAMETER + 3 * number + 2] = id; // id
-							m_BulkReadTxPacket[PARAMETER + 3 * number + 3] = AXDXL::P_PRESENT_TEMPERATURE; // start address
-							number++;
-						}
-				}
-		}
-	/*
-	if(Ping(FSR::ID_L_FSR, 0) == SUCCESS)
-	{
-	m_BulkReadTxPacket[PARAMETER+3*number+1] = 2;               // length
-	m_BulkReadTxPacket[PARAMETER+3*number+2] = FSR::ID_L_FSR;   // id
-	m_BulkReadTxPacket[PARAMETER+3*number+3] = FSR::P_FSR_X;    // start address
-	number++;
-	}
+    if (m_bIncludeTempData == true)
+        {
+            for (int id = JointData::ID_MIN; id <= JointData::ID_MAX; id++)
+                {
+                    if (MotionStatus::m_CurrentJoints.GetEnable(id))
+                        {
+                            m_BulkReadTxPacket[PARAMETER + 3 * number + 1] = 1; // length
+                            m_BulkReadTxPacket[PARAMETER + 3 * number + 2] = id; // id
+                            m_BulkReadTxPacket[PARAMETER + 3 * number + 3] = AXDXL::P_PRESENT_TEMPERATURE; // start address
+                            number++;
+                        }
+                }
+        }
+    /*
+    if(Ping(FSR::ID_L_FSR, 0) == SUCCESS)
+    {
+    m_BulkReadTxPacket[PARAMETER+3*number+1] = 2;               // length
+    m_BulkReadTxPacket[PARAMETER+3*number+2] = FSR::ID_L_FSR;   // id
+    m_BulkReadTxPacket[PARAMETER+3*number+3] = FSR::P_FSR_X;    // start address
+    number++;
+    }
 
-	if(Ping(FSR::ID_R_FSR, 0) == SUCCESS)
-	{
-	m_BulkReadTxPacket[PARAMETER+3*number+1] = 2;               // length
-	m_BulkReadTxPacket[PARAMETER+3*number+2] = FSR::ID_R_FSR;   // id
-	m_BulkReadTxPacket[PARAMETER+3*number+3] = FSR::P_FSR_X;    // start address
-	number++;
-	}
-	*/
-	//fprintf(stderr, "NUMBER : %d \n", number);
+    if(Ping(FSR::ID_R_FSR, 0) == SUCCESS)
+    {
+    m_BulkReadTxPacket[PARAMETER+3*number+1] = 2;               // length
+    m_BulkReadTxPacket[PARAMETER+3*number+2] = FSR::ID_R_FSR;   // id
+    m_BulkReadTxPacket[PARAMETER+3*number+3] = FSR::P_FSR_X;    // start address
+    number++;
+    }
+    */
+    //fprintf(stderr, "NUMBER : %d \n", number);
 
-	m_BulkReadTxPacket[LENGTH]          = (number * 3) + 3;
+    m_BulkReadTxPacket[LENGTH]          = (number * 3) + 3;
 }
 
 int ArbotixPro::BulkRead()
 {
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
 
-	if (m_BulkReadTxPacket[LENGTH] != 0)
-		return TxRxPacket(m_BulkReadTxPacket, rxpacket, 0);
-	else
-		{
-			MakeBulkReadPacket();
-			return TX_FAIL;
-		}
+    if (m_BulkReadTxPacket[LENGTH] != 0)
+        return TxRxPacket(m_BulkReadTxPacket, rxpacket, 0);
+    else
+        {
+            MakeBulkReadPacket();
+            return TX_FAIL;
+        }
 }
 
 int ArbotixPro::SyncWrite(int start_addr, int each_length, int number, int *pParam)
 {
     
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int n;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int n;
 
-	txpacket[ID]                = (unsigned char)ID_BROADCAST;
-	txpacket[INSTRUCTION]       = INST_SYNC_WRITE;
-	txpacket[PARAMETER]			= (unsigned char)start_addr;
-	txpacket[PARAMETER + 1]		= (unsigned char)(each_length - 1);
-	for (n = 0; n < (number * each_length); n++)
-		txpacket[PARAMETER + 2 + n]   = (unsigned char)pParam[n];
-	txpacket[LENGTH]            = n + 4;
+    txpacket[ID]                = (unsigned char)ID_BROADCAST;
+    txpacket[INSTRUCTION]       = INST_SYNC_WRITE;
+    txpacket[PARAMETER]         = (unsigned char)start_addr;
+    txpacket[PARAMETER + 1]     = (unsigned char)(each_length - 1);
+    for (n = 0; n < (number * each_length); n++)
+        txpacket[PARAMETER + 2 + n]   = (unsigned char)pParam[n];
+    txpacket[LENGTH]            = n + 4;
 
-	return TxRxPacket(txpacket, rxpacket, 0);
+    return TxRxPacket(txpacket, rxpacket, 0);
 }
 
 bool ArbotixPro::Connect()
 {
 
 
-	return DXLPowerOn();
+    return DXLPowerOn();
 }
 
 bool ArbotixPro::ChangeBaud(int baud)
 {
-	
+    
 
-	return DXLPowerOn();
+    return DXLPowerOn();
 }
 
 bool ArbotixPro::DXLPowerOn(bool state)
 {
-	return true;
+    return true;
 }
 
 void ArbotixPro::Disconnect()
@@ -834,184 +834,184 @@ void ArbotixPro::Disconnect()
 
 int ArbotixPro::WriteByte(int address, int value, int *error)
 {
-	return WriteByte(ID_CM, address, value, error);
+    return WriteByte(ID_CM, address, value, error);
 }
 
 int ArbotixPro::WriteWord(int address, int value, int *error)
 {
-	return WriteWord(ID_CM, address, value, error);
+    return WriteWord(ID_CM, address, value, error);
 }
 
 void ArbotixPro::WriteWordDelayed(int address, int value)
 {
-	if (m_DelayedWords > 9) return;
+    if (m_DelayedWords > 9) return;
 
-	m_DelayedWord[m_DelayedWords] = value;
-	m_DelayedAddress[m_DelayedWords] = address;
-	m_DelayedWords++;
-	return;
+    m_DelayedWord[m_DelayedWords] = value;
+    m_DelayedAddress[m_DelayedWords] = address;
+    m_DelayedWords++;
+    return;
 }
 
 int ArbotixPro::Ping(int id, int *error)
 {
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int result;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int result;
 
-	txpacket[ID]           = (unsigned char)id;
-	txpacket[INSTRUCTION]  = INST_PING;
-	txpacket[LENGTH]       = 2;
+    txpacket[ID]           = (unsigned char)id;
+    txpacket[INSTRUCTION]  = INST_PING;
+    txpacket[LENGTH]       = 2;
 
-	result = TxRxPacket(txpacket, rxpacket, 2);
-	if (result == SUCCESS && txpacket[ID] != ID_BROADCAST)
-		{
-			if (error != 0)
-				*error = (int)rxpacket[ERRBIT];
-		}
+    result = TxRxPacket(txpacket, rxpacket, 2);
+    if (result == SUCCESS && txpacket[ID] != ID_BROADCAST)
+        {
+            if (error != 0)
+                *error = (int)rxpacket[ERRBIT];
+        }
 
-	return result;
+    return result;
 }
 
 int ArbotixPro::ReadByte(int id, int address, int *pValue, int *error)
 {
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int result;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int result;
 
-	txpacket[ID]           = (unsigned char)id;
-	txpacket[INSTRUCTION]  = INST_READ;
-	txpacket[PARAMETER]    = (unsigned char)address;
-	txpacket[PARAMETER + 1]  = 1;
-	txpacket[LENGTH]       = 4;
+    txpacket[ID]           = (unsigned char)id;
+    txpacket[INSTRUCTION]  = INST_READ;
+    txpacket[PARAMETER]    = (unsigned char)address;
+    txpacket[PARAMETER + 1]  = 1;
+    txpacket[LENGTH]       = 4;
 
-	result = TxRxPacket(txpacket, rxpacket, 2);
-	if (result == SUCCESS)
-		{
-			*pValue = (int)rxpacket[PARAMETER];
-			if (error != 0)
-				*error = (int)rxpacket[ERRBIT];
-		}
+    result = TxRxPacket(txpacket, rxpacket, 2);
+    if (result == SUCCESS)
+        {
+            *pValue = (int)rxpacket[PARAMETER];
+            if (error != 0)
+                *error = (int)rxpacket[ERRBIT];
+        }
 
-	return result;
+    return result;
 }
 
 int ArbotixPro::ReadWord(int id, int address, int *pValue, int *error)
 {
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int result;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int result;
 
-	txpacket[ID]           = (unsigned char)id;
-	txpacket[INSTRUCTION]  = INST_READ;
-	txpacket[PARAMETER]    = (unsigned char)address;
-	txpacket[PARAMETER + 1]  = 2;
-	txpacket[LENGTH]       = 4;
+    txpacket[ID]           = (unsigned char)id;
+    txpacket[INSTRUCTION]  = INST_READ;
+    txpacket[PARAMETER]    = (unsigned char)address;
+    txpacket[PARAMETER + 1]  = 2;
+    txpacket[LENGTH]       = 4;
 
-	result = TxRxPacket(txpacket, rxpacket, 2);
-	if (result == SUCCESS)
-		{
-			*pValue = MakeWord((int)rxpacket[PARAMETER], (int)rxpacket[PARAMETER + 1]);
+    result = TxRxPacket(txpacket, rxpacket, 2);
+    if (result == SUCCESS)
+        {
+            *pValue = MakeWord((int)rxpacket[PARAMETER], (int)rxpacket[PARAMETER + 1]);
 
-			if (error != 0)
-				*error = (int)rxpacket[ERRBIT];
-		}
+            if (error != 0)
+                *error = (int)rxpacket[ERRBIT];
+        }
 
-	return result;
+    return result;
 }
 
 int ArbotixPro::ReadTable(int id, int start_addr, int end_addr, unsigned char *table, int *error)
 {
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int result;
-	int length = end_addr - start_addr + 1;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int result;
+    int length = end_addr - start_addr + 1;
 
-	txpacket[ID]           = (unsigned char)id;
-	txpacket[INSTRUCTION]  = INST_READ;
-	txpacket[PARAMETER]    = (unsigned char)start_addr;
-	txpacket[PARAMETER + 1]  = (unsigned char)length;
-	txpacket[LENGTH]       = 4;
+    txpacket[ID]           = (unsigned char)id;
+    txpacket[INSTRUCTION]  = INST_READ;
+    txpacket[PARAMETER]    = (unsigned char)start_addr;
+    txpacket[PARAMETER + 1]  = (unsigned char)length;
+    txpacket[LENGTH]       = 4;
 
-	result = TxRxPacket(txpacket, rxpacket, 1);
-	if (result == SUCCESS)
-		{
-			for (int i = 0; i < length; i++)
-				table[start_addr + i] = rxpacket[PARAMETER + i];
+    result = TxRxPacket(txpacket, rxpacket, 1);
+    if (result == SUCCESS)
+        {
+            for (int i = 0; i < length; i++)
+                table[start_addr + i] = rxpacket[PARAMETER + i];
 
-			if (error != 0)
-				*error = (int)rxpacket[ERRBIT];
-		}
+            if (error != 0)
+                *error = (int)rxpacket[ERRBIT];
+        }
 
-	return result;
+    return result;
 }
 
 int ArbotixPro::WriteByte(int id, int address, int value, int *error)
 {
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int result;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int result;
 
-	txpacket[ID]           = (unsigned char)id;
-	txpacket[INSTRUCTION]  = INST_WRITE;
-	txpacket[PARAMETER]    = (unsigned char)address;
-	txpacket[PARAMETER + 1]  = (unsigned char)value;
-	txpacket[LENGTH]       = 4;
+    txpacket[ID]           = (unsigned char)id;
+    txpacket[INSTRUCTION]  = INST_WRITE;
+    txpacket[PARAMETER]    = (unsigned char)address;
+    txpacket[PARAMETER + 1]  = (unsigned char)value;
+    txpacket[LENGTH]       = 4;
 
-	result = TxRxPacket(txpacket, rxpacket, 2);
-	if (result == SUCCESS && id != ID_BROADCAST)
-		{
-			if (error != 0)
-				*error = (int)rxpacket[ERRBIT];
-		}
+    result = TxRxPacket(txpacket, rxpacket, 2);
+    if (result == SUCCESS && id != ID_BROADCAST)
+        {
+            if (error != 0)
+                *error = (int)rxpacket[ERRBIT];
+        }
 
-	return result;
+    return result;
 }
 
 int ArbotixPro::WriteWord(int id, int address, int value, int *error)
 {
-	unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
-	unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
-	int result;
+    unsigned char txpacket[MAXNUM_TXPARAM + 10] = {0, };
+    unsigned char rxpacket[MAXNUM_RXPARAM + 10] = {0, };
+    int result;
 
-	txpacket[ID]           = (unsigned char)id;
-	txpacket[INSTRUCTION]  = INST_WRITE;
-	txpacket[PARAMETER]    = (unsigned char)address;
-	txpacket[PARAMETER + 1]  = (unsigned char)GetLowByte(value);
-	txpacket[PARAMETER + 2]  = (unsigned char)GetHighByte(value);
-	txpacket[LENGTH]       = 5;
+    txpacket[ID]           = (unsigned char)id;
+    txpacket[INSTRUCTION]  = INST_WRITE;
+    txpacket[PARAMETER]    = (unsigned char)address;
+    txpacket[PARAMETER + 1]  = (unsigned char)GetLowByte(value);
+    txpacket[PARAMETER + 2]  = (unsigned char)GetHighByte(value);
+    txpacket[LENGTH]       = 5;
 
-	result = TxRxPacket(txpacket, rxpacket, 2);
-	if (result == SUCCESS && id != ID_BROADCAST)
-		{
-			if (error != 0)
-				*error = (int)rxpacket[ERRBIT];
-		}
+    result = TxRxPacket(txpacket, rxpacket, 2);
+    if (result == SUCCESS && id != ID_BROADCAST)
+        {
+            if (error != 0)
+                *error = (int)rxpacket[ERRBIT];
+        }
 
-	return result;
+    return result;
 }
 
 int ArbotixPro::MakeWord(int lowbyte, int highbyte)
 {
-	unsigned short word;
+    unsigned short word;
 
-	word = highbyte;
-	word = word << 8;
-	word = word + lowbyte;
+    word = highbyte;
+    word = word << 8;
+    word = word + lowbyte;
 
-	return (int)word;
+    return (int)word;
 }
 
 int ArbotixPro::GetLowByte(int word)
 {
-	unsigned short temp;
-	temp = word & 0xff;
-	return (int)temp;
+    unsigned short temp;
+    temp = word & 0xff;
+    return (int)temp;
 }
 
 int ArbotixPro::GetHighByte(int word)
 {
-	unsigned short temp;
-	temp = word & 0xff00;
-	return (int)(temp >> 8);
+    unsigned short temp;
+    temp = word & 0xff00;
+    return (int)(temp >> 8);
 }
 

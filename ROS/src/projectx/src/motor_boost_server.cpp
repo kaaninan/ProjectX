@@ -1,11 +1,10 @@
 #include "ros/ros.h"
-#include "projectx/MotorOutArray.h"
-#include "projectx/MotorInArray.h"
 #include <ctime>
 #include <iostream>
 #include <string>
 #include <boost/asio.hpp>
 #include "projectx/MotorBoost.h"
+#include "std_msgs/Int64.h"
 #include "projectx/MotorOut.h"
 
 using boost::asio::ip::tcp;
@@ -14,6 +13,12 @@ std::string node_name = "node_motor_boost_server";
 
 ros::ServiceClient client;
 ros::Publisher motor_pub;
+ros::Publisher motor_pub_played;
+
+// RME'deki play komutun bittigini belirtir
+int played = 0;
+// Biten komutun bildirilmesini belirtir
+int gonderildi = 0;
 
 // Torque Buffer
 int torque_buffer[20];
@@ -95,8 +100,10 @@ int main(int argc, char **argv){
   ros::NodeHandle n;
   client = n.serviceClient<projectx::MotorBoost>("server_motor_boost");
 
-  motor_pub = n.advertise<projectx::MotorOut>("arduinoMotorOutgoing", 1000);
-  ros::Rate loop_rate(50);
+  motor_pub = n.advertise<projectx::MotorOut>("motor_out_single", 1000);
+  motor_pub_played = n.advertise<std_msgs::Int64>("motor_out_played", 1000);
+
+  ros::Rate loop_rate(100);
 
   ROS_INFO("READY: Motor Boost Server ");
 
@@ -130,8 +137,13 @@ int main(int argc, char **argv){
             ok = 1;
             std::cout << "MOTION STARTING" << std::endl; // Info
 
-          // TODO: TEST1
+          // RME CLOSED
           }else if ("END" == gelen) {
+            std::cout << "RME EXIT" << std::endl;
+
+          // Main Program CLOSED
+          }else if ("QUIT" == gelen) {
+            std::cout << "Motor Boost Server: EXIT" << std::endl;
             exit(0);
 
           }else {
@@ -145,7 +157,15 @@ int main(int argc, char **argv){
 
                 // Verileri Al
                 int motor_id = get_motor_id(parse);
-                //std::string cevap = motor_service(veri_turu, motor_id, 0);
+                int goal = get_goal(parse);
+
+                // if(motor_id == 1){
+                //   std_msgs::Int64 data;
+                //   data.data = goal;
+                //   motor_pub_played.publish(data);
+                //   ros::spinOnce();
+                // }
+
                 std::ostringstream oss2;
                 oss2 << "000" << torque_buffer[motor_id];
                 std::string cevap = oss2.str();
@@ -200,46 +220,41 @@ int main(int argc, char **argv){
 
                 motorData.id = motor_id;
                 motorData.pos = goal;
-                motorData.speed = 0;
-                motorData.torque = torque_buffer[motor_id];
-                motorData.rw = 0;
-                motorData.action = 0;
+                motorData.torque = -1;
 
-                ROS_INFO("WRITE GOAL - %d -> %d",motor_id, goal);
+                // ROS_INFO("WRITE GOAL - %d -> %d",motor_id, goal);
 
-                // motor_pub.publish(motorData);
+                motor_pub.publish(motorData);
                 ros::spinOnce();
                 loop_rate.sleep();
 
-                
-                // SIL std::string cevap = motor_service(veri_turu, motor_id, goal);
-                
                 // Cevap Hazirla
-                // std::ostringstream oss;
-                // if(motor_id < 10){ oss << "C" << "GOALPW0" << motor_id << "0000" << "0000"; }
-                // else{ oss << "C" << "GOALPW" << motor_id << "0000" << "0000"; }
-                // dondur = oss.str();
-
-                // LOG
-                // std::cout << "Write Goal Position: " << motor_id << " Return: " << dondur << std::endl;
+                std::ostringstream oss;
+                if(motor_id < 10){ oss << "C" << "GOALPS0" << motor_id << "00000000"; }
+                else{ oss << "C" << "GOALPS" << motor_id << "00000000"; }
+                dondur = oss.str();
                 
+
             }else if (veri_turu == "write_torque") {
 
                 // Verileri Al
                 int motor_id = get_motor_id(parse);
                 int goal = get_goal(parse);
 
+                // Param String Icin
+                std::ostringstream oss_param;
+                oss_param << "/motor_" << motor_id << "_torque";
+                std::string str_param = oss_param.str();
+
                 // Buffer
-                torque_buffer[motor_id] = goal;
+                torque_buffer[motor_id] = goal; // Burasi Icin
+                n.setParam(str_param, goal); // ROS Icin
 
                 projectx::MotorOut motorData;
 
                 motorData.id = motor_id;
-                motorData.pos = 0;
-                motorData.speed = 0;
+                motorData.pos = -1;
                 motorData.torque = goal;
-                motorData.rw = 1;
-                motorData.action = 0;
 
                 // ROS_INFO("WRITE TORQ - %d -> %d",motor_id, goal);
 
@@ -247,17 +262,16 @@ int main(int argc, char **argv){
                 ros::spinOnce();
                 loop_rate.sleep();
 
-                // SIL std::string cevap = motor_service(veri_turu, motor_id, goal);
-                
                 // Cevap Hazirla
                 std::ostringstream oss;
-                if(motor_id < 10){ oss << "C" << "TORQEW0" << motor_id << "0000" << "0000"; }
-                else{ oss << "C" << "TORQEW" << motor_id << "0000" << "0000"; }
+                if(motor_id < 10){ oss << "C" << "TORQER0" << motor_id << "00000000";
+                }else{ oss << "C" << "TORQER" << motor_id << "00000000"; }
                 dondur = oss.str();
 
-                // LOG
-                // std::cout << "Write Torque Status: " << motor_id << " Return: " << dondur << std::endl;
 
+                // motor_pub.publish(motorData);
+                // ros::spinOnce();
+                // loop_rate.sleep();
             }
           }
           a = 0;

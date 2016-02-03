@@ -177,6 +177,8 @@ namespace Robot
 			int m_DelayedAddress[10];
 			unsigned int m_DelayedWords;
 			bool m_bIncludeTempData;
+
+			int played;
         
 
 			ArbotixPro(PlatformArbotixPro *platform);

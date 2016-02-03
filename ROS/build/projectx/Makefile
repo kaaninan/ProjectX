@@ -164,6 +164,20 @@ _projectx_generate_messages_check_deps_CommonProperties/fast:
 .PHONY : _projectx_generate_messages_check_deps_CommonProperties/fast
 
 # Convenience name for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule
+
+# Convenience name for target.
+_projectx_generate_messages_check_deps_DataControl: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule
+.PHONY : _projectx_generate_messages_check_deps_DataControl
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_DataControl/fast:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build
+.PHONY : _projectx_generate_messages_check_deps_DataControl/fast
+
+# Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule
@@ -176,6 +190,20 @@ _projectx_generate_messages_check_deps_Gyro: projectx/CMakeFiles/_projectx_gener
 _projectx_generate_messages_check_deps_Gyro/fast:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build
 .PHONY : _projectx_generate_messages_check_deps_Gyro/fast
+
+# Convenience name for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule
+
+# Convenience name for target.
+_projectx_generate_messages_check_deps_IntArray: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule
+.PHONY : _projectx_generate_messages_check_deps_IntArray
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_IntArray/fast:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build
+.PHONY : _projectx_generate_messages_check_deps_IntArray/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/rule:
@@ -774,7 +802,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... _projectx_generate_messages_check_deps_CommonProperties"
+	@echo "... _projectx_generate_messages_check_deps_DataControl"
 	@echo "... _projectx_generate_messages_check_deps_Gyro"
+	@echo "... _projectx_generate_messages_check_deps_IntArray"
 	@echo "... _projectx_generate_messages_check_deps_Label"
 	@echo "... _projectx_generate_messages_check_deps_MotorBoost"
 	@echo "... _projectx_generate_messages_check_deps_MotorIn"

@@ -7,16 +7,15 @@ import struct
 
 
 class MotorInArray(genpy.Message):
-  _md5sum = "3e33506fbb9fc6f0584fe4650dda8219"
+  _md5sum = "ac25f9cd141042ee871f32a69a144670"
   _type = "projectx/MotorInArray"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """int64[] id
-int64[] temp
+  _full_text = """int64[] temp
 int64[] voltage
 int64[] pos
 """
-  __slots__ = ['id','temp','voltage','pos']
-  _slot_types = ['int64[]','int64[]','int64[]','int64[]']
+  __slots__ = ['temp','voltage','pos']
+  _slot_types = ['int64[]','int64[]','int64[]']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +25,7 @@ int64[] pos
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       id,temp,voltage,pos
+       temp,voltage,pos
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -35,8 +34,6 @@ int64[] pos
     if args or kwds:
       super(MotorInArray, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
-      if self.id is None:
-        self.id = []
       if self.temp is None:
         self.temp = []
       if self.voltage is None:
@@ -44,7 +41,6 @@ int64[] pos
       if self.pos is None:
         self.pos = []
     else:
-      self.id = []
       self.temp = []
       self.voltage = []
       self.pos = []
@@ -61,10 +57,6 @@ int64[] pos
     :param buff: buffer, ``StringIO``
     """
     try:
-      length = len(self.id)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%sq'%length
-      buff.write(struct.pack(pattern, *self.id))
       length = len(self.temp)
       buff.write(_struct_I.pack(length))
       pattern = '<%sq'%length
@@ -87,13 +79,6 @@ int64[] pos
     """
     try:
       end = 0
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sq'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.id = struct.unpack(pattern, str[start:end])
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])
@@ -127,10 +112,6 @@ int64[] pos
     :param numpy: numpy python module
     """
     try:
-      length = len(self.id)
-      buff.write(_struct_I.pack(length))
-      pattern = '<%sq'%length
-      buff.write(self.id.tostring())
       length = len(self.temp)
       buff.write(_struct_I.pack(length))
       pattern = '<%sq'%length
@@ -154,13 +135,6 @@ int64[] pos
     """
     try:
       end = 0
-      start = end
-      end += 4
-      (length,) = _struct_I.unpack(str[start:end])
-      pattern = '<%sq'%length
-      start = end
-      end += struct.calcsize(pattern)
-      self.id = numpy.frombuffer(str[start:end], dtype=numpy.int64, count=length)
       start = end
       end += 4
       (length,) = _struct_I.unpack(str[start:end])

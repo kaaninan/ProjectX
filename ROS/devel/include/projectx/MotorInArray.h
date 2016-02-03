@@ -24,22 +24,17 @@ struct MotorInArray_
   typedef MotorInArray_<ContainerAllocator> Type;
 
   MotorInArray_()
-    : id()
-    , temp()
+    : temp()
     , voltage()
     , pos()  {
     }
   MotorInArray_(const ContainerAllocator& _alloc)
-    : id(_alloc)
-    , temp(_alloc)
+    : temp(_alloc)
     , voltage(_alloc)
     , pos(_alloc)  {
     }
 
 
-
-   typedef std::vector<int64_t, typename ContainerAllocator::template rebind<int64_t>::other >  _id_type;
-  _id_type id;
 
    typedef std::vector<int64_t, typename ContainerAllocator::template rebind<int64_t>::other >  _temp_type;
   _temp_type temp;
@@ -127,12 +122,12 @@ struct MD5Sum< ::projectx::MotorInArray_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "3e33506fbb9fc6f0584fe4650dda8219";
+    return "ac25f9cd141042ee871f32a69a144670";
   }
 
   static const char* value(const ::projectx::MotorInArray_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x3e33506fbb9fc6f0ULL;
-  static const uint64_t static_value2 = 0x584fe4650dda8219ULL;
+  static const uint64_t static_value1 = 0xac25f9cd141042eeULL;
+  static const uint64_t static_value2 = 0x871f32a69a144670ULL;
 };
 
 template<class ContainerAllocator>
@@ -151,8 +146,7 @@ struct Definition< ::projectx::MotorInArray_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "int64[] id\n\
-int64[] temp\n\
+    return "int64[] temp\n\
 int64[] voltage\n\
 int64[] pos\n\
 ";
@@ -173,7 +167,6 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.id);
       stream.next(m.temp);
       stream.next(m.voltage);
       stream.next(m.pos);
@@ -195,12 +188,6 @@ struct Printer< ::projectx::MotorInArray_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::projectx::MotorInArray_<ContainerAllocator>& v)
   {
-    s << indent << "id[]" << std::endl;
-    for (size_t i = 0; i < v.id.size(); ++i)
-    {
-      s << indent << "  id[" << i << "]: ";
-      Printer<int64_t>::stream(s, indent + "  ", v.id[i]);
-    }
     s << indent << "temp[]" << std::endl;
     for (size_t i = 0; i < v.temp.size(); ++i)
     {

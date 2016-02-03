@@ -1,6 +1,8 @@
 (cl:defpackage projectx-msg
   (:use )
   (:export
+   "<DATACONTROL>"
+   "DATACONTROL"
    "<SCALABLECONTROL>"
    "SCALABLECONTROL"
    "<LABEL>"
@@ -35,5 +37,7 @@
    "MULTIFADER"
    "<XYPAD>"
    "XYPAD"
+   "<INTARRAY>"
+   "INTARRAY"
   ))
 

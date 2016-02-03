@@ -36,7 +36,6 @@ def publish_data(thread_name,delay):
                 # if i == 1:
                 #     print (i, ' ',int(motor_values[i].get("pos")))
                 try:
-                    motorData.id.append(int(i))
                     motorData.temp.append(int(motor_values[i].get("temp")))
                     motorData.voltage.append(int(motor_values[i].get("voltage")))
                     motorData.pos.append(int(motor_values[i].get("pos")))
@@ -118,7 +117,7 @@ def listener():
     
     rospy.init_node('motor_values_listener', anonymous=True)
     
-    rospy.Subscriber("arduinoMotorIncoming", MotorIn, callback)
+    rospy.Subscriber("Ami", MotorIn, callback)
 
     try:
         thread.start_new_thread(publish_data, ("Thread-1",2))

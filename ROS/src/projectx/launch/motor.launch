@@ -2,8 +2,9 @@
                                                                                                                                                                                                                   
   <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino"/>
   <node pkg="projectx" type="motor_in_server.py" name="motor_in_server" output="screen"/>
-  <!--<node pkg="projectx" type="motor_out_server.py" name="motor_out_server" />-->
-  <node pkg="projectx" type="motor_service_server.py" name="motor_service_server" output="screen"/>
-  <node pkg="projectx" type="motor_boost_server" name="motor_boost_server" output="screen"/>
+  <node pkg="projectx" type="motor_service_server.py" name="motor_service_server"  output="screen"/>
+  <node pkg="projectx" type="motor_boost_server" name="motor_boost_server" output="screen" />
+  <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen"/>
+  <node pkg="projectx" type="motor_command_server.py" name="motor_command_server" output="screen"/>
 
 </launch>      

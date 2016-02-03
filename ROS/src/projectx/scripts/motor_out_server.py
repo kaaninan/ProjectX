@@ -60,13 +60,15 @@ def motor_out_chat_callback2(data):
 
 def talker():
     global pub, rate
-    pub = rospy.Publisher('arduinoMotorOutgoing', MotorOut, queue_size=10)
-    rospy.Subscriber("motor_string_data", String, motor_string_data_callback)
-    rospy.Subscriber("motor_out_single_server", MotorOut, motor_out_single_callback)
+    pub = rospy.Publisher('Amop', MotorOut, queue_size=10)
+    
+    rospy.Subscriber("motor_out_array", Int64Array, motor_string_data_callback) # RME Play'daki komutlar
+    rospy.Subscriber("motor_out_played", Int64, motor_string_data_callback) # RME Play Bitince
+    rospy.Subscriber("motor_out_single", MotorOut, motor_out_single_callback) # RME'de set komutu
 
     rospy.init_node('motor_out_server', anonymous=True)
 
-    rate = rospy.Rate(20)
+    rate = rospy.Rate(1)
 
     rospy.loginfo("READY: Motor Outgoing Server")
 

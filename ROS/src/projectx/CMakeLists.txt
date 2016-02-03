@@ -24,7 +24,9 @@ add_message_files(
   MotorIn.msg
   MotorInArray.msg
   MotorOut.msg
+  DataControl.msg
   MotorOutArray.msg
+  IntArray.msg
   MotorOutSingleArray.msg
   Gyro.msg
   OscData.msg

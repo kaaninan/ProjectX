@@ -644,6 +644,19 @@ _projectx_generate_messages_check_deps_CommonProperties/fast:
 .PHONY : _projectx_generate_messages_check_deps_CommonProperties/fast
 
 #=============================================================================
+# Target rules for targets named _projectx_generate_messages_check_deps_DataControl
+
+# Build rule for target.
+_projectx_generate_messages_check_deps_DataControl: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_DataControl
+.PHONY : _projectx_generate_messages_check_deps_DataControl
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_DataControl/fast:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build
+.PHONY : _projectx_generate_messages_check_deps_DataControl/fast
+
+#=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_Gyro
 
 # Build rule for target.
@@ -655,6 +668,19 @@ _projectx_generate_messages_check_deps_Gyro: cmake_check_build_system
 _projectx_generate_messages_check_deps_Gyro/fast:
 	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build
 .PHONY : _projectx_generate_messages_check_deps_Gyro/fast
+
+#=============================================================================
+# Target rules for targets named _projectx_generate_messages_check_deps_IntArray
+
+# Build rule for target.
+_projectx_generate_messages_check_deps_IntArray: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_IntArray
+.PHONY : _projectx_generate_messages_check_deps_IntArray
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_IntArray/fast:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build
+.PHONY : _projectx_generate_messages_check_deps_IntArray/fast
 
 #=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_Label
@@ -1253,7 +1279,9 @@ help:
 	@echo "... rosserial_msgs_genlisp"
 	@echo "... rosserial_msgs_genpy"
 	@echo "... _projectx_generate_messages_check_deps_CommonProperties"
+	@echo "... _projectx_generate_messages_check_deps_DataControl"
 	@echo "... _projectx_generate_messages_check_deps_Gyro"
+	@echo "... _projectx_generate_messages_check_deps_IntArray"
 	@echo "... _projectx_generate_messages_check_deps_Label"
 	@echo "... _projectx_generate_messages_check_deps_MotorBoost"
 	@echo "... _projectx_generate_messages_check_deps_MotorIn"

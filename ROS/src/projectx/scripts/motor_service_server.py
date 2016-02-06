@@ -11,8 +11,6 @@ def handle_service(req):
 	motor_id = parseList[1]
 	komut = parseList[2]
 
-	print motor_data
-
 	if veri_turu == "read_present_pos":
 		list_sira = int(motor_id)-1
 		return_data = motor_data.pos[list_sira]
@@ -41,7 +39,7 @@ def handle_service(req):
 
 	elif veri_turu == "write_goal_pos":
 
-		IPTAL
+		# IPTAL
 
 		data = MotorOut()
 
@@ -52,7 +50,7 @@ def handle_service(req):
 		data.rw = 0
 		data.action = 0
 
-		print "ID: "+str(motor_id)+" - POS: "+str(komut)
+		print "Service Server - WRITE GOAL ID: "+str(motor_id)+" - POS: "+str(komut)
 
 		pubSingle.publish(data)
 		rate.sleep()
@@ -80,6 +78,7 @@ def handle_service(req):
 
 def callbackMotor(data):
 	global motor_data
+	# rospy.loginfo(data)
 	motor_data = data
 
 

@@ -13,7 +13,7 @@
 
 // ROS
 #include <ros.h>
-#include <std_msgs/String.h>
+#include <projectx/Hash.h>
 #include <projectx/MotorIn.h>
 #include <projectx/MotorOut.h>
 #include <projectx/IntArray.h>
@@ -30,7 +30,7 @@ int ok_gyro = 0;
 
 
 // ROS PUBLISHER
-projectx::MotorIn motorin_data;
+projectx::Hash motorin_data;
 ros::Publisher p_motor("Ami", &motorin_data);
 
 projectx::Gyro gyro_data;
@@ -46,8 +46,13 @@ ros::Publisher p_sensor("Asi", &sensor_data);
 
 // ### ROS -> SERVO TORQUE (SUBSCRIBER)
 
-void messageMotorTorqueIn( const projectx::MotorOut& msg) {
-  writeServoTorque(msg.id, msg.torque);
+void messageMotorSingleIn( const projectx::MotorOut& msg) {
+  if(msg.torque != -1){
+    writeServoTorque(msg.id, msg.torque);
+  }
+  else if(msg.pos != -1){
+    writeServoPos(msg.id, msg.pos);
+  }
 }
 
 void writeServoTorque(int motor_id, int torque) {
@@ -88,34 +93,24 @@ void messageDataControl( const projectx::IntArray& msg) {
 
 // ### SERVO -> ROS (PUBLISHER)
 
-// Motorların Sıcaklık, Voltaj ve Posizyon Bilgisi (Read)
-int motor_temp[22];
-int motor_pos[22];
-int motor_volt[22];
-int motor_torque[22];
-
-int motorOku = 1; // Her loop'da değer okunacak motor
+int motorId = 1;
 
 void publishServo() {
-  
-  motorin_data.id = motorOku;
-  motorin_data.temp = Dynamixel.readTemperature(motorOku);
-  motorin_data.voltage = Dynamixel.readVoltage(motorOku);
-  motorin_data.pos = Dynamixel.readPosition(motorOku);
-
+  int pos = Dynamixel.readPosition(motorId);
+  motorin_data.id = motorId;
+  motorin_data.deger = pos;
   p_motor.publish(&motorin_data);
   
-  motorOku++; // Bir Sonraki Motoru Oku ve Publish
+  motorId++;
   
-  if(motorOku == 21)
-    motorOku = 1;
-  
+  if(motorId == 21) motorId = 1;
+
 }
 
 
 // ## SUBSCRIBER
 
-ros::Subscriber<projectx::MotorOut> sub_motor_torque("Amot", messageMotorTorqueIn);
+ros::Subscriber<projectx::MotorOut> sub_motor_single("Amot", messageMotorSingleIn);
 ros::Subscriber<projectx::IntArray> sub_motor_pos("Amop", messageMotorPosIn);
 ros::Subscriber<projectx::IntArray> sub_data_control("Adc", messageDataControl);
 
@@ -133,11 +128,11 @@ void setup() {
 
   // Subscriber
   nh.subscribe(sub_motor_pos);
-  nh.subscribe(sub_motor_torque);
+  nh.subscribe(sub_motor_single);
   nh.subscribe(sub_data_control);
 
   Dynamixel.begin(1000000, 2);
-  
+
   delay(1000);
 }
 
@@ -149,3 +144,4 @@ void loop() {
   nh.spinOnce();
   delay(1);
 }
+

@@ -6,6 +6,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_TouchOSC_Common.py"
+  "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Hash.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiXYPad.py"

@@ -103,7 +103,7 @@ int main(int argc, char **argv){
   motor_pub = n.advertise<projectx::MotorOut>("motor_out_single", 1000);
   motor_pub_played = n.advertise<std_msgs::Int64>("motor_out_played", 1000);
 
-  ros::Rate loop_rate(100);
+  ros::Rate loop_rate(50);
 
   ROS_INFO("READY: Motor Boost Server ");
 
@@ -193,7 +193,7 @@ int main(int argc, char **argv){
                 dondur = oss.str();
 
                 // LOG
-                // std::cout << "Reading Present Position: " << motor_id << " Return: " << dondur << std::endl;
+                std::cout << "Reading Present Position: " << motor_id << " Return: " << dondur << std::endl;
                 
             }else if (veri_turu == "read_goal_pos") {
 
@@ -208,7 +208,7 @@ int main(int argc, char **argv){
                 dondur = oss.str();
 
                 // LOG
-                // std::cout << "Reading Goal Position: " << motor_id << " Return: " << dondur << std::endl;
+                std::cout << "Reading Goal Position: " << motor_id << " Return: " << dondur << std::endl;
 
             }else if (veri_turu == "write_goal_pos") {
 
@@ -222,7 +222,7 @@ int main(int argc, char **argv){
                 motorData.pos = goal;
                 motorData.torque = -1;
 
-                // ROS_INFO("WRITE GOAL - %d -> %d",motor_id, goal);
+                ROS_INFO("BOOST - WRITE GOAL - %d -> %d",motor_id, goal);
 
                 motor_pub.publish(motorData);
                 ros::spinOnce();
@@ -256,7 +256,7 @@ int main(int argc, char **argv){
                 motorData.pos = -1;
                 motorData.torque = goal;
 
-                // ROS_INFO("WRITE TORQ - %d -> %d",motor_id, goal);
+                ROS_INFO("BOOST - WRITE TORQ - %d -> %d",motor_id, goal);
 
                 motor_pub.publish(motorData);
                 ros::spinOnce();

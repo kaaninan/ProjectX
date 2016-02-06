@@ -6,6 +6,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/DataControl.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/TouchOSC_Common.lisp"
+  "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Hash.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/ScalableControl.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOut.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiXYPad.lisp"

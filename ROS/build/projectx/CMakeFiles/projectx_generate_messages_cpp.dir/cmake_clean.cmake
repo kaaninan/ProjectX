@@ -6,6 +6,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/include/projectx/MultiButton.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/DataControl.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/TouchOSC_Common.h"
+  "/home/rock/ProjectX/ROS/devel/include/projectx/Hash.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/ScalableControl.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MotorOut.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MultiXYPad.h"

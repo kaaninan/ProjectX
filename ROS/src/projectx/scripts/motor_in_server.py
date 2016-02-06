@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import rospy
-from projectx.msg import MotorIn
-from projectx.msg import MotorInArray
+from projectx.msg import *
+from std_msgs.msg import *
 import thread
 
 motor_values = {}
@@ -11,7 +11,7 @@ def dogrula():
     global motor_values
     for i in range(1,21):
         try:
-            if motor_values[i].get("pos") and motor_values[i].get("temp") and motor_values[i].get("voltage"):
+            if int(motor_values[i].get("pos")):
                 don = 1 # Bos Durmasin Diye
         # Sorun Yok
         except:
@@ -31,22 +31,20 @@ def publish_data(thread_name,delay):
         if ok_ == 1:
             motorData = MotorInArray()
 
-            for i in range(1,21):
-                
-                # if i == 1:
-                #     print (i, ' ',int(motor_values[i].get("pos")))
-                try:
-                    motorData.temp.append(int(motor_values[i].get("temp")))
-                    motorData.voltage.append(int(motor_values[i].get("voltage")))
+            try:
+                for i in range(1,21):
+                    # motorData.temp.append(int(motor_values[i].get("temp")))
+                    # motorData.voltage.append(int(motor_values[i].get("voltage")))
                     motorData.pos.append(int(motor_values[i].get("pos")))
-                except:
-                    tamam = 0
-                    # NULL
+                global pub, rate
+                # rospy.loginfo("Motor In Server")
+                # rospy.loginfo(motorData)
+                pub.publish(motorData)
+                rate.sleep()
+            except:
+                tamam = 0
 
-            global pub
-            global rate
-            pub.publish(motorData)
-            rate.sleep()
+            
 
 
 
@@ -75,49 +73,46 @@ def deger_bul(id, bolum):
 
 def callback(data):
     
-    #    rospy.loginfo("%s, %s, %s, %s", data.id, data.temp, data.voltage, data.pos)
+    # rospy.loginfo("%s, %s, %s, %s", data.id, data.temp, data.voltage, data.pos)
     
     
     # Gelen Verinin Dogruluk Kontrolu
     # TECRUBE: Ilk basta tum veriler tam gelene kadar yaklasik 2sn geciyor.
     # Eger gecersiz deger gelirse varolan degeri koru
     
-    if data.temp < 1 or data.temp > 200:
-        deger = deger_bul(data.id, "temp")
-        temp_ = deger
-    else:
-        temp_ = int(data.temp)
+    # if data.temp < 2 or data.temp > 200:
+    #     deger = deger_bul(data.id, "temp")
+    #     temp_ = deger
+    # else:
+    #     temp_ = int(data.temp)
     
     
-    if data.voltage < 1 or data.voltage > 200:
-        deger = deger_bul(data.id, "voltage")
-        voltage_ = deger
-    else:
-        voltage_ = int(data.voltage)
+    # if data.voltage < 2 or data.voltage > 200:
+    #     deger = deger_bul(data.id, "voltage")
+    #     voltage_ = deger
+    # else:
+    #     voltage_ = int(data.voltage)
     
     
-    if data.pos < 0 or data.pos > 2000:
+    if data.deger < 1 or data.deger > 1030:
         deger = deger_bul(data.id, "pos")
         pos_ = deger
     else:
-        pos_ = int(data.pos)
+        pos_ = int(data.deger)
 
-
-    # if data.id == 2:
-    #     print("2 -> ", data.pos, " -- ", pos_);
     
     global motor_values
-
-    motor_values[data.id] = {"temp":temp_, "voltage":voltage_, "pos": pos_}
-    
+    motor_values[data.id] = {"pos": pos_}
     yazdir()
+    rospy.loginfo(data)
+    rospy.loginfo(motor_values)
 
 
 def listener():
     
     rospy.init_node('motor_values_listener', anonymous=True)
     
-    rospy.Subscriber("Ami", MotorIn, callback)
+    rospy.Subscriber("Ami", Hash, callback)
 
     try:
         thread.start_new_thread(publish_data, ("Thread-1",2))

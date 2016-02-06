@@ -6,7 +6,7 @@ from projectx.msg import MotorOut
 def talker():
     pub = rospy.Publisher('arduinoMotorOutgoing', MotorOut, queue_size=10)
 
-rospy.init_node('talker', anonymous=True)
+    rospy.init_node('talker', anonymous=True)
     
     rate = rospy.Rate(10) # 10hz
     

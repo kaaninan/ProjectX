@@ -4,6 +4,7 @@ from ._DataControl import *
 from ._MotorInArray import *
 from ._MotorOut import *
 from ._TouchOSC_Common import *
+from ._Hash import *
 from ._Gyro import *
 from ._Tabpage import *
 from ._MotorOutSingleArray import *

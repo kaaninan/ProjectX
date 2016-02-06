@@ -21,6 +21,7 @@ add_service_files(
 add_message_files(
   FILES
   Sensor.msg
+  Hash.msg
   MotorIn.msg
   MotorInArray.msg
   MotorOut.msg

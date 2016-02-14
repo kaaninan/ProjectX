@@ -29,7 +29,7 @@ def talker():
 
     rospy.init_node('motor_out_server', anonymous=True)
 
-    rate = rospy.Rate(10)
+    rate = rospy.Rate(40)
 
     rospy.loginfo("READY: Motor Outgoing Server")
 

@@ -97,6 +97,7 @@ int motorId = 1;
 
 void publishServo() {
   int pos = Dynamixel.readPosition(motorId);
+  int pos2 = Dynamixel.ping(motorId);
   motorin_data.id = motorId;
   motorin_data.deger = pos;
   p_motor.publish(&motorin_data);

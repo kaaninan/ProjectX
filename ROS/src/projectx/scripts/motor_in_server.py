@@ -104,8 +104,8 @@ def callback(data):
     global motor_values
     motor_values[data.id] = {"pos": pos_}
     yazdir()
-    rospy.loginfo(data)
-    rospy.loginfo(motor_values)
+    # rospy.loginfo(data)
+    # rospy.loginfo(motor_values)
 
 
 def listener():

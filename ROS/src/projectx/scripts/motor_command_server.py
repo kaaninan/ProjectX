@@ -50,13 +50,25 @@ def sub_played(data):
     played = data.data
 
 
+def control(data):
+    global pub_sync, rate
+    sync_data = DataControl()
+    sync_data.data = "motor"
+    sync_data.value = [data]
+    pub_sync.publish(sync_data)
+    print "Published Data Control in Motor Command Server"
+    rate.sleep()
+
 def service_motor(req):
-    global process, pub_sync, pub_motor, rate, played
+    global process, pub_motor, rate, played
     komut = req.in_data
 
     played = 0
     
     if komut == "play":
+
+        control(1)
+        time.sleep(1)
 
         os.system("sudo rm /home/rock/Motor_Test.txt")
 
@@ -67,7 +79,7 @@ def service_motor(req):
         rospy.loginfo("RME: ON")
         time.sleep(4)
 
-        thread_multi(process, "page", "0")
+        thread_multi(process, "page", "3")
         rospy.loginfo("RME: ON")
         time.sleep(2)
 
@@ -79,24 +91,14 @@ def service_motor(req):
         thread_single(process, "exit")
         rospy.loginfo("RME: EXIT")
 
-        # while 1:
-        #     global played
-        #     if played == 1:
-        #         print "PLAY BITTI"
-        #         time.sleep(3)
-                
-        #         thread_single(process, "exit")
-        #         rospy.loginfo("RME: EXIT")
-        #         played = 0
-        #         break;
+        control(0)
+        time.sleep(1)
+
+        motor()
+        rospy.loginfo("FILE READ - PLAY")
 
     elif komut == "manual":
-        sync_data = DataControl()
-        sync_data.data = "motor"
-        sync_data.value = [1]
-        pub_sync.publish(sync_data)
-        print "Published Data Control in Motor Command Server"
-        rate.sleep()
+        control(1)
 
     elif komut == "start":
         process = start()
@@ -106,8 +108,14 @@ def service_motor(req):
         rospy.loginfo("RME: EXIT")
 
     elif komut == "file":
+        control(0)
+        time.sleep(1)
         motor()
         rospy.loginfo("FILE READ - PLAY")
+
+        time.sleep(1)
+        control(1)
+        os.system("sudo rm /home/rock/Motor_Test.txt")
 
     elif komut == "exit":
         thread_single(process, "exit")

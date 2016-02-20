@@ -2,74 +2,88 @@ var ws = null;
 
 var recognizing = false;
 
-function baglan(){;
-    var host = "127.0.0.1"
-    var port = 9000
-    var socket = ""
-
-    var _socket = (undefined==socket)?"":"/"+socket
-
-    _url = "ws://"+host+":"+port+_socket
-
-    if ('MozWebSocket' in window) ws = new MozWebSocket (_url);
-    else ws = new WebSocket (_url);
-
-
-    ws.onclose = function(){
-        setTimeout(function(){
-            baglan();
-        }, 1000);
-    };
-
-    ws.onopen = function () {};
-
-    ws.onerror = function (error) {};
-
-    ws.onmessage = function (e) {
-
-        if(e.data == "stop"){
-            
-                console.log("STOP");  
-                recognizing = false;
-                recognition.stop();
-            
-
-        }else if(e.data == "start"){
-          
-          try {
-                console.log("START");
-                if(recognizing == false){
-                  recognition.start();
-                  recognizing = true;
-                };
-          }
-          catch(err) {
-              console.log("çakışma var");
+var twist;
 
 
 
-              setTimeout(function () {
-                console.log("START 2");
-                if(recognizing == false){
-                  recognition.start();
-                  recognizing = true;
-                };
-              }, 1000);
-              
-          }
 
-            
-          
-        }
-    };
-
-}
+var ros = new ROSLIB.Ros({});
 
 $(function(){
-    baglan();
+    ros.connect('ws://localhost:9090');
 })
 
 
+// If there is an error on the backend, an 'error' emit will be emitted.
+ros.on('error', function(error) {
+  document.getElementById('connecting').style.display = 'none';
+  document.getElementById('connected').style.display = 'none';
+  document.getElementById('closed').style.display = 'none';
+  document.getElementById('error').style.display = 'inline';
+  console.log(error);
+});
+
+// Find out exactly when we made a connection.
+ros.on('connection', function() {
+  console.log('Connection made!');
+  document.getElementById('connecting').style.display = 'none';
+  document.getElementById('error').style.display = 'none';
+  document.getElementById('closed').style.display = 'none';
+  document.getElementById('connected').style.display = 'inline';
+});
+
+ros.on('close', function() {
+  console.log('Connection closed.');
+  document.getElementById('connecting').style.display = 'none';
+  document.getElementById('connected').style.display = 'none';
+  document.getElementById('closed').style.display = 'inline';
+});
+
+
+
+
+// PUBLISH
+var cmdVel = new ROSLIB.Topic({
+    ros : ros,
+    name : '/speech_data',
+    messageType : 'std_msgs/String'
+  });
+
+
+
+
+
+
+        // if(e.data == "stop"){
+            
+        //         console.log("STOP");  
+        //         recognizing = false;
+        //         recognition.stop();
+            
+
+        // }else if(e.data == "start"){
+          
+        //   try {
+        //         console.log("START");
+        //         if(recognizing == false){
+        //           recognition.start();
+        //           recognizing = true;
+        //         };
+        //   }
+        //   catch(err) {
+        //       console.log("çakışma var");
+
+
+
+        //       setTimeout(function () {
+        //         console.log("START 2");
+        //         if(recognizing == false){
+        //           recognition.start();
+        //           recognizing = true;
+        //         };
+        //       }, 1000);
+              
+          
 
 
 
@@ -187,14 +201,20 @@ if (!('webkitSpeechRecognition' in window)) {
 
       if(interim_transcript == ""){
 
-        ws.send("*-*");
+        // ws.send("*-*");
+
 
         $('div#son').append(" -- ");
         $('div#son').append("<br>");  
 
       }else{
 
-        ws.send(cumle+"-"+deger);
+        // ws.send(cumle+"-"+deger);
+
+        twist = new ROSLIB.Message({data:cumle});
+
+      // And finally, publish.
+      cmdVel.publish(twist);
 
         $('div#son').append(cumle+" -- "+deger);
         $('div#son').append("<br>");  

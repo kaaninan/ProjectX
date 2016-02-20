@@ -1,0 +1,3 @@
+- https ile 8008 portunda server açıyor.
+- Chromium ile bağlantı sağlanıyor.
+- ROS ile haberleşmesi için roslibjs açık olması lazım.

@@ -6,7 +6,9 @@ int gaz_pin = 2;
 
 
 // VALUE (with Default Values)
-int temp = -1;
+float temp = -1;
+float temp_out = -1;
+float humidity = -1;
 int ldr = -1;
 int uzaklik = -1;
 int gaz = -1;
@@ -20,9 +22,12 @@ void publishSensor() {
   read_gaz();
   read_ldr();
   read_temp();
+  read_temp_out();
 
   sensor_data.ldr = ldr;
   sensor_data.temp = temp;
+  sensor_data.temp_out = temp_out;
+  sensor_data.humidity = humidity;
   sensor_data.dis = uzaklik;
   sensor_data.gaz = gaz;
 
@@ -85,4 +90,32 @@ void read_temp() {
     else if (cfg == 0x40) raw = raw & ~1;
   }
   temp = (float)raw / 16.0;
+}
+
+
+void read_temp_out(){
+  humidity = dht.readHumidity();
+  temp_out = dht.readTemperature();
+
+  if (isnan(humidity) || isnan(temp_out)) {
+    //Serial.println("Failed to read from DHT sensor!");
+    return;
+  }
+
+  float hic = dht.computeHeatIndex(temp_out, humidity, false);
+
+//  Serial.print("Humidity: ");
+//  Serial.print(h);
+//  Serial.print(" %\t");
+//  Serial.print("Temperature: ");
+//  Serial.print(t);
+//  Serial.print(" *C ");
+//  Serial.print(f);
+//  Serial.print(" *F\t");
+//  Serial.print("Heat index: ");
+//  Serial.print(hic);
+//  Serial.print(" *C ");
+//  Serial.print(hif);
+//  Serial.println(" *F");
+  
 }

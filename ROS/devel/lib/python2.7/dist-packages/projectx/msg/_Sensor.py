@@ -7,16 +7,18 @@ import struct
 
 
 class Sensor(genpy.Message):
-  _md5sum = "04650b2f757cb0c082a163e7761e3ac3"
+  _md5sum = "949ea192333261d5f2a0646fc476a04c"
   _type = "projectx/Sensor"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """int64 dis
 int64 ldr
 int64 gaz
-int64 temp
+float64 temp
+float64 temp_out
+float64 humidity
 """
-  __slots__ = ['dis','ldr','gaz','temp']
-  _slot_types = ['int64','int64','int64','int64']
+  __slots__ = ['dis','ldr','gaz','temp','temp_out','humidity']
+  _slot_types = ['int64','int64','int64','float64','float64','float64']
 
   def __init__(self, *args, **kwds):
     """
@@ -26,7 +28,7 @@ int64 temp
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       dis,ldr,gaz,temp
+       dis,ldr,gaz,temp,temp_out,humidity
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -42,12 +44,18 @@ int64 temp
       if self.gaz is None:
         self.gaz = 0
       if self.temp is None:
-        self.temp = 0
+        self.temp = 0.
+      if self.temp_out is None:
+        self.temp_out = 0.
+      if self.humidity is None:
+        self.humidity = 0.
     else:
       self.dis = 0
       self.ldr = 0
       self.gaz = 0
-      self.temp = 0
+      self.temp = 0.
+      self.temp_out = 0.
+      self.humidity = 0.
 
   def _get_types(self):
     """
@@ -62,7 +70,7 @@ int64 temp
     """
     try:
       _x = self
-      buff.write(_struct_4q.pack(_x.dis, _x.ldr, _x.gaz, _x.temp))
+      buff.write(_struct_3q3d.pack(_x.dis, _x.ldr, _x.gaz, _x.temp, _x.temp_out, _x.humidity))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -75,8 +83,8 @@ int64 temp
       end = 0
       _x = self
       start = end
-      end += 32
-      (_x.dis, _x.ldr, _x.gaz, _x.temp,) = _struct_4q.unpack(str[start:end])
+      end += 48
+      (_x.dis, _x.ldr, _x.gaz, _x.temp, _x.temp_out, _x.humidity,) = _struct_3q3d.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -90,7 +98,7 @@ int64 temp
     """
     try:
       _x = self
-      buff.write(_struct_4q.pack(_x.dis, _x.ldr, _x.gaz, _x.temp))
+      buff.write(_struct_3q3d.pack(_x.dis, _x.ldr, _x.gaz, _x.temp, _x.temp_out, _x.humidity))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -104,11 +112,11 @@ int64 temp
       end = 0
       _x = self
       start = end
-      end += 32
-      (_x.dis, _x.ldr, _x.gaz, _x.temp,) = _struct_4q.unpack(str[start:end])
+      end += 48
+      (_x.dis, _x.ldr, _x.gaz, _x.temp, _x.temp_out, _x.humidity,) = _struct_3q3d.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_4q = struct.Struct("<4q")
+_struct_3q3d = struct.Struct("<3q3d")

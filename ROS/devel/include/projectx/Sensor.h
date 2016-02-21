@@ -27,13 +27,17 @@ struct Sensor_
     : dis(0)
     , ldr(0)
     , gaz(0)
-    , temp(0)  {
+    , temp(0.0)
+    , temp_out(0.0)
+    , humidity(0.0)  {
     }
   Sensor_(const ContainerAllocator& _alloc)
     : dis(0)
     , ldr(0)
     , gaz(0)
-    , temp(0)  {
+    , temp(0.0)
+    , temp_out(0.0)
+    , humidity(0.0)  {
     }
 
 
@@ -47,8 +51,14 @@ struct Sensor_
    typedef int64_t _gaz_type;
   _gaz_type gaz;
 
-   typedef int64_t _temp_type;
+   typedef double _temp_type;
   _temp_type temp;
+
+   typedef double _temp_out_type;
+  _temp_out_type temp_out;
+
+   typedef double _humidity_type;
+  _humidity_type humidity;
 
 
 
@@ -127,12 +137,12 @@ struct MD5Sum< ::projectx::Sensor_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "04650b2f757cb0c082a163e7761e3ac3";
+    return "949ea192333261d5f2a0646fc476a04c";
   }
 
   static const char* value(const ::projectx::Sensor_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x04650b2f757cb0c0ULL;
-  static const uint64_t static_value2 = 0x82a163e7761e3ac3ULL;
+  static const uint64_t static_value1 = 0x949ea192333261d5ULL;
+  static const uint64_t static_value2 = 0xf2a0646fc476a04cULL;
 };
 
 template<class ContainerAllocator>
@@ -154,7 +164,9 @@ struct Definition< ::projectx::Sensor_<ContainerAllocator> >
     return "int64 dis\n\
 int64 ldr\n\
 int64 gaz\n\
-int64 temp\n\
+float64 temp\n\
+float64 temp_out\n\
+float64 humidity\n\
 ";
   }
 
@@ -177,6 +189,8 @@ namespace serialization
       stream.next(m.ldr);
       stream.next(m.gaz);
       stream.next(m.temp);
+      stream.next(m.temp_out);
+      stream.next(m.humidity);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -202,7 +216,11 @@ struct Printer< ::projectx::Sensor_<ContainerAllocator> >
     s << indent << "gaz: ";
     Printer<int64_t>::stream(s, indent + "  ", v.gaz);
     s << indent << "temp: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.temp);
+    Printer<double>::stream(s, indent + "  ", v.temp);
+    s << indent << "temp_out: ";
+    Printer<double>::stream(s, indent + "  ", v.temp_out);
+    s << indent << "humidity: ";
+    Printer<double>::stream(s, indent + "  ", v.humidity);
   }
 };
 

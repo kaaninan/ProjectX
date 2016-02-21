@@ -23,6 +23,9 @@ def req_callback(data):
     if hedef == "motor":
         data_array[2] = int(value[0])
         print "Data Control Opened Motor: " + str(data_array[2])
+    elif hedef == "sensor":
+        data_array[0] = int(value[0])
+        print "Data Control Opened Sensor: " + str(data_array[0])
 
     gonder()
 

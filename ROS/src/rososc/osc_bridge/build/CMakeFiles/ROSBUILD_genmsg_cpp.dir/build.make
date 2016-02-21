@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/catkin-ws/src/rososc/osc_bridge
+CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/catkin-ws/src/rososc/osc_bridge/build
+CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
@@ -60,6 +60,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/rock/catkin-ws/src/rososc/osc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/catkin-ws/src/rososc/osc_bridge /home/rock/catkin-ws/src/rososc/osc_bridge /home/rock/catkin-ws/src/rososc/osc_bridge/build /home/rock/catkin-ws/src/rososc/osc_bridge/build /home/rock/catkin-ws/src/rososc/osc_bridge/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/osc_bridge /home/rock/ProjectX/ROS/src/rososc/osc_bridge /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

@@ -2,7 +2,7 @@
 OneWire temp_pin(22);
 SharpIR sharp(A1, 25, 93, 1080);
 int ldr_pin = 0;
-int gaz_pin = 2;
+int gaz_pin = 15;
 
 
 // VALUE (with Default Values)
@@ -99,10 +99,10 @@ void read_temp_out(){
 
   if (isnan(humidity) || isnan(temp_out)) {
     //Serial.println("Failed to read from DHT sensor!");
-    return;
+    //return;
   }
 
-  float hic = dht.computeHeatIndex(temp_out, humidity, false);
+  //temp_out = dht.computeHeatIndex(t_temp_out, humidity, false);
 
 //  Serial.print("Humidity: ");
 //  Serial.print(h);

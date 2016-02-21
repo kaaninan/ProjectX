@@ -7,4 +7,8 @@
           GAZ
           TEMP-VAL
           TEMP
+          TEMP_OUT-VAL
+          TEMP_OUT
+          HUMIDITY-VAL
+          HUMIDITY
 ))

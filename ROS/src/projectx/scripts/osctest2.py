@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from projectx.msg import ScalableControl
-from projectx.msg import Motor
-
+from projectx.msg import *
 
 
 class PublisherData:
@@ -73,14 +71,13 @@ class PublisherData:
                 rospy.Subscriber(taslak1, ScalableControl, self.callback)
                 rospy.Subscriber(push1, ScalableControl, self.callback)
         
-        rospy.loginfo("ROS OSC Started")
-        
+        rospy.loginfo("OSC: Ready")
         rospy.spin()
     
     
     def __init__(self):
-        rospy.init_node('osc_pubsub', anonymous=True)
-        self.pub = rospy.Publisher('hardware_motor_data', Motor, queue_size = 10)
+        rospy.init_node('osc_incoming', anonymous=True)
+        #self.pub = rospy.Publisher('hardware_motor_data', Motor, queue_size = 10)
         self.listener()
 
 

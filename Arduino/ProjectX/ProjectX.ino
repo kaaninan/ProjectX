@@ -100,11 +100,13 @@ void messageDataControl( const projectx::IntArray& msg) {
 // ### ROS -> OUT DATA LASER
 void messageOutDataLaser( const std_msgs::Int64& msg) {
   int data = msg.data;
+  analogWrite(laser, data);
 }
 
 // ### ROS -> OUT DATA BUZZER
 void messageOutDataBuzzer( const std_msgs::Int64& msg) {
   int data = msg.data;
+  analogWrite(buzzer, data);
 }
 
 // ### ROS -> OUT DATA POWER LED
@@ -112,6 +114,9 @@ void messageOutDataPowerLed( const projectx::IntArray& msg) {
   int led_1 = msg.deger[0];
   int led_2 = msg.deger[1];
   int led_3 = msg.deger[2];
+  analogWrite(power_led_1, led_1);
+  analogWrite(power_led_2, led_2);
+  analogWrite(power_led_3, led_3);
 }
 
 

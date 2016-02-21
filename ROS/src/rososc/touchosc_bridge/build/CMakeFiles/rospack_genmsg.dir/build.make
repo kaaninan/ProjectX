@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/catkin-ws/src/rososc/touchosc_bridge
+CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/catkin-ws/src/rososc/touchosc_bridge/build
+CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build
 
 # Utility rule file for rospack_genmsg.
 
@@ -60,6 +60,6 @@ CMakeFiles/rospack_genmsg.dir/clean:
 .PHONY : CMakeFiles/rospack_genmsg.dir/clean
 
 CMakeFiles/rospack_genmsg.dir/depend:
-	cd /home/rock/catkin-ws/src/rososc/touchosc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/catkin-ws/src/rososc/touchosc_bridge /home/rock/catkin-ws/src/rososc/touchosc_bridge /home/rock/catkin-ws/src/rososc/touchosc_bridge/build /home/rock/catkin-ws/src/rososc/touchosc_bridge/build /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/rospack_genmsg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rospack_genmsg.dir/depend
 

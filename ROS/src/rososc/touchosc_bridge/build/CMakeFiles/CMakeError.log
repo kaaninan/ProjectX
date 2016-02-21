@@ -1,26 +1,26 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3253636189/fast"
-make[1]: Entering directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3253636189.dir/build.make CMakeFiles/cmTryCompileExec3253636189.dir/build
-make[2]: Entering directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3253636189.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3253636189.dir/CheckSymbolExists.c.o   -c /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec3253636189
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3253636189.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3253636189.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3253636189 -rdynamic 
-CMakeFiles/cmTryCompileExec3253636189.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:/usr/bin/make "cmTryCompileExec701099925/fast"
+make[1]: Entering directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec701099925.dir/build.make CMakeFiles/cmTryCompileExec701099925.dir/build
+make[2]: Entering directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec701099925.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec701099925.dir/CheckSymbolExists.c.o   -c /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec701099925
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec701099925.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec701099925.dir/CheckSymbolExists.c.o  -o cmTryCompileExec701099925 -rdynamic 
+CMakeFiles/cmTryCompileExec701099925.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0xe): undefined reference to `pthread_create'
 CheckSymbolExists.c:(.text+0x12): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-make[2]: Leaving directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-make[2]: *** [cmTryCompileExec3253636189] Error 1
-make[1]: Leaving directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec3253636189/fast] Error 2
+make[2]: Leaving directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+make[2]: *** [cmTryCompileExec701099925] Error 1
+make[1]: Leaving directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec701099925/fast] Error 2
 
-File /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -36,23 +36,23 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp
+Change Dir: /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4234031957/fast"
-make[1]: Entering directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4234031957.dir/build.make CMakeFiles/cmTryCompileExec4234031957.dir/build
-make[2]: Entering directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4234031957.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec4234031957.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec4234031957
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4234031957.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec4234031957.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4234031957 -rdynamic -lpthreads 
+Run Build Command:/usr/bin/make "cmTryCompileExec3289479971/fast"
+make[1]: Entering directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3289479971.dir/build.make CMakeFiles/cmTryCompileExec3289479971.dir/build
+make[2]: Entering directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3289479971.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec3289479971.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3289479971
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3289479971.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec3289479971.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3289479971 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[2]: Leaving directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
-make[2]: *** [cmTryCompileExec4234031957] Error 1
-make[1]: *** [cmTryCompileExec4234031957/fast] Error 2
-make[1]: Leaving directory `/home/rock/catkin-ws/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+make[2]: Leaving directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+make[2]: *** [cmTryCompileExec3289479971] Error 1
+make[1]: Leaving directory `/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3289479971/fast] Error 2
 
 

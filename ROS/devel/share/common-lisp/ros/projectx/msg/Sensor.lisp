@@ -25,8 +25,18 @@
    (temp
     :reader temp
     :initarg :temp
-    :type cl:integer
-    :initform 0))
+    :type cl:float
+    :initform 0.0)
+   (temp_out
+    :reader temp_out
+    :initarg :temp_out
+    :type cl:float
+    :initform 0.0)
+   (humidity
+    :reader humidity
+    :initarg :humidity
+    :type cl:float
+    :initform 0.0))
 )
 
 (cl:defclass Sensor (<Sensor>)
@@ -56,6 +66,16 @@
 (cl:defmethod temp-val ((m <Sensor>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projectx-msg:temp-val is deprecated.  Use projectx-msg:temp instead.")
   (temp m))
+
+(cl:ensure-generic-function 'temp_out-val :lambda-list '(m))
+(cl:defmethod temp_out-val ((m <Sensor>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projectx-msg:temp_out-val is deprecated.  Use projectx-msg:temp_out instead.")
+  (temp_out m))
+
+(cl:ensure-generic-function 'humidity-val :lambda-list '(m))
+(cl:defmethod humidity-val ((m <Sensor>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader projectx-msg:humidity-val is deprecated.  Use projectx-msg:humidity instead.")
+  (humidity m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Sensor>) ostream)
   "Serializes a message object of type '<Sensor>"
   (cl:let* ((signed (cl:slot-value msg 'dis)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
@@ -88,16 +108,33 @@
     (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
     )
-  (cl:let* ((signed (cl:slot-value msg 'temp)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 18446744073709551616) signed)))
-    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 16) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 24) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 32) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 40) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 48) unsigned) ostream)
-    (cl:write-byte (cl:ldb (cl:byte 8 56) unsigned) ostream)
-    )
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'temp))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'temp_out))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-double-float-bits (cl:slot-value msg 'humidity))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 32) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 40) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 48) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 56) bits) ostream))
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <Sensor>) istream)
   "Deserializes a message object of type '<Sensor>"
@@ -131,16 +168,36 @@
       (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'gaz) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
-    (cl:let ((unsigned 0))
-      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 16) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 24) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 32) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 40) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 48) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:ldb (cl:byte 8 56) unsigned) (cl:read-byte istream))
-      (cl:setf (cl:slot-value msg 'temp) (cl:if (cl:< unsigned 9223372036854775808) unsigned (cl:- unsigned 18446744073709551616))))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'temp) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'temp_out) (roslisp-utils:decode-double-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 32) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 40) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 48) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 56) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'humidity) (roslisp-utils:decode-double-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Sensor>)))
@@ -151,18 +208,20 @@
   "projectx/Sensor")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Sensor>)))
   "Returns md5sum for a message object of type '<Sensor>"
-  "04650b2f757cb0c082a163e7761e3ac3")
+  "949ea192333261d5f2a0646fc476a04c")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Sensor)))
   "Returns md5sum for a message object of type 'Sensor"
-  "04650b2f757cb0c082a163e7761e3ac3")
+  "949ea192333261d5f2a0646fc476a04c")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Sensor>)))
   "Returns full string definition for message of type '<Sensor>"
-  (cl:format cl:nil "int64 dis~%int64 ldr~%int64 gaz~%int64 temp~%~%"))
+  (cl:format cl:nil "int64 dis~%int64 ldr~%int64 gaz~%float64 temp~%float64 temp_out~%float64 humidity~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Sensor)))
   "Returns full string definition for message of type 'Sensor"
-  (cl:format cl:nil "int64 dis~%int64 ldr~%int64 gaz~%int64 temp~%~%"))
+  (cl:format cl:nil "int64 dis~%int64 ldr~%int64 gaz~%float64 temp~%float64 temp_out~%float64 humidity~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Sensor>))
   (cl:+ 0
+     8
+     8
      8
      8
      8
@@ -175,4 +234,6 @@
     (cl:cons ':ldr (ldr msg))
     (cl:cons ':gaz (gaz msg))
     (cl:cons ':temp (temp msg))
+    (cl:cons ':temp_out (temp_out msg))
+    (cl:cons ':humidity (humidity msg))
 ))

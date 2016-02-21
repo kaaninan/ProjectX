@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/catkin-ws/src/rososc/diagnostics_handler
+CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/catkin-ws/src/rososc/diagnostics_handler/build
+CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler/build
 
 # Utility rule file for ROSBUILD_gensrv_cpp.
 
@@ -60,6 +60,6 @@ CMakeFiles/ROSBUILD_gensrv_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_gensrv_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_gensrv_cpp.dir/depend:
-	cd /home/rock/catkin-ws/src/rososc/diagnostics_handler/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/catkin-ws/src/rososc/diagnostics_handler /home/rock/catkin-ws/src/rososc/diagnostics_handler /home/rock/catkin-ws/src/rososc/diagnostics_handler/build /home/rock/catkin-ws/src/rososc/diagnostics_handler/build /home/rock/catkin-ws/src/rososc/diagnostics_handler/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler/build /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler/build /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler/build/CMakeFiles/ROSBUILD_gensrv_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_gensrv_cpp.dir/depend
 

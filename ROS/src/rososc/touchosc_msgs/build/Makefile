@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/catkin-ws/src/rososc/touchosc_msgs
+CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/catkin-ws/src/rososc/touchosc_msgs/build
+CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -229,6 +229,19 @@ clean_test_results: cmake_check_build_system
 clean_test_results/fast:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
 .PHONY : clean_test_results/fast
+
+#=============================================================================
+# Target rules for targets named clean_test_results_touchosc_msgs
+
+# Build rule for target.
+clean_test_results_touchosc_msgs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 clean_test_results_touchosc_msgs
+.PHONY : clean_test_results_touchosc_msgs
+
+# fast build rule for target.
+clean_test_results_touchosc_msgs/fast:
+	$(MAKE) -f CMakeFiles/clean_test_results_touchosc_msgs.dir/build.make CMakeFiles/clean_test_results_touchosc_msgs.dir/build
+.PHONY : clean_test_results_touchosc_msgs/fast
 
 #=============================================================================
 # Target rules for targets named download_extra_data
@@ -464,6 +477,7 @@ help:
 	@echo "... ROSBUILD_gensrv_lisp"
 	@echo "... _catkin_empty_exported_target"
 	@echo "... clean_test_results"
+	@echo "... clean_test_results_touchosc_msgs"
 	@echo "... download_extra_data"
 	@echo "... doxygen"
 	@echo "... edit_cache"

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/catkin-ws/src/rososc/touchosc_msgs
+CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/catkin-ws/src/rososc/touchosc_msgs/build
+CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build
 
 # Utility rule file for ROSBUILD_genmsg_cpp.
 
@@ -61,9 +61,9 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/ScalableControl.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/ScalableControl.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/ScalableControl.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/ScalableControl.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/ScalableControl.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/ScalableControl.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/Label.h: ../msg/Label.msg
 ../msg_gen/cpp/include/touchosc_msgs/Label.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -71,9 +71,9 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/Label.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/Label.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/Label.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/Label.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/Label.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/Label.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/TouchOSC_Common.h: ../msg/TouchOSC_Common.msg
 ../msg_gen/cpp/include/touchosc_msgs/TouchOSC_Common.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -81,26 +81,26 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/TouchOSC_Common.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/TouchOSC_Common.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/TouchOSC_Common.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/TouchOSC_Common.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/TouchOSC_Common.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/TouchOSC_Common.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/Tabpage.h: ../msg/Tabpage.msg
 ../msg_gen/cpp/include/touchosc_msgs/Tabpage.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
 ../msg_gen/cpp/include/touchosc_msgs/Tabpage.h: /opt/ros/indigo/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/touchosc_msgs/Tabpage.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/Tabpage.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_4)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/Tabpage.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/Tabpage.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/Tabpage.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/CommonProperties.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/CommonProperties.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
 ../msg_gen/cpp/include/touchosc_msgs/CommonProperties.h: /opt/ros/indigo/share/roslib/cmake/../../../lib/roslib/gendeps
 ../msg_gen/cpp/include/touchosc_msgs/CommonProperties.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_5)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/CommonProperties.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/CommonProperties.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/CommonProperties.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/MultiButton.h: ../msg/MultiButton.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiButton.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -108,9 +108,9 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/MultiButton.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiButton.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiButton.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_6)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/MultiButton.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/MultiButton.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/MultiButton.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/MultiXYPad.h: ../msg/MultiXYPad.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiXYPad.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -118,9 +118,9 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/MultiXYPad.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiXYPad.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiXYPad.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_7)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/MultiXYPad.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/MultiXYPad.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/MultiXYPad.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/MultiFader.h: ../msg/MultiFader.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiFader.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -128,9 +128,9 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/MultiFader.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiFader.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/MultiFader.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_8)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/MultiFader.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/MultiFader.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/MultiFader.msg
 
 ../msg_gen/cpp/include/touchosc_msgs/XYPad.h: ../msg/XYPad.msg
 ../msg_gen/cpp/include/touchosc_msgs/XYPad.h: /opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py
@@ -138,9 +138,9 @@ CMakeFiles/ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/XYPad.h
 ../msg_gen/cpp/include/touchosc_msgs/XYPad.h: /opt/ros/indigo/share/std_msgs/msg/Header.msg
 ../msg_gen/cpp/include/touchosc_msgs/XYPad.h: ../msg/CommonProperties.msg
 ../msg_gen/cpp/include/touchosc_msgs/XYPad.h: ../manifest.xml
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles $(CMAKE_PROGRESS_9)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating ../msg_gen/cpp/include/touchosc_msgs/XYPad.h"
-	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/catkin-ws/src/rososc/touchosc_msgs/msg/XYPad.msg
+	/opt/ros/indigo/share/roscpp/rosbuild/scripts/genmsg_cpp.py /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/msg/XYPad.msg
 
 ROSBUILD_genmsg_cpp: CMakeFiles/ROSBUILD_genmsg_cpp
 ROSBUILD_genmsg_cpp: ../msg_gen/cpp/include/touchosc_msgs/ScalableControl.h
@@ -164,6 +164,6 @@ CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean:
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/clean
 
 CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend:
-	cd /home/rock/catkin-ws/src/rososc/touchosc_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/catkin-ws/src/rososc/touchosc_msgs /home/rock/catkin-ws/src/rososc/touchosc_msgs /home/rock/catkin-ws/src/rososc/touchosc_msgs/build /home/rock/catkin-ws/src/rososc/touchosc_msgs/build /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles/ROSBUILD_genmsg_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ROSBUILD_genmsg_cpp.dir/depend
 

@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/rock/catkin-ws/src/rososc/diagnostics_handler/build/devel/setup.sh
+    local-name: /home/rock/ProjectX/ROS/src/rososc/diagnostics_handler/build/devel/setup.sh

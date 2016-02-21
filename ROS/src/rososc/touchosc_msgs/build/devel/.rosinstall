@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/rock/catkin-ws/src/rososc/touchosc_msgs/build/devel/setup.sh
+    local-name: /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/devel/setup.sh

@@ -12,21 +12,42 @@ def callback_rotary(data):
 def callback_toggle(data):
     name = data.common.name
     value = data.value
-    rospy.loginfo(name[5:])
+    rospy.loginfo(name)
     rospy.loginfo(value)
+
+    if name == "toggle_lazer":
+        data = DataControl()
+        data.data = "laser_power"
+        data.value = [int(value)]
+        pub.publish(data)
+        rate.sleep()
 
 
 def callback_multitoggle(data):
     name = data.common.name
-    value = data.value
-    rospy.loginfo(name[5:])
+    value = data.values
+    rospy.loginfo(name)
     rospy.loginfo(value)
+
+    if name == "multitoggle_led":
+        data = DataControl()
+        data.data = "powerled_power"
+        data.value = [int(value[0]),int(value[1]),int(value[2])]
+        pub.publish(data)
+        rate.sleep()
 
 def callback_push(data):
     name = data.common.name
     value = data.value
-    rospy.loginfo(name[5:])
+    rospy.loginfo(name)
     rospy.loginfo(value)
+
+    if name == "push_buzzer":
+        data = DataControl()
+        data.data = "buzzer"
+        data.value = [int(value)]
+        pub.publish(data)
+        rate.sleep()
 
 def callback_multipush(data):
     name = data.common.name
@@ -58,17 +79,33 @@ def callback_xy_head(data):
     rospy.loginfo(name[5:])
     rospy.loginfo(value)
 
+
 def callback_fader(data):
     name = data.common.name
     value = data.value
-    rospy.loginfo(name[5:])
+    rospy.loginfo(name)
     rospy.loginfo(value)
+
+    if name == "fader_lazer":
+        data = DataControl()
+        data.data = "laser"
+        data.value = [int(value)]
+        pub.publish(data)
+        rate.sleep()
+
 
 def callback_multifader(data):
     name = data.common.name
-    value = data.value
-    rospy.loginfo(name[5:])
+    value = data.values
+    rospy.loginfo(name)
     rospy.loginfo(value)
+
+    if name == "multifader_led":
+        data = DataControl()
+        data.data = "powerled"
+        data.value = [int(value[0]),int(value[1]),int(value[2])]
+        pub.publish(data)
+        rate.sleep()
 
 def listener():
 
@@ -129,7 +166,10 @@ def listener():
 
 
 def main():
+    global pub, rate
     rospy.init_node('osc_incoming', anonymous=True)
+    pub = rospy.Publisher('arduino_out_data', DataControl, queue_size=10)
+    rate = rospy.Rate(100)
     listener()
 
 

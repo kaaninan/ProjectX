@@ -1,0 +1,28 @@
+<launch>                                                                             
+  <param name="layout_path" value="$(find projectx)/OSC" />
+
+  <rosparam param="layouts">
+    [ "ProjectX.touchosc", "ProjectX.touchosc" ]
+  </rosparam>
+
+  <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="screen">
+    <param name="osc_name" value="ProjectX OSC" />                            
+    <param name="port" value="8000"/>
+    <param name="print_fallback" value="True" />
+    <param name="load_default" value="True" />
+    <param name="publish_accel" value="True" />
+    <param name="publish_diag" value="True" />
+    <param name="vibrate" value="True" />
+    <param name="tabpage_sub" value="True" />
+  </node>
+                                                                                                
+  <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
+  <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/>
+
+  <param name="arduino_out_data_auth" value="1" />
+  
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino"/>
+  <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen"/>
+  <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen"/>
+
+</launch>      

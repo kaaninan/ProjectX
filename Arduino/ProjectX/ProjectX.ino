@@ -106,17 +106,26 @@ void messageOutDataLaser( const std_msgs::Int64& msg) {
 // ### ROS -> OUT DATA BUZZER
 void messageOutDataBuzzer( const std_msgs::Int64& msg) {
   int data = msg.data;
-  analogWrite(buzzer, data);
+  digitalWrite(buzzer, data);
 }
+
+int temp_l1 = 0;
+int temp_l2 = 0;
+int temp_l3 = 0;
 
 // ### ROS -> OUT DATA POWER LED
 void messageOutDataPowerLed( const projectx::IntArray& msg) {
   int led_1 = msg.deger[0];
   int led_2 = msg.deger[1];
   int led_3 = msg.deger[2];
-  analogWrite(power_led_1, led_1);
-  analogWrite(power_led_2, led_2);
-  analogWrite(power_led_3, led_3);
+  
+  if(temp_l1 != led_1) analogWrite(power_led_1, led_1);
+  if(temp_l2 != led_2) analogWrite(power_led_2, led_2);
+  if(temp_l3 != led_3) analogWrite(power_led_3, led_3);
+  
+  temp_l1 = led_1;
+  temp_l2 = led_2;
+  temp_l3 = led_3;
 }
 
 

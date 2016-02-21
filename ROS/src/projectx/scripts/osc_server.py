@@ -3,64 +3,82 @@ import rospy
 from projectx.msg import *
 
 
-def callback_rotary():
+def callback_rotary(data):
     name = data.common.name
     value = data.value
     rospy.loginfo(name[5:])
     rospy.loginfo(value)
 
-def callback_toggle():
+def callback_toggle(data):
     name = data.common.name
     value = data.value
     rospy.loginfo(name[5:])
     rospy.loginfo(value)
 
 
-def callback_multitoggle():
-    pass
-
-def callback_push():
+def callback_multitoggle(data):
     name = data.common.name
     value = data.value
     rospy.loginfo(name[5:])
     rospy.loginfo(value)
 
-def callback_multipush():
-    pass
-
-def callback_encoder():
+def callback_push(data):
     name = data.common.name
     value = data.value
     rospy.loginfo(name[5:])
     rospy.loginfo(value)
 
-def callback_xy_gyro():
-    pass
-
-def callback_xy_motion():
-    pass
-
-def callback_xy_head():
-    pass
-
-def callback_fader():
+def callback_multipush(data):
     name = data.common.name
     value = data.value
     rospy.loginfo(name[5:])
     rospy.loginfo(value)
 
-def callback_multifader():
-    pass
+def callback_encoder(data):
+    name = data.common.name
+    value = data.value
+    rospy.loginfo(name[5:])
+    rospy.loginfo(value)
+
+def callback_xy_gyro(data):
+    name = data.common.name
+    value = data.value
+    rospy.loginfo(name[5:])
+    rospy.loginfo(value)
+
+def callback_xy_motion(data):
+    name = data.common.name
+    value = data.value
+    rospy.loginfo(name[5:])
+    rospy.loginfo(value)
+
+def callback_xy_head(data):
+    name = data.common.name
+    value = data.value
+    rospy.loginfo(name[5:])
+    rospy.loginfo(value)
+
+def callback_fader(data):
+    name = data.common.name
+    value = data.value
+    rospy.loginfo(name[5:])
+    rospy.loginfo(value)
+
+def callback_multifader(data):
+    name = data.common.name
+    value = data.value
+    rospy.loginfo(name[5:])
+    rospy.loginfo(value)
 
 def listener():
 
     # ROTARY (Basligin Altinda)
-    rot[0] = "touchosc/main/rotary1"
-    rot[1] = "touchosc/main/rotary2"
-    rot[2] = "touchosc/main/rotary3"
-    rospy.Subscriber(rot[0], ScalableControl, callback_rotary)
-    rospy.Subscriber(rot[1], ScalableControl, callback_rotary)
-    rospy.Subscriber(rot[2], ScalableControl, callback_rotary)
+    rot1 = "touchosc/main/rotary1"
+    rot2 = "touchosc/main/rotary2"
+    rot3 = "touchosc/main/rotary3"
+    rospy.Subscriber(rot1, ScalableControl, callback_rotary)
+    rospy.Subscriber(rot2, ScalableControl, callback_rotary)
+    rospy.Subscriber(rot3, ScalableControl, callback_rotary)
 
     # TOGGLE (Ust Sira)
     taslak = "touchosc/main/toggle"
@@ -83,13 +101,13 @@ def listener():
     # TOGGLE
     rospy.Subscriber("/touchosc/main/toggle_lazer", ScalableControl, callback_toggle)
     rospy.Subscriber("/touchosc/main/multitoggle_led", MultiButton, callback_multitoggle)
-    rospy.Subscriber("/touchosc/main/multitoggle_2", MultiButton, callback_multitoggle) # Sari - Buzzerin ustunde
-    rospy.Subscriber("/touchosc/main/multitoggle_auto", MultiButton, callback_multitoggle) # Auto - motionun yaninda
+    rospy.Subscriber("/touchosc/main/multitoggle_2", MultiButton, callback_multitoggle) # SariRenk
+    rospy.Subscriber("/touchosc/main/multitoggle_auto", MultiButton, callback_multitoggle) # AUTO
 
     # PUSH
     rospy.Subscriber("/touchosc/main/push_buzzer", ScalableControl, callback_push)
     rospy.Subscriber("/touchosc/main/push_start", ScalableControl, callback_push)
-    rospy.Subscriber("/touchosc/main/multipush_sifre", MultiPush, callback_multipush)
+    rospy.Subscriber("/touchosc/main/multipush_sifre", MultiButton, callback_multipush)
 
     # ENCODER
     rospy.Subscriber("/touchosc/main/encoder1", ScalableControl, callback_encoder)
@@ -101,7 +119,7 @@ def listener():
 
     # FADER
     rospy.Subscriber("/touchosc/main/fader1", ScalableControl, callback_fader) # Head XY'nin yaninda
-    rospy.Subscriber("/touchosc/main/fader_laser", ScalableControl, callback_fader)
+    rospy.Subscriber("/touchosc/main/fader_lazer", ScalableControl, callback_fader)
     rospy.Subscriber("/touchosc/main/multifader_led", MultiFader, callback_multifader)
 
 

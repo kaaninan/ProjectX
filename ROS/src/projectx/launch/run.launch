@@ -1,0 +1,61 @@
+<launch>                        
+
+  <!-- ROS BRIDGE -->
+  <arg name="port" default="9090" />
+  <arg name="address" default="" />
+  <arg name="ssl" default="false" />
+  <arg name="certfile" default=""/>
+  <arg name="keyfile" default="" />
+  <arg name="authenticate" default="false" />
+
+  <!-- OSC -->
+  <group ns="OSC">
+    <param name="layout_path" value="$(find projectx)/osc" />
+    <rosparam param="layouts">[ "ProjectX.touchosc", "ProjectX.touchosc" ]</rosparam>
+    <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="screen">
+      <param name="osc_name" value="ProjectX OSC" />                            
+      <param name="port" value="8000"/>
+      <param name="print_fallback" value="True" />
+      <param name="load_default" value="True" />
+      <param name="publish_accel" value="True" />
+      <param name="publish_diag" value="True" />
+      <param name="vibrate" value="True" />
+      <param name="tabpage_sub" value="True" />
+    </node>
+    <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
+    <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/>
+  </group>
+                                                                                                
+  <!-- Arduino -->
+  <group ns="Arduino">
+    <param name="arduino_out_data_auth" value="1" />
+    <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino"/>
+    <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen"/>
+    <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen"/>
+  </group>
+
+  <!-- Ros Bridge -->
+  <group ns="Rosbridge">
+    <node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" output="screen">
+      <param name="authenticate" value="$(arg authenticate)" />
+      <param name="port" value="$(arg port)"/>
+      <param name="address" value="$(arg address)"/>
+    </node>
+    <node name="rosapi" pkg="rosapi" type="rosapi_node" />
+  </group>
+
+  <!-- Motor -->
+  <group ns="Motor">
+    <node pkg="projectx" type="motor_in_server.py" name="motor_in_server" output="screen"/>
+    <node pkg="projectx" type="motor_service_server.py" name="motor_service_server"  output="screen"/>
+    <node pkg="projectx" type="motor_boost_server" name="motor_boost_server" output="screen" />
+    <node pkg="projectx" type="motor_command_server.py" name="motor_command_server" output="screen"/>
+    <node pkg="projectx" type="motor_out_server.py" name="motor_out_server" output="screen"/>
+  </group>
+
+  <!-- Speak-->
+  <group ns="Speak">
+    <node pkg="projectx" type="speak_server.py" name="speak_server" output="screen"/>
+  </group>
+
+</launch>

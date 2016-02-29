@@ -105,6 +105,11 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" ""
 )
 
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv" ""
+)
+
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/Tabpage.msg" "std_msgs/Header"
@@ -123,11 +128,6 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" ""
-)
-
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" ""
 )
 
 #
@@ -259,7 +259,7 @@ _generate_msg_cpp(projectx
 
 ### Generating Services
 _generate_srv_cpp(projectx
-  "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv"
+  "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
@@ -325,6 +325,8 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Motor
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
@@ -332,8 +334,6 @@ add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_chec
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -468,7 +468,7 @@ _generate_msg_lisp(projectx
 
 ### Generating Services
 _generate_srv_lisp(projectx
-  "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv"
+  "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
@@ -534,6 +534,8 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Motor
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
@@ -541,8 +543,6 @@ add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_che
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -677,7 +677,7 @@ _generate_msg_py(projectx
 
 ### Generating Services
 _generate_srv_py(projectx
-  "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv"
+  "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
@@ -743,6 +743,8 @@ get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Motor
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
@@ -750,8 +752,6 @@ add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -5,8 +5,6 @@ var recognizing = false;
 var twist;
 
 
-
-
 var ros = new ROSLIB.Ros({});
 
 $(function(){
@@ -43,52 +41,18 @@ ros.on('close', function() {
 
 
 // PUBLISH
-var cmdVel = new ROSLIB.Topic({
+// var cmdVel = new ROSLIB.Topic({
+//     ros : ros,
+//     name : '/speech_data',
+//     messageType : 'std_msgs/String'
+//   });
+
+
+var speech_service = new ROSLIB.Service({
     ros : ros,
-    name : '/speech_data',
-    messageType : 'std_msgs/String'
+    name : '/service_speech_data',
+    serviceType : 'projectx/Speech'
   });
-
-
-
-
-
-
-        // if(e.data == "stop"){
-            
-        //         console.log("STOP");  
-        //         recognizing = false;
-        //         recognition.stop();
-            
-
-        // }else if(e.data == "start"){
-          
-        //   try {
-        //         console.log("START");
-        //         if(recognizing == false){
-        //           recognition.start();
-        //           recognizing = true;
-        //         };
-        //   }
-        //   catch(err) {
-        //       console.log("çakışma var");
-
-
-
-        //       setTimeout(function () {
-        //         console.log("START 2");
-        //         if(recognizing == false){
-        //           recognition.start();
-        //           recognizing = true;
-        //         };
-        //       }, 1000);
-              
-          
-
-
-
-
-
 
 
 
@@ -211,10 +175,11 @@ if (!('webkitSpeechRecognition' in window)) {
 
         // ws.send(cumle+"-"+deger);
 
-        twist = new ROSLIB.Message({data:cumle});
+        var request = new ROSLIB.ServiceRequest({data : cumle});
+        speech_service.callService(request, function(result) {});
 
-      // And finally, publish.
-      cmdVel.publish(twist);
+        // twist = new ROSLIB.Message({data:cumle});
+        // cmdVel.publish(twist);
 
         $('div#son').append(cumle+" -- "+deger);
         $('div#son').append("<br>");  

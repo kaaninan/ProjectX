@@ -20,7 +20,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/include/projectx/MotorOutSingleArray.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MotorOutArray.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MultiFader.h"
-  "/home/rock/ProjectX/ROS/devel/include/projectx/Pin.h"
+  "/home/rock/ProjectX/ROS/devel/include/projectx/Speech.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/MotorBoost.h"
   "/home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h"
 )

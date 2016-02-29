@@ -20,7 +20,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiFader.py"
-  "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py"
+  "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Speech.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py"
   "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py"

@@ -1,27 +1,20 @@
 #!/usr/bin/env python
 
 import rospy
-from projectx.msg import *
+from std_msgs.msg import *
 
 def talker():
-    pub = rospy.Publisher('arduino_out_data', DataControl, queue_size=10)
+    pub = rospy.Publisher('/speech_data', String, queue_size=10)
 
     rospy.init_node('talker', anonymous=True)
     
-    rate = rospy.Rate(10) # 10hz
-    
-    a = 0
+    rate = rospy.Rate(1) # 10hz
 
     while not rospy.is_shutdown():
-        data = DataControl()
-        data.data = "powerled"
-        data.value = [a, 0, 0]
-        rospy.loginfo(data)
+        data = String()
+        data.data = "ok"
         pub.publish(data)
         rate.sleep()
-        a = a + 1
-        if a == 255:
-            a = 0
 
 if __name__ == '__main__':
     try:

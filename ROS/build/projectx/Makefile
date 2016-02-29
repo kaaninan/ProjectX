@@ -374,20 +374,6 @@ _projectx_generate_messages_check_deps_OscData/fast:
 .PHONY : _projectx_generate_messages_check_deps_OscData/fast
 
 # Convenience name for target.
-projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule
-.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule
-
-# Convenience name for target.
-_projectx_generate_messages_check_deps_Pin: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule
-.PHONY : _projectx_generate_messages_check_deps_Pin
-
-# fast build rule for target.
-_projectx_generate_messages_check_deps_Pin/fast:
-	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build
-.PHONY : _projectx_generate_messages_check_deps_Pin/fast
-
-# Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule
@@ -428,6 +414,20 @@ _projectx_generate_messages_check_deps_SensorTemp: projectx/CMakeFiles/_projectx
 _projectx_generate_messages_check_deps_SensorTemp/fast:
 	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build
 .PHONY : _projectx_generate_messages_check_deps_SensorTemp/fast
+
+# Convenience name for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+
+# Convenience name for target.
+_projectx_generate_messages_check_deps_Speech: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+.PHONY : _projectx_generate_messages_check_deps_Speech
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_Speech/fast:
+	cd /home/rock/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build
+.PHONY : _projectx_generate_messages_check_deps_Speech/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/rule:
@@ -831,10 +831,10 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"
 	@echo "... _projectx_generate_messages_check_deps_MultiXYPad"
 	@echo "... _projectx_generate_messages_check_deps_OscData"
-	@echo "... _projectx_generate_messages_check_deps_Pin"
 	@echo "... _projectx_generate_messages_check_deps_ScalableControl"
 	@echo "... _projectx_generate_messages_check_deps_Sensor"
 	@echo "... _projectx_generate_messages_check_deps_SensorTemp"
+	@echo "... _projectx_generate_messages_check_deps_Speech"
 	@echo "... _projectx_generate_messages_check_deps_Tabpage"
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"

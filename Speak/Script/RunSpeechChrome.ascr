@@ -9,7 +9,7 @@
     </actions>
     <parameters/>
     <script pauseBefore="0" pauseAfter="0">
-        <action name="ActionClick" pauseBefore="500" pauseAfter="10000">
+        <action name="ActionClick" comment="Open Chrome" pauseBefore="500" pauseAfter="10000">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>
@@ -31,7 +31,7 @@
                 <subParameter name="value" code="0">:</subParameter>
             </parameter>
         </action>
-        <action name="ActionClick" pauseBefore="1000" pauseAfter="200">
+        <action name="ActionClick" comment="Press Address" pauseBefore="1000" pauseAfter="200">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>
@@ -53,7 +53,7 @@
                 <subParameter name="value" code="0">:</subParameter>
             </parameter>
         </action>
-        <action name="ActionWriteText" pauseBefore="1000" pauseAfter="200">
+        <action name="ActionWriteText" comment="Write Address" pauseBefore="1000" pauseAfter="200">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>
@@ -65,7 +65,7 @@
                 <subParameter name="value" code="0">10</subParameter>
             </parameter>
         </action>
-        <action name="ActionKey" pauseBefore="200" pauseAfter="200">
+        <action name="ActionKey" comment="Enter" pauseBefore="200" pauseAfter="200">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>
@@ -100,7 +100,7 @@
                 <subParameter name="value" code="0">10</subParameter>
             </parameter>
         </action>
-        <action name="ActionClick" pauseBefore="4000" pauseAfter="500">
+        <action name="ActionClick" comment="Next SSL" pauseBefore="8000" pauseAfter="500">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>

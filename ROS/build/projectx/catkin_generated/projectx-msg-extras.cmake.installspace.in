@@ -1,2 +1,2 @@
 set(projectx_MESSAGE_FILES "msg/Sensor.msg;msg/Hash.msg;msg/MotorIn.msg;msg/MotorInArray.msg;msg/MotorOut.msg;msg/DataControl.msg;msg/MotorOutArray.msg;msg/IntArray.msg;msg/MotorOutSingleArray.msg;msg/Gyro.msg;msg/OscData.msg;msg/CommonProperties.msg;msg/Label.msg;msg/MultiButton.msg;msg/MultiFader.msg;msg/MultiXYPad.msg;msg/ScalableControl.msg;msg/Tabpage.msg;msg/TouchOSC_Common.msg;msg/XYPad.msg")
-set(projectx_SERVICE_FILES "srv/Pin.srv;srv/SensorTemp.srv;srv/MotorBoost.srv")
+set(projectx_SERVICE_FILES "srv/SensorTemp.srv;srv/MotorBoost.srv;srv/Speech.srv")

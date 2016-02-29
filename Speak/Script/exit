@@ -1,1 +1,2 @@
+export DISPLAY=:2.0
 actionaz -e /home/rock/ProjectX/Speak/Script/ExitSpeechChrome.ascr

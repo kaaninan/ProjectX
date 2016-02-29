@@ -20,7 +20,7 @@ FILE(REMOVE_RECURSE
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiFader.lisp"
-  "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp"
+  "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Speech.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp"
   "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp"
 )

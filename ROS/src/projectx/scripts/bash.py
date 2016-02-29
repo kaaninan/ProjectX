@@ -2,15 +2,12 @@
 
 import subprocess
 import time
+import os
 
-p = subprocess.Popen(["./ProjectX/Motion/Linux/project/rme/rme"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+p = subprocess.Popen(["./ProjectX/Speak/Script/run"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
 
+print("OK")
 
-print("1")
-
-time.sleep(4)
-
-p.stdin.write('exit')
-p.stdin.write('\n')
+time.sleep(1)
 
 print "bitti"

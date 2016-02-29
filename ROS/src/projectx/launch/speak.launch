@@ -1,0 +1,23 @@
+<launch>
+
+	<!-- ROS Bridge -->
+	<arg name="port" default="9090" />
+	<arg name="address" default="" />
+	<arg name="ssl" default="false" />
+	<arg name="certfile" default=""/>
+	<arg name="keyfile" default="" />
+	<arg name="authenticate" default="false" />
+	<node name="rosbridge_websocket" pkg="rosbridge_server" type="rosbridge_websocket" output="screen">
+	<param name="authenticate" value="$(arg authenticate)" />
+	<param name="port" value="$(arg port)"/>
+	<param name="address" value="$(arg address)"/>
+	</node>
+	<node name="rosapi" pkg="rosapi" type="rosapi_node" />
+
+	<!-- Speak-->
+	<param name="/open_speak" value="1"/>
+  	<node pkg="projectx" type="speak_server.py" name="speak_server"/>
+
+  	<node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" />
+
+  </launch>

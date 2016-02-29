@@ -839,19 +839,6 @@ _projectx_generate_messages_check_deps_OscData/fast:
 .PHONY : _projectx_generate_messages_check_deps_OscData/fast
 
 #=============================================================================
-# Target rules for targets named _projectx_generate_messages_check_deps_Pin
-
-# Build rule for target.
-_projectx_generate_messages_check_deps_Pin: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_Pin
-.PHONY : _projectx_generate_messages_check_deps_Pin
-
-# fast build rule for target.
-_projectx_generate_messages_check_deps_Pin/fast:
-	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build
-.PHONY : _projectx_generate_messages_check_deps_Pin/fast
-
-#=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_ScalableControl
 
 # Build rule for target.
@@ -889,6 +876,19 @@ _projectx_generate_messages_check_deps_SensorTemp: cmake_check_build_system
 _projectx_generate_messages_check_deps_SensorTemp/fast:
 	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build
 .PHONY : _projectx_generate_messages_check_deps_SensorTemp/fast
+
+#=============================================================================
+# Target rules for targets named _projectx_generate_messages_check_deps_Speech
+
+# Build rule for target.
+_projectx_generate_messages_check_deps_Speech: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_Speech
+.PHONY : _projectx_generate_messages_check_deps_Speech
+
+# fast build rule for target.
+_projectx_generate_messages_check_deps_Speech/fast:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build
+.PHONY : _projectx_generate_messages_check_deps_Speech/fast
 
 #=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_Tabpage
@@ -1307,10 +1307,10 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"
 	@echo "... _projectx_generate_messages_check_deps_MultiXYPad"
 	@echo "... _projectx_generate_messages_check_deps_OscData"
-	@echo "... _projectx_generate_messages_check_deps_Pin"
 	@echo "... _projectx_generate_messages_check_deps_ScalableControl"
 	@echo "... _projectx_generate_messages_check_deps_Sensor"
 	@echo "... _projectx_generate_messages_check_deps_SensorTemp"
+	@echo "... _projectx_generate_messages_check_deps_Speech"
 	@echo "... _projectx_generate_messages_check_deps_Tabpage"
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"

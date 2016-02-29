@@ -20,6 +20,7 @@ d11ee6ee1199969c08625e4533e93f84 /home/rock/ProjectX/ROS/devel/include/projectx/
 d2c8d445d4adbc47421d19e44b465211 /home/rock/ProjectX/ROS/devel/include/projectx/ScalableControl.h
 87d03e1a9271178cd57f906607fe2cc6 /home/rock/ProjectX/ROS/devel/include/projectx/Sensor.h
 f60534e791387dcd9fb2c862e3256d0f /home/rock/ProjectX/ROS/devel/include/projectx/SensorTemp.h
+c198cf910591fb53d25151d085be649d /home/rock/ProjectX/ROS/devel/include/projectx/Speech.h
 7a62bafb1d5128e85eb1a74823308e5c /home/rock/ProjectX/ROS/devel/include/projectx/Tabpage.h
 9da5e70e683b006fa352945aeed22955 /home/rock/ProjectX/ROS/devel/include/projectx/TouchOSC_Common.h
 31863a5420d4f6c79d18507a35e1f689 /home/rock/ProjectX/ROS/devel/include/projectx/XYPad.h
@@ -55,6 +56,7 @@ a6be4e32f734eeeab059077e645f7743 /home/rock/ProjectX/ROS/devel/lib/python2.7/dis
 d8ebfeb860fa170930c1809149aca2c1 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py
 92db21f0f43dfce6283d9ff02cc7753a /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Pin.py
 2b821a513afa3490804b9746adf49d93 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py
+9ae89e60e5fad54c580f3f468045e13b /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Speech.py
 79a30f98d26ff2d6b6757725e8181bca /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py
 8c80ec9c2d8da4956df65fd38870960e /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py
 85962f7d6729d5b8965eddf565c8c525 /home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py
@@ -91,6 +93,7 @@ b37c6cbcefde30157aee5a6fa92a3046 /home/rock/ProjectX/ROS/devel/share/common-lisp
 b25b83feaa5b362910be79de29310efc /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp
 db9db6983fc54395f64c23068d464c62 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Pin.lisp
 f3fea3cc3b8f77bc30c87380e591a35c /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp
+8aa97d239fc4431592cae61e8366f356 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Speech.lisp
 1b3f3ddf586ae80bbd4a125afc29bccf /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/rosserial_arduino/msg/Adc.lisp
 f8e82309591fbb3a3c74df36e0cf2527 /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/rosserial_arduino/srv/Test.lisp
 9a1fd715169139fa87af6638db8dc7ab /home/rock/ProjectX/ROS/devel/share/common-lisp/ros/rosserial_msgs/msg/Log.lisp
@@ -120,10 +123,10 @@ bbd67acbbd51a8d2511f9a36dcfac98f projectx/CMakeFiles/_projectx_generate_messages
 72bbf473228de7df8b2075a567abb6de projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader
 8c96155c826259ac569ba4770e75df37 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad
 6a545a9c8690f368d36a13cd7bd53ee6 projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData
-9b0bbd2d78c5b87167c3c9700be51f42 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin
 e9b1821c5c292e09c22599f0ff827a8d projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl
 4f0a81719edf7665a2d334b2bfd7027c projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor
 51889d26ca22f3ac2ca6dbe94eeae383 projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp
+f75601f445339d6590b3bccbe95e943a projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech
 5c5fb3698a1945cb80b6c335ed67e10a projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage
 97314439a212203d9f25b36a1a5ef703 projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common
 3883919a16e747a29703cc944371ad7b projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad

@@ -13,9 +13,9 @@ find_package(catkin REQUIRED COMPONENTS
 
 add_service_files(
   FILES
-  Pin.srv
   SensorTemp.srv
   MotorBoost.srv
+  Speech.srv
 )
 
 add_message_files(

@@ -34,9 +34,9 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/projectx/srv" TYPE FILE FILES
-    "/home/rock/ProjectX/ROS/src/projectx/srv/Pin.srv"
     "/home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv"
     "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv"
+    "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

@@ -482,9 +482,9 @@ clean: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_gencpp.dir/clean
 # Target rules for target rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir
 
 # All Build rule for target.
+rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/all: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles 
@@ -519,8 +519,8 @@ clean: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_message
 # Target rules for target rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir
 
 # All Build rule for target.
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/all
+rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_cpp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  74 75
@@ -551,8 +551,8 @@ clean: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_message
 # Target rules for target rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir
 
 # All Build rule for target.
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/all
+rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  76
@@ -583,8 +583,8 @@ clean: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_message
 # Target rules for target rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir
 
 # All Build rule for target.
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/all
+rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/all: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Test.dir/all
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/depend
 	$(MAKE) -f rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  77 78 79 80
@@ -792,8 +792,8 @@ clean: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_f
 # Target rules for target rosserial/rosserial_client/CMakeFiles/float64_test.dir
 
 # All Build rule for target.
-rosserial/rosserial_client/CMakeFiles/float64_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 rosserial/rosserial_client/CMakeFiles/float64_test.dir/all: gtest/CMakeFiles/gtest_main.dir/all
+rosserial/rosserial_client/CMakeFiles/float64_test.dir/all: gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/depend
 	$(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  1
@@ -1130,8 +1130,8 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/clean
 
 # All Build rule for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/all: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles 
@@ -1166,11 +1166,11 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/
 # Target rules for target rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  81 82 83 84 85
@@ -1201,11 +1201,11 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.
 # Target rules for target rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  86 87 88 89 90
@@ -1236,11 +1236,11 @@ clean: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp
 # Target rules for target rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
-rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/all
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/all
+rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/all: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/all
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/depend
 	$(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles  91 92 93 94 95 96 97
@@ -1386,10 +1386,10 @@ projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Multi
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/clean
-projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/clean
+projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/clean
 projectx/clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/clean
@@ -1915,37 +1915,6 @@ clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/cl
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir
-
-# All Build rule for target.
-projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all:
-	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/depend
-	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles 
-	@echo "Built target _projectx_generate_messages_check_deps_Pin"
-.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-
-# Build rule for subdir invocation for target.
-projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/build/CMakeFiles 0
-.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule
-
-# Convenience name for target.
-_projectx_generate_messages_check_deps_Pin: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/rule
-.PHONY : _projectx_generate_messages_check_deps_Pin
-
-# clean rule for target.
-projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/clean:
-	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/clean
-.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/clean
-
-# clean rule for target.
-clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir
 
 # All Build rule for target.
@@ -2036,6 +2005,37 @@ projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/clean:
 
 # clean rule for target.
 clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/clean
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir
+
+# All Build rule for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/all:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/depend
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles 
+	@echo "Built target _projectx_generate_messages_check_deps_Speech"
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/all
+
+# Build rule for subdir invocation for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rock/ProjectX/ROS/build/CMakeFiles 0
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+
+# Convenience name for target.
+_projectx_generate_messages_check_deps_Speech: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+.PHONY : _projectx_generate_messages_check_deps_Speech
+
+# clean rule for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/clean:
+	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/clean
+.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/clean
+
+# clean rule for target.
+clean: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -2273,29 +2273,29 @@ clean: projectx/CMakeFiles/projectx_generate_messages.dir/clean
 # Target rules for target projectx/CMakeFiles/projectx_generate_messages_cpp.dir
 
 # All Build rule for target.
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
+projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_cpp.dir/depend
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build
@@ -2327,29 +2327,29 @@ clean: projectx/CMakeFiles/projectx_generate_messages_cpp.dir/clean
 # Target rules for target projectx/CMakeFiles/projectx_generate_messages_lisp.dir
 
 # All Build rule for target.
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
+projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_lisp.dir/depend
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build
@@ -2381,29 +2381,29 @@ clean: projectx/CMakeFiles/projectx_generate_messages_lisp.dir/clean
 # Target rules for target projectx/CMakeFiles/projectx_generate_messages_py.dir
 
 # All Build rule for target.
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/std_msgs_generate_messages_py.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/all
-projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/all
+projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/all
 projectx/CMakeFiles/projectx_generate_messages_py.dir/all: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/all
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_py.dir/build.make projectx/CMakeFiles/projectx_generate_messages_py.dir/depend
 	$(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_py.dir/build.make projectx/CMakeFiles/projectx_generate_messages_py.dir/build

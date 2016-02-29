@@ -1,18 +1,36 @@
 #!/usr/bin/env python
 
 import rospy
-import BaseHTTPServer, SimpleHTTPServer
-import ssl
+import thread
+import os
+import subprocess
+import time
+
+# Open HTTPS Server
+
+def run(name):
+	subprocess.Popen(["cd $HOME/ProjectX/Speak; python https"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
 
 def start():
+	try:
+		thread.start_new_thread( run, ("Thread_1",) )
+	except:
+		rospy.logerr("Error: unable to start thread")
 
-	ip_address = rospy.get_param("/speech_ip_address", "192.168.1.37")
-	port = rospy.get_param("/speech_port", 8008)
+	time.sleep(2)
 
-	httpd = BaseHTTPServer.HTTPServer((ip_address, port), SimpleHTTPServer.SimpleHTTPRequestHandler)
-	httpd.socket = ssl.wrap_socket (httpd.socket, certfile='/home/rock/ProjectX/Speak/server.pem', server_side=True)
-	httpd.serve_forever()
+	auth = rospy.get_param("/open_speak", "0")
+
+	if auth == 1:
+		rospy.loginfo("OK")
+		subprocess.Popen(["cd $HOME/ProjectX/Speak/Script; ./run"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+	else:
+		rospy.loginfo("NO")
+
+	rospy.loginfo("STARTED: Speak Server")
+
+	rospy.spin()
 
 if __name__ == '__main__':
-	rospy.loginfo("STARTED: Speak Server")
+	rospy.init_node('speak_server', anonymous=True)
 	start()

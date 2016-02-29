@@ -15,10 +15,10 @@
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir
-/home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_Pin.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir
+/home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir
 /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir

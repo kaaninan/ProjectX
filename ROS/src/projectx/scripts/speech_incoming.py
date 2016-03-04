@@ -8,7 +8,7 @@ def handle_service(req):
     data = req.data
     rospy.loginfo(data)
     gonder = SpeechResponse()
-    gonder.dondur = "ok"
+    gonder.dondur = "OK"
     return gonder
 
 
@@ -16,7 +16,7 @@ def handle_service(req):
 def start_server():
     rospy.init_node('speech_incoming')
     
-    s = rospy.Service('service_speech_data', Speech, handle_service)
+    s = rospy.Service('/service_speech_data', Speech, handle_service)
     
     rate = rospy.Rate(20)
 

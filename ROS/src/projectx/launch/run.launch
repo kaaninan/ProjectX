@@ -1,7 +1,7 @@
 <launch>                        
 
   <param name="/open_speak" value="1"/>
-  <param name="arduino_out_data_auth" value="1" />
+  <param name="/arduino_out_data_auth" value="1" />
 
   <!-- OSC -->
   <param name="layout_path" value="$(find projectx)/osc" />
@@ -50,7 +50,8 @@
   
 
   <!-- Speak-->
-  <node pkg="projectx" type="speak_server.py" name="speak_server" output="screen"/>
+  <node pkg="projectx" type="speak_server.py" name="speak_server"/>
+  <node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" />
   
 
 </launch>

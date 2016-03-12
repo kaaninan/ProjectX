@@ -1,8 +1,8 @@
-# Install script for directory: /home/rock/ProjectX/ROS/src/projectx
+# Install script for directory: /home/kaaninan/ProjectX/ROS/src/projectx
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/rock/ProjectX/ROS/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/kaaninan/ProjectX/ROS/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,54 +34,54 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/projectx/srv" TYPE FILE FILES
-    "/home/rock/ProjectX/ROS/src/projectx/srv/SensorTemp.srv"
-    "/home/rock/ProjectX/ROS/src/projectx/srv/MotorBoost.srv"
-    "/home/rock/ProjectX/ROS/src/projectx/srv/Speech.srv"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/projectx/msg" TYPE FILE FILES
-    "/home/rock/ProjectX/ROS/src/projectx/msg/Sensor.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/Hash.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorIn.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorInArray.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOut.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/DataControl.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/IntArray.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/Gyro.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/OscData.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/CommonProperties.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/Label.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MultiButton.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MultiFader.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/Tabpage.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg"
-    "/home/rock/ProjectX/ROS/src/projectx/msg/XYPad.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorIn.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorInArray.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Gyro.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Label.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiFader.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg"
+    "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/projectx/cmake" TYPE FILE FILES "/home/rock/ProjectX/ROS/build/projectx/catkin_generated/installspace/projectx-msg-paths.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/projectx/cmake" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/build/projectx/catkin_generated/installspace/projectx-msg-paths.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/rock/ProjectX/ROS/devel/include/projectx")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/kaaninan/ProjectX/ROS/devel/include/projectx")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/rock/ProjectX/ROS/devel/share/common-lisp/ros/projectx")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/rock/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

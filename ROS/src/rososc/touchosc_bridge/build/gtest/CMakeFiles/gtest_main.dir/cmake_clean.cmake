@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
-  "/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/lib/libgtest_main.pdb"
-  "/home/rock/ProjectX/ROS/src/rososc/touchosc_bridge/lib/libgtest_main.so"
+  "/home/kaaninan/ProjectX/ROS/src/rososc/touchosc_bridge/lib/libgtest_main.pdb"
+  "/home/kaaninan/ProjectX/ROS/src/rososc/touchosc_bridge/lib/libgtest_main.so"
 )
 
 # Per-language clean rules from dependency scanning.

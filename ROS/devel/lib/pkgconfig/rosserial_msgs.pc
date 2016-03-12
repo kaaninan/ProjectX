@@ -1,8 +1,8 @@
-prefix=/home/rock/ProjectX/ROS/devel
+prefix=/home/kaaninan/ProjectX/ROS/devel
 
 Name: rosserial_msgs
 Description: Description of rosserial_msgs
 Version: 0.6.4
-Cflags: -I/home/rock/ProjectX/ROS/devel/include
-Libs: -L/home/rock/ProjectX/ROS/devel/lib 
+Cflags: -I/home/kaaninan/ProjectX/ROS/devel/include
+Libs: -L/home/kaaninan/ProjectX/ROS/devel/lib 
 Requires: message_runtime

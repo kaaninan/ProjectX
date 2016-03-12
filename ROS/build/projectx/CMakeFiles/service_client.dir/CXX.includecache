@@ -6,51 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoInts.h
-ros/service_traits.h
--
-projectx/AddTwoIntsRequest.h
--
-projectx/AddTwoIntsResponse.h
--
-
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoIntsRequest.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/home/rock/ProjectX/ROS/devel/include/projectx/AddTwoIntsResponse.h
-string
--
-vector
--
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-
-/home/rock/ProjectX/ROS/src/projectx/src/service_client.cpp
+/home/kaaninan/ProjectX/ROS/src/projectx/src/service_client.cpp
 ros/ros.h
-/home/rock/ProjectX/ROS/src/projectx/src/ros/ros.h
+/home/kaaninan/ProjectX/ROS/src/projectx/src/ros/ros.h
 projectx/AddTwoInts.h
-/home/rock/ProjectX/ROS/src/projectx/src/projectx/AddTwoInts.h
+/home/kaaninan/ProjectX/ROS/src/projectx/src/projectx/AddTwoInts.h
 cstdlib
 -
 
@@ -272,10 +232,6 @@ boost/make_shared.hpp
 cstddef
 -
 memory
--
-
-/opt/ros/indigo/include/ros/message_operations.h
-ostream
 -
 
 /opt/ros/indigo/include/ros/message_traits.h

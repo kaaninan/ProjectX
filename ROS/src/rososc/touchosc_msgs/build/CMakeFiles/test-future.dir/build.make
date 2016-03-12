@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs/build
 
 # Utility rule file for test-future.
 
@@ -60,6 +60,6 @@ CMakeFiles/test-future.dir/clean:
 .PHONY : CMakeFiles/test-future.dir/clean
 
 CMakeFiles/test-future.dir/depend:
-	cd /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build /home/rock/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles/test-future.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs/build /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs/build /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_msgs/build/CMakeFiles/test-future.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/test-future.dir/depend
 

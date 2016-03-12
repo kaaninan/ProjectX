@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build
 
 # Utility rule file for rosbuild_premsgsrvgen.
 
@@ -60,6 +60,6 @@ CMakeFiles/rosbuild_premsgsrvgen.dir/clean:
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/clean
 
 CMakeFiles/rosbuild_premsgsrvgen.dir/depend:
-	cd /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/osc_bridge /home/rock/ProjectX/ROS/src/rososc/osc_bridge /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/CMakeFiles/rosbuild_premsgsrvgen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_premsgsrvgen.dir/depend
 

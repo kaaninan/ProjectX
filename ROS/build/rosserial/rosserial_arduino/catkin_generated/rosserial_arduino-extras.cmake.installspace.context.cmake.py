@@ -2,7 +2,7 @@
 DEVELSPACE = 'FALSE' == 'TRUE'
 INSTALLSPACE = 'TRUE' == 'TRUE'
 
-CATKIN_DEVEL_PREFIX = '/home/rock/ProjectX/ROS/devel'
+CATKIN_DEVEL_PREFIX = '/home/kaaninan/ProjectX/ROS/devel'
 
 CATKIN_GLOBAL_BIN_DESTINATION = 'bin'
 CATKIN_GLOBAL_ETC_DESTINATION = 'etc'
@@ -20,14 +20,14 @@ CATKIN_PACKAGE_LIBEXEC_DESTINATION = ''
 CATKIN_PACKAGE_PYTHON_DESTINATION = 'lib/python2.7/dist-packages/rosserial_arduino'
 CATKIN_PACKAGE_SHARE_DESTINATION = 'share/rosserial_arduino'
 
-CMAKE_BINARY_DIR = '/home/rock/ProjectX/ROS/build'
-CMAKE_CURRENT_BINARY_DIR = '/home/rock/ProjectX/ROS/build/rosserial/rosserial_arduino'
-CMAKE_CURRENT_SOURCE_DIR = '/home/rock/ProjectX/ROS/src/rosserial/rosserial_arduino'
-CMAKE_INSTALL_PREFIX = '/home/rock/ProjectX/ROS/install'
-CMAKE_SOURCE_DIR = '/home/rock/ProjectX/ROS/src'
+CMAKE_BINARY_DIR = '/home/kaaninan/ProjectX/ROS/build'
+CMAKE_CURRENT_BINARY_DIR = '/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino'
+CMAKE_CURRENT_SOURCE_DIR = '/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino'
+CMAKE_INSTALL_PREFIX = '/home/kaaninan/ProjectX/ROS/install'
+CMAKE_SOURCE_DIR = '/home/kaaninan/ProjectX/ROS/src'
 
 PKG_CMAKE_DIR = '${rosserial_arduino_DIR}'
 
 PROJECT_NAME = 'rosserial_arduino'
-PROJECT_BINARY_DIR = '/home/rock/ProjectX/ROS/build/rosserial/rosserial_arduino'
-PROJECT_SOURCE_DIR = '/home/rock/ProjectX/ROS/src/rosserial/rosserial_arduino'
+PROJECT_BINARY_DIR = '/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino'
+PROJECT_SOURCE_DIR = '/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino'

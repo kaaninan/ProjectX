@@ -16,8 +16,8 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/rock/ProjectX/ROS/src/rosserial/rosserial_server/include"
-  "/home/rock/ProjectX/ROS/devel/include"
+  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include"
+  "/home/kaaninan/ProjectX/ROS/devel/include"
   "/opt/ros/indigo/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

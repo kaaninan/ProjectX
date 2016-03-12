@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build
 
 # Utility rule file for rosbuild_clean-test-results.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build
 include CMakeFiles/rosbuild_clean-test-results.dir/progress.make
 
 CMakeFiles/rosbuild_clean-test-results:
-	if ! rm -rf /home/rock/.ros/test_results/osc_bridge; then echo "WARNING:\ failed\ to\ remove\ test-results\ directory"; fi
+	if ! rm -rf /home/kaaninan/.ros/test_results/osc_bridge; then echo "WARNING:\ failed\ to\ remove\ test-results\ directory"; fi
 
 rosbuild_clean-test-results: CMakeFiles/rosbuild_clean-test-results
 rosbuild_clean-test-results: CMakeFiles/rosbuild_clean-test-results.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/rosbuild_clean-test-results.dir/clean:
 .PHONY : CMakeFiles/rosbuild_clean-test-results.dir/clean
 
 CMakeFiles/rosbuild_clean-test-results.dir/depend:
-	cd /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src/rososc/osc_bridge /home/rock/ProjectX/ROS/src/rososc/osc_bridge /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build /home/rock/ProjectX/ROS/src/rososc/osc_bridge/build/CMakeFiles/rosbuild_clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build /home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/CMakeFiles/rosbuild_clean-test-results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rosbuild_clean-test-results.dir/depend
 

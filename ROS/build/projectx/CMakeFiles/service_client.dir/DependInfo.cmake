@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rock/ProjectX/ROS/src/projectx/src/service_client.cpp" "/home/rock/ProjectX/ROS/build/projectx/CMakeFiles/service_client.dir/src/service_client.cpp.o"
+  "/home/kaaninan/ProjectX/ROS/src/projectx/src/service_client.cpp" "/home/kaaninan/ProjectX/ROS/build/projectx/CMakeFiles/service_client.dir/src/service_client.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -21,9 +21,9 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/rock/ProjectX/ROS/devel/include"
+  "/home/kaaninan/ProjectX/ROS/devel/include"
   "/opt/ros/indigo/include"
-  "/home/rock/ProjectX/ROS/src/projectx/src/projectx/include"
+  "/home/kaaninan/ProjectX/ROS/src/projectx/src/projectx/include"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

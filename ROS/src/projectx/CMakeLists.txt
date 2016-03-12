@@ -84,7 +84,3 @@ add_executable(arduino_sicaklik src/arduino_sicaklik.cpp)
 target_link_libraries(arduino_sicaklik ${catkin_LIBRARIES})
 add_dependencies(arduino_sicaklik projectx_gencpp)
 
-
-add_executable(service_client src/service_client.cpp)
-target_link_libraries(service_client ${catkin_LIBRARIES})
-add_dependencies(service_client projectx_gencpp)

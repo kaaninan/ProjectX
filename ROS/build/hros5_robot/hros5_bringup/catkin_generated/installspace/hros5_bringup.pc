@@ -1,8 +1,0 @@
-prefix=/home/rock/ProjectX/ROS/install
-
-Name: hros5_bringup
-Description: Description of hros5_bringup
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/rock/ProjectX/ROS/install/lib 
-Requires: 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/rock/ProjectX/ROS/src/rosserial/rosserial_python
+# Install script for directory: /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/rock/ProjectX/ROS/install")
+  SET(CMAKE_INSTALL_PREFIX "/home/kaaninan/ProjectX/ROS/install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,28 +33,28 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/rock/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/installspace/rosserial_python.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/installspace/rosserial_python.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosserial_python/cmake" TYPE FILE FILES
-    "/home/rock/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/installspace/rosserial_pythonConfig.cmake"
-    "/home/rock/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/installspace/rosserial_pythonConfig-version.cmake"
+    "/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/installspace/rosserial_pythonConfig.cmake"
+    "/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/installspace/rosserial_pythonConfig-version.cmake"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosserial_python" TYPE FILE FILES "/home/rock/ProjectX/ROS/src/rosserial/rosserial_python/package.xml")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosserial_python" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python/package.xml")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  INCLUDE("/home/rock/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/safe_execute_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_python/catkin_generated/safe_execute_install.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/rosserial_python" TYPE PROGRAM FILES
-    "/home/rock/ProjectX/ROS/src/rosserial/rosserial_python/nodes/serial_node.py"
-    "/home/rock/ProjectX/ROS/src/rosserial/rosserial_python/nodes/message_info_service.py"
+    "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python/nodes/serial_node.py"
+    "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python/nodes/message_info_service.py"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

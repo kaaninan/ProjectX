@@ -1,5 +1,5 @@
 <launch>                                                                             
-  <param name="layout_path" value="$(find projectx)/OSC" />
+  <param name="layout_path" value="$(find projectx)/osc" />
 
   <rosparam param="layouts">
     [ "ProjectX.touchosc", "ProjectX.touchosc" ]

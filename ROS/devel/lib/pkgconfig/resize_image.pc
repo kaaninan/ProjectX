@@ -1,8 +1,0 @@
-prefix=/home/rock/ProjectX/ROS/devel
-
-Name: resize_image
-Description: Description of resize_image
-Version: 0.0.1
-Cflags: -I/home/rock/ProjectX/ROS/src/hros5_misc/resize_image/include
-Libs: -L/home/rock/ProjectX/ROS/devel/lib 
-Requires: 

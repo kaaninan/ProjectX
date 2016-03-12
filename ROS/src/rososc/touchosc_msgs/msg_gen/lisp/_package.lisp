@@ -1,23 +1,23 @@
 (cl:defpackage touchosc_msgs-msg
   (:use )
   (:export
-   "<SCALABLECONTROL>"
-   "SCALABLECONTROL"
+   "<TABPAGE>"
+   "TABPAGE"
+   "<XYPAD>"
+   "XYPAD"
    "<LABEL>"
    "LABEL"
    "<TOUCHOSC_COMMON>"
    "TOUCHOSC_COMMON"
-   "<TABPAGE>"
-   "TABPAGE"
-   "<COMMONPROPERTIES>"
-   "COMMONPROPERTIES"
    "<MULTIBUTTON>"
    "MULTIBUTTON"
    "<MULTIXYPAD>"
    "MULTIXYPAD"
+   "<COMMONPROPERTIES>"
+   "COMMONPROPERTIES"
+   "<SCALABLECONTROL>"
+   "SCALABLECONTROL"
    "<MULTIFADER>"
    "MULTIFADER"
-   "<XYPAD>"
-   "XYPAD"
   ))
 

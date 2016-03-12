@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
 
 # Include any dependencies generated for this target.
 include projectx/CMakeFiles/motor_boost_server.dir/depend.make
@@ -50,18 +50,18 @@ include projectx/CMakeFiles/motor_boost_server.dir/progress.make
 include projectx/CMakeFiles/motor_boost_server.dir/flags.make
 
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: projectx/CMakeFiles/motor_boost_server.dir/flags.make
-projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_1)
+projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o: /home/kaaninan/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o"
-	cd /home/rock/ProjectX/ROS/build/projectx && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o -c /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
+	cd /home/kaaninan/ProjectX/ROS/build/projectx && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o -c /home/kaaninan/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
 
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i"
-	cd /home/rock/ProjectX/ROS/build/projectx && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp > CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i
+	cd /home/kaaninan/ProjectX/ROS/build/projectx && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/kaaninan/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp > CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i
 
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s"
-	cd /home/rock/ProjectX/ROS/build/projectx && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/rock/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp -o CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s
+	cd /home/kaaninan/ProjectX/ROS/build/projectx && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/kaaninan/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp -o CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s
 
 projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o.requires:
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o.requires
@@ -79,41 +79,41 @@ motor_boost_server_OBJECTS = \
 # External object files for target motor_boost_server
 motor_boost_server_EXTERNAL_OBJECTS =
 
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/build.make
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libroscpp.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libboost_signals.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librosconsole.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/liblog4cxx.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librostime.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libcpp_common.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libboost_system.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libpthread.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
-/home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server"
-	cd /home/rock/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motor_boost_server.dir/link.txt --verbose=$(VERBOSE)
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/build.make
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libroscpp.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librosconsole.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/liblog4cxx.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/librostime.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /opt/ros/indigo/lib/libcpp_common.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server"
+	cd /home/kaaninan/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/motor_boost_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-projectx/CMakeFiles/motor_boost_server.dir/build: /home/rock/ProjectX/ROS/devel/lib/projectx/motor_boost_server
+projectx/CMakeFiles/motor_boost_server.dir/build: /home/kaaninan/ProjectX/ROS/devel/lib/projectx/motor_boost_server
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/build
 
 projectx/CMakeFiles/motor_boost_server.dir/requires: projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o.requires
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/requires
 
 projectx/CMakeFiles/motor_boost_server.dir/clean:
-	cd /home/rock/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/motor_boost_server.dir/cmake_clean.cmake
+	cd /home/kaaninan/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/motor_boost_server.dir/cmake_clean.cmake
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/clean
 
 projectx/CMakeFiles/motor_boost_server.dir/depend:
-	cd /home/rock/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/src/projectx /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build/projectx /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/motor_boost_server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src/projectx /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/projectx /home/kaaninan/ProjectX/ROS/build/projectx/CMakeFiles/motor_boost_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/depend
 

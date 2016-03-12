@@ -16,7 +16,7 @@ class MyProcess:
     def spin(self, cumle):
         parsed = cumle.split(" ")
 
-        rospy.loginfo("dyioalog %d",self.diyalog)
+        rospy.loginfo("diyalog %d",self.diyalog)
 
 
         # KONUSMA YENI BASLIYOR

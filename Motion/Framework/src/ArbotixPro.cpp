@@ -566,12 +566,12 @@ int ArbotixPro::TxRxPacket(unsigned char *txpacket, unsigned char *rxpacket, int
                 // printf("ID: %d \n", id);
                 // printf("CW: %d \n", cw);
                 // printf("CCW: %d \n", ccw);
-                // printf("POS: %d \n \n", pos);
+                printf("POS: %d \n \n", pos);
 
                 if(id != 0){
                     played = 1;
                     std::ofstream myfile;
-                    myfile.open ("/home/rock/Motor_Test.txt", std::ios_base::app);
+                    myfile.open ("/home/kaaninan/Motor_Test.txt", std::ios_base::app);
                     myfile << "ID:" << id << ":POS:" << pos << ":\n";
                     myfile.close();
                 }

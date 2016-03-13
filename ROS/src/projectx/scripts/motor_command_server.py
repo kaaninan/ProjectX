@@ -13,7 +13,7 @@ from std_msgs.msg import *
 def motor():
     global pub_motor, rate
 
-    f = open("/home/rock/Motor_Test.txt","r")
+    f = open("$HOME/Motor_Test.txt","r")
     data = IntArray()
 
     for line in iter(f):
@@ -70,7 +70,7 @@ def service_motor(req):
         control(1)
         time.sleep(1)
 
-        os.system("sudo rm /home/rock/Motor_Test.txt")
+        os.system("sudo rm $HOME/Motor_Test.txt")
 
         process = start()
         time.sleep(2)
@@ -115,7 +115,7 @@ def service_motor(req):
 
         time.sleep(1)
         control(1)
-        os.system("sudo rm /home/rock/Motor_Test.txt")
+        os.system("sudo rm $HOME/Motor_Test.txt")
 
     elif komut == "exit":
         thread_single(process, "exit")
@@ -156,7 +156,7 @@ def thread_multi(process, komut, deger):
         print "Error: unable to start thread"
 
 def start():
-    terminal = subprocess.Popen(["sudo","/home/rock/ProjectX/Motion/Linux/project/rme/rme"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    terminal = subprocess.Popen(["sudo","$HOME/ProjectX/Motion/Linux/project/rme/rme"], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     
     # line = terminal.stdout.readline()
     # print line

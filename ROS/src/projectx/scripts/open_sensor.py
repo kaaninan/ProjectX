@@ -3,6 +3,8 @@
 import rospy
 from projectx.msg import *
 
+# Sensor Iletisimi acar
+
 def talker():
     pub_sync = rospy.Publisher('arduino_data_sync', DataControl, queue_size=10) # Data Control
 

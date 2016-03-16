@@ -177,8 +177,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/strip
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/opt/ros/indigo/share/ros/core/rosbuild/rostoolchain.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=/opt/ros/indigo/share/ros/core/rosbuild/rostoolchain.cmake
 
 //If true, cmake will use relative paths in makefiles and projects.
 CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
@@ -497,7 +497,7 @@ PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 // it will install things.
 PYTHON_INSTALL_DIR:INTERNAL=lib/python2.7/dist-packages
 _rosbuild_EXPORTS:INTERNAL=
-_rosbuild_cached_flag_time:INTERNAL=1457822575.13
+_rosbuild_cached_flag_time:INTERNAL=1458114187.15
 _roslang_LANGS:INTERNAL=roslisp
 _rospack_deps_manifests_invoke_result:INTERNAL=
 _rospack_msgsrv_gen_invoke_result:INTERNAL=

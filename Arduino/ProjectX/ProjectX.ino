@@ -1,3 +1,5 @@
+#include <SoftwareSerial.h>
+
 // MINIMU
 // GYRO
 #include <Wire.h>
@@ -151,12 +153,12 @@ void publishServo() {
 
 // ## SUBSCRIBER
 
-ros::Subscriber<projectx::MotorOut> sub_motor_single("Amot", messageMotorSingleIn);
-ros::Subscriber<projectx::IntArray> sub_motor_pos("Amop", messageMotorPosIn);
-ros::Subscriber<projectx::IntArray> sub_data_control("Adc", messageDataControl);
-ros::Subscriber<projectx::IntArray> sub_out_power_led("Aop", messageOutDataPowerLed);
-ros::Subscriber<std_msgs::Int64> sub_out_laser("Aol", messageOutDataLaser);
-ros::Subscriber<std_msgs::Int64> sub_out_buzzer("Aob", messageOutDataBuzzer);
+ros::Subscriber<projectx::MotorOut> sub_motor_single("arduino_motor_out_single", messageMotorSingleIn);
+ros::Subscriber<projectx::IntArray> sub_motor_pos("arduino_motor_out_array", messageMotorPosIn);
+ros::Subscriber<projectx::IntArray> sub_data_control("arduino_data_control", messageDataControl);
+ros::Subscriber<projectx::IntArray> sub_out_power_led("arduino_out_led", messageOutDataPowerLed);
+ros::Subscriber<std_msgs::Int64> sub_out_laser("arduino_out_laser", messageOutDataLaser);
+ros::Subscriber<std_msgs::Int64> sub_out_buzzer("arduino_out_buzzer", messageOutDataBuzzer);
 
 
 void setup() {

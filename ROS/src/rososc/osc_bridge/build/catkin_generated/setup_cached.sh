@@ -9,7 +9,7 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel:$CMAKE_PREFIX_PATH"
 export CPATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/include:$CPATH"
-export LD_LIBRARY_PATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib:/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib/x86_64-linux-gnu:/home/kaaninan/ProjectX/ROS/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/kaaninan/ProjectX/ROS/devel/lib:/opt/ros/indigo/lib:/home/kaaninan/torch/install/lib:/home/kaaninan/torch/install/lib"
+export LD_LIBRARY_PATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib:/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib/x86_64-linux-gnu:/home/kaaninan/ProjectX/ROS/devel/lib/x86_64-linux-gnu:/opt/ros/indigo/lib/x86_64-linux-gnu:/home/kaaninan/ProjectX/ROS/devel/lib:/opt/ros/indigo/lib"
 export PATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/bin:$PATH"
 export PKG_CONFIG_PATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib/pkgconfig:/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib/x86_64-linux-gnu/pkgconfig:/home/kaaninan/ProjectX/ROS/devel/lib/x86_64-linux-gnu/pkgconfig:/opt/ros/indigo/lib/x86_64-linux-gnu/pkgconfig:/home/kaaninan/ProjectX/ROS/devel/lib/pkgconfig:/opt/ros/indigo/lib/pkgconfig"
 export PYTHONPATH="/home/kaaninan/ProjectX/ROS/src/rososc/osc_bridge/build/devel/lib/python2.7/dist-packages:$PYTHONPATH"

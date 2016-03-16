@@ -21,19 +21,8 @@ class PublisherData:
         name = data.common.name
         value = data.value
         rospy.loginfo(str(name)+" -> "+str(value))
-        talker_single(int(name[5:]), value, -1)
+        #talker_single(int(name[5:]), value, -1)
 
-
-    def callback_push(self,data):
-        name = data.common.name
-        value = data.value
-        
-        if name == "push1":
-            # READ
-            pass
-        elif name == "push2":
-            # SAVE
-            pass
 
     def callback_multipush(self,data):
         pass
@@ -50,40 +39,18 @@ class PublisherData:
             for number in range(0,11):
                 taslak1 = taslak + `number`
                 rospy.Subscriber(taslak1, ScalableControl, self.callback_fader)
-        
-        rospy.Subscriber("touchosc/1/push1", ScalableControl, self.callback_push)
-        rospy.Subscriber("touchosc/1/push2", ScalableControl, self.callback_push)
-        rospy.Subscriber("touchosc/2/push1", ScalableControl, self.callback_push)
-        rospy.Subscriber("touchosc/2/push2", ScalableControl, self.callback_push)
 
         rospy.Subscriber("touchosc/1/multipush1", ScalableControl, self.callback_multipush)
         rospy.Subscriber("touchosc/2/multipush1", ScalableControl, self.callback_multipush)
 
-        rospy.loginfo("OSC: Ready")
+        rospy.loginfo("OSC MOTOR: Ready")
         rospy.spin()
     
     
     def __init__(self):
         rospy.init_node('osc_incoming', anonymous=True)
-            
-        pubSingle = rospy.Publisher('motor_out_torque', MotorOut, queue_size=100)
-
-        pub_fader = []
-        pub_label = []
-
-
-        for i in range(1,11):
-            pub_fader.append(rospy.Publisher('/touchosc/1/fader'+str(i), ScalableControl, queue_size=100))
-
-        # for a in range(1,11):
-        #     pub_fader[10+a] = rospy.Publisher('/touchosc/2/fader'+str(a), ScalableControl, queue_size=100)
-
-        # for a in range(1,11):
-        #     pub_label[a] = rospy.Publisher('/touchosc/1/label'+str(a), ScalableControl, queue_size=100)
-
-        # for a in range(1,11):
-        #     pub_label[10+a] = rospy.Publisher('/touchosc/2/label'+str(a), ScalableControl, queue_size=100)
-
+        
+        pubSingle = rospy.Publisher('motor_out_single', MotorOut, queue_size=100)
 
         rate = rospy.Rate(100)
 

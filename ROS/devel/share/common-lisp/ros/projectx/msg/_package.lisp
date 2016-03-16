@@ -1,14 +1,10 @@
 (cl:defpackage projectx-msg
   (:use )
   (:export
-   "<MOTOROUTSINGLEARRAY>"
-   "MOTOROUTSINGLEARRAY"
    "<DATACONTROL>"
    "DATACONTROL"
    "<TABPAGE>"
    "TABPAGE"
-   "<MOTOROUTARRAY>"
-   "MOTOROUTARRAY"
    "<XYPAD>"
    "XYPAD"
    "<LABEL>"

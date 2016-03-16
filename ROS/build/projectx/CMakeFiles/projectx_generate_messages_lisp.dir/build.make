@@ -57,9 +57,7 @@ projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Label.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/ScalableControl.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/XYPad.lisp
-projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp
-projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Tabpage.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/IntArray.lisp
 projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/DataControl.lisp
@@ -153,72 +151,60 @@ projectx/CMakeFiles/projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/XYPad.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
-/home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorOutSingleArray.msg"
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
-
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MultiButton.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
-
-/home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
-/home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorOutArray.msg"
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Tabpage.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Tabpage.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Tabpage.lisp: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/Tabpage.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/IntArray.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/IntArray.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/IntArray.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/DataControl.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/DataControl.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/DataControl.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOut.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOut.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorOut.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Hash.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Hash.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/Hash.msg"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/SensorTemp.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/SensorTemp.srv"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/MotorBoost.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/MotorBoost.srv"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv
 
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Speech.lisp: /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py
 /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv/Speech.lisp: /home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Lisp code from projectx/Speech.srv"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/srv
 
@@ -235,9 +221,7 @@ projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Label.lisp
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/ScalableControl.lisp
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/XYPad.lisp
-projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutSingleArray.lisp
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MultiButton.lisp
-projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/MotorOutArray.lisp
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/Tabpage.lisp
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/IntArray.lisp
 projectx_generate_messages_lisp: /home/kaaninan/ProjectX/ROS/devel/share/common-lisp/ros/projectx/msg/DataControl.lisp

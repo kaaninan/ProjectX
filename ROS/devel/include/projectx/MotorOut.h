@@ -26,18 +26,12 @@ struct MotorOut_
   MotorOut_()
     : id(0)
     , pos(0)
-    , speed(0)
-    , torque(0)
-    , rw(0)
-    , action(0)  {
+    , torque(0)  {
     }
   MotorOut_(const ContainerAllocator& _alloc)
     : id(0)
     , pos(0)
-    , speed(0)
-    , torque(0)
-    , rw(0)
-    , action(0)  {
+    , torque(0)  {
     }
 
 
@@ -48,17 +42,8 @@ struct MotorOut_
    typedef int64_t _pos_type;
   _pos_type pos;
 
-   typedef int64_t _speed_type;
-  _speed_type speed;
-
    typedef int64_t _torque_type;
   _torque_type torque;
-
-   typedef int64_t _rw_type;
-  _rw_type rw;
-
-   typedef int64_t _action_type;
-  _action_type action;
 
 
 
@@ -137,12 +122,12 @@ struct MD5Sum< ::projectx::MotorOut_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "1c569e6a2d73436766c3b4d4f657523e";
+    return "5430fc9361c2337213e0d90db94db2ad";
   }
 
   static const char* value(const ::projectx::MotorOut_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x1c569e6a2d734367ULL;
-  static const uint64_t static_value2 = 0x66c3b4d4f657523eULL;
+  static const uint64_t static_value1 = 0x5430fc9361c23372ULL;
+  static const uint64_t static_value2 = 0x13e0d90db94db2adULL;
 };
 
 template<class ContainerAllocator>
@@ -163,10 +148,7 @@ struct Definition< ::projectx::MotorOut_<ContainerAllocator> >
   {
     return "int64 id\n\
 int64 pos\n\
-int64 speed\n\
 int64 torque\n\
-int64 rw\n\
-int64 action\n\
 ";
   }
 
@@ -187,10 +169,7 @@ namespace serialization
     {
       stream.next(m.id);
       stream.next(m.pos);
-      stream.next(m.speed);
       stream.next(m.torque);
-      stream.next(m.rw);
-      stream.next(m.action);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER;
@@ -213,14 +192,8 @@ struct Printer< ::projectx::MotorOut_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.id);
     s << indent << "pos: ";
     Printer<int64_t>::stream(s, indent + "  ", v.pos);
-    s << indent << "speed: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.speed);
     s << indent << "torque: ";
     Printer<int64_t>::stream(s, indent + "  ", v.torque);
-    s << indent << "rw: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.rw);
-    s << indent << "action: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.action);
   }
 };
 

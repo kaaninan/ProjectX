@@ -19,4 +19,4 @@
   <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
   <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/>
 
-</launch>      
+</launch>

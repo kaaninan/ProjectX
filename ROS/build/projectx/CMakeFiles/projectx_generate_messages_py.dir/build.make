@@ -57,9 +57,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/d
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_XYPad.py
-projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py
-projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_IntArray.py
 projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py
@@ -155,72 +153,60 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/d
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/XYPad"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MotorOutSingleArray"
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
-
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_13)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MultiButton"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
-
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MotorOutArray"
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py: /opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_14)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/Tabpage"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_IntArray.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_IntArray.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_15)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/IntArray"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_16)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/DataControl"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOut.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_17)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/MotorOut"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Hash.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Hash.py: /home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_20)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_18)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG projectx/Hash"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py: /home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_21)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_19)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV projectx/SensorTemp"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py: /home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_22)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_20)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV projectx/MotorBoost"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv
 
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Speech.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Speech.py: /home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_23)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_21)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV projectx/Speech"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv -Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg -Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg -p projectx -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv
 
@@ -237,9 +223,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/d
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_XYPad.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_IntArray.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py
@@ -248,7 +232,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/d
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Speech.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_24)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_22)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for projectx"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg --initpy
 
@@ -265,9 +249,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/d
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_XYPad.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_IntArray.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py
@@ -276,7 +258,7 @@ projectx/CMakeFiles/projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/d
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_SensorTemp.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_MotorBoost.py
 /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv/_Speech.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_25)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_23)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for projectx"
 	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/srv --initpy
 
@@ -293,9 +275,7 @@ projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/d
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Label.py
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_ScalableControl.py
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_XYPad.py
-projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutSingleArray.py
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MultiButton.py
-projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_MotorOutArray.py
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_Tabpage.py
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_IntArray.py
 projectx_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/projectx/msg/_DataControl.py

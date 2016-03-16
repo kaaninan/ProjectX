@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "projectx: 20 messages, 3 services")
+message(STATUS "projectx: 18 messages, 3 services")
 
 set(MSG_I_FLAGS "-Iprojectx:/home/kaaninan/ProjectX/ROS/src/projectx/msg;-Istd_msgs:/opt/ros/indigo/share/std_msgs/cmake/../msg")
 
@@ -15,19 +15,9 @@ add_custom_target(projectx_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" ""
-)
-
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Label.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Label.msg" "projectx/CommonProperties:std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" ""
 )
 
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
@@ -35,9 +25,19 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" ""
 )
 
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" ""
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" "projectx/CommonProperties:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" ""
 )
 
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiFader.msg" NAME_WE)
@@ -55,54 +55,9 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg" ""
 )
 
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" "projectx/CommonProperties:std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" "projectx/CommonProperties:std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" "projectx/CommonProperties:std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" "std_msgs/Header"
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
-add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" ""
 )
 
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorIn.msg" NAME_WE)
@@ -115,14 +70,49 @@ add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" "projectx/CommonProperties:std_msgs/Header"
 )
 
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" "projectx/CommonProperties:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" "projectx/CommonProperties:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" "std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" ""
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" ""
 )
 
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg" NAME_WE)
 add_custom_target(_projectx_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg" ""
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" ""
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" ""
+)
+
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
+add_custom_target(_projectx_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "projectx" "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" ""
 )
 
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
@@ -209,21 +199,9 @@ _generate_msg_cpp(projectx
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
 )
 _generate_msg_cpp(projectx
-  "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
-)
-_generate_msg_cpp(projectx
   "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg"
   "${MSG_I_FLAGS}"
   "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
-)
-_generate_msg_cpp(projectx
-  "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
-  "${MSG_I_FLAGS}"
-  ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/projectx
 )
 _generate_msg_cpp(projectx
@@ -289,15 +267,15 @@ add_custom_target(projectx_generate_messages_cpp
 add_dependencies(projectx_generate_messages projectx_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Label.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiFader.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
@@ -305,33 +283,29 @@ get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/G
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorIn.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_cpp _projectx_generate_messages_check_deps_${_filename})
@@ -418,21 +392,9 @@ _generate_msg_lisp(projectx
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
 )
 _generate_msg_lisp(projectx
-  "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
-)
-_generate_msg_lisp(projectx
   "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg"
   "${MSG_I_FLAGS}"
   "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
-)
-_generate_msg_lisp(projectx
-  "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
-  "${MSG_I_FLAGS}"
-  ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/projectx
 )
 _generate_msg_lisp(projectx
@@ -498,15 +460,15 @@ add_custom_target(projectx_generate_messages_lisp
 add_dependencies(projectx_generate_messages projectx_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Label.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiFader.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
@@ -514,33 +476,29 @@ get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/G
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorIn.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_lisp _projectx_generate_messages_check_deps_${_filename})
@@ -627,21 +585,9 @@ _generate_msg_py(projectx
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
 )
 _generate_msg_py(projectx
-  "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
-)
-_generate_msg_py(projectx
   "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg"
   "${MSG_I_FLAGS}"
   "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg;/opt/ros/indigo/share/std_msgs/cmake/../msg/Header.msg"
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
-)
-_generate_msg_py(projectx
-  "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg"
-  "${MSG_I_FLAGS}"
-  ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/projectx
 )
 _generate_msg_py(projectx
@@ -707,15 +653,15 @@ add_custom_target(projectx_generate_messages_py
 add_dependencies(projectx_generate_messages projectx_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Label.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorInArray.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiFader.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
@@ -723,33 +669,29 @@ get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/G
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/CommonProperties.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/SensorTemp.srv" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutSingleArray.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/TouchOSC_Common.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
-add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Sensor.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/OscData.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorIn.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiXYPad.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOutArray.msg" NAME_WE)
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/ScalableControl.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/XYPad.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/Hash.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/Speech.srv" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/IntArray.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/DataControl.msg" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/srv/MotorBoost.srv" NAME_WE)
+add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MotorOut.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/projectx/msg/MultiButton.msg" NAME_WE)
 add_dependencies(projectx_generate_messages_py _projectx_generate_messages_check_deps_${_filename})

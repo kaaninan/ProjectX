@@ -1,8 +1,8 @@
-prefix=/home/rock/ProjectX/ROS/devel
+prefix=/home/ubuntu/ProjectX/ROS/devel
 
 Name: rosserial_windows
 Description: Description of rosserial_windows
 Version: 0.6.4
 Cflags: 
-Libs: -L/home/rock/ProjectX/ROS/devel/lib 
+Libs: -L/home/ubuntu/ProjectX/ROS/devel/lib 
 Requires: 

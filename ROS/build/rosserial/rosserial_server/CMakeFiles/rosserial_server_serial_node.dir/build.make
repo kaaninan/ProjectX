@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
+CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
 
 # Include any dependencies generated for this target.
 include rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend.make
@@ -50,18 +50,18 @@ include rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/p
 include rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/flags.make
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/flags.make
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o: /home/rock/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/rock/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_1)
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o: /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/ubuntu/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o"
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_server && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o -c /home/rock/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o -c /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i"
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/rock/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp > CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp > CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s"
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/rock/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp -o CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o.requires:
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o.requires
@@ -79,42 +79,42 @@ rosserial_server_serial_node_OBJECTS = \
 # External object files for target rosserial_server_serial_node
 rosserial_server_serial_node_EXTERNAL_OBJECTS =
 
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libtopic_tools.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_signals.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/liblog4cxx.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp_serialization.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librostime.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libxmlrpcpp.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libcpp_common.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_system.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libpthread.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
-/home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node"
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rosserial_server_serial_node.dir/link.txt --verbose=$(VERBOSE)
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libtopic_tools.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_signals.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_log4cxx.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librosconsole_backend_interface.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/liblog4cxx.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libroscpp_serialization.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/librostime.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libxmlrpcpp.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /opt/ros/indigo/lib/libcpp_common.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_system.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libpthread.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so
+/home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable /home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node"
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rosserial_server_serial_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build: /home/rock/ProjectX/ROS/devel/lib/rosserial_server/serial_node
+rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build: /home/ubuntu/ProjectX/ROS/devel/lib/rosserial_server/serial_node
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/requires: rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o.requires
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/requires
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean:
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_server_serial_node.dir/cmake_clean.cmake
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_server_serial_node.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/clean
 
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend:
-	cd /home/rock/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/src/rosserial/rosserial_server /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build/rosserial/rosserial_server /home/rock/ProjectX/ROS/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/depend
 

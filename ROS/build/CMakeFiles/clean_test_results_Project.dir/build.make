@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
+CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
 
 # Utility rule file for clean_test_results_Project.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
 include CMakeFiles/clean_test_results_Project.dir/progress.make
 
 CMakeFiles/clean_test_results_Project:
-	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/rock/ProjectX/ROS/build/test_results/Project
+	/usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/remove_test_results.py /home/ubuntu/ProjectX/ROS/build/test_results/Project
 
 clean_test_results_Project: CMakeFiles/clean_test_results_Project
 clean_test_results_Project: CMakeFiles/clean_test_results_Project.dir/build.make
@@ -61,6 +61,6 @@ CMakeFiles/clean_test_results_Project.dir/clean:
 .PHONY : CMakeFiles/clean_test_results_Project.dir/clean
 
 CMakeFiles/clean_test_results_Project.dir/depend:
-	cd /home/rock/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build/CMakeFiles/clean_test_results_Project.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/CMakeFiles/clean_test_results_Project.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results_Project.dir/depend
 

@@ -1,8 +1,8 @@
-prefix=/home/rock/ProjectX/ROS/devel
+prefix=/home/ubuntu/ProjectX/ROS/devel
 
 Name: rosserial_arduino
 Description: Description of rosserial_arduino
 Version: 0.6.4
-Cflags: -I/home/rock/ProjectX/ROS/devel/include
-Libs: -L/home/rock/ProjectX/ROS/devel/lib 
+Cflags: -I/home/ubuntu/ProjectX/ROS/devel/include
+Libs: -L/home/ubuntu/ProjectX/ROS/devel/lib 
 Requires: message_runtime

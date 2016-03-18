@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/service_client.dir/src/service_client.cpp.o"
-  "/home/rock/ProjectX/ROS/devel/lib/projectx/service_client.pdb"
-  "/home/rock/ProjectX/ROS/devel/lib/projectx/service_client"
+  "/home/ubuntu/ProjectX/ROS/devel/lib/projectx/service_client.pdb"
+  "/home/ubuntu/ProjectX/ROS/devel/lib/projectx/service_client"
 )
 
 # Per-language clean rules from dependency scanning.

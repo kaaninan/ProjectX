@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
+CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
 
 # Utility rule file for _projectx_generate_messages_check_deps_ScalableControl.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
 include projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/progress.make
 
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl:
-	cd /home/rock/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py projectx /home/rock/ProjectX/ROS/src/projectx/msg/ScalableControl.msg std_msgs/Header:projectx/CommonProperties
+	cd /home/ubuntu/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py projectx /home/ubuntu/ProjectX/ROS/src/projectx/msg/ScalableControl.msg std_msgs/Header:projectx/CommonProperties
 
 _projectx_generate_messages_check_deps_ScalableControl: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl
 _projectx_generate_messages_check_deps_ScalableControl: projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/build.make
@@ -57,10 +57,10 @@ projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/b
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/build
 
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/clean:
-	cd /home/rock/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/cmake_clean.cmake
+	cd /home/ubuntu/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/cmake_clean.cmake
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/clean
 
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/depend:
-	cd /home/rock/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/src/projectx /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build/projectx /home/rock/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/projectx /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/projectx /home/ubuntu/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/depend
 

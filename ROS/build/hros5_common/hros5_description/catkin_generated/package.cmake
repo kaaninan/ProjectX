@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "hros5_description")
-set(hros5_description_MAINTAINER "Konstantinos Chatzilygeroudis <costashatz@gmail.com>")
-set(hros5_description_DEPRECATED "")
-set(hros5_description_VERSION "0.0.1")
-set(hros5_description_BUILD_DEPENDS )
-set(hros5_description_RUN_DEPENDS "robot_state_publisher" "joint_state_publisher" "rviz" "xacro" "urdf")
-set(hros5_description_BUILDTOOL_DEPENDS "catkin")

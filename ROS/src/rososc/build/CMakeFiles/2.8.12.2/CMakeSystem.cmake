@@ -1,13 +1,13 @@
-set(CMAKE_HOST_SYSTEM "Linux-3.0.36+")
+set(CMAKE_HOST_SYSTEM "Linux-3.18.0-25-rpi2")
 set(CMAKE_HOST_SYSTEM_NAME "Linux")
-set(CMAKE_HOST_SYSTEM_VERSION "3.0.36+")
+set(CMAKE_HOST_SYSTEM_VERSION "3.18.0-25-rpi2")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "armv7l")
 
 include("/opt/ros/indigo/share/ros/core/rosbuild/rostoolchain.cmake")
 
-set(CMAKE_SYSTEM "Linux-3.0.36+")
+set(CMAKE_SYSTEM "Linux-3.18.0-25-rpi2")
 set(CMAKE_SYSTEM_NAME "Linux")
-set(CMAKE_SYSTEM_VERSION "3.0.36+")
+set(CMAKE_SYSTEM_VERSION "3.18.0-25-rpi2")
 set(CMAKE_SYSTEM_PROCESSOR "armv7l")
 
 set(CMAKE_CROSSCOMPILING "FALSE")

@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/rock/ProjectX/ROS/src/rosserial/rosserial_client/test/float64_test.cpp" "/home/rock/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.o"
+  "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_client/test/float64_test.cpp" "/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,12 +15,12 @@ SET(CMAKE_TARGET_DEFINITIONS
 
 # Targets to which this target links.
 SET(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/rock/ProjectX/ROS/build/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/ubuntu/ProjectX/ROS/build/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   )
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "/home/rock/ProjectX/ROS/src/rosserial/rosserial_client/src"
+  "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_client/src"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

@@ -1,8 +1,8 @@
-prefix=/home/rock/ProjectX/ROS/install
+prefix=/home/ubuntu/ProjectX/ROS/install
 
 Name: rosserial_msgs
 Description: Description of rosserial_msgs
 Version: 0.6.4
-Cflags: -I/home/rock/ProjectX/ROS/install/include
-Libs: -L/home/rock/ProjectX/ROS/install/lib 
+Cflags: -I/home/ubuntu/ProjectX/ROS/install/include
+Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
 Requires: message_runtime

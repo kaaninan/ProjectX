@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
+CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
 
 # Utility rule file for _run_tests_rosserial_client_gtest_float64_test.
 
@@ -46,7 +46,7 @@ CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
 include rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/progress.make
 
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test:
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_client && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/rock/ProjectX/ROS/build/test_results/rosserial_client/gtest-float64_test.xml /home/rock/ProjectX/ROS/devel/lib/rosserial_client/float64_test\ --gtest_output=xml:/home/rock/ProjectX/ROS/build/test_results/rosserial_client/gtest-float64_test.xml
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/catkin/cmake/test/run_tests.py /home/ubuntu/ProjectX/ROS/build/test_results/rosserial_client/gtest-float64_test.xml /home/ubuntu/ProjectX/ROS/devel/lib/rosserial_client/float64_test\ --gtest_output=xml:/home/ubuntu/ProjectX/ROS/build/test_results/rosserial_client/gtest-float64_test.xml
 
 _run_tests_rosserial_client_gtest_float64_test: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test
 _run_tests_rosserial_client_gtest_float64_test: rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build.make
@@ -57,10 +57,10 @@ rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build
 
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/clean:
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_client && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/cmake_clean.cmake
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client && $(CMAKE_COMMAND) -P CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/clean
 
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/depend:
-	cd /home/rock/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/src/rosserial/rosserial_client /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build/rosserial/rosserial_client /home/rock/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_client /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/depend
 

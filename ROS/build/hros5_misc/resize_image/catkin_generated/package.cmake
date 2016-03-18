@@ -1,7 +1,0 @@
-set(_CATKIN_CURRENT_PACKAGE "resize_image")
-set(resize_image_MAINTAINER "r3n33 <ReneeSeekingEmployment@gmail.com>")
-set(resize_image_DEPRECATED "")
-set(resize_image_VERSION "0.0.1")
-set(resize_image_BUILD_DEPENDS "sensor_msgs" "roscpp" "cv_bridge" "image_transport" "sensor_msgs" "cv_bridge" "std_msgs" "image_transport")
-set(resize_image_RUN_DEPENDS "image_transport" "boost" "open_cv")
-set(resize_image_BUILDTOOL_DEPENDS "catkin")

@@ -1,16 +1,6 @@
 (cl:defpackage projectx-srv
   (:use )
   (:export
-   "PIN"
-   "<PIN-REQUEST>"
-   "PIN-REQUEST"
-   "<PIN-RESPONSE>"
-   "PIN-RESPONSE"
-   "ADDTWOINTS"
-   "<ADDTWOINTS-REQUEST>"
-   "ADDTWOINTS-REQUEST"
-   "<ADDTWOINTS-RESPONSE>"
-   "ADDTWOINTS-RESPONSE"
    "MOTORBOOST"
    "<MOTORBOOST-REQUEST>"
    "MOTORBOOST-REQUEST"

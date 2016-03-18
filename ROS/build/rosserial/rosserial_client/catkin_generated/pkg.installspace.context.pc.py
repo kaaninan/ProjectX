@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "rosserial_client"
-PROJECT_SPACE_DIR = "/home/rock/ProjectX/ROS/install"
+PROJECT_SPACE_DIR = "/home/ubuntu/ProjectX/ROS/install"
 PROJECT_VERSION = "0.6.4"

@@ -1,8 +1,8 @@
-prefix=/home/rock/ProjectX/ROS/devel
+prefix=/home/ubuntu/ProjectX/ROS/devel
 
 Name: rosserial_server
 Description: Description of rosserial_server
 Version: 0.6.4
-Cflags: -I/home/rock/ProjectX/ROS/src/rosserial/rosserial_server/include
-Libs: -L/home/rock/ProjectX/ROS/devel/lib 
+Cflags: -I/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include
+Libs: -L/home/ubuntu/ProjectX/ROS/devel/lib 
 Requires: roscpp rosserial_msgs topic_tools

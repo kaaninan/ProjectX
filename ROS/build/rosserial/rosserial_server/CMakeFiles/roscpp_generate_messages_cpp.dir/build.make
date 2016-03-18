@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/rock/ProjectX/ROS/src
+CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/rock/ProjectX/ROS/build
+CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
 
 # Utility rule file for roscpp_generate_messages_cpp.
 
@@ -56,10 +56,10 @@ rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build: ro
 .PHONY : rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 
 rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	cd /home/rock/ProjectX/ROS/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/depend:
-	cd /home/rock/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/rock/ProjectX/ROS/src /home/rock/ProjectX/ROS/src/rosserial/rosserial_server /home/rock/ProjectX/ROS/build /home/rock/ProjectX/ROS/build/rosserial/rosserial_server /home/rock/ProjectX/ROS/build/rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : rosserial/rosserial_server/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 

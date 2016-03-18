@@ -1,8 +1,0 @@
-prefix=/home/rock/ProjectX/ROS/install
-
-Name: resize_image
-Description: Description of resize_image
-Version: 0.0.1
-Cflags: -I/home/rock/ProjectX/ROS/install/include
-Libs: -L/home/rock/ProjectX/ROS/install/lib 
-Requires: 

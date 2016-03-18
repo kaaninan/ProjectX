@@ -74,11 +74,3 @@ include_directories(
 add_executable(motor_boost_server src/motor_boost_server.cpp)
 target_link_libraries(motor_boost_server ${catkin_LIBRARIES})
 add_dependencies(motor_boost_server projectx_gencpp)
-
-
-
-
-add_executable(arduino_sicaklik src/arduino_sicaklik.cpp)
-target_link_libraries(arduino_sicaklik ${catkin_LIBRARIES})
-add_dependencies(arduino_sicaklik projectx_gencpp)
-

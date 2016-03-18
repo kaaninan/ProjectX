@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/RequestMessageInfo.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/RequestMessageInfo.h
->>>>>>> develop
 ros/service_traits.h
 -
 rosserial_msgs/RequestMessageInfoRequest.h
@@ -18,11 +14,7 @@ rosserial_msgs/RequestMessageInfoRequest.h
 rosserial_msgs/RequestMessageInfoResponse.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/RequestMessageInfoRequest.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/RequestMessageInfoRequest.h
->>>>>>> develop
 string
 -
 vector
@@ -38,11 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/RequestMessageInfoResponse.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/RequestMessageInfoResponse.h
->>>>>>> develop
 string
 -
 vector
@@ -58,11 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/RequestServiceInfo.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/RequestServiceInfo.h
->>>>>>> develop
 ros/service_traits.h
 -
 rosserial_msgs/RequestServiceInfoRequest.h
@@ -70,11 +54,7 @@ rosserial_msgs/RequestServiceInfoRequest.h
 rosserial_msgs/RequestServiceInfoResponse.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/RequestServiceInfoRequest.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/RequestServiceInfoRequest.h
->>>>>>> develop
 string
 -
 vector
@@ -90,11 +70,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/RequestServiceInfoResponse.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/RequestServiceInfoResponse.h
->>>>>>> develop
 string
 -
 vector
@@ -110,11 +86,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/rosserial_msgs/TopicInfo.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/rosserial_msgs/TopicInfo.h
->>>>>>> develop
 string
 -
 vector
@@ -130,11 +102,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/async_read_buffer.h
-=======
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/async_read_buffer.h
->>>>>>> develop
 boost/bind.hpp
 -
 boost/asio.hpp
@@ -144,11 +112,7 @@ boost/function.hpp
 ros/ros.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/serial_session.h
-=======
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/serial_session.h
->>>>>>> develop
 iostream
 -
 boost/bind.hpp
@@ -158,15 +122,9 @@ boost/asio.hpp
 ros/ros.h
 -
 rosserial_server/session.h
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/rosserial_server/session.h
 
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/session.h
-=======
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/rosserial_server/session.h
-
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/session.h
->>>>>>> develop
 map
 -
 boost/bind.hpp
@@ -184,19 +142,11 @@ topic_tools/shape_shifter.h
 std_msgs/Time.h
 -
 rosserial_server/async_read_buffer.h
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/rosserial_server/async_read_buffer.h
 rosserial_server/topic_handlers.h
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/rosserial_server/topic_handlers.h
 
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/topic_handlers.h
-=======
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/rosserial_server/async_read_buffer.h
-rosserial_server/topic_handlers.h
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/rosserial_server/topic_handlers.h
-
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/include/rosserial_server/topic_handlers.h
->>>>>>> develop
 ros/ros.h
 -
 rosserial_msgs/TopicInfo.h
@@ -208,11 +158,7 @@ rosserial_msgs/RequestServiceInfo.h
 topic_tools/shape_shifter.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp
-=======
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/src/serial_node.cpp
->>>>>>> develop
 boost/asio.hpp
 -
 boost/bind.hpp
@@ -222,11 +168,7 @@ boost/thread.hpp
 ros/ros.h
 -
 rosserial_server/serial_session.h
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_server/src/rosserial_server/serial_session.h
-=======
-/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_server/src/rosserial_server/serial_session.h
->>>>>>> develop
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

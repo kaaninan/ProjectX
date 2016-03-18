@@ -2,11 +2,7 @@
 
 message(STATUS "rosserial_msgs: 2 messages, 3 services")
 
-<<<<<<< HEAD
 set(MSG_I_FLAGS "-Irosserial_msgs:/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg")
-=======
-set(MSG_I_FLAGS "-Irosserial_msgs:/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg")
->>>>>>> develop
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -19,7 +15,6 @@ add_custom_target(rosserial_msgs_generate_messages ALL)
 
 
 
-<<<<<<< HEAD
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
 add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" ""
@@ -43,31 +38,6 @@ add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
 add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" ""
-=======
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
-add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
-add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
-add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv" NAME_WE)
-add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv" ""
-)
-
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
-add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "rosserial_msgs" "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" ""
->>>>>>> develop
 )
 
 #
@@ -77,21 +47,13 @@ add_custom_target(_rosserial_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosserial_msgs
 )
 _generate_msg_cpp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosserial_msgs
@@ -99,31 +61,19 @@ _generate_msg_cpp(rosserial_msgs
 
 ### Generating Services
 _generate_srv_cpp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosserial_msgs
 )
 _generate_srv_cpp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosserial_msgs
 )
 _generate_srv_cpp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/rosserial_msgs
@@ -141,7 +91,6 @@ add_custom_target(rosserial_msgs_generate_messages_cpp
 add_dependencies(rosserial_msgs_generate_messages rosserial_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-<<<<<<< HEAD
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
 add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
@@ -151,17 +100,6 @@ add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_m
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
 add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
-=======
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
->>>>>>> develop
 add_dependencies(rosserial_msgs_generate_messages_cpp _rosserial_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -174,21 +112,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosserial_msgs_generate_messages_cp
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosserial_msgs
 )
 _generate_msg_lisp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosserial_msgs
@@ -196,31 +126,19 @@ _generate_msg_lisp(rosserial_msgs
 
 ### Generating Services
 _generate_srv_lisp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosserial_msgs
 )
 _generate_srv_lisp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosserial_msgs
 )
 _generate_srv_lisp(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/rosserial_msgs
@@ -238,7 +156,6 @@ add_custom_target(rosserial_msgs_generate_messages_lisp
 add_dependencies(rosserial_msgs_generate_messages rosserial_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-<<<<<<< HEAD
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
 add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
@@ -248,17 +165,6 @@ add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
 add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
-=======
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
->>>>>>> develop
 add_dependencies(rosserial_msgs_generate_messages_lisp _rosserial_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -271,21 +177,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS rosserial_msgs_generate_messages_li
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosserial_msgs
 )
 _generate_msg_py(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosserial_msgs
@@ -293,31 +191,19 @@ _generate_msg_py(rosserial_msgs
 
 ### Generating Services
 _generate_srv_py(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosserial_msgs
 )
 _generate_srv_py(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosserial_msgs
 )
 _generate_srv_py(rosserial_msgs
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv"
-=======
-  "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv"
->>>>>>> develop
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/rosserial_msgs
@@ -335,7 +221,6 @@ add_custom_target(rosserial_msgs_generate_messages_py
 add_dependencies(rosserial_msgs_generate_messages rosserial_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-<<<<<<< HEAD
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
 add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
@@ -345,17 +230,6 @@ add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_me
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
 add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
-=======
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/Log.msg" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestParam.srv" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestServiceInfo.srv" NAME_WE)
-add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/srv/RequestMessageInfo.srv" NAME_WE)
->>>>>>> develop
 add_dependencies(rosserial_msgs_generate_messages_py _rosserial_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

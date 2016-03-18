@@ -14,17 +14,12 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-<<<<<<< HEAD
 echo_and_run cd "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_python"
-=======
-echo_and_run cd "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python"
->>>>>>> develop
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-<<<<<<< HEAD
     PYTHONPATH="/home/ubuntu/ProjectX/ROS/install/lib/python2.7/dist-packages:/home/ubuntu/ProjectX/ROS/build/lib/python2.7/dist-packages:$PYTHONPATH" \
     CATKIN_BINARY_DIR="/home/ubuntu/ProjectX/ROS/build" \
     "/usr/bin/python" \
@@ -33,13 +28,3 @@ echo_and_run /usr/bin/env \
     install \
     $DESTDIR_ARG \
     --install-layout=deb --prefix="/home/ubuntu/ProjectX/ROS/install" --install-scripts="/home/ubuntu/ProjectX/ROS/install/bin"
-=======
-    PYTHONPATH="/home/kaaninan/ProjectX/ROS/install/lib/python2.7/dist-packages:/home/kaaninan/ProjectX/ROS/build/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/kaaninan/ProjectX/ROS/build" \
-    "/usr/bin/python" \
-    "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python/setup.py" \
-    build --build-base "/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_python" \
-    install \
-    $DESTDIR_ARG \
-    --install-layout=deb --prefix="/home/kaaninan/ProjectX/ROS/install" --install-scripts="/home/kaaninan/ProjectX/ROS/install/bin"
->>>>>>> develop

@@ -6,19 +6,11 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/projectx/src/arduino_sicaklik.cpp
 ros/ros.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/ros/ros.h
 std_msgs/Float64.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/std_msgs/Float64.h
-=======
-/home/kaaninan/ProjectX/ROS/src/projectx/src/arduino_sicaklik.cpp
-ros/ros.h
-/home/kaaninan/ProjectX/ROS/src/projectx/src/ros/ros.h
-std_msgs/Float64.h
-/home/kaaninan/ProjectX/ROS/src/projectx/src/std_msgs/Float64.h
->>>>>>> develop
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

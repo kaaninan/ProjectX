@@ -39,17 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
-=======
-CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
->>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,24 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/CMakeFiles/progress.marks
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles 0
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_server/CMakeFiles/progress.marks
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles 0
->>>>>>> develop
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/clean
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/clean
->>>>>>> develop
 .PHONY : clean
 
 # The main clean target
@@ -153,38 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/preinstall
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/preinstall
->>>>>>> develop
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/preinstall
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/preinstall
->>>>>>> develop
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> develop
 .PHONY : depend
 
 # Convenience name for target.
 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/rule
 
 # Convenience name for target.
@@ -193,20 +160,12 @@ rosserial_server_serial_node: rosserial/rosserial_server/CMakeFiles/rosserial_se
 
 # fast build rule for target.
 rosserial_server_serial_node/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build
->>>>>>> develop
 .PHONY : rosserial_server_serial_node/fast
 
 # Convenience name for target.
 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/rule
 
 # Convenience name for target.
@@ -215,20 +174,12 @@ rosserial_server_socket_node: rosserial/rosserial_server/CMakeFiles/rosserial_se
 
 # fast build rule for target.
 rosserial_server_socket_node/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build
->>>>>>> develop
 .PHONY : rosserial_server_socket_node/fast
 
 # Convenience name for target.
 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -237,20 +188,12 @@ topic_tools_generate_messages_cpp: rosserial/rosserial_server/CMakeFiles/topic_t
 
 # fast build rule for target.
 topic_tools_generate_messages_cpp/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
->>>>>>> develop
 .PHONY : topic_tools_generate_messages_cpp/fast
 
 # Convenience name for target.
 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -259,20 +202,12 @@ topic_tools_generate_messages_lisp: rosserial/rosserial_server/CMakeFiles/topic_
 
 # fast build rule for target.
 topic_tools_generate_messages_lisp/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
->>>>>>> develop
 .PHONY : topic_tools_generate_messages_lisp/fast
 
 # Convenience name for target.
 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -281,11 +216,7 @@ topic_tools_generate_messages_py: rosserial/rosserial_server/CMakeFiles/topic_to
 
 # fast build rule for target.
 topic_tools_generate_messages_py/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build.make rosserial/rosserial_server/CMakeFiles/topic_tools_generate_messages_py.dir/build
->>>>>>> develop
 .PHONY : topic_tools_generate_messages_py/fast
 
 src/serial_node.o: src/serial_node.cpp.o
@@ -293,11 +224,7 @@ src/serial_node.o: src/serial_node.cpp.o
 
 # target to build an object file
 src/serial_node.cpp.o:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.o
->>>>>>> develop
 .PHONY : src/serial_node.cpp.o
 
 src/serial_node.i: src/serial_node.cpp.i
@@ -305,11 +232,7 @@ src/serial_node.i: src/serial_node.cpp.i
 
 # target to preprocess a source file
 src/serial_node.cpp.i:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.i
->>>>>>> develop
 .PHONY : src/serial_node.cpp.i
 
 src/serial_node.s: src/serial_node.cpp.s
@@ -317,11 +240,7 @@ src/serial_node.s: src/serial_node.cpp.s
 
 # target to generate assembly for a file
 src/serial_node.cpp.s:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_serial_node.dir/src/serial_node.cpp.s
->>>>>>> develop
 .PHONY : src/serial_node.cpp.s
 
 src/socket_node.o: src/socket_node.cpp.o
@@ -329,11 +248,7 @@ src/socket_node.o: src/socket_node.cpp.o
 
 # target to build an object file
 src/socket_node.cpp.o:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/src/socket_node.cpp.o
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/src/socket_node.cpp.o
->>>>>>> develop
 .PHONY : src/socket_node.cpp.o
 
 src/socket_node.i: src/socket_node.cpp.i
@@ -341,11 +256,7 @@ src/socket_node.i: src/socket_node.cpp.i
 
 # target to preprocess a source file
 src/socket_node.cpp.i:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/src/socket_node.cpp.i
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/src/socket_node.cpp.i
->>>>>>> develop
 .PHONY : src/socket_node.cpp.i
 
 src/socket_node.s: src/socket_node.cpp.s
@@ -353,11 +264,7 @@ src/socket_node.s: src/socket_node.cpp.s
 
 # target to generate assembly for a file
 src/socket_node.cpp.s:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/src/socket_node.cpp.s
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/build.make rosserial/rosserial_server/CMakeFiles/rosserial_server_socket_node.dir/src/socket_node.cpp.s
->>>>>>> develop
 .PHONY : src/socket_node.cpp.s
 
 # Help Target
@@ -395,10 +302,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> develop
 .PHONY : cmake_check_build_system
 

@@ -35,17 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
-=======
-CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
->>>>>>> develop
 
 # Utility rule file for _rosserial_arduino_generate_messages_check_deps_Adc.
 
@@ -53,11 +46,7 @@ CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
 include rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/progress.make
 
 rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rosserial_arduino /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_arduino/msg/Adc.msg 
-=======
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rosserial_arduino /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/msg/Adc.msg 
->>>>>>> develop
 
 _rosserial_arduino_generate_messages_check_deps_Adc: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc
 _rosserial_arduino_generate_messages_check_deps_Adc: rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/build.make
@@ -68,18 +57,10 @@ rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_chec
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/build
 
 rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/clean:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino && $(CMAKE_COMMAND) -P CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/clean
 
 rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/depend:
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_arduino /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && $(CMAKE_COMMAND) -P CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/cmake_clean.cmake
-.PHONY : rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/clean
-
-rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/depend:
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> develop
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/_rosserial_arduino_generate_messages_check_deps_Adc.dir/depend
 

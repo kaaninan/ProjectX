@@ -1,6 +1,2 @@
 - setup-file:
-<<<<<<< HEAD
     local-name: /home/ubuntu/ProjectX/ROS/devel/setup.sh
-=======
-    local-name: /home/kaaninan/ProjectX/ROS/devel/setup.sh
->>>>>>> develop

@@ -39,17 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
-=======
-CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
->>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -127,24 +120,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_msgs/CMakeFiles/progress.marks
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles 0
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_msgs/CMakeFiles/progress.marks
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles 0
->>>>>>> develop
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/clean
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/clean
->>>>>>> develop
 .PHONY : clean
 
 # The main clean target
@@ -153,38 +136,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/preinstall
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/preinstall
->>>>>>> develop
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/preinstall
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/preinstall
->>>>>>> develop
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> develop
 .PHONY : depend
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/rule
 
 # Convenience name for target.
@@ -193,20 +160,12 @@ _rosserial_msgs_generate_messages_check_deps_Log: rosserial/rosserial_msgs/CMake
 
 # fast build rule for target.
 _rosserial_msgs_generate_messages_check_deps_Log/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_Log.dir/build
->>>>>>> develop
 .PHONY : _rosserial_msgs_generate_messages_check_deps_Log/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/rule
 
 # Convenience name for target.
@@ -215,20 +174,12 @@ _rosserial_msgs_generate_messages_check_deps_RequestMessageInfo: rosserial/rosse
 
 # fast build rule for target.
 _rosserial_msgs_generate_messages_check_deps_RequestMessageInfo/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestMessageInfo.dir/build
->>>>>>> develop
 .PHONY : _rosserial_msgs_generate_messages_check_deps_RequestMessageInfo/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/rule
 
 # Convenience name for target.
@@ -237,20 +188,12 @@ _rosserial_msgs_generate_messages_check_deps_RequestParam: rosserial/rosserial_m
 
 # fast build rule for target.
 _rosserial_msgs_generate_messages_check_deps_RequestParam/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestParam.dir/build
->>>>>>> develop
 .PHONY : _rosserial_msgs_generate_messages_check_deps_RequestParam/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/rule
 
 # Convenience name for target.
@@ -259,20 +202,12 @@ _rosserial_msgs_generate_messages_check_deps_RequestServiceInfo: rosserial/rosse
 
 # fast build rule for target.
 _rosserial_msgs_generate_messages_check_deps_RequestServiceInfo/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_RequestServiceInfo.dir/build
->>>>>>> develop
 .PHONY : _rosserial_msgs_generate_messages_check_deps_RequestServiceInfo/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/rule
 
 # Convenience name for target.
@@ -281,20 +216,12 @@ _rosserial_msgs_generate_messages_check_deps_TopicInfo: rosserial/rosserial_msgs
 
 # fast build rule for target.
 _rosserial_msgs_generate_messages_check_deps_TopicInfo/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/build.make rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/build
->>>>>>> develop
 .PHONY : _rosserial_msgs_generate_messages_check_deps_TopicInfo/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/rule
 
 # Convenience name for target.
@@ -303,20 +230,12 @@ rosserial_msgs_gencpp: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp
 
 # fast build rule for target.
 rosserial_msgs_gencpp/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_gencpp.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_gencpp/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -325,20 +244,12 @@ rosserial_msgs_generate_messages: rosserial/rosserial_msgs/CMakeFiles/rosserial_
 
 # fast build rule for target.
 rosserial_msgs_generate_messages/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_generate_messages/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -347,20 +258,12 @@ rosserial_msgs_generate_messages_cpp: rosserial/rosserial_msgs/CMakeFiles/rosser
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_cpp/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_cpp.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -369,20 +272,12 @@ rosserial_msgs_generate_messages_lisp: rosserial/rosserial_msgs/CMakeFiles/rosse
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_lisp/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_lisp.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -391,20 +286,12 @@ rosserial_msgs_generate_messages_py: rosserial/rosserial_msgs/CMakeFiles/rosseri
 
 # fast build rule for target.
 rosserial_msgs_generate_messages_py/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_generate_messages_py.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/rule
 
 # Convenience name for target.
@@ -413,20 +300,12 @@ rosserial_msgs_genlisp: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genli
 
 # fast build rule for target.
 rosserial_msgs_genlisp/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genlisp.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_genlisp/fast
 
 # Convenience name for target.
 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/rule:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/rule
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/rule
->>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/rule
 
 # Convenience name for target.
@@ -435,11 +314,7 @@ rosserial_msgs_genpy: rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.d
 
 # fast build rule for target.
 rosserial_msgs_genpy/fast:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/build
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/build.make rosserial/rosserial_msgs/CMakeFiles/rosserial_msgs_genpy.dir/build
->>>>>>> develop
 .PHONY : rosserial_msgs_genpy/fast
 
 # Help Target
@@ -478,10 +353,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> develop
 .PHONY : cmake_check_build_system
 

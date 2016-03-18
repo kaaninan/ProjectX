@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 prefix=/home/ubuntu/ProjectX/ROS/devel
-=======
-prefix=/home/kaaninan/ProjectX/ROS/devel
->>>>>>> develop
 
 Name: rosserial_msgs
 Description: Description of rosserial_msgs
 Version: 0.6.4
-<<<<<<< HEAD
 Cflags: -I/home/ubuntu/ProjectX/ROS/devel/include
 Libs: -L/home/ubuntu/ProjectX/ROS/devel/lib 
-=======
-Cflags: -I/home/kaaninan/ProjectX/ROS/devel/include
-Libs: -L/home/kaaninan/ProjectX/ROS/devel/lib 
->>>>>>> develop
 Requires: message_runtime

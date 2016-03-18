@@ -1,8 +1,0 @@
-prefix=/home/kaaninan/ProjectX/ROS/install
-
-Name: rosserial_server
-Description: Description of rosserial_server
-Version: 0.6.4
-Cflags: -I/home/kaaninan/ProjectX/ROS/install/include
-Libs: -L/home/kaaninan/ProjectX/ROS/install/lib 
-Requires: roscpp rosserial_msgs topic_tools

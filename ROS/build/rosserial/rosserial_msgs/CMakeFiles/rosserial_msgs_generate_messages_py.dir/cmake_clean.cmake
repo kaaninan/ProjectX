@@ -1,6 +1,5 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/rosserial_msgs_generate_messages_py"
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/msg/_Log.py"
   "/home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/msg/_TopicInfo.py"
   "/home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/_RequestParam.py"
@@ -8,15 +7,6 @@ FILE(REMOVE_RECURSE
   "/home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/_RequestMessageInfo.py"
   "/home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/msg/__init__.py"
   "/home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/__init__.py"
-=======
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/msg/_TopicInfo.py"
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/msg/_Log.py"
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/_RequestParam.py"
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/_RequestMessageInfo.py"
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/_RequestServiceInfo.py"
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/msg/__init__.py"
-  "/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_msgs/srv/__init__.py"
->>>>>>> develop
 )
 
 # Per-language clean rules from dependency scanning.

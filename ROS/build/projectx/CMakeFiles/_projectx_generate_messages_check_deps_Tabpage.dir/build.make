@@ -35,17 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
-=======
-CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
->>>>>>> develop
 
 # Utility rule file for _projectx_generate_messages_check_deps_Tabpage.
 
@@ -53,11 +46,7 @@ CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
 include projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/progress.make
 
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py projectx /home/ubuntu/ProjectX/ROS/src/projectx/msg/Tabpage.msg std_msgs/Header
-=======
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py projectx /home/kaaninan/ProjectX/ROS/src/projectx/msg/Tabpage.msg std_msgs/Header
->>>>>>> develop
 
 _projectx_generate_messages_check_deps_Tabpage: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage
 _projectx_generate_messages_check_deps_Tabpage: projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build.make
@@ -68,18 +57,10 @@ projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build: _p
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build
 
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/clean:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/cmake_clean.cmake
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/clean
 
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/depend:
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/projectx /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/projectx /home/ubuntu/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/cmake_clean.cmake
-.PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/clean
-
-projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/depend:
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src/projectx /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/projectx /home/kaaninan/ProjectX/ROS/build/projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/depend
 

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 prefix=/home/ubuntu/ProjectX/ROS/install
-=======
-prefix=/home/kaaninan/ProjectX/ROS/install
->>>>>>> develop
 
 Name: rosserial_embeddedlinux
 Description: Description of rosserial_embeddedlinux
 Version: 0.6.4
 Cflags: 
-<<<<<<< HEAD
 Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
-=======
-Libs: -L/home/kaaninan/ProjectX/ROS/install/lib 
->>>>>>> develop
 Requires: 

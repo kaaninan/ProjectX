@@ -35,17 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
-=======
-CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
->>>>>>> develop
 
 # Utility rule file for roscpp_generate_messages_cpp.
 
@@ -63,18 +56,10 @@ projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/build: roscpp_generate_mess
 .PHONY : projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 
 projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/depend:
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/projectx /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/projectx /home/ubuntu/ProjectX/ROS/build/projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/kaaninan/ProjectX/ROS/build/projectx && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
-.PHONY : projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-
-projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/depend:
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src/projectx /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/projectx /home/kaaninan/ProjectX/ROS/build/projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> develop
 .PHONY : projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 

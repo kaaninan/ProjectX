@@ -1,12 +1,9 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/projectx_generate_messages_cpp"
-<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorInArray.h"
-  "/home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorOutArray.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/IntArray.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorOut.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/MultiFader.h"
-  "/home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorOutSingleArray.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/TouchOSC_Common.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/ScalableControl.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/Hash.h"
@@ -24,29 +21,6 @@ FILE(REMOVE_RECURSE
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/Speech.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorBoost.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/projectx/SensorTemp.h"
-=======
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MultiXYPad.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorInArray.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/CommonProperties.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/TouchOSC_Common.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MultiFader.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/Gyro.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/Sensor.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/OscData.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorIn.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/Label.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/ScalableControl.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/XYPad.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MultiButton.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/Tabpage.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/IntArray.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/DataControl.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorOut.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/Hash.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/SensorTemp.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorBoost.h"
-  "/home/kaaninan/ProjectX/ROS/devel/include/projectx/Speech.h"
->>>>>>> develop
 )
 
 # Per-language clean rules from dependency scanning.

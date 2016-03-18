@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorBoost.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorBoost.h
->>>>>>> develop
 ros/service_traits.h
 -
 projectx/MotorBoostRequest.h
@@ -18,11 +14,7 @@ projectx/MotorBoostRequest.h
 projectx/MotorBoostResponse.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorBoostRequest.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorBoostRequest.h
->>>>>>> develop
 string
 -
 vector
@@ -38,11 +30,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorBoostResponse.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorBoostResponse.h
->>>>>>> develop
 string
 -
 vector
@@ -58,11 +46,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/devel/include/projectx/MotorOut.h
-=======
-/home/kaaninan/ProjectX/ROS/devel/include/projectx/MotorOut.h
->>>>>>> develop
 string
 -
 vector
@@ -78,15 +62,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
 ros/ros.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/ros/ros.h
-=======
-/home/kaaninan/ProjectX/ROS/src/projectx/src/motor_boost_server.cpp
-ros/ros.h
-/home/kaaninan/ProjectX/ROS/src/projectx/src/ros/ros.h
->>>>>>> develop
 ctime
 -
 iostream
@@ -96,19 +74,11 @@ string
 boost/asio.hpp
 -
 projectx/MotorBoost.h
-<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/projectx/src/projectx/MotorBoost.h
 std_msgs/Int64.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/std_msgs/Int64.h
 projectx/MotorOut.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/projectx/MotorOut.h
-=======
-/home/kaaninan/ProjectX/ROS/src/projectx/src/projectx/MotorBoost.h
-std_msgs/Int64.h
-/home/kaaninan/ProjectX/ROS/src/projectx/src/std_msgs/Int64.h
-projectx/MotorOut.h
-/home/kaaninan/ProjectX/ROS/src/projectx/src/projectx/MotorOut.h
->>>>>>> develop
 
 /opt/ros/indigo/include/XmlRpcDecl.h
 ros/macros.h

@@ -35,24 +35,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
-=======
-CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
->>>>>>> develop
 
 # Utility rule file for rosserial_arduino_generate_messages_py.
 
 # Include the progress variables for this target.
 include rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/progress.make
 
-<<<<<<< HEAD
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py
@@ -89,44 +81,6 @@ rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/pyth
 rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py
 rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py
 rosserial_arduino_generate_messages_py: /home/ubuntu/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/__init__.py
-=======
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/__init__.py
-
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py: /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/msg/Adc.msg
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python from MSG rosserial_arduino/Adc"
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/msg/Adc.msg -Irosserial_arduino:/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/msg -p rosserial_arduino -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg
-
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py: /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/srv/Test.srv
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python code from SRV rosserial_arduino/Test"
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/srv/Test.srv -Irosserial_arduino:/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino/msg -p rosserial_arduino -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv
-
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python msg __init__.py for rosserial_arduino"
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg --initpy
-
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/__init__.py: /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py
-/home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/__init__.py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/kaaninan/ProjectX/ROS/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold "Generating Python srv __init__.py for rosserial_arduino"
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv --initpy
-
-rosserial_arduino_generate_messages_py: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py
-rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/_Adc.py
-rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/_Test.py
-rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/msg/__init__.py
-rosserial_arduino_generate_messages_py: /home/kaaninan/ProjectX/ROS/devel/lib/python2.7/dist-packages/rosserial_arduino/srv/__init__.py
->>>>>>> develop
 rosserial_arduino_generate_messages_py: rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build.make
 .PHONY : rosserial_arduino_generate_messages_py
 
@@ -135,18 +89,10 @@ rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.di
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/build
 
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean:
-<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_arduino_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean
 
 rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/depend:
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_arduino /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino && $(CMAKE_COMMAND) -P CMakeFiles/rosserial_arduino_generate_messages_py.dir/cmake_clean.cmake
-.PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/clean
-
-rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/depend:
-	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_arduino /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> develop
 .PHONY : rosserial/rosserial_arduino/CMakeFiles/rosserial_arduino_generate_messages_py.dir/depend
 

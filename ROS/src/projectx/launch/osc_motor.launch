@@ -1,0 +1,23 @@
+<launch>                                                                             
+  <param name="layout_path" value="$(find projectx)/osc" />
+
+  <rosparam param="layouts">
+    [ "Servo_Single.touchosc", "Servo_Single.touchosc" ]
+  </rosparam>
+
+  <node pkg="touchosc_bridge" type="touchosc_bridge.py" name="touchosc" output="screen">
+    <param name="osc_name" value="ProjectX OSC" />                            
+    <param name="port" value="8000"/>
+    <param name="print_fallback" value="True" />
+    <param name="load_default" value="True" />
+    <param name="publish_accel" value="True" />
+    <param name="publish_diag" value="True" />
+    <param name="vibrate" value="True" />
+    <param name="tabpage_sub" value="True" />
+  </node>
+                                                                                                
+  <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
+
+  <node pkg="projectx" type="osc_server_motor.py" name="osc_server_motor" output="screen"/>
+
+</launch>

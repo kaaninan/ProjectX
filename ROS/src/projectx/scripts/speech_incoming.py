@@ -16,7 +16,7 @@ class MyProcess:
     def spin(self, cumle):
         parsed = cumle.split(" ")
 
-        rospy.loginfo("dyioalog %d",self.diyalog)
+        rospy.loginfo("diyalog %d",self.diyalog)
 
 
         # KONUSMA YENI BASLIYOR
@@ -97,11 +97,11 @@ class MyProcess:
         # CUMLE
         self.eski_cumle = "" # Bir onceki cumle
         self.cumle = "" # Mevcut cumle
-        self.running = 0 # Robot dinliyor mu
-        self.index_cumle = 0 # Baslangic kelimesi varsa kacinci
+        self.running = 0 # Robot dinliyor mu
+        self.index_cumle = 0 # Baslangi kelimesi varsa kacinci
         self.index_cumle_bitis = 0 # Bitis kelimesi varsa kacinci
-        self.anahtar_baslangic = 0 # Baslangic kelimesi var mý
-        self.anahtar_bitis = 0 # Bitis kelimesi var mý
+        self.anahtar_baslangic = 0 # Baslangic kelimesi var mi
+        self.anahtar_bitis = 0 # Bitis kelimesi var m
         self.diyalog = 0 # Diyalog var mi (uzun konusmalarda anahtar kelimeye ihtiyac duymamak icin)
 
 

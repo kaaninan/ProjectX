@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/ubuntu/ProjectX/ROS/src/rososc
+=======
+# Install script for directory: /home/kaaninan/ProjectX/ROS/src/rososc
+>>>>>>> develop
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,7 +42,13 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
+<<<<<<< HEAD
 FILE(WRITE "/home/ubuntu/ProjectX/ROS/src/rososc/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
   FILE(APPEND "/home/ubuntu/ProjectX/ROS/src/rososc/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+=======
+FILE(WRITE "/home/kaaninan/ProjectX/ROS/src/rososc/build/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/home/kaaninan/ProjectX/ROS/src/rososc/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+>>>>>>> develop
 ENDFOREACH(file)

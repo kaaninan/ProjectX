@@ -39,10 +39,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +127,24 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles /home/ubuntu/ProjectX/ROS/build/projectx/CMakeFiles/progress.marks
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles 0
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles /home/kaaninan/ProjectX/ROS/build/projectx/CMakeFiles/progress.marks
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles 0
+>>>>>>> develop
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/clean
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/clean
+>>>>>>> develop
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +153,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/preinstall
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/preinstall
+>>>>>>> develop
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/preinstall
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/preinstall
+>>>>>>> develop
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> develop
 .PHONY : depend
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/rule
 
 # Convenience name for target.
@@ -160,12 +193,20 @@ _projectx_generate_messages_check_deps_CommonProperties: projectx/CMakeFiles/_pr
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_CommonProperties/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_CommonProperties.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_CommonProperties/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/rule
 
 # Convenience name for target.
@@ -174,12 +215,20 @@ _projectx_generate_messages_check_deps_DataControl: projectx/CMakeFiles/_project
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_DataControl/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_DataControl.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_DataControl/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/rule
 
 # Convenience name for target.
@@ -188,12 +237,20 @@ _projectx_generate_messages_check_deps_Gyro: projectx/CMakeFiles/_projectx_gener
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_Gyro/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Gyro.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_Gyro/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/rule
 
 # Convenience name for target.
@@ -202,12 +259,20 @@ _projectx_generate_messages_check_deps_Hash: projectx/CMakeFiles/_projectx_gener
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_Hash/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Hash.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_Hash/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/rule
 
 # Convenience name for target.
@@ -216,12 +281,20 @@ _projectx_generate_messages_check_deps_IntArray: projectx/CMakeFiles/_projectx_g
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_IntArray/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_IntArray.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_IntArray/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/rule
 
 # Convenience name for target.
@@ -230,12 +303,20 @@ _projectx_generate_messages_check_deps_Label: projectx/CMakeFiles/_projectx_gene
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_Label/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Label.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_Label/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/rule
 
 # Convenience name for target.
@@ -244,12 +325,20 @@ _projectx_generate_messages_check_deps_MotorBoost: projectx/CMakeFiles/_projectx
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MotorBoost/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorBoost.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_MotorBoost/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/rule
 
 # Convenience name for target.
@@ -258,12 +347,20 @@ _projectx_generate_messages_check_deps_MotorIn: projectx/CMakeFiles/_projectx_ge
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MotorIn/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorIn.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_MotorIn/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/rule
 
 # Convenience name for target.
@@ -272,12 +369,20 @@ _projectx_generate_messages_check_deps_MotorInArray: projectx/CMakeFiles/_projec
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MotorInArray/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorInArray.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_MotorInArray/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/rule
 
 # Convenience name for target.
@@ -286,6 +391,7 @@ _projectx_generate_messages_check_deps_MotorOut: projectx/CMakeFiles/_projectx_g
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MotorOut/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/build
 .PHONY : _projectx_generate_messages_check_deps_MotorOut/fast
 
@@ -320,6 +426,14 @@ _projectx_generate_messages_check_deps_MotorOutSingleArray/fast:
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule:
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOut.dir/build
+.PHONY : _projectx_generate_messages_check_deps_MotorOut/fast
+
+# Convenience name for target.
+projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule:
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/rule
 
 # Convenience name for target.
@@ -328,12 +442,20 @@ _projectx_generate_messages_check_deps_MultiButton: projectx/CMakeFiles/_project
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MultiButton/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiButton.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_MultiButton/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/rule
 
 # Convenience name for target.
@@ -342,12 +464,20 @@ _projectx_generate_messages_check_deps_MultiFader: projectx/CMakeFiles/_projectx
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MultiFader/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiFader.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_MultiFader/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/rule
 
 # Convenience name for target.
@@ -356,12 +486,20 @@ _projectx_generate_messages_check_deps_MultiXYPad: projectx/CMakeFiles/_projectx
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_MultiXYPad/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MultiXYPad.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_MultiXYPad/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/rule
 
 # Convenience name for target.
@@ -370,12 +508,20 @@ _projectx_generate_messages_check_deps_OscData: projectx/CMakeFiles/_projectx_ge
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_OscData/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_OscData.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_OscData/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/rule
 
 # Convenience name for target.
@@ -384,12 +530,20 @@ _projectx_generate_messages_check_deps_ScalableControl: projectx/CMakeFiles/_pro
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_ScalableControl/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_ScalableControl.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_ScalableControl/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/rule
 
 # Convenience name for target.
@@ -398,12 +552,20 @@ _projectx_generate_messages_check_deps_Sensor: projectx/CMakeFiles/_projectx_gen
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_Sensor/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Sensor.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_Sensor/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/rule
 
 # Convenience name for target.
@@ -412,12 +574,20 @@ _projectx_generate_messages_check_deps_SensorTemp: projectx/CMakeFiles/_projectx
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_SensorTemp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_SensorTemp.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_SensorTemp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/rule
 
 # Convenience name for target.
@@ -426,12 +596,20 @@ _projectx_generate_messages_check_deps_Speech: projectx/CMakeFiles/_projectx_gen
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_Speech/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Speech.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_Speech/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/rule
 
 # Convenience name for target.
@@ -440,12 +618,20 @@ _projectx_generate_messages_check_deps_Tabpage: projectx/CMakeFiles/_projectx_ge
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_Tabpage/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_Tabpage.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_Tabpage/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/rule
 
 # Convenience name for target.
@@ -454,12 +640,20 @@ _projectx_generate_messages_check_deps_TouchOSC_Common: projectx/CMakeFiles/_pro
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_TouchOSC_Common/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_TouchOSC_Common.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_TouchOSC_Common/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/rule
 
 # Convenience name for target.
@@ -468,12 +662,20 @@ _projectx_generate_messages_check_deps_XYPad: projectx/CMakeFiles/_projectx_gene
 
 # fast build rule for target.
 _projectx_generate_messages_check_deps_XYPad/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_XYPad.dir/build
+>>>>>>> develop
 .PHONY : _projectx_generate_messages_check_deps_XYPad/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/arduino_sicaklik.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/arduino_sicaklik.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/arduino_sicaklik.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/arduino_sicaklik.dir/rule
 
 # Convenience name for target.
@@ -482,12 +684,20 @@ arduino_sicaklik: projectx/CMakeFiles/arduino_sicaklik.dir/rule
 
 # fast build rule for target.
 arduino_sicaklik/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/build
+>>>>>>> develop
 .PHONY : arduino_sicaklik/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/motor_boost_server.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motor_boost_server.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motor_boost_server.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/rule
 
 # Convenience name for target.
@@ -496,12 +706,20 @@ motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/rule
 
 # fast build rule for target.
 motor_boost_server/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/build
+>>>>>>> develop
 .PHONY : motor_boost_server/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_gencpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_gencpp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_gencpp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_gencpp.dir/rule
 
 # Convenience name for target.
@@ -510,12 +728,20 @@ projectx_gencpp: projectx/CMakeFiles/projectx_gencpp.dir/rule
 
 # fast build rule for target.
 projectx_gencpp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_gencpp.dir/build.make projectx/CMakeFiles/projectx_gencpp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_gencpp.dir/build.make projectx/CMakeFiles/projectx_gencpp.dir/build
+>>>>>>> develop
 .PHONY : projectx_gencpp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_generate_messages.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -524,12 +750,20 @@ projectx_generate_messages: projectx/CMakeFiles/projectx_generate_messages.dir/r
 
 # fast build rule for target.
 projectx_generate_messages/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages.dir/build.make projectx/CMakeFiles/projectx_generate_messages.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages.dir/build.make projectx/CMakeFiles/projectx_generate_messages.dir/build
+>>>>>>> develop
 .PHONY : projectx_generate_messages/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages_cpp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -538,12 +772,20 @@ projectx_generate_messages_cpp: projectx/CMakeFiles/projectx_generate_messages_c
 
 # fast build rule for target.
 projectx_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_cpp.dir/build
+>>>>>>> develop
 .PHONY : projectx_generate_messages_cpp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages_lisp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -552,12 +794,20 @@ projectx_generate_messages_lisp: projectx/CMakeFiles/projectx_generate_messages_
 
 # fast build rule for target.
 projectx_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build.make projectx/CMakeFiles/projectx_generate_messages_lisp.dir/build
+>>>>>>> develop
 .PHONY : projectx_generate_messages_lisp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages_py.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_generate_messages_py.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -566,12 +816,20 @@ projectx_generate_messages_py: projectx/CMakeFiles/projectx_generate_messages_py
 
 # fast build rule for target.
 projectx_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_py.dir/build.make projectx/CMakeFiles/projectx_generate_messages_py.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_generate_messages_py.dir/build.make projectx/CMakeFiles/projectx_generate_messages_py.dir/build
+>>>>>>> develop
 .PHONY : projectx_generate_messages_py/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_genlisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_genlisp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_genlisp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_genlisp.dir/rule
 
 # Convenience name for target.
@@ -580,12 +838,20 @@ projectx_genlisp: projectx/CMakeFiles/projectx_genlisp.dir/rule
 
 # fast build rule for target.
 projectx_genlisp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_genlisp.dir/build.make projectx/CMakeFiles/projectx_genlisp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_genlisp.dir/build.make projectx/CMakeFiles/projectx_genlisp.dir/build
+>>>>>>> develop
 .PHONY : projectx_genlisp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/projectx_genpy.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_genpy.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_genpy.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/projectx_genpy.dir/rule
 
 # Convenience name for target.
@@ -594,12 +860,20 @@ projectx_genpy: projectx/CMakeFiles/projectx_genpy.dir/rule
 
 # fast build rule for target.
 projectx_genpy/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_genpy.dir/build.make projectx/CMakeFiles/projectx_genpy.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/projectx_genpy.dir/build.make projectx/CMakeFiles/projectx_genpy.dir/build
+>>>>>>> develop
 .PHONY : projectx_genpy/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -608,12 +882,20 @@ roscpp_generate_messages_cpp: projectx/CMakeFiles/roscpp_generate_messages_cpp.d
 
 # fast build rule for target.
 roscpp_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make projectx/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+>>>>>>> develop
 .PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -622,12 +904,20 @@ roscpp_generate_messages_lisp: projectx/CMakeFiles/roscpp_generate_messages_lisp
 
 # fast build rule for target.
 roscpp_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make projectx/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+>>>>>>> develop
 .PHONY : roscpp_generate_messages_lisp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/roscpp_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/roscpp_generate_messages_py.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/roscpp_generate_messages_py.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/roscpp_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -636,12 +926,20 @@ roscpp_generate_messages_py: projectx/CMakeFiles/roscpp_generate_messages_py.dir
 
 # fast build rule for target.
 roscpp_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/roscpp_generate_messages_py.dir/build.make projectx/CMakeFiles/roscpp_generate_messages_py.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/roscpp_generate_messages_py.dir/build.make projectx/CMakeFiles/roscpp_generate_messages_py.dir/build
+>>>>>>> develop
 .PHONY : roscpp_generate_messages_py/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -650,12 +948,20 @@ rosgraph_msgs_generate_messages_cpp: projectx/CMakeFiles/rosgraph_msgs_generate_
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make projectx/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+>>>>>>> develop
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -664,12 +970,20 @@ rosgraph_msgs_generate_messages_lisp: projectx/CMakeFiles/rosgraph_msgs_generate
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make projectx/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+>>>>>>> develop
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -678,12 +992,20 @@ rosgraph_msgs_generate_messages_py: projectx/CMakeFiles/rosgraph_msgs_generate_m
 
 # fast build rule for target.
 rosgraph_msgs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make projectx/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+>>>>>>> develop
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -692,12 +1014,20 @@ std_msgs_generate_messages_cpp: projectx/CMakeFiles/std_msgs_generate_messages_c
 
 # fast build rule for target.
 std_msgs_generate_messages_cpp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+>>>>>>> develop
 .PHONY : std_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -706,12 +1036,20 @@ std_msgs_generate_messages_lisp: projectx/CMakeFiles/std_msgs_generate_messages_
 
 # fast build rule for target.
 std_msgs_generate_messages_lisp/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+>>>>>>> develop
 .PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 projectx/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+>>>>>>> develop
 .PHONY : projectx/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -720,7 +1058,11 @@ std_msgs_generate_messages_py: projectx/CMakeFiles/std_msgs_generate_messages_py
 
 # fast build rule for target.
 std_msgs_generate_messages_py/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build
+>>>>>>> develop
 .PHONY : std_msgs_generate_messages_py/fast
 
 src/arduino_sicaklik.o: src/arduino_sicaklik.cpp.o
@@ -728,7 +1070,11 @@ src/arduino_sicaklik.o: src/arduino_sicaklik.cpp.o
 
 # target to build an object file
 src/arduino_sicaklik.cpp.o:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.o
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.o
+>>>>>>> develop
 .PHONY : src/arduino_sicaklik.cpp.o
 
 src/arduino_sicaklik.i: src/arduino_sicaklik.cpp.i
@@ -736,7 +1082,11 @@ src/arduino_sicaklik.i: src/arduino_sicaklik.cpp.i
 
 # target to preprocess a source file
 src/arduino_sicaklik.cpp.i:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.i
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.i
+>>>>>>> develop
 .PHONY : src/arduino_sicaklik.cpp.i
 
 src/arduino_sicaklik.s: src/arduino_sicaklik.cpp.s
@@ -744,7 +1094,11 @@ src/arduino_sicaklik.s: src/arduino_sicaklik.cpp.s
 
 # target to generate assembly for a file
 src/arduino_sicaklik.cpp.s:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.s
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.s
+>>>>>>> develop
 .PHONY : src/arduino_sicaklik.cpp.s
 
 src/motor_boost_server.o: src/motor_boost_server.cpp.o
@@ -752,7 +1106,11 @@ src/motor_boost_server.o: src/motor_boost_server.cpp.o
 
 # target to build an object file
 src/motor_boost_server.cpp.o:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o
+>>>>>>> develop
 .PHONY : src/motor_boost_server.cpp.o
 
 src/motor_boost_server.i: src/motor_boost_server.cpp.i
@@ -760,7 +1118,11 @@ src/motor_boost_server.i: src/motor_boost_server.cpp.i
 
 # target to preprocess a source file
 src/motor_boost_server.cpp.i:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i
+>>>>>>> develop
 .PHONY : src/motor_boost_server.cpp.i
 
 src/motor_boost_server.s: src/motor_boost_server.cpp.s
@@ -768,7 +1130,11 @@ src/motor_boost_server.s: src/motor_boost_server.cpp.s
 
 # target to generate assembly for a file
 src/motor_boost_server.cpp.s:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s
+>>>>>>> develop
 .PHONY : src/motor_boost_server.cpp.s
 
 # Help Target
@@ -787,8 +1153,6 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_MotorIn"
 	@echo "... _projectx_generate_messages_check_deps_MotorInArray"
 	@echo "... _projectx_generate_messages_check_deps_MotorOut"
-	@echo "... _projectx_generate_messages_check_deps_MotorOutArray"
-	@echo "... _projectx_generate_messages_check_deps_MotorOutSingleArray"
 	@echo "... _projectx_generate_messages_check_deps_MultiButton"
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"
 	@echo "... _projectx_generate_messages_check_deps_MultiXYPad"
@@ -842,6 +1206,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> develop
 .PHONY : cmake_check_build_system
 

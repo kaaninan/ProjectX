@@ -2,7 +2,11 @@
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+<<<<<<< HEAD
   SET(CMAKE_INSTALL_PREFIX "/home/ubuntu/ProjectX/ROS/install")
+=======
+  SET(CMAKE_INSTALL_PREFIX "/home/kaaninan/ProjectX/ROS/install")
+>>>>>>> develop
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

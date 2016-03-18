@@ -1,7 +1,12 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/rosserial_arduino_generate_messages_cpp"
+<<<<<<< HEAD
   "/home/ubuntu/ProjectX/ROS/devel/include/rosserial_arduino/Adc.h"
   "/home/ubuntu/ProjectX/ROS/devel/include/rosserial_arduino/Test.h"
+=======
+  "/home/kaaninan/ProjectX/ROS/devel/include/rosserial_arduino/Adc.h"
+  "/home/kaaninan/ProjectX/ROS/devel/include/rosserial_arduino/Test.h"
+>>>>>>> develop
 )
 
 # Per-language clean rules from dependency scanning.

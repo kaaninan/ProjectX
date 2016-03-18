@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/ubuntu/ProjectX/ROS/src/projectx/src/service_client.cpp
 ros/ros.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/ros/ros.h
 projectx/AddTwoInts.h
 /home/ubuntu/ProjectX/ROS/src/projectx/src/projectx/AddTwoInts.h
+=======
+/home/kaaninan/ProjectX/ROS/src/projectx/src/service_client.cpp
+ros/ros.h
+/home/kaaninan/ProjectX/ROS/src/projectx/src/ros/ros.h
+projectx/AddTwoInts.h
+/home/kaaninan/ProjectX/ROS/src/projectx/src/projectx/AddTwoInts.h
+>>>>>>> develop
 cstdlib
 -
 

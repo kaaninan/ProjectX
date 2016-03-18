@@ -1,0 +1,8 @@
+prefix=/home/kaaninan/ProjectX/ROS/install
+
+Name: rosserial_python
+Description: Description of rosserial_python
+Version: 0.6.4
+Cflags: 
+Libs: -L/home/kaaninan/ProjectX/ROS/install/lib 
+Requires: 

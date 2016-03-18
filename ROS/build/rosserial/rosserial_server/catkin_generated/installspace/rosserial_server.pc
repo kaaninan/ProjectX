@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 prefix=/home/ubuntu/ProjectX/ROS/install
+=======
+prefix=/home/kaaninan/ProjectX/ROS/install
+>>>>>>> develop
 
 Name: rosserial_server
 Description: Description of rosserial_server
 Version: 0.6.4
+<<<<<<< HEAD
 Cflags: -I/home/ubuntu/ProjectX/ROS/install/include
 Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
+=======
+Cflags: -I/home/kaaninan/ProjectX/ROS/install/include
+Libs: -L/home/kaaninan/ProjectX/ROS/install/lib 
+>>>>>>> develop
 Requires: roscpp rosserial_msgs topic_tools

@@ -35,10 +35,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 
 # Utility rule file for run_tests.
 
@@ -60,6 +67,10 @@ CMakeFiles/run_tests.dir/clean:
 .PHONY : CMakeFiles/run_tests.dir/clean
 
 CMakeFiles/run_tests.dir/depend:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/CMakeFiles/run_tests.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> develop
 .PHONY : CMakeFiles/run_tests.dir/depend
 

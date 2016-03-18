@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/kaaninan/ProjectX/ROS/src/rososc/touchosc_bridge/build/devel/setup.sh

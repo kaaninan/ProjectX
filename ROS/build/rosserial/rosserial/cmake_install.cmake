@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
   SET(CMAKE_INSTALL_PREFIX "/home/ubuntu/ProjectX/ROS/install")
+=======
+# Install script for directory: /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial
+
+# Set the install prefix
+IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  SET(CMAKE_INSTALL_PREFIX "/home/kaaninan/ProjectX/ROS/install")
+>>>>>>> develop
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,6 +41,10 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+<<<<<<< HEAD
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosserial" TYPE FILE FILES "/home/ubuntu/ProjectX/ROS/src/rosserial/rosserial/package.xml")
+=======
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rosserial" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/src/rosserial/rosserial/package.xml")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

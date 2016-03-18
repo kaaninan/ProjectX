@@ -39,10 +39,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +127,24 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_windows/CMakeFiles/progress.marks
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles 0
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_windows/CMakeFiles/progress.marks
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles 0
+>>>>>>> develop
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/clean
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/clean
+>>>>>>> develop
 .PHONY : clean
 
 # The main clean target
@@ -136,17 +153,29 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/preinstall
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/preinstall
+>>>>>>> develop
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/preinstall
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_windows/preinstall
+>>>>>>> develop
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> develop
 .PHONY : depend
 
 # Help Target
@@ -173,6 +202,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> develop
 .PHONY : cmake_check_build_system
 

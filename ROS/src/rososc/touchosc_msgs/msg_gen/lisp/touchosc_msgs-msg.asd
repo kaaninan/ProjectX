@@ -1,0 +1,26 @@
+
+(cl:in-package :asdf)
+
+(defsystem "touchosc_msgs-msg"
+  :depends-on (:roslisp-msg-protocol :roslisp-utils :std_msgs-msg
+)
+  :components ((:file "_package")
+    (:file "Tabpage" :depends-on ("_package_Tabpage"))
+    (:file "_package_Tabpage" :depends-on ("_package"))
+    (:file "XYPad" :depends-on ("_package_XYPad"))
+    (:file "_package_XYPad" :depends-on ("_package"))
+    (:file "Label" :depends-on ("_package_Label"))
+    (:file "_package_Label" :depends-on ("_package"))
+    (:file "TouchOSC_Common" :depends-on ("_package_TouchOSC_Common"))
+    (:file "_package_TouchOSC_Common" :depends-on ("_package"))
+    (:file "MultiButton" :depends-on ("_package_MultiButton"))
+    (:file "_package_MultiButton" :depends-on ("_package"))
+    (:file "MultiXYPad" :depends-on ("_package_MultiXYPad"))
+    (:file "_package_MultiXYPad" :depends-on ("_package"))
+    (:file "CommonProperties" :depends-on ("_package_CommonProperties"))
+    (:file "_package_CommonProperties" :depends-on ("_package"))
+    (:file "ScalableControl" :depends-on ("_package_ScalableControl"))
+    (:file "_package_ScalableControl" :depends-on ("_package"))
+    (:file "MultiFader" :depends-on ("_package_MultiFader"))
+    (:file "_package_MultiFader" :depends-on ("_package"))
+  ))

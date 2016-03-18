@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: /home/ubuntu/ProjectX/ROS/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
   SET(CMAKE_INSTALL_PREFIX "/home/ubuntu/ProjectX/ROS/install")
+=======
+# Install script for directory: /home/kaaninan/ProjectX/ROS/src
+
+# Set the install prefix
+IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  SET(CMAKE_INSTALL_PREFIX "/home/kaaninan/ProjectX/ROS/install")
+>>>>>>> develop
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,78 +52,127 @@ ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unsp
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/ubuntu/ProjectX/ROS/install/_setup_util.py")
+=======
+   "/home/kaaninan/ProjectX/ROS/install/_setup_util.py")
+>>>>>>> develop
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+<<<<<<< HEAD
 FILE(INSTALL DESTINATION "/home/ubuntu/ProjectX/ROS/install" TYPE PROGRAM FILES "/home/ubuntu/ProjectX/ROS/build/catkin_generated/installspace/_setup_util.py")
+=======
+FILE(INSTALL DESTINATION "/home/kaaninan/ProjectX/ROS/install" TYPE PROGRAM FILES "/home/kaaninan/ProjectX/ROS/build/catkin_generated/installspace/_setup_util.py")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/ubuntu/ProjectX/ROS/install/env.sh")
+=======
+   "/home/kaaninan/ProjectX/ROS/install/env.sh")
+>>>>>>> develop
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+<<<<<<< HEAD
 FILE(INSTALL DESTINATION "/home/ubuntu/ProjectX/ROS/install" TYPE PROGRAM FILES "/home/ubuntu/ProjectX/ROS/build/catkin_generated/installspace/env.sh")
+=======
+FILE(INSTALL DESTINATION "/home/kaaninan/ProjectX/ROS/install" TYPE PROGRAM FILES "/home/kaaninan/ProjectX/ROS/build/catkin_generated/installspace/env.sh")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/ubuntu/ProjectX/ROS/install/setup.bash")
+=======
+   "/home/kaaninan/ProjectX/ROS/install/setup.bash")
+>>>>>>> develop
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+<<<<<<< HEAD
 FILE(INSTALL DESTINATION "/home/ubuntu/ProjectX/ROS/install" TYPE FILE FILES "/home/ubuntu/ProjectX/ROS/build/catkin_generated/installspace/setup.bash")
+=======
+FILE(INSTALL DESTINATION "/home/kaaninan/ProjectX/ROS/install" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/build/catkin_generated/installspace/setup.bash")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/ubuntu/ProjectX/ROS/install/setup.sh")
+=======
+   "/home/kaaninan/ProjectX/ROS/install/setup.sh")
+>>>>>>> develop
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+<<<<<<< HEAD
 FILE(INSTALL DESTINATION "/home/ubuntu/ProjectX/ROS/install" TYPE FILE FILES "/home/ubuntu/ProjectX/ROS/build/catkin_generated/installspace/setup.sh")
+=======
+FILE(INSTALL DESTINATION "/home/kaaninan/ProjectX/ROS/install" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/build/catkin_generated/installspace/setup.sh")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/ubuntu/ProjectX/ROS/install/setup.zsh")
+=======
+   "/home/kaaninan/ProjectX/ROS/install/setup.zsh")
+>>>>>>> develop
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+<<<<<<< HEAD
 FILE(INSTALL DESTINATION "/home/ubuntu/ProjectX/ROS/install" TYPE FILE FILES "/home/ubuntu/ProjectX/ROS/build/catkin_generated/installspace/setup.zsh")
+=======
+FILE(INSTALL DESTINATION "/home/kaaninan/ProjectX/ROS/install" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/build/catkin_generated/installspace/setup.zsh")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/ubuntu/ProjectX/ROS/install/.rosinstall")
+=======
+   "/home/kaaninan/ProjectX/ROS/install/.rosinstall")
+>>>>>>> develop
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
+<<<<<<< HEAD
 FILE(INSTALL DESTINATION "/home/ubuntu/ProjectX/ROS/install" TYPE FILE FILES "/home/ubuntu/ProjectX/ROS/build/catkin_generated/installspace/.rosinstall")
+=======
+FILE(INSTALL DESTINATION "/home/kaaninan/ProjectX/ROS/install" TYPE FILE FILES "/home/kaaninan/ProjectX/ROS/build/catkin_generated/installspace/.rosinstall")
+>>>>>>> develop
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/gtest/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_arduino/cmake_install.cmake")
@@ -127,6 +184,19 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_embeddedlinux/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_windows/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/cmake_install.cmake")
+=======
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/gtest/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_arduino/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_client/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_msgs/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_python/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_xbee/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/projectx/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_server/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_embeddedlinux/cmake_install.cmake")
+  INCLUDE("/home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_windows/cmake_install.cmake")
+>>>>>>> develop
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -136,7 +206,13 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
+<<<<<<< HEAD
 FILE(WRITE "/home/ubuntu/ProjectX/ROS/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
   FILE(APPEND "/home/ubuntu/ProjectX/ROS/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+=======
+FILE(WRITE "/home/kaaninan/ProjectX/ROS/build/${CMAKE_INSTALL_MANIFEST}" "")
+FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
+  FILE(APPEND "/home/kaaninan/ProjectX/ROS/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+>>>>>>> develop
 ENDFOREACH(file)

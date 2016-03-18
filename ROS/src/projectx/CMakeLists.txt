@@ -26,9 +26,7 @@ add_message_files(
   MotorInArray.msg
   MotorOut.msg
   DataControl.msg
-  MotorOutArray.msg
   IntArray.msg
-  MotorOutSingleArray.msg
   Gyro.msg
   OscData.msg
   CommonProperties.msg
@@ -83,3 +81,7 @@ add_dependencies(motor_boost_server projectx_gencpp)
 add_executable(arduino_sicaklik src/arduino_sicaklik.cpp)
 target_link_libraries(arduino_sicaklik ${catkin_LIBRARIES})
 add_dependencies(arduino_sicaklik projectx_gencpp)
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop

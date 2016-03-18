@@ -67,14 +67,23 @@ set(rosserial_python_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(rosserial_python_SOURCE_PREFIX /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_python)
   set(rosserial_python_DEVEL_PREFIX /home/ubuntu/ProjectX/ROS/devel)
+=======
+  set(rosserial_python_SOURCE_PREFIX /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_python)
+  set(rosserial_python_DEVEL_PREFIX /home/kaaninan/ProjectX/ROS/devel)
+>>>>>>> develop
   set(rosserial_python_INSTALL_PREFIX "")
   set(rosserial_python_PREFIX ${rosserial_python_DEVEL_PREFIX})
 else()
   set(rosserial_python_SOURCE_PREFIX "")
   set(rosserial_python_DEVEL_PREFIX "")
+<<<<<<< HEAD
   set(rosserial_python_INSTALL_PREFIX /home/ubuntu/ProjectX/ROS/install)
+=======
+  set(rosserial_python_INSTALL_PREFIX /home/kaaninan/ProjectX/ROS/install)
+>>>>>>> develop
   set(rosserial_python_PREFIX ${rosserial_python_INSTALL_PREFIX})
 endif()
 
@@ -103,7 +112,11 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'rosserial_python' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  Ask the maintainer 'Paul Bouchier <paul.bouchier@gmail.com>, Mike Purvis <mpurvis@clearpathrobotics.com>' to fix it.")
       endif()
     else()
+<<<<<<< HEAD
       message(FATAL_ERROR "Project 'rosserial_python' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ubuntu/ProjectX/ROS/install/${idir}'.  Ask the maintainer 'Paul Bouchier <paul.bouchier@gmail.com>, Mike Purvis <mpurvis@clearpathrobotics.com>' to fix it.")
+=======
+      message(FATAL_ERROR "Project 'rosserial_python' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/kaaninan/ProjectX/ROS/install/${idir}'.  Ask the maintainer 'Paul Bouchier <paul.bouchier@gmail.com>, Mike Purvis <mpurvis@clearpathrobotics.com>' to fix it.")
+>>>>>>> develop
     endif()
     _list_append_unique(rosserial_python_INCLUDE_DIRS ${include})
   endforeach()
@@ -122,7 +135,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/ubuntu/ProjectX/ROS/install/lib;/opt/ros/indigo/lib)
+=======
+    foreach(path /home/kaaninan/ProjectX/ROS/install/lib;/home/kaaninan/ProjectX/ROS/devel/lib;/opt/ros/indigo/lib)
+>>>>>>> develop
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -39,10 +39,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,9 +127,15 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles /home/ubuntu/ProjectX/ROS/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles /home/kaaninan/ProjectX/ROS/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles 0
+>>>>>>> develop
 .PHONY : all
 
 # The main clean target
@@ -761,32 +774,6 @@ _projectx_generate_messages_check_deps_MotorOut/fast:
 .PHONY : _projectx_generate_messages_check_deps_MotorOut/fast
 
 #=============================================================================
-# Target rules for targets named _projectx_generate_messages_check_deps_MotorOutArray
-
-# Build rule for target.
-_projectx_generate_messages_check_deps_MotorOutArray: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_MotorOutArray
-.PHONY : _projectx_generate_messages_check_deps_MotorOutArray
-
-# fast build rule for target.
-_projectx_generate_messages_check_deps_MotorOutArray/fast:
-	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutArray.dir/build
-.PHONY : _projectx_generate_messages_check_deps_MotorOutArray/fast
-
-#=============================================================================
-# Target rules for targets named _projectx_generate_messages_check_deps_MotorOutSingleArray
-
-# Build rule for target.
-_projectx_generate_messages_check_deps_MotorOutSingleArray: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _projectx_generate_messages_check_deps_MotorOutSingleArray
-.PHONY : _projectx_generate_messages_check_deps_MotorOutSingleArray
-
-# fast build rule for target.
-_projectx_generate_messages_check_deps_MotorOutSingleArray/fast:
-	$(MAKE) -f projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/build.make projectx/CMakeFiles/_projectx_generate_messages_check_deps_MotorOutSingleArray.dir/build
-.PHONY : _projectx_generate_messages_check_deps_MotorOutSingleArray/fast
-
-#=============================================================================
 # Target rules for targets named _projectx_generate_messages_check_deps_MultiButton
 
 # Build rule for target.
@@ -1288,8 +1275,6 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_MotorIn"
 	@echo "... _projectx_generate_messages_check_deps_MotorInArray"
 	@echo "... _projectx_generate_messages_check_deps_MotorOut"
-	@echo "... _projectx_generate_messages_check_deps_MotorOutArray"
-	@echo "... _projectx_generate_messages_check_deps_MotorOutSingleArray"
 	@echo "... _projectx_generate_messages_check_deps_MultiButton"
 	@echo "... _projectx_generate_messages_check_deps_MultiFader"
 	@echo "... _projectx_generate_messages_check_deps_MultiXYPad"

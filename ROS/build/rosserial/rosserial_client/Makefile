@@ -39,10 +39,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -120,14 +127,24 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/progress.marks
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/build/CMakeFiles 0
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/progress.marks
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/build/CMakeFiles 0
+>>>>>>> develop
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/clean
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/clean
+>>>>>>> develop
 .PHONY : clean
 
 # The main clean target
@@ -136,22 +153,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/preinstall
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/preinstall
+>>>>>>> develop
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/preinstall
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/preinstall
+>>>>>>> develop
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> develop
 .PHONY : depend
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/rule
 
 # Convenience name for target.
@@ -160,12 +193,20 @@ _run_tests_rosserial_client: rosserial/rosserial_client/CMakeFiles/_run_tests_ro
 
 # fast build rule for target.
 _run_tests_rosserial_client/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir/build
+>>>>>>> develop
 .PHONY : _run_tests_rosserial_client/fast
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/rule
 
 # Convenience name for target.
@@ -174,12 +215,20 @@ _run_tests_rosserial_client_gtest: rosserial/rosserial_client/CMakeFiles/_run_te
 
 # fast build rule for target.
 _run_tests_rosserial_client_gtest/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir/build
+>>>>>>> develop
 .PHONY : _run_tests_rosserial_client_gtest/fast
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/rule
 
 # Convenience name for target.
@@ -188,12 +237,20 @@ _run_tests_rosserial_client_gtest_float64_test: rosserial/rosserial_client/CMake
 
 # fast build rule for target.
 _run_tests_rosserial_client_gtest_float64_test/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir/build
+>>>>>>> develop
 .PHONY : _run_tests_rosserial_client_gtest_float64_test/fast
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule
 
 # Convenience name for target.
@@ -202,12 +259,20 @@ float64_test: rosserial/rosserial_client/CMakeFiles/float64_test.dir/rule
 
 # fast build rule for target.
 float64_test/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/build
+>>>>>>> develop
 .PHONY : float64_test/fast
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/rule
 
 # Convenience name for target.
@@ -216,12 +281,20 @@ run_tests_rosserial_client: rosserial/rosserial_client/CMakeFiles/run_tests_ross
 
 # fast build rule for target.
 run_tests_rosserial_client/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/build.make rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/build.make rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client.dir/build
+>>>>>>> develop
 .PHONY : run_tests_rosserial_client/fast
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/rule
 
 # Convenience name for target.
@@ -230,12 +303,20 @@ run_tests_rosserial_client_gtest: rosserial/rosserial_client/CMakeFiles/run_test
 
 # fast build rule for target.
 run_tests_rosserial_client_gtest/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/build.make rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/build.make rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest.dir/build
+>>>>>>> develop
 .PHONY : run_tests_rosserial_client_gtest/fast
 
 # Convenience name for target.
 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/rule:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/rule
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/rule
+>>>>>>> develop
 .PHONY : rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/rule
 
 # Convenience name for target.
@@ -244,7 +325,11 @@ run_tests_rosserial_client_gtest_float64_test: rosserial/rosserial_client/CMakeF
 
 # fast build rule for target.
 run_tests_rosserial_client_gtest_float64_test/fast:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/build
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/run_tests_rosserial_client_gtest_float64_test.dir/build
+>>>>>>> develop
 .PHONY : run_tests_rosserial_client_gtest_float64_test/fast
 
 test/float64_test.o: test/float64_test.cpp.o
@@ -252,7 +337,11 @@ test/float64_test.o: test/float64_test.cpp.o
 
 # target to build an object file
 test/float64_test.cpp.o:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.o
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.o
+>>>>>>> develop
 .PHONY : test/float64_test.cpp.o
 
 test/float64_test.i: test/float64_test.cpp.i
@@ -260,7 +349,11 @@ test/float64_test.i: test/float64_test.cpp.i
 
 # target to preprocess a source file
 test/float64_test.cpp.i:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.i
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.i
+>>>>>>> develop
 .PHONY : test/float64_test.cpp.i
 
 test/float64_test.s: test/float64_test.cpp.s
@@ -268,7 +361,11 @@ test/float64_test.s: test/float64_test.cpp.s
 
 # target to generate assembly for a file
 test/float64_test.cpp.s:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.s
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(MAKE) -f rosserial/rosserial_client/CMakeFiles/float64_test.dir/build.make rosserial/rosserial_client/CMakeFiles/float64_test.dir/test/float64_test.cpp.s
+>>>>>>> develop
 .PHONY : test/float64_test.cpp.s
 
 # Help Target
@@ -305,6 +402,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> develop
 .PHONY : cmake_check_build_system
 

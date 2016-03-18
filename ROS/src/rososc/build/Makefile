@@ -39,10 +39,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src/rososc
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/src/rososc/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src/rososc
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/src/rososc/build
+>>>>>>> develop
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +76,15 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/src/rososc/build/CMakeFiles /home/ubuntu/ProjectX/ROS/src/rososc/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ubuntu/ProjectX/ROS/src/rososc/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/src/rososc/build/CMakeFiles /home/kaaninan/ProjectX/ROS/src/rososc/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kaaninan/ProjectX/ROS/src/rososc/build/CMakeFiles 0
+>>>>>>> develop
 .PHONY : all
 
 # The main clean target

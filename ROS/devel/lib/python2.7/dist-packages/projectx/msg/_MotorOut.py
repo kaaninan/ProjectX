@@ -7,18 +7,15 @@ import struct
 
 
 class MotorOut(genpy.Message):
-  _md5sum = "1c569e6a2d73436766c3b4d4f657523e"
+  _md5sum = "5430fc9361c2337213e0d90db94db2ad"
   _type = "projectx/MotorOut"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """int64 id
 int64 pos
-int64 speed
 int64 torque
-int64 rw
-int64 action
 """
-  __slots__ = ['id','pos','speed','torque','rw','action']
-  _slot_types = ['int64','int64','int64','int64','int64','int64']
+  __slots__ = ['id','pos','torque']
+  _slot_types = ['int64','int64','int64']
 
   def __init__(self, *args, **kwds):
     """
@@ -28,7 +25,7 @@ int64 action
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       id,pos,speed,torque,rw,action
+       id,pos,torque
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -41,21 +38,12 @@ int64 action
         self.id = 0
       if self.pos is None:
         self.pos = 0
-      if self.speed is None:
-        self.speed = 0
       if self.torque is None:
         self.torque = 0
-      if self.rw is None:
-        self.rw = 0
-      if self.action is None:
-        self.action = 0
     else:
       self.id = 0
       self.pos = 0
-      self.speed = 0
       self.torque = 0
-      self.rw = 0
-      self.action = 0
 
   def _get_types(self):
     """
@@ -70,7 +58,7 @@ int64 action
     """
     try:
       _x = self
-      buff.write(_struct_6q.pack(_x.id, _x.pos, _x.speed, _x.torque, _x.rw, _x.action))
+      buff.write(_struct_3q.pack(_x.id, _x.pos, _x.torque))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -83,8 +71,8 @@ int64 action
       end = 0
       _x = self
       start = end
-      end += 48
-      (_x.id, _x.pos, _x.speed, _x.torque, _x.rw, _x.action,) = _struct_6q.unpack(str[start:end])
+      end += 24
+      (_x.id, _x.pos, _x.torque,) = _struct_3q.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -98,7 +86,7 @@ int64 action
     """
     try:
       _x = self
-      buff.write(_struct_6q.pack(_x.id, _x.pos, _x.speed, _x.torque, _x.rw, _x.action))
+      buff.write(_struct_3q.pack(_x.id, _x.pos, _x.torque))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(_x))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(_x))))
 
@@ -112,11 +100,11 @@ int64 action
       end = 0
       _x = self
       start = end
-      end += 48
-      (_x.id, _x.pos, _x.speed, _x.torque, _x.rw, _x.action,) = _struct_6q.unpack(str[start:end])
+      end += 24
+      (_x.id, _x.pos, _x.torque,) = _struct_3q.unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
 
 _struct_I = genpy.struct_I
-_struct_6q = struct.Struct("<6q")
+_struct_3q = struct.Struct("<3q")

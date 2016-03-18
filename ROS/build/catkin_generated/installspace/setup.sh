@@ -8,7 +8,11 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
+<<<<<<< HEAD
 : ${_CATKIN_SETUP_DIR:=/home/ubuntu/ProjectX/ROS/install}
+=======
+: ${_CATKIN_SETUP_DIR:=/home/kaaninan/ProjectX/ROS/install}
+>>>>>>> develop
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

@@ -1,6 +1,7 @@
 (cl:defpackage projectx-msg
   (:use )
   (:export
+<<<<<<< HEAD
    "<TABPAGE>"
    "TABPAGE"
    "<GYRO>"
@@ -41,5 +42,43 @@
    "MOTORIN"
    "<TOUCHOSC_COMMON>"
    "TOUCHOSC_COMMON"
+=======
+   "<DATACONTROL>"
+   "DATACONTROL"
+   "<TABPAGE>"
+   "TABPAGE"
+   "<XYPAD>"
+   "XYPAD"
+   "<LABEL>"
+   "LABEL"
+   "<MOTORIN>"
+   "MOTORIN"
+   "<TOUCHOSC_COMMON>"
+   "TOUCHOSC_COMMON"
+   "<OSCDATA>"
+   "OSCDATA"
+   "<MULTIBUTTON>"
+   "MULTIBUTTON"
+   "<MULTIXYPAD>"
+   "MULTIXYPAD"
+   "<INTARRAY>"
+   "INTARRAY"
+   "<COMMONPROPERTIES>"
+   "COMMONPROPERTIES"
+   "<SENSOR>"
+   "SENSOR"
+   "<SCALABLECONTROL>"
+   "SCALABLECONTROL"
+   "<HASH>"
+   "HASH"
+   "<MULTIFADER>"
+   "MULTIFADER"
+   "<MOTOROUT>"
+   "MOTOROUT"
+   "<GYRO>"
+   "GYRO"
+   "<MOTORINARRAY>"
+   "MOTORINARRAY"
+>>>>>>> develop
   ))
 

@@ -1,6 +1,11 @@
 # CMake generated Testfile for 
+<<<<<<< HEAD
 # Source directory: /home/ubuntu/ProjectX/ROS/src
 # Build directory: /home/ubuntu/ProjectX/ROS/build
+=======
+# Source directory: /home/kaaninan/ProjectX/ROS/src
+# Build directory: /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

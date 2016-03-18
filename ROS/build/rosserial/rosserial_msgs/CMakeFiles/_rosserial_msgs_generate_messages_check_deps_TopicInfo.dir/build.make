@@ -35,10 +35,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/ubuntu/ProjectX/ROS/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
+=======
+CMAKE_SOURCE_DIR = /home/kaaninan/ProjectX/ROS/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/kaaninan/ProjectX/ROS/build
+>>>>>>> develop
 
 # Utility rule file for _rosserial_msgs_generate_messages_check_deps_TopicInfo.
 
@@ -46,7 +53,11 @@ CMAKE_BINARY_DIR = /home/ubuntu/ProjectX/ROS/build
 include rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/progress.make
 
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rosserial_msgs /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg 
+=======
+	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/indigo/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py rosserial_msgs /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs/msg/TopicInfo.msg 
+>>>>>>> develop
 
 _rosserial_msgs_generate_messages_check_deps_TopicInfo: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo
 _rosserial_msgs_generate_messages_check_deps_TopicInfo: rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/build.make
@@ -57,10 +68,18 @@ rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/build
 
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/clean:
+<<<<<<< HEAD
 	cd /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/cmake_clean.cmake
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/clean
 
 rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/depend:
 	cd /home/ubuntu/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ubuntu/ProjectX/ROS/src /home/ubuntu/ProjectX/ROS/src/rosserial/rosserial_msgs /home/ubuntu/ProjectX/ROS/build /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_msgs /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/cmake_clean.cmake
+.PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/clean
+
+rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/depend:
+	cd /home/kaaninan/ProjectX/ROS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kaaninan/ProjectX/ROS/src /home/kaaninan/ProjectX/ROS/src/rosserial/rosserial_msgs /home/kaaninan/ProjectX/ROS/build /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_msgs /home/kaaninan/ProjectX/ROS/build/rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> develop
 .PHONY : rosserial/rosserial_msgs/CMakeFiles/_rosserial_msgs_generate_messages_check_deps_TopicInfo.dir/depend
 

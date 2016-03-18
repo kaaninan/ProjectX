@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 prefix=/home/ubuntu/ProjectX/ROS/devel
+=======
+prefix=/home/kaaninan/ProjectX/ROS/devel
+>>>>>>> develop
 
 Name: rosserial_windows
 Description: Description of rosserial_windows
 Version: 0.6.4
 Cflags: 
+<<<<<<< HEAD
 Libs: -L/home/ubuntu/ProjectX/ROS/devel/lib 
+=======
+Libs: -L/home/kaaninan/ProjectX/ROS/devel/lib 
+>>>>>>> develop
 Requires: 

@@ -47,13 +47,13 @@ int ok_gyro = 0;
 
 // ROS PUBLISHER
 projectx::Hash motorin_data;
-ros::Publisher p_motor("Ami", &motorin_data);
+ros::Publisher p_motor("arduino_in_motor", &motorin_data);
 
 projectx::Gyro gyro_data;
-ros::Publisher p_gyro("Agi", &gyro_data);
+ros::Publisher p_gyro("arduino_in_gyro", &gyro_data);
 
 projectx::Sensor sensor_data;
-ros::Publisher p_sensor("Asi", &sensor_data);
+ros::Publisher p_sensor("arduino_in_sensor", &sensor_data);
 
 
 

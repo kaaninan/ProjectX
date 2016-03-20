@@ -904,19 +904,6 @@ _projectx_generate_messages_check_deps_XYPad/fast:
 .PHONY : _projectx_generate_messages_check_deps_XYPad/fast
 
 #=============================================================================
-# Target rules for targets named arduino_sicaklik
-
-# Build rule for target.
-arduino_sicaklik: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 arduino_sicaklik
-.PHONY : arduino_sicaklik
-
-# fast build rule for target.
-arduino_sicaklik/fast:
-	$(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/build
-.PHONY : arduino_sicaklik/fast
-
-#=============================================================================
 # Target rules for targets named motor_boost_server
 
 # Build rule for target.
@@ -1273,7 +1260,6 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_Tabpage"
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"
-	@echo "... arduino_sicaklik"
 	@echo "... motor_boost_server"
 	@echo "... projectx_gencpp"
 	@echo "... projectx_generate_messages"

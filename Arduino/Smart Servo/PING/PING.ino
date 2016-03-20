@@ -11,12 +11,12 @@ void loop() {
   Serial.println("Start");
 
   for (int i = 1; i < 21; i++) {
-    int a = Dynamixel.ping(1);
+    int a = Dynamixel.ping(i);
     Serial.print("ID: ");
     Serial.print(i);
     Serial.print(" -> ");
     Serial.println(a);
-    delay(1);
+    delay(50);
   }
 
   delay(500);

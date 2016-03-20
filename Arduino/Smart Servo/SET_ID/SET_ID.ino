@@ -6,7 +6,7 @@ void setup() {
   delay(1000);
 }
 
-int yap = 19;
+int yap = 11;
 
 void loop() {
 

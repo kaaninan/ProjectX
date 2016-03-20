@@ -444,20 +444,6 @@ _projectx_generate_messages_check_deps_XYPad/fast:
 .PHONY : _projectx_generate_messages_check_deps_XYPad/fast
 
 # Convenience name for target.
-projectx/CMakeFiles/arduino_sicaklik.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/arduino_sicaklik.dir/rule
-.PHONY : projectx/CMakeFiles/arduino_sicaklik.dir/rule
-
-# Convenience name for target.
-arduino_sicaklik: projectx/CMakeFiles/arduino_sicaklik.dir/rule
-.PHONY : arduino_sicaklik
-
-# fast build rule for target.
-arduino_sicaklik/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/build
-.PHONY : arduino_sicaklik/fast
-
-# Convenience name for target.
 projectx/CMakeFiles/motor_boost_server.dir/rule:
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motor_boost_server.dir/rule
 .PHONY : projectx/CMakeFiles/motor_boost_server.dir/rule
@@ -695,30 +681,6 @@ std_msgs_generate_messages_py/fast:
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
-src/arduino_sicaklik.o: src/arduino_sicaklik.cpp.o
-.PHONY : src/arduino_sicaklik.o
-
-# target to build an object file
-src/arduino_sicaklik.cpp.o:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.o
-.PHONY : src/arduino_sicaklik.cpp.o
-
-src/arduino_sicaklik.i: src/arduino_sicaklik.cpp.i
-.PHONY : src/arduino_sicaklik.i
-
-# target to preprocess a source file
-src/arduino_sicaklik.cpp.i:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.i
-.PHONY : src/arduino_sicaklik.cpp.i
-
-src/arduino_sicaklik.s: src/arduino_sicaklik.cpp.s
-.PHONY : src/arduino_sicaklik.s
-
-# target to generate assembly for a file
-src/arduino_sicaklik.cpp.s:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/arduino_sicaklik.dir/build.make projectx/CMakeFiles/arduino_sicaklik.dir/src/arduino_sicaklik.cpp.s
-.PHONY : src/arduino_sicaklik.cpp.s
-
 src/motor_boost_server.o: src/motor_boost_server.cpp.o
 .PHONY : src/motor_boost_server.o
 
@@ -770,7 +732,6 @@ help:
 	@echo "... _projectx_generate_messages_check_deps_Tabpage"
 	@echo "... _projectx_generate_messages_check_deps_TouchOSC_Common"
 	@echo "... _projectx_generate_messages_check_deps_XYPad"
-	@echo "... arduino_sicaklik"
 	@echo "... edit_cache"
 	@echo "... install"
 	@echo "... install/local"
@@ -795,9 +756,6 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... src/arduino_sicaklik.o"
-	@echo "... src/arduino_sicaklik.i"
-	@echo "... src/arduino_sicaklik.s"
 	@echo "... src/motor_boost_server.o"
 	@echo "... src/motor_boost_server.i"
 	@echo "... src/motor_boost_server.s"

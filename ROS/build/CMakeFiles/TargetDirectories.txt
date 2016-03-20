@@ -30,7 +30,6 @@
 /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client.dir
 /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest.dir
 /home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_client/CMakeFiles/_run_tests_rosserial_client_gtest_float64_test.dir
-/home/ubuntu/ProjectX/ROS/build/projectx/CMakeFiles/arduino_sicaklik.dir
 /home/ubuntu/ProjectX/ROS/build/CMakeFiles/clean_test_results.dir
 /home/ubuntu/ProjectX/ROS/build/CMakeFiles/clean_test_results_Project.dir
 /home/ubuntu/ProjectX/ROS/build/CMakeFiles/download_extra_data.dir

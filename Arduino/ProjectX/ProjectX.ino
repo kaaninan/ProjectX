@@ -28,11 +28,19 @@ ros::NodeHandle  nh;
 
 
 // OUT
-int laser = 4;
-int buzzer = 5;
-int power_led_1 = 6;
-int power_led_2 = 7;
-int power_led_3 = 8;
+int power_led_1 = 4;
+int power_led_2 = 5;
+int power_led_3 = 6;
+int buzzer = 7;
+
+// RGB
+const int redPin = 8;
+const int greenPin = 11;
+const int bluePin = 12;
+
+OneWire temp_pin(22);
+SharpIR sharp(A1, 25, 93, 1080);
+int ldr_pin = 0;
 
 // SENSOR
 #define DHTPIN 23
@@ -98,12 +106,12 @@ void messageDataControl( const projectx::IntArray& msg) {
   ok_motor = msg.deger[2];
 }
 
-
-// ### ROS -> OUT DATA LASER
-void messageOutDataLaser( const std_msgs::Int64& msg) {
-  int data = msg.data;
-  analogWrite(laser, data);
-}
+//
+//// ### ROS -> OUT DATA LASER
+//void messageOutDataLaser( const std_msgs::Int64& msg) {
+//  int data = msg.data;
+//  analogWrite(laser, data);
+//}
 
 // ### ROS -> OUT DATA BUZZER
 void messageOutDataBuzzer( const std_msgs::Int64& msg) {
@@ -157,7 +165,7 @@ ros::Subscriber<projectx::MotorOut> sub_motor_single("arduino_motor_out_single",
 ros::Subscriber<projectx::IntArray> sub_motor_pos("arduino_motor_out_array", messageMotorPosIn);
 ros::Subscriber<projectx::IntArray> sub_data_control("arduino_data_control", messageDataControl);
 ros::Subscriber<projectx::IntArray> sub_out_power_led("arduino_out_led", messageOutDataPowerLed);
-ros::Subscriber<std_msgs::Int64> sub_out_laser("arduino_out_laser", messageOutDataLaser);
+//ros::Subscriber<std_msgs::Int64> sub_out_laser("arduino_out_laser", messageOutDataLaser);
 ros::Subscriber<std_msgs::Int64> sub_out_buzzer("arduino_out_buzzer", messageOutDataBuzzer);
 
 
@@ -165,11 +173,11 @@ void setup() {
 
   //gyro_start();
 
-  pinMode(laser, OUTPUT);
   pinMode(buzzer, OUTPUT);
   pinMode(power_led_1, OUTPUT);
   pinMode(power_led_2, OUTPUT);
   pinMode(power_led_3, OUTPUT);
+  pinMode(redPin, OUTPUT);
 
   dht.begin();
   
@@ -185,7 +193,7 @@ void setup() {
   nh.subscribe(sub_motor_single);
   nh.subscribe(sub_data_control);
   nh.subscribe(sub_out_power_led);
-  nh.subscribe(sub_out_laser);
+//  nh.subscribe(sub_out_laser);
   nh.subscribe(sub_out_buzzer);
 
   Dynamixel.begin(1000000, 2);

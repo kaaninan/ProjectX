@@ -124,9 +124,9 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_python/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_xbee/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/projectx/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_embeddedlinux/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_windows/cmake_install.cmake")
-  INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/ProjectX/ROS/install
-
-Name: rosserial_client
-Description: Description of rosserial_client
-Version: 0.6.4
-Cflags: 
-Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
-Requires: 

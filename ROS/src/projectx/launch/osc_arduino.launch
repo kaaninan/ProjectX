@@ -1,5 +1,5 @@
 <launch>                                                                             
-  <param name="layout_path" value="$(find projectx)/OSC" />
+  <param name="layout_path" value="$(find projectx)/osc" />
 
   <rosparam param="layouts">
     [ "ProjectX.touchosc", "ProjectX.touchosc" ]
@@ -17,7 +17,7 @@
   </node>
                                                                                                 
   <node pkg="pytouchosc" type="layoutserver_node" name="layoutserver"/>
-  <node pkg="projectx" type="osc_server.py" name="osc_server" output="screen"/>
+  <node pkg="projectx" type="osc_server_motor.py" name="osc_server" output="screen"/>
 
   <param name="arduino_out_data_auth" value="1" />
   

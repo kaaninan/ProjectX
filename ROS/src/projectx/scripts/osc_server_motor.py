@@ -21,7 +21,6 @@ class PublisherData:
         name = data.common.name
         value = data.value
         rospy.loginfo(str(name)+" -> "+str(value))
-        #talker_single(int(name[5:]), value, -1)
 
 
     def callback_multipush(self,data):

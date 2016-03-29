@@ -1,13 +1,9 @@
-
-
-
 // VALUE (with Default Values)
 float temp = -1;
 float temp_out = -1;
 float humidity = -1;
 int ldr = -1;
 int uzaklik = -1;
-int gaz = -1;
 
 
 
@@ -15,7 +11,6 @@ int gaz = -1;
 
 void publishSensor() {
   read_uzaklik();
-  read_gaz();
   read_ldr();
   read_temp();
   read_temp_out();
@@ -25,7 +20,6 @@ void publishSensor() {
   sensor_data.temp_out = temp_out;
   sensor_data.humidity = humidity;
   sensor_data.dis = uzaklik;
-  sensor_data.gaz = gaz;
 
   p_sensor.publish(&sensor_data);
 }
@@ -39,10 +33,6 @@ void read_uzaklik() {
   uzaklik = sharp.distance();
 }
 
-
-void read_gaz() {
-  gaz = analogRead(gaz_pin);
-}
 
 
 void read_ldr() {

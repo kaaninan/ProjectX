@@ -229,9 +229,9 @@ SET(CMAKE_MAKEFILE_PRODUCTS
   "rosserial/rosserial_python/CMakeFiles/CMakeDirectoryInformation.cmake"
   "rosserial/rosserial_xbee/CMakeFiles/CMakeDirectoryInformation.cmake"
   "projectx/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "rosserial/rosserial_server/CMakeFiles/CMakeDirectoryInformation.cmake"
   "rosserial/rosserial_embeddedlinux/CMakeFiles/CMakeDirectoryInformation.cmake"
   "rosserial/rosserial_windows/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "rosserial/rosserial_server/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:

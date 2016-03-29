@@ -1,6 +1,5 @@
 #include <SoftwareSerial.h>
 
-// MINIMU
 // GYRO
 #include <Wire.h>
 #include <L3G.h>
@@ -27,30 +26,32 @@
 ros::NodeHandle  nh;
 
 
-// OUT
-int power_led_1 = 4;
-int power_led_2 = 5;
-int power_led_3 = 6;
-int buzzer = 7;
+// ### PIN ###
 
-// RGB
+// OUT
+const int power_led_1 = 4;
+const int power_led_2 = 5;
+const int power_led_3 = 6;
+const int buzzer = 7;
 const int redPin = 8;
 const int greenPin = 11;
 const int bluePin = 12;
 
+
+// SENSOR
 OneWire temp_pin(22);
 SharpIR sharp(A1, 25, 93, 1080);
 int ldr_pin = 0;
-
-// SENSOR
 #define DHTPIN 23
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
 
-// DATA CONTROL
+
+// DATA CONTROL (for loop)
 int ok_sensor = 0;
 int ok_motor = 0;
 int ok_gyro = 0;
+
 
 
 // ROS PUBLISHER
@@ -159,13 +160,42 @@ void publishServo() {
 }
 
 
+void rgb(){
+  unsigned int rgbColour[3];
+
+  // Start off with red.
+  rgbColour[0] = 255;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;  
+
+  // Choose the colours to increment and decrement.
+  for (int decColour = 0; decColour < 3; decColour += 1) {
+    int incColour = decColour == 2 ? 0 : decColour + 1;
+
+    // cross-fade the two colours.
+    for(int i = 0; i < 255; i += 1) {
+      rgbColour[decColour] -= 1;
+      rgbColour[incColour] += 1;
+      
+      setColourRgb(rgbColour[0], rgbColour[1], rgbColour[2]);
+      delay(10);
+    }
+  }
+}
+
+void setColourRgb(unsigned int red, unsigned int green, unsigned int blue) {
+  analogWrite(redPin, red);
+  analogWrite(greenPin, green);
+  analogWrite(bluePin, blue);
+ }
+ 
+
 // ## SUBSCRIBER
 
 ros::Subscriber<projectx::MotorOut> sub_motor_single("arduino_motor_out_single", messageMotorSingleIn);
 ros::Subscriber<projectx::IntArray> sub_motor_pos("arduino_motor_out_array", messageMotorPosIn);
 ros::Subscriber<projectx::IntArray> sub_data_control("arduino_data_control", messageDataControl);
 ros::Subscriber<projectx::IntArray> sub_out_power_led("arduino_out_led", messageOutDataPowerLed);
-//ros::Subscriber<std_msgs::Int64> sub_out_laser("arduino_out_laser", messageOutDataLaser);
 ros::Subscriber<std_msgs::Int64> sub_out_buzzer("arduino_out_buzzer", messageOutDataBuzzer);
 
 
@@ -178,6 +208,17 @@ void setup() {
   pinMode(power_led_2, OUTPUT);
   pinMode(power_led_3, OUTPUT);
   pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+  
+  analogWrite(power_led_1, 40);  
+  analogWrite(power_led_2, 20);
+  analogWrite(power_led_3, 20);
+  
+  analogWrite(redPin, 240);
+  analogWrite(greenPin, 230);
+  analogWrite(bluePin, 230);
+  
 
   dht.begin();
   
@@ -197,11 +238,14 @@ void setup() {
   nh.subscribe(sub_out_buzzer);
 
   Dynamixel.begin(1000000, 2);
+  
+  setColourRgb(10,10,10);
 
   delay(1000);
 }
 
 void loop() {
+  //rgb();
   if (ok_sensor == 1) publishSensor();
   if (ok_gyro == 1) gyro_loop();
   if (ok_motor == 1) publishServo();

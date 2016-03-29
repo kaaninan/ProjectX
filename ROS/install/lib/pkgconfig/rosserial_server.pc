@@ -1,8 +1,0 @@
-prefix=/home/ubuntu/ProjectX/ROS/install
-
-Name: rosserial_server
-Description: Description of rosserial_server
-Version: 0.6.4
-Cflags: -I/home/ubuntu/ProjectX/ROS/install/include
-Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
-Requires: roscpp rosserial_msgs topic_tools

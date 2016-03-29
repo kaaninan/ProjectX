@@ -3,8 +3,6 @@
           DIS
           LDR-VAL
           LDR
-          GAZ-VAL
-          GAZ
           TEMP-VAL
           TEMP
           TEMP_OUT-VAL

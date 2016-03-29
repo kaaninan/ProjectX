@@ -26,7 +26,6 @@ struct Sensor_
   Sensor_()
     : dis(0)
     , ldr(0)
-    , gaz(0)
     , temp(0.0)
     , temp_out(0.0)
     , humidity(0.0)  {
@@ -34,7 +33,6 @@ struct Sensor_
   Sensor_(const ContainerAllocator& _alloc)
     : dis(0)
     , ldr(0)
-    , gaz(0)
     , temp(0.0)
     , temp_out(0.0)
     , humidity(0.0)  {
@@ -47,9 +45,6 @@ struct Sensor_
 
    typedef int64_t _ldr_type;
   _ldr_type ldr;
-
-   typedef int64_t _gaz_type;
-  _gaz_type gaz;
 
    typedef double _temp_type;
   _temp_type temp;
@@ -137,12 +132,12 @@ struct MD5Sum< ::projectx::Sensor_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "949ea192333261d5f2a0646fc476a04c";
+    return "dba7b0b4b263b01b4f2166b3e5a0e9c5";
   }
 
   static const char* value(const ::projectx::Sensor_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x949ea192333261d5ULL;
-  static const uint64_t static_value2 = 0xf2a0646fc476a04cULL;
+  static const uint64_t static_value1 = 0xdba7b0b4b263b01bULL;
+  static const uint64_t static_value2 = 0x4f2166b3e5a0e9c5ULL;
 };
 
 template<class ContainerAllocator>
@@ -163,7 +158,6 @@ struct Definition< ::projectx::Sensor_<ContainerAllocator> >
   {
     return "int64 dis\n\
 int64 ldr\n\
-int64 gaz\n\
 float64 temp\n\
 float64 temp_out\n\
 float64 humidity\n\
@@ -187,7 +181,6 @@ namespace serialization
     {
       stream.next(m.dis);
       stream.next(m.ldr);
-      stream.next(m.gaz);
       stream.next(m.temp);
       stream.next(m.temp_out);
       stream.next(m.humidity);
@@ -213,8 +206,6 @@ struct Printer< ::projectx::Sensor_<ContainerAllocator> >
     Printer<int64_t>::stream(s, indent + "  ", v.dis);
     s << indent << "ldr: ";
     Printer<int64_t>::stream(s, indent + "  ", v.ldr);
-    s << indent << "gaz: ";
-    Printer<int64_t>::stream(s, indent + "  ", v.gaz);
     s << indent << "temp: ";
     Printer<double>::stream(s, indent + "  ", v.temp);
     s << indent << "temp_out: ";

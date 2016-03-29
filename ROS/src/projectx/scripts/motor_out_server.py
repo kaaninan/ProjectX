@@ -3,6 +3,7 @@ import rospy
 from projectx.msg import *
 from std_msgs.msg import String
 
+# Arduinoya gidecek komutlarin zamanlarini duzenle
 
 def motor_out_single_callback(data):
     # rospy.loginfo("Motor Out Server PUB")
@@ -21,8 +22,8 @@ def motor_out_array_callback(data):
 def talker():
     global pub_pos, pub_single, rate
 
-    pub_pos = rospy.Publisher('Amop', IntArray, queue_size=10) # Motor (Position)
-    pub_single = rospy.Publisher('Amot', MotorOut, queue_size=10) # Single Motor (Torque) or (Position)
+    pub_pos = rospy.Publisher('arduino_motor_out_array', IntArray, queue_size=10) # Motor (Position)
+    pub_single = rospy.Publisher('arduino_motor_out_single', MotorOut, queue_size=10) # Single Motor (Torque) or (Position)
     
     rospy.Subscriber("motor_out_single", MotorOut, motor_out_single_callback) # Single (POS) or (Torque) <- RME
     rospy.Subscriber("motor_out_array", IntArray, motor_out_array_callback) # Array POS <- Motor Command Server

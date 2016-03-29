@@ -127,6 +127,8 @@ IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_server/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_embeddedlinux/cmake_install.cmake")
   INCLUDE("/home/ubuntu/ProjectX/ROS/build/rosserial/rosserial_windows/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/ProjectX/ROS/build/usb_cam/cmake_install.cmake")
+  INCLUDE("/home/ubuntu/ProjectX/ROS/build/video_stream_opencv/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 

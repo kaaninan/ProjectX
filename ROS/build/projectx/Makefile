@@ -444,20 +444,6 @@ _projectx_generate_messages_check_deps_XYPad/fast:
 .PHONY : _projectx_generate_messages_check_deps_XYPad/fast
 
 # Convenience name for target.
-projectx/CMakeFiles/motor_boost_server.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/motor_boost_server.dir/rule
-.PHONY : projectx/CMakeFiles/motor_boost_server.dir/rule
-
-# Convenience name for target.
-motor_boost_server: projectx/CMakeFiles/motor_boost_server.dir/rule
-.PHONY : motor_boost_server
-
-# fast build rule for target.
-motor_boost_server/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/build
-.PHONY : motor_boost_server/fast
-
-# Convenience name for target.
 projectx/CMakeFiles/projectx_gencpp.dir/rule:
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 projectx/CMakeFiles/projectx_gencpp.dir/rule
 .PHONY : projectx/CMakeFiles/projectx_gencpp.dir/rule
@@ -681,30 +667,6 @@ std_msgs_generate_messages_py/fast:
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build.make projectx/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
-src/motor_boost_server.o: src/motor_boost_server.cpp.o
-.PHONY : src/motor_boost_server.o
-
-# target to build an object file
-src/motor_boost_server.cpp.o:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.o
-.PHONY : src/motor_boost_server.cpp.o
-
-src/motor_boost_server.i: src/motor_boost_server.cpp.i
-.PHONY : src/motor_boost_server.i
-
-# target to preprocess a source file
-src/motor_boost_server.cpp.i:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.i
-.PHONY : src/motor_boost_server.cpp.i
-
-src/motor_boost_server.s: src/motor_boost_server.cpp.s
-.PHONY : src/motor_boost_server.s
-
-# target to generate assembly for a file
-src/motor_boost_server.cpp.s:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f projectx/CMakeFiles/motor_boost_server.dir/build.make projectx/CMakeFiles/motor_boost_server.dir/src/motor_boost_server.cpp.s
-.PHONY : src/motor_boost_server.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -737,7 +699,6 @@ help:
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
-	@echo "... motor_boost_server"
 	@echo "... projectx_gencpp"
 	@echo "... projectx_generate_messages"
 	@echo "... projectx_generate_messages_cpp"
@@ -756,9 +717,6 @@ help:
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... test"
-	@echo "... src/motor_boost_server.o"
-	@echo "... src/motor_boost_server.i"
-	@echo "... src/motor_boost_server.s"
 .PHONY : help
 
 

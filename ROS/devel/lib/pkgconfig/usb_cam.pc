@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ProjectX/ROS/devel
+
+Name: usb_cam
+Description: Description of usb_cam
+Version: 0.3.4
+Cflags: -I/home/ubuntu/ProjectX/ROS/src/usb_cam/include
+Libs: -L/home/ubuntu/ProjectX/ROS/devel/lib -lusb_cam
+Requires: 

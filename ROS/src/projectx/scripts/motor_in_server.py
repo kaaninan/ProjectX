@@ -12,10 +12,10 @@ def dogrula():
     for i in range(1,21):
         try:
             if int(motor_values[i].get("pos")):
-                don = 1 # Bos Durmasin Diye
+                pass
         # Sorun Yok
         except:
-            rospy.loginfo("motorSubscriber.py -> Arduino'dan gelen motor verileri eksik! (topic: arduinoMotorIncoming) - Motor ID: [%s]",str(i))
+            #rospy.loginfo("motorSubscriber.py -> Arduino'dan gelen motor verileri eksik! (topic: arduinoMotorIncoming) - Motor ID: [%s]",str(i))
             return 0
     rospy.loginfo("motorSubscriber.py -> SERVO MOTOR OK")
     return 1
@@ -112,16 +112,16 @@ def listener():
     
     rospy.init_node('motor_values_listener', anonymous=True)
     
-    rospy.Subscriber("Ami", Hash, callback)
+    rospy.Subscriber("arduino_in_motor", Hash, callback)
 
     try:
         thread.start_new_thread(publish_data, ("Thread-1",2))
     except:
         rospy.logerr("Thread Error");
     
-    global pub
-    global rate
-    pub = rospy.Publisher('motorIncomingData', MotorInArray, queue_size=10)
+    global pub, rate
+    
+    pub = rospy.Publisher('motor_incoming_data', MotorInArray, queue_size=10)
     rate = rospy.Rate(100)
 
     rospy.loginfo("READY: Motor Incoming Server")

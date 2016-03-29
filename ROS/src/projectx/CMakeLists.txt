@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(projectx)
 
-set(CMAKE_CXX_FLAGS "-std=c++11 ${CMAKE_CXX_FLAGS}")
-
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
@@ -71,6 +69,6 @@ include_directories(
 
 
 
-add_executable(motor_boost_server src/motor_boost_server.cpp)
-target_link_libraries(motor_boost_server ${catkin_LIBRARIES})
-add_dependencies(motor_boost_server projectx_gencpp)
+#add_executable(motor_boost_server src/motor_boost_server.cpp)
+#target_link_libraries(motor_boost_server ${catkin_LIBRARIES})
+#add_dependencies(motor_boost_server projectx_gencpp)

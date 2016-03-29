@@ -26,6 +26,9 @@ def req_callback(data):
     elif hedef == "sensor":
         data_array[0] = int(value[0])
         print "Data Control Opened Sensor: " + str(data_array[0])
+    elif hedef == "gyro":
+        data_array[1] = int(value[0])
+        print "Data Control Opened Gyro: " + str(data_array[1])
 
     gonder()
 
@@ -46,10 +49,11 @@ def gonder():
 def main():
     global pub
 
-    pub = rospy.Publisher('Adc', IntArray, queue_size=10)
+    pub = rospy.Publisher('arduino_data_control', IntArray, queue_size=10)
+    
     rospy.Subscriber("arduino_data_sync", DataControl, req_callback)
 
-    rospy.init_node('arduino_data_control', anonymous=True)
+    rospy.init_node('arduino_data_control_node', anonymous=True)
 
     rospy.loginfo("READY: Arduino Data Control")
 

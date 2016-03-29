@@ -1,2 +1,2 @@
-projectx:rosserial/rosserial:rosserial/rosserial_arduino:rosserial/rosserial_client:rosserial/rosserial_embeddedlinux:rosserial/rosserial_msgs:rosserial/rosserial_python:rosserial/rosserial_server:rosserial/rosserial_windows:rosserial/rosserial_xbee
+projectx:rosserial/rosserial:rosserial/rosserial_arduino:rosserial/rosserial_client:rosserial/rosserial_embeddedlinux:rosserial/rosserial_msgs:rosserial/rosserial_python:rosserial/rosserial_server:rosserial/rosserial_windows:rosserial/rosserial_xbee:usb_cam:video_stream_opencv
 -DCATKIN_DEVEL_PREFIX=/home/ubuntu/ProjectX/ROS/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu/ProjectX/ROS/install -G Unix Makefiles

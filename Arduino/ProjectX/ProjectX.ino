@@ -142,22 +142,17 @@ void msgCallbackRgb( const projectx::IntArray& msg) {
 
 // POWER LED
 
-int temp_l1 = 0;
-int temp_l2 = 0;
-int temp_l3 = 0;
-
-void msgCallbackLed( const projectx::IntArray& msg) {
-  int led_1 = msg.deger[0];
-  int led_2 = msg.deger[1];
-  int led_3 = msg.deger[2];
-
-  if (temp_l1 != led_1) analogWrite(power_led_1, led_1);
-  if (temp_l2 != led_2) analogWrite(power_led_2, led_2);
-  if (temp_l3 != led_3) analogWrite(power_led_3, led_3);
-
-  temp_l1 = led_1;
-  temp_l2 = led_2;
-  temp_l3 = led_3;
+void msgCallbackLed1( const std_msgs::Int64& msg) {
+  int led = msg.data;
+  analogWrite(power_led_1, led);
+}
+void msgCallbackLed2( const std_msgs::Int64& msg) {
+  int led = msg.data;
+  analogWrite(power_led_2, led);
+}
+void msgCallbackLed3( const std_msgs::Int64& msg) {
+  int led = msg.data;
+  analogWrite(power_led_3, led);
 }
 
 
@@ -183,7 +178,6 @@ int motorId = 1;
 
 void publishServo() {
   int pos = Dynamixel.readPosition(motorId);
-  int pos2 = Dynamixel.ping(motorId);
   motorin_data.id = motorId;
   motorin_data.deger = pos;
   p_motor.publish(&motorin_data);
@@ -208,7 +202,9 @@ ros::Subscriber<projectx::MotorOut> sub_motor_single("arduino_motor_out_single",
 ros::Subscriber<projectx::IntArray> sub_motor_array("arduino_motor_out_array", msgMotorArrayIn);
 
 // Out
-ros::Subscriber<projectx::IntArray> sub_out_led("arduino_out_led", msgCallbackLed);
+ros::Subscriber<std_msgs::Int64> sub_out_led1("arduino_out_led_1", msgCallbackLed1);
+ros::Subscriber<std_msgs::Int64> sub_out_led2("arduino_out_led_2", msgCallbackLed2);
+ros::Subscriber<std_msgs::Int64> sub_out_led3("arduino_out_led_3", msgCallbackLed3);
 ros::Subscriber<std_msgs::Int64> sub_out_buzzer("arduino_out_buzzer", msgCallbackBuzzer);
 ros::Subscriber<projectx::IntArray> sub_out_rgb("arduino_out_rgb", msgCallbackRgb);
 
@@ -227,7 +223,7 @@ ros::Subscriber<projectx::IntArray> sub_data_control("arduino_data_control", mes
 
 void setup() {
 
-  //gyro_start();
+  gyro_start();
 
   // PIN MODE
   pinMode(buzzer, OUTPUT);
@@ -273,7 +269,9 @@ void setup() {
   nh.subscribe(sub_motor_array);
   nh.subscribe(sub_motor_single);
   nh.subscribe(sub_data_control);
-  nh.subscribe(sub_out_led);
+  nh.subscribe(sub_out_led1);
+  nh.subscribe(sub_out_led2);
+  nh.subscribe(sub_out_led3);
   nh.subscribe(sub_out_rgb);
   nh.subscribe(sub_out_buzzer);
   nh.subscribe(sub_out_nrf);

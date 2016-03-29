@@ -15,13 +15,13 @@ void loop() {
     //Temperature = Dynamixel.readTemperature(i); // Request and Print the Temperature
     //Voltage = Dynamixel.readVoltage(i);         // Request and Print the Voltage
     Position = Dynamixel.readPosition(i);
-    int pin2 = Dynamixel.ping(i);
+//    int pin2 = Dynamixel.ping(i);
 
     Serial.print(i);
     //Serial.print(" -> TEMP: ");   // Print the variables in the Serial Monitor
 //    Serial.print(Temperature);
     Serial.print("  Ping: ");
-    Serial.print(pin2);
+//    Serial.print(pin2);
     Serial.print("  Position: ");
     Serial.println(Position);
 

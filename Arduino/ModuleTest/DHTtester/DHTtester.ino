@@ -2,21 +2,18 @@
 // Written by ladyada, public domain
 
 #include "DHT.h"
-#include <LiquidCrystal.h>
 
 #define DHTPIN 23     // what digital pin we're connected to
 
 #define DHTTYPE DHT11   // DHT 22  (AM2302), AM2321
 
 DHT dht(DHTPIN, DHTTYPE);
-LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
 
 void setup() {
   Serial.begin(9600);
   Serial.println("DHTxx test!");
 
   dht.begin();
-  lcd.begin(16, 2);
 }
 
 void loop() {
@@ -56,6 +53,5 @@ void loop() {
   Serial.print(hif);
   Serial.println(" *F");
 
-  lcd.setCursor(0, 1);
   
 }

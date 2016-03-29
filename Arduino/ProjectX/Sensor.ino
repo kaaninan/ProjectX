@@ -34,11 +34,9 @@ void read_uzaklik() {
 }
 
 
-
 void read_ldr() {
   ldr = analogRead(ldr_pin);
 }
-
 
 void read_temp() {
   byte i;
@@ -82,26 +80,4 @@ void read_temp() {
 void read_temp_out(){
   humidity = dht.readHumidity();
   temp_out = dht.readTemperature();
-
-  if (isnan(humidity) || isnan(temp_out)) {
-    //Serial.println("Failed to read from DHT sensor!");
-    //return;
-  }
-
-  //temp_out = dht.computeHeatIndex(t_temp_out, humidity, false);
-
-//  Serial.print("Humidity: ");
-//  Serial.print(h);
-//  Serial.print(" %\t");
-//  Serial.print("Temperature: ");
-//  Serial.print(t);
-//  Serial.print(" *C ");
-//  Serial.print(f);
-//  Serial.print(" *F\t");
-//  Serial.print("Heat index: ");
-//  Serial.print(hic);
-//  Serial.print(" *C ");
-//  Serial.print(hif);
-//  Serial.println(" *F");
-  
 }

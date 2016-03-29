@@ -1,6 +1,3 @@
-
-
-
 int SENSOR_SIGN[9] = {1, 1, 1, -1, -1, -1, 1, 1, 1}; //Correct directions x,y,z - gyro, accelerometer, magnetometer
 
 #define GRAVITY 256  //this equivalent to 1G in the raw data coming from the accelerometer 

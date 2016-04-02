@@ -15,7 +15,7 @@
 	<node name="rosapi" pkg="rosapi" type="rosapi_node" />
 
 	<!-- Speak-->
-	<param name="/open_speak" value="0"/>
+	<param name="/open_speak" value="1"/>
   	<node pkg="projectx" type="speak_server.py" name="speak_server"/>
 
   	<node pkg="projectx" type="speech_incoming.py" name="speech_incoming" output="screen" />

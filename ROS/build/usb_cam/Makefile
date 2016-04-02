@@ -150,90 +150,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-.PHONY : geometry_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# fast build rule for target.
-geometry_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-.PHONY : geometry_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-.PHONY : geometry_msgs_generate_messages_py
-
-# fast build rule for target.
-geometry_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-.PHONY : geometry_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
-
-# Convenience name for target.
 usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
 	cd /home/ubuntu/ProjectX/ROS/build && $(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
 .PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
@@ -358,17 +274,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... geometry_msgs_generate_messages_cpp"
-	@echo "... geometry_msgs_generate_messages_lisp"
-	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... install"
 	@echo "... install/local"
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... std_srvs_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_py"

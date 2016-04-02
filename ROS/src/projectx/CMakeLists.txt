@@ -67,8 +67,7 @@ include_directories(
 # )
 
 
-
-
 #add_executable(motor_boost_server src/motor_boost_server.cpp)
 #target_link_libraries(motor_boost_server ${catkin_LIBRARIES})
 #add_dependencies(motor_boost_server projectx_gencpp)
+

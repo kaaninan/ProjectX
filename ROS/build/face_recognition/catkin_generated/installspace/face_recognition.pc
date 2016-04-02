@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ProjectX/ROS/install
+
+Name: face_recognition
+Description: Description of face_recognition
+Version: 0.0.0
+Cflags: -I/home/ubuntu/ProjectX/ROS/install/include
+Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
+Requires: message_runtime roscpp std_msgs actionlib rospy roslib actionlib_msgs cv_bridge image_transport

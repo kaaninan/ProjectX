@@ -3,7 +3,7 @@ import rospy
 from projectx.msg import *
 from std_msgs.msg import String
 
-# Arduinoya gidecek komutlarin zamanlarini duzenle
+# ROS - Arduino  //RATE//
 
 def motor_out_single_callback(data):
     # rospy.loginfo("Motor Out Server PUB")
@@ -30,7 +30,7 @@ def talker():
 
     rospy.init_node('motor_out_server', anonymous=True)
 
-    rate = rospy.Rate(40)
+    rate = rospy.Rate(80)
 
     rospy.loginfo("READY: Motor Outgoing Server")
 

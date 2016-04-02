@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec272215941/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec272215941.dir/build.make CMakeFiles/cmTryCompileExec272215941.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec386596704/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec386596704.dir/build.make CMakeFiles/cmTryCompileExec386596704.dir/build
 make[1]: Entering directory `/home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec272215941.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec272215941.dir/CheckSymbolExists.c.o   -c /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTryCompileExec272215941
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec272215941.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec272215941.dir/CheckSymbolExists.c.o  -o cmTryCompileExec272215941 -rdynamic 
-CMakeFiles/cmTryCompileExec272215941.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTryCompileExec386596704.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec386596704.dir/CheckSymbolExists.c.o   -c /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec386596704
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec386596704.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec386596704.dir/CheckSymbolExists.c.o  -o cmTryCompileExec386596704 -rdynamic 
+CMakeFiles/cmTryCompileExec386596704.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0xe): undefined reference to `pthread_create'
 CheckSymbolExists.c:(.text+0x12): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 make[1]: Leaving directory `/home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec272215941] Error 1
-make: *** [cmTryCompileExec272215941/fast] Error 2
+make[1]: *** [cmTryCompileExec386596704] Error 1
+make: *** [cmTryCompileExec386596704/fast] Error 2
 
 File /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,19 +36,19 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2322914732/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2322914732.dir/build.make CMakeFiles/cmTryCompileExec2322914732.dir/build
+Run Build Command:/usr/bin/make "cmTryCompileExec413853567/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec413853567.dir/build.make CMakeFiles/cmTryCompileExec413853567.dir/build
 make[1]: Entering directory `/home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2322914732.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec2322914732.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2322914732
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2322914732.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec2322914732.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2322914732 -rdynamic -lpthreads 
+Building C object CMakeFiles/cmTryCompileExec413853567.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec413853567.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec413853567
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec413853567.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec413853567.dir/CheckFunctionExists.c.o  -o cmTryCompileExec413853567 -rdynamic -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
 make[1]: Leaving directory `/home/ubuntu/ProjectX/ROS/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec2322914732] Error 1
-make: *** [cmTryCompileExec2322914732/fast] Error 2
+make[1]: *** [cmTryCompileExec413853567] Error 1
+make: *** [cmTryCompileExec413853567/fast] Error 2
 
 

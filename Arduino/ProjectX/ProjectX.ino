@@ -114,6 +114,7 @@ void msgMotorArrayIn( const projectx::IntArray& msg) {
 
 void writeServoPos(int motor_id, int pos) {
   Dynamixel.move(motor_id, pos);
+  delay(5);
 }
 
 
@@ -178,9 +179,12 @@ int motorId = 1;
 
 void publishServo() {
   int pos = Dynamixel.readPosition(motorId);
+  
   motorin_data.id = motorId;
   motorin_data.deger = pos;
   p_motor.publish(&motorin_data);
+  delay(5);
+  
   motorId++;
   if (motorId == 21) motorId = 1;
 }
@@ -234,6 +238,11 @@ void setup() {
   pinMode(greenPin, OUTPUT);
   pinMode(bluePin, OUTPUT);
 
+
+  // DATA CONTROL (for loop)
+  ok_sensor = 0;
+  ok_motor = 0;
+  ok_gyro = 0;
 
   // SENSOR BEGIN
   SPI.begin();

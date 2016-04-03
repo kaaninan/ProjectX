@@ -9,7 +9,7 @@ import time
 # Open HTTPS Server
 
 def run(name):
-	subprocess.Popen(["cd $HOME/ProjectX/Speak; python https"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+	subprocess.Popen(["cd $HOME/ProjectX/Speak; ./http"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
 
 def start():
 	try:

@@ -1,1 +1,0 @@
-rosservice call /server_motor_command "in_data: 'manual'"

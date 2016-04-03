@@ -59,7 +59,7 @@
             <exception id="2" action="1" line=""/>
             <exception id="32" action="0" line=""/>
             <parameter name="text">
-                <subParameter name="value" code="0">https://127.0.0.1:8008/index.html</subParameter>
+                <subParameter name="value" code="0">http://localhost:8008</subParameter>
             </parameter>
             <parameter name="pause">
                 <subParameter name="value" code="0">10</subParameter>

@@ -10,6 +10,9 @@ from projectx.srv import *
 from std_msgs.msg import *
 
 
+
+
+
 ## ZAMANA GORE MOTOR POS HESAPLAMA VE GONDERME
 def pos_calculate(present_motor_data, new_motor_data, adim_sayisi):
     global pub_sync, pub_motor_array, pub_motor_single, rate
@@ -19,7 +22,7 @@ def pos_calculate(present_motor_data, new_motor_data, adim_sayisi):
 
     for i in range(0,20):
         # Toplam hareket derecesi
-        degisecek_derece = new_motor_data[i] - present_motor_data.pos[i]
+        degisecek_derece = new_motor_data[i] - present_motor_data[i]
         # Her adimda kac derece hareket edecek
         tek_adim.append(degisecek_derece / adim_sayisi)
 
@@ -27,19 +30,47 @@ def pos_calculate(present_motor_data, new_motor_data, adim_sayisi):
         # Her bir adimda motorlarin gitmesi gereken pozisyon
         goal_motor_pos = IntArray() # Tum motorlarin goal pos lari
 
-        for a in range(1,21):
+        for a in range(0,20):
             # Motor icin gitmesi gereken adimi mevcut posun ustune koy
-            new_pos = pre_motor_data[a] + tek_adim[a]
-            # Motorlara gidecek listeye ekle
-            goal_motor_pos.append(new_pos)
+            new_pos = present_motor_data[a] + tek_adim[a]
+            
             # Mevcut pozisyonlarini guncelle
-            present_motor_data.pos[a] = new_pos
+            present_motor_data[a] = new_pos
+            
+            # Motora veriyi yolla
+            data = MotorOut()
+            data.id = int(int(a)+1)
+            data.pos = int(new_pos)
+            data.torque = -1
 
-        # Her bir adimda goal poslari motorlara gonder
-        rospy.loginfo("Motor Playback - Goal Pos Pub: "+ goal_motor_pos)
-        pub_motor_single.publish(goal_motor_pos)
-        rate.sleep()
+            pub_motor_single.publish(data)
+            rate.sleep()
 
+
+
+
+def pub_single_data(pos):
+    global pub_motor_array, rate
+    send_data = IntArray()
+
+    for i in pos:
+        # Motora veriyi yolla
+        send_data.deger.append(int(i))
+
+    rospy.loginfo("Published Single Data")
+    
+    pub_motor_array.publish(send_data)
+    rate.sleep()
+
+
+
+
+# Motion Values
+def values():
+    global pos_oturma, pos_ayakta_durma
+
+    pos_oturma = [516, 538, 495, 412, 547, 447, 561, 498, 511, 500, 526, 356, 370, 80, 87, 192, 195, 509, 515, 512]
+    pos_ayakta_durma = [512, 512, 400, 600, 512, 512, 512, 512, 480, 520, 400, 400, 440, 440, 430, 430, 512, 512, 512, 512]
 
 
 
@@ -69,9 +100,14 @@ def control_close_all():
 
 
 
-# Node Service
+
+
+
+
+
+# Main Service
 def service_motion_command(req):
-    global pub_sync, pub_motor_array, pub_motor_single, rate, head_access
+    global pub_sync, pub_motor_array, pub_motor_single, rate, head_access, motor_data, now_pos, pos_oturma, pos_ayakta_durma
 
     komut = req.in_data
     
@@ -79,8 +115,33 @@ def service_motion_command(req):
         head_access = int(komut[5:])
         rospy.loginfo("Head Access Opened: "+ str(komut[5:]))
         
-    elif komut == "manual":
-        control(1)
+    elif komut == "add":
+        # Mevcut motor pozisyonlarini kaydet
+        now_pos = motor_data
+        rospy.loginfo(motor_data)
+
+    elif komut == "play":
+        # Mevcut motor pozisyonlarini kaydet
+        goal_pos = pos_ayakta_durma
+        pos_calculate(now_pos, goal_pos, 400)
+
+    elif komut == "single":
+        # Mevcut motor pozisyonlarini kaydet
+        pub_single_data(pos_ayakta_durma)
+
+    elif komut[:3] == "set":
+        motor_id = int(komut[4:6])
+        motor_pos = int(komut[7:])
+        
+        data = MotorOut()
+        data.id = int(motor_id)
+        data.pos = int(motor_pos)
+        data.torque = -1
+
+        rospy.loginfo("Motion Manager - WRITE POS: "+str(motor_id))
+
+        pub_motor_single.publish(data)
+        rate.sleep()
 
 
     return_data = "OK" # Simdilik
@@ -231,6 +292,10 @@ def service_motion_torque(req):
 
 
 
+
+# Subscriber
+
+
 def callbackHead(data):
     global head_access
 
@@ -258,9 +323,17 @@ def callbackHead(data):
 
 
 def callbackMotor(data):
-    global motor_data
+    global motor_data, now_pos
     # rospy.loginfo(data)
     motor_data = data
+
+    now_pos = []
+    for i in range(0,20):
+        now_pos.append(motor_data.pos[i])
+
+
+
+
 
 
 def main():
@@ -277,10 +350,11 @@ def main():
     rospy.Service('service_motion_command', MotorBoost, service_motion_command) # Sistem Komutlari
     rospy.Service('service_motion_torque', MotorBoost, service_motion_torque) # Motor Tork Komutlari
     
-    head_access = 0
+    values()
+    head_access = 0 # Default Value
 
     rospy.init_node('motion_control_server', anonymous=True)
-    rate = rospy.Rate(100)
+    rate = rospy.Rate(20)
 
     rospy.loginfo("READY: Motion Control Server")
 

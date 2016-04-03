@@ -1,31 +1,33 @@
 #!/usr/bin/env python
 
 import rospy
+import subprocess
+import time
+import signal
+import os
 from std_msgs.msg import *
 from projectx.msg import *
 
-def talker():
-    pub = rospy.Publisher('/motor_head_position', IntArray, queue_size=10)
-
+def main():
     rospy.init_node('talker', anonymous=True)
     
-    rate = rospy.Rate(100) # 10hz
+    rospy.loginfo("Aciliyor..")
 
-    a = 300
+    p = subprocess.Popen(["rosrun face_recognition Fserver"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+    time.sleep(1)
+    p2 = subprocess.Popen(["rosrun face_recognition Fclient"], bufsize=2048, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+
 
     while not rospy.is_shutdown():
-        data = IntArray()
-        data.deger = [a,512]
-        pub.publish(data)
-        rate.sleep()
+        rospy.spin()
 
-        a = a+1
+    rospy.loginfo("Kapatiliyor..")
+    os.killpg(os.getpgid(p.pid), signal.SIGTERM)
+    os.killpg(os.getpgid(p2.pid), signal.SIGTERM)
 
-        if a == 700:
-            a = 300
 
 if __name__ == '__main__':
     try:
-        talker()
+        main()
     except rospy.ROSInterruptException:
         pass

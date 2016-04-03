@@ -56,7 +56,7 @@ public:
     //a face recognized with confidence value higher than the confidence_value threshold is accepted as valid.
     pnh_.param<double>("confidence_value", confidence_value, 0.88);
     //if output screen is shown
-    pnh_.param<bool>("show_screen_flag", show_screen_flag, true);
+    pnh_.param<bool>("show_screen_flag", show_screen_flag, false);
     ROS_INFO("show_screen_flag: %s", show_screen_flag ? "true" : "false");
     //a parameter for the "add_face_images" goal which determines the number of training images for a new face (person) to be acquired from the video stream 
     pnh_.param<int>("add_face_number", add_face_number, 25);
@@ -81,7 +81,7 @@ public:
        ROS_WARN("Alert: Database is not updated. Please delete \"facedata.xml\" and re-run!"); //AFTER
     }
     //subscribe to video stream through image transport class
-    image_sub_ = it_.subscribe("/camera/image_raw", 1, &FaceRecognition::imageCB, this);
+    image_sub_ = it_.subscribe("/camera/rotated_image", 1, &FaceRecognition::imageCB, this);
   }
 
   ~FaceRecognition(void)

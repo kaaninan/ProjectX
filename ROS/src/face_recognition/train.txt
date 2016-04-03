@@ -1,125 +1,361 @@
-1 Maciej data/1_Maciej1.pgm
-1 Maciej data/1_Maciej2.pgm
-1 Maciej data/1_Maciej3.pgm
-1 Maciej data/1_Maciej4.pgm
-1 Maciej data/1_Maciej5.pgm
-1 Maciej data/1_Maciej6.pgm
-1 Maciej data/1_Maciej7.pgm
-1 Maciej data/1_Maciej8.pgm
-1 Maciej data/1_Maciej9.pgm
-1 Maciej data/1_Maciej10.pgm
-1 Maciej data/1_Maciej11.pgm
-1 Maciej data/1_Maciej12.pgm
-1 Maciej data/1_Maciej13.pgm
-1 Maciej data/1_Maciej14.pgm
-1 Maciej data/1_Maciej15.pgm
-1 Maciej data/1_Maciej16.pgm
-1 Maciej data/1_Maciej17.pgm
-1 Maciej data/1_Maciej18.pgm
-1 Maciej data/1_Maciej19.pgm
-1 Maciej data/1_Maciej20.pgm
-1 Maciej data/1_Maciej21.pgm
-1 Maciej data/1_Maciej22.pgm
-1 Maciej data/1_Maciej23.pgm
-1 Maciej data/1_Maciej24.pgm
-1 Maciej data/1_Maciej25.pgm
-2 Kaan Inan data/2_Kaan Inan1.pgm
-2 Kaan Inan data/2_Kaan Inan2.pgm
-2 Kaan Inan data/2_Kaan Inan3.pgm
-2 Kaan Inan data/2_Kaan Inan4.pgm
-2 Kaan Inan data/2_Kaan Inan5.pgm
-2 Kaan Inan data/2_Kaan Inan6.pgm
-2 Kaan Inan data/2_Kaan Inan7.pgm
-2 Kaan Inan data/2_Kaan Inan8.pgm
-2 Kaan Inan data/2_Kaan Inan9.pgm
-2 Kaan Inan data/2_Kaan Inan10.pgm
-3 Kaan Inan data/3_Kaan Inan1.pgm
-3 Kaan Inan data/3_Kaan Inan2.pgm
-3 Kaan Inan data/3_Kaan Inan3.pgm
-3 Kaan Inan data/3_Kaan Inan4.pgm
-3 Kaan Inan data/3_Kaan Inan5.pgm
-3 Kaan Inan data/3_Kaan Inan6.pgm
-3 Kaan Inan data/3_Kaan Inan7.pgm
-3 Kaan Inan data/3_Kaan Inan8.pgm
-3 Kaan Inan data/3_Kaan Inan9.pgm
-3 Kaan Inan data/3_Kaan Inan10.pgm
-3 Kaan Inan data/3_Kaan Inan11.pgm
-3 Kaan Inan data/3_Kaan Inan12.pgm
-3 Kaan Inan data/3_Kaan Inan13.pgm
-3 Kaan Inan data/3_Kaan Inan14.pgm
-3 Kaan Inan data/3_Kaan Inan15.pgm
-3 Kaan Inan data/3_Kaan Inan16.pgm
-3 Kaan Inan data/3_Kaan Inan17.pgm
-3 Kaan Inan data/3_Kaan Inan18.pgm
-3 Kaan Inan data/3_Kaan Inan19.pgm
-3 Kaan Inan data/3_Kaan Inan20.pgm
-3 Kaan Inan data/3_Kaan Inan21.pgm
-3 Kaan Inan data/3_Kaan Inan22.pgm
-3 Kaan Inan data/3_Kaan Inan23.pgm
-3 Kaan Inan data/3_Kaan Inan24.pgm
-3 Kaan Inan data/3_Kaan Inan25.pgm
-3 Kaan Inan data/3_Kaan Inan1.pgm
-3 Kaan Inan data/3_Kaan Inan2.pgm
-3 Kaan Inan data/3_Kaan Inan3.pgm
-3 Kaan Inan data/3_Kaan Inan4.pgm
-3 Kaan Inan data/3_Kaan Inan5.pgm
-3 Kaan Inan data/3_Kaan Inan6.pgm
-3 Kaan Inan data/3_Kaan Inan7.pgm
-3 Kaan Inan data/3_Kaan Inan8.pgm
-3 Kaan Inan data/3_Kaan Inan9.pgm
-3 Kaan Inan data/3_Kaan Inan10.pgm
-3 Kaan Inan data/3_Kaan Inan11.pgm
-3 Kaan Inan data/3_Kaan Inan12.pgm
-3 Kaan Inan data/3_Kaan Inan13.pgm
-3 Kaan Inan data/3_Kaan Inan14.pgm
-3 Kaan Inan data/3_Kaan Inan15.pgm
-3 Kaan Inan data/3_Kaan Inan16.pgm
-3 Kaan Inan data/3_Kaan Inan17.pgm
-3 Kaan Inan data/3_Kaan Inan18.pgm
-3 Kaan Inan data/3_Kaan Inan19.pgm
-3 Kaan Inan data/3_Kaan Inan20.pgm
-3 Kaan Inan data/3_Kaan Inan21.pgm
-3 Kaan Inan data/3_Kaan Inan22.pgm
-3 Kaan Inan data/3_Kaan Inan23.pgm
-3 Kaan Inan data/3_Kaan Inan24.pgm
-3 Kaan Inan data/3_Kaan Inan25.pgm
-3 Kaan Inan data/3_Kaan Inan1.pgm
-3 Kaan Inan data/3_Kaan Inan2.pgm
-3 Kaan Inan data/3_Kaan Inan3.pgm
-3 Kaan Inan data/3_Kaan Inan4.pgm
-3 Kaan Inan data/3_Kaan Inan5.pgm
-3 Kaan Inan data/3_Kaan Inan6.pgm
-3 Kaan Inan data/3_Kaan Inan7.pgm
-3 Kaan Inan data/3_Kaan Inan8.pgm
-3 Kaan Inan data/3_Kaan Inan9.pgm
-3 Kaan Inan data/3_Kaan Inan10.pgm
-3 Kaan Inan data/3_Kaan Inan11.pgm
-3 Kaan Inan data/3_Kaan Inan12.pgm
-3 Kaan Inan data/3_Kaan Inan13.pgm
-3 Kaan Inan data/3_Kaan Inan14.pgm
-3 Kaan Inan data/3_Kaan Inan15.pgm
-3 Kaan Inan data/3_Kaan Inan16.pgm
-3 Kaan Inan data/3_Kaan Inan17.pgm
-3 Kaan Inan data/3_Kaan Inan18.pgm
-3 Kaan Inan data/3_Kaan Inan19.pgm
-3 Kaan Inan data/3_Kaan Inan20.pgm
-3 Kaan Inan data/3_Kaan Inan21.pgm
-3 Kaan Inan data/3_Kaan Inan22.pgm
-3 Kaan Inan data/3_Kaan Inan23.pgm
-3 Kaan Inan data/3_Kaan Inan24.pgm
-3 Kaan Inan data/3_Kaan Inan25.pgm
-3 Kaan Inan data/3_Kaan Inan1.pgm
-3 Kaan Inan data/3_Kaan Inan2.pgm
-3 Kaan Inan data/3_Kaan Inan3.pgm
-3 Kaan Inan data/3_Kaan Inan4.pgm
-3 Kaan Inan data/3_Kaan Inan5.pgm
-3 Kaan Inan data/3_Kaan Inan6.pgm
-3 Kaan Inan data/3_Kaan Inan7.pgm
-3 Kaan Inan data/3_Kaan Inan8.pgm
-3 Kaan Inan data/3_Kaan Inan9.pgm
-3 Kaan Inan data/3_Kaan Inan10.pgm
-3 Kaan Inan data/3_Kaan Inan11.pgm
-3 Kaan Inan data/3_Kaan Inan12.pgm
-3 Kaan Inan data/3_Kaan Inan13.pgm
-3 Kaan Inan data/3_Kaan Inan14.pgm
-3 Kaan Inan data/3_Kaan Inan15.pgm
+1 Kaan data/1_Kaan1.pgm
+1 Kaan data/1_Kaan2.pgm
+1 Kaan data/1_Kaan3.pgm
+1 Kaan data/1_Kaan4.pgm
+1 Kaan data/1_Kaan5.pgm
+1 Kaan data/1_Kaan6.pgm
+1 Kaan data/1_Kaan7.pgm
+1 Kaan data/1_Kaan8.pgm
+1 Kaan data/1_Kaan9.pgm
+1 Kaan data/1_Kaan10.pgm
+1 Kaan data/1_Kaan11.pgm
+1 Kaan data/1_Kaan12.pgm
+1 Kaan data/1_Kaan13.pgm
+1 Kaan data/1_Kaan14.pgm
+1 Kaan data/1_Kaan15.pgm
+1 Kaan data/1_Kaan16.pgm
+1 Kaan data/1_Kaan17.pgm
+1 Kaan data/1_Kaan18.pgm
+1 Kaan data/1_Kaan19.pgm
+1 Kaan data/1_Kaan20.pgm
+1 Kaan data/1_Kaan21.pgm
+1 Kaan data/1_Kaan22.pgm
+1 Kaan data/1_Kaan23.pgm
+1 Kaan data/1_Kaan24.pgm
+1 Kaan data/1_Kaan25.pgm
+2 Kaan data/2_Kaan1.pgm
+2 Kaan data/2_Kaan2.pgm
+2 Kaan data/2_Kaan3.pgm
+2 Kaan data/2_Kaan4.pgm
+2 Kaan data/2_Kaan5.pgm
+2 Kaan data/2_Kaan6.pgm
+2 Kaan data/2_Kaan7.pgm
+2 Kaan data/2_Kaan8.pgm
+2 Kaan data/2_Kaan9.pgm
+2 Kaan data/2_Kaan10.pgm
+2 Kaan data/2_Kaan11.pgm
+2 Kaan data/2_Kaan12.pgm
+2 Kaan data/2_Kaan13.pgm
+2 Kaan data/2_Kaan14.pgm
+2 Kaan data/2_Kaan15.pgm
+2 Kaan data/2_Kaan16.pgm
+2 Kaan data/2_Kaan17.pgm
+2 Kaan data/2_Kaan18.pgm
+2 Kaan data/2_Kaan19.pgm
+2 Kaan data/2_Kaan20.pgm
+2 Kaan data/2_Kaan21.pgm
+2 Kaan data/2_Kaan22.pgm
+2 Kaan data/2_Kaan23.pgm
+2 Kaan data/2_Kaan24.pgm
+2 Kaan data/2_Kaan25.pgm
+3 Kaan data/3_Kaan1.pgm
+3 Kaan data/3_Kaan2.pgm
+3 Kaan data/3_Kaan3.pgm
+3 Kaan data/3_Kaan4.pgm
+3 Kaan data/3_Kaan5.pgm
+3 Kaan data/3_Kaan6.pgm
+3 Kaan data/3_Kaan7.pgm
+3 Kaan data/3_Kaan8.pgm
+3 Kaan data/3_Kaan9.pgm
+3 Kaan data/3_Kaan10.pgm
+3 Kaan data/3_Kaan11.pgm
+3 Kaan data/3_Kaan12.pgm
+3 Kaan data/3_Kaan13.pgm
+3 Kaan data/3_Kaan14.pgm
+3 Kaan data/3_Kaan15.pgm
+3 Kaan data/3_Kaan16.pgm
+3 Kaan data/3_Kaan17.pgm
+3 Kaan data/3_Kaan18.pgm
+3 Kaan data/3_Kaan19.pgm
+3 Kaan data/3_Kaan20.pgm
+3 Kaan data/3_Kaan21.pgm
+3 Kaan data/3_Kaan22.pgm
+3 Kaan data/3_Kaan23.pgm
+3 Kaan data/3_Kaan24.pgm
+3 Kaan data/3_Kaan25.pgm
+4 Kaan data/4_Kaan1.pgm
+4 Kaan data/4_Kaan2.pgm
+4 Kaan data/4_Kaan3.pgm
+4 Kaan data/4_Kaan4.pgm
+4 Kaan data/4_Kaan5.pgm
+4 Kaan data/4_Kaan6.pgm
+4 Kaan data/4_Kaan7.pgm
+4 Kaan data/4_Kaan8.pgm
+4 Kaan data/4_Kaan9.pgm
+4 Kaan data/4_Kaan10.pgm
+4 Kaan data/4_Kaan11.pgm
+4 Kaan data/4_Kaan12.pgm
+4 Kaan data/4_Kaan13.pgm
+4 Kaan data/4_Kaan14.pgm
+4 Kaan data/4_Kaan15.pgm
+4 Kaan data/4_Kaan16.pgm
+4 Kaan data/4_Kaan17.pgm
+4 Kaan data/4_Kaan18.pgm
+4 Kaan data/4_Kaan19.pgm
+4 Kaan data/4_Kaan20.pgm
+4 Kaan data/4_Kaan21.pgm
+4 Kaan data/4_Kaan22.pgm
+4 Kaan data/4_Kaan23.pgm
+4 Kaan data/4_Kaan24.pgm
+4 Kaan data/4_Kaan25.pgm
+5 Kaan data/5_Kaan1.pgm
+5 Kaan data/5_Kaan2.pgm
+5 Kaan data/5_Kaan3.pgm
+5 Kaan data/5_Kaan4.pgm
+5 Kaan data/5_Kaan5.pgm
+5 Kaan data/5_Kaan6.pgm
+5 Kaan data/5_Kaan7.pgm
+5 Kaan data/5_Kaan8.pgm
+5 Kaan data/5_Kaan9.pgm
+5 Kaan data/5_Kaan10.pgm
+5 Kaan data/5_Kaan11.pgm
+5 Kaan data/5_Kaan12.pgm
+5 Kaan data/5_Kaan13.pgm
+5 Kaan data/5_Kaan14.pgm
+5 Kaan data/5_Kaan15.pgm
+5 Kaan data/5_Kaan16.pgm
+5 Kaan data/5_Kaan17.pgm
+5 Kaan data/5_Kaan18.pgm
+5 Kaan data/5_Kaan19.pgm
+5 Kaan data/5_Kaan20.pgm
+5 Kaan data/5_Kaan21.pgm
+5 Kaan data/5_Kaan22.pgm
+5 Kaan data/5_Kaan23.pgm
+5 Kaan data/5_Kaan24.pgm
+5 Kaan data/5_Kaan25.pgm
+6 Kaan data/6_Kaan1.pgm
+6 Kaan data/6_Kaan2.pgm
+6 Kaan data/6_Kaan3.pgm
+6 Kaan data/6_Kaan4.pgm
+6 Kaan data/6_Kaan5.pgm
+6 Kaan data/6_Kaan6.pgm
+6 Kaan data/6_Kaan7.pgm
+6 Kaan data/6_Kaan8.pgm
+6 Kaan data/6_Kaan9.pgm
+6 Kaan data/6_Kaan10.pgm
+6 Kaan data/6_Kaan11.pgm
+6 Kaan data/6_Kaan12.pgm
+6 Kaan data/6_Kaan13.pgm
+6 Kaan data/6_Kaan14.pgm
+6 Kaan data/6_Kaan15.pgm
+6 Kaan data/6_Kaan16.pgm
+6 Kaan data/6_Kaan17.pgm
+6 Kaan data/6_Kaan18.pgm
+6 Kaan data/6_Kaan19.pgm
+6 Kaan data/6_Kaan20.pgm
+6 Kaan data/6_Kaan21.pgm
+6 Kaan data/6_Kaan22.pgm
+6 Kaan data/6_Kaan23.pgm
+6 Kaan data/6_Kaan24.pgm
+6 Kaan data/6_Kaan25.pgm
+7 Kaan data/7_Kaan1.pgm
+7 Kaan data/7_Kaan2.pgm
+7 Kaan data/7_Kaan3.pgm
+7 Kaan data/7_Kaan4.pgm
+7 Kaan data/7_Kaan5.pgm
+7 Kaan data/7_Kaan6.pgm
+7 Kaan data/7_Kaan7.pgm
+7 Kaan data/7_Kaan8.pgm
+7 Kaan data/7_Kaan9.pgm
+7 Kaan data/7_Kaan10.pgm
+7 Kaan data/7_Kaan11.pgm
+7 Kaan data/7_Kaan12.pgm
+7 Kaan data/7_Kaan13.pgm
+7 Kaan data/7_Kaan14.pgm
+7 Kaan data/7_Kaan15.pgm
+7 Kaan data/7_Kaan16.pgm
+7 Kaan data/7_Kaan17.pgm
+7 Kaan data/7_Kaan18.pgm
+7 Kaan data/7_Kaan19.pgm
+7 Kaan data/7_Kaan20.pgm
+7 Kaan data/7_Kaan21.pgm
+7 Kaan data/7_Kaan22.pgm
+7 Kaan data/7_Kaan23.pgm
+7 Kaan data/7_Kaan24.pgm
+7 Kaan data/7_Kaan25.pgm
+8 Kaan data/8_Kaan1.pgm
+8 Kaan data/8_Kaan2.pgm
+8 Kaan data/8_Kaan3.pgm
+8 Kaan data/8_Kaan4.pgm
+8 Kaan data/8_Kaan5.pgm
+8 Kaan data/8_Kaan6.pgm
+8 Kaan data/8_Kaan7.pgm
+8 Kaan data/8_Kaan8.pgm
+8 Kaan data/8_Kaan9.pgm
+8 Kaan data/8_Kaan10.pgm
+8 Kaan data/8_Kaan11.pgm
+9 Kaan data/9_Kaan1.pgm
+9 Kaan data/9_Kaan2.pgm
+9 Kaan data/9_Kaan3.pgm
+9 Kaan data/9_Kaan4.pgm
+9 Kaan data/9_Kaan5.pgm
+9 Kaan data/9_Kaan6.pgm
+9 Kaan data/9_Kaan7.pgm
+9 Kaan data/9_Kaan8.pgm
+9 Kaan data/9_Kaan9.pgm
+9 Kaan data/9_Kaan10.pgm
+9 Kaan data/9_Kaan11.pgm
+9 Kaan data/9_Kaan12.pgm
+9 Kaan data/9_Kaan13.pgm
+9 Kaan data/9_Kaan14.pgm
+9 Kaan data/9_Kaan15.pgm
+9 Kaan data/9_Kaan16.pgm
+9 Kaan data/9_Kaan17.pgm
+9 Kaan data/9_Kaan18.pgm
+9 Kaan data/9_Kaan19.pgm
+9 Kaan data/9_Kaan20.pgm
+9 Kaan data/9_Kaan21.pgm
+9 Kaan data/9_Kaan22.pgm
+9 Kaan data/9_Kaan23.pgm
+9 Kaan data/9_Kaan24.pgm
+9 Kaan data/9_Kaan25.pgm
+10 Test data/10_Test1.pgm
+10 Test data/10_Test2.pgm
+10 Test data/10_Test3.pgm
+10 Test data/10_Test4.pgm
+10 Test data/10_Test5.pgm
+10 Test data/10_Test6.pgm
+10 Test data/10_Test7.pgm
+10 Test data/10_Test8.pgm
+10 Test data/10_Test9.pgm
+10 Test data/10_Test10.pgm
+10 Test data/10_Test11.pgm
+10 Test data/10_Test12.pgm
+10 Test data/10_Test13.pgm
+10 Test data/10_Test14.pgm
+10 Test data/10_Test15.pgm
+10 Test data/10_Test16.pgm
+10 Test data/10_Test17.pgm
+10 Test data/10_Test18.pgm
+10 Test data/10_Test19.pgm
+10 Test data/10_Test20.pgm
+10 Test data/10_Test21.pgm
+10 Test data/10_Test22.pgm
+10 Test data/10_Test23.pgm
+10 Test data/10_Test24.pgm
+10 Test data/10_Test25.pgm
+11 Test data/11_Test1.pgm
+11 Test data/11_Test2.pgm
+11 Test data/11_Test3.pgm
+11 Test data/11_Test4.pgm
+11 Test data/11_Test5.pgm
+11 Test data/11_Test6.pgm
+11 Test data/11_Test7.pgm
+11 Test data/11_Test8.pgm
+11 Test data/11_Test9.pgm
+11 Test data/11_Test10.pgm
+11 Test data/11_Test11.pgm
+11 Test data/11_Test12.pgm
+11 Test data/11_Test13.pgm
+11 Test data/11_Test14.pgm
+11 Test data/11_Test15.pgm
+11 Test data/11_Test16.pgm
+11 Test data/11_Test17.pgm
+11 Test data/11_Test18.pgm
+11 Test data/11_Test19.pgm
+11 Test data/11_Test20.pgm
+11 Test data/11_Test21.pgm
+11 Test data/11_Test22.pgm
+11 Test data/11_Test23.pgm
+11 Test data/11_Test24.pgm
+11 Test data/11_Test25.pgm
+12 Test data/12_Test1.pgm
+12 Test data/12_Test2.pgm
+12 Test data/12_Test3.pgm
+12 Test data/12_Test4.pgm
+12 Test data/12_Test5.pgm
+12 Test data/12_Test6.pgm
+12 Test data/12_Test7.pgm
+12 Test data/12_Test8.pgm
+12 Test data/12_Test9.pgm
+12 Test data/12_Test10.pgm
+12 Test data/12_Test11.pgm
+12 Test data/12_Test12.pgm
+12 Test data/12_Test13.pgm
+12 Test data/12_Test14.pgm
+12 Test data/12_Test15.pgm
+12 Test data/12_Test16.pgm
+12 Test data/12_Test17.pgm
+12 Test data/12_Test18.pgm
+12 Test data/12_Test19.pgm
+12 Test data/12_Test20.pgm
+12 Test data/12_Test21.pgm
+12 Test data/12_Test22.pgm
+12 Test data/12_Test23.pgm
+12 Test data/12_Test24.pgm
+12 Test data/12_Test25.pgm
+13 Test data/13_Test1.pgm
+13 Test data/13_Test2.pgm
+13 Test data/13_Test3.pgm
+13 Test data/13_Test4.pgm
+13 Test data/13_Test5.pgm
+13 Test data/13_Test6.pgm
+13 Test data/13_Test7.pgm
+13 Test data/13_Test8.pgm
+13 Test data/13_Test9.pgm
+13 Test data/13_Test10.pgm
+13 Test data/13_Test11.pgm
+13 Test data/13_Test12.pgm
+13 Test data/13_Test13.pgm
+13 Test data/13_Test14.pgm
+13 Test data/13_Test15.pgm
+13 Test data/13_Test16.pgm
+13 Test data/13_Test17.pgm
+13 Test data/13_Test18.pgm
+13 Test data/13_Test19.pgm
+13 Test data/13_Test20.pgm
+13 Test data/13_Test21.pgm
+13 Test data/13_Test22.pgm
+13 Test data/13_Test23.pgm
+13 Test data/13_Test24.pgm
+13 Test data/13_Test25.pgm
+14 Test data/14_Test1.pgm
+14 Test data/14_Test2.pgm
+14 Test data/14_Test3.pgm
+14 Test data/14_Test4.pgm
+14 Test data/14_Test5.pgm
+14 Test data/14_Test6.pgm
+14 Test data/14_Test7.pgm
+14 Test data/14_Test8.pgm
+14 Test data/14_Test9.pgm
+14 Test data/14_Test10.pgm
+14 Test data/14_Test11.pgm
+14 Test data/14_Test12.pgm
+14 Test data/14_Test13.pgm
+14 Test data/14_Test14.pgm
+14 Test data/14_Test15.pgm
+14 Test data/14_Test16.pgm
+14 Test data/14_Test17.pgm
+14 Test data/14_Test18.pgm
+14 Test data/14_Test19.pgm
+14 Test data/14_Test20.pgm
+14 Test data/14_Test21.pgm
+14 Test data/14_Test22.pgm
+14 Test data/14_Test23.pgm
+14 Test data/14_Test24.pgm
+14 Test data/14_Test25.pgm
+15 Test data/15_Test1.pgm
+15 Test data/15_Test2.pgm
+15 Test data/15_Test3.pgm
+15 Test data/15_Test4.pgm
+15 Test data/15_Test5.pgm
+15 Test data/15_Test6.pgm
+15 Test data/15_Test7.pgm
+15 Test data/15_Test8.pgm
+15 Test data/15_Test9.pgm
+15 Test data/15_Test10.pgm
+15 Test data/15_Test11.pgm
+15 Test data/15_Test12.pgm
+15 Test data/15_Test13.pgm
+15 Test data/15_Test14.pgm
+15 Test data/15_Test15.pgm
+15 Test data/15_Test16.pgm
+15 Test data/15_Test17.pgm
+15 Test data/15_Test18.pgm
+15 Test data/15_Test19.pgm
+15 Test data/15_Test20.pgm
+15 Test data/15_Test21.pgm
+15 Test data/15_Test22.pgm
+15 Test data/15_Test23.pgm
+15 Test data/15_Test24.pgm
+15 Test data/15_Test25.pgm

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/ProjectX/ROS/install
+
+Name: image_view
+Description: Description of image_view
+Version: 1.12.16
+Cflags: -I/home/ubuntu/ProjectX/ROS/install/include
+Libs: -L/home/ubuntu/ProjectX/ROS/install/lib 
+Requires: dynamic_reconfigure

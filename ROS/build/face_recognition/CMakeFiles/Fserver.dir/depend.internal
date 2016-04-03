@@ -3,6 +3,12 @@
 
 face_recognition/CMakeFiles/Fserver.dir/src/face_recognition.cpp.o
  /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionAction.h
+ /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionActionFeedback.h
+ /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionActionGoal.h
+ /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionActionResult.h
+ /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionFeedback.h
+ /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionGoal.h
+ /home/ubuntu/ProjectX/ROS/devel/include/face_recognition/FaceRecognitionResult.h
  /home/ubuntu/ProjectX/ROS/src/face_recognition/src/face_recognition.cpp
  /home/ubuntu/ProjectX/ROS/src/face_recognition/src/face_recognition_lib.cpp
  /opt/ros/indigo/include/XmlRpcDecl.h

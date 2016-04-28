@@ -5,7 +5,6 @@ from projectx.msg import *
 from std_msgs.msg import *
 
 
-# Power Led ve Laser icin ON_OFF butonlari TEMP datalari gerektiriyor
 
 def req_callback(data):
     

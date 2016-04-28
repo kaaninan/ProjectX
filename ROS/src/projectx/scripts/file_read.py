@@ -34,9 +34,6 @@ def arduinoMotor():
             hata = 1
 
             
-
-            
-    		
 	
 
     f.close()

@@ -12,7 +12,6 @@ from std_msgs.msg import *
 
 
 
-
 ## ZAMANA GORE MOTOR POS HESAPLAMA VE GONDERME
 def pos_calculate(present_motor_data, new_motor_data, adim_sayisi):
     global pub_sync, pub_motor_array, pub_motor_single, rate
@@ -163,7 +162,7 @@ def control_close_all():
 def service_motion_command(req):
     global pub_sync, pub_motor_array, pub_motor_single, rate, head_access, now_pos, pos_oturma, pos_ayakta_durma
 
-    komut = req.in_data
+    komut = req.data
     
     if komut[:4] == "head":
         head_access = int(komut[5:])
@@ -223,18 +222,11 @@ def service_motion_command(req):
         rate.sleep()
 
 
-    return_data = "OK" # Simdilik
-
-    res = MotorBoostResponse()
-    res.out_data = return_data
-    return res
-
-
 # Tork Service
 def service_motion_torque(req):
     global pub_sync, pub_motor_array, pub_motor_single, rate
 
-    komut = req.in_data
+    komut = req.data
     
     if komut[:2] == "on":
         motor_id = int(komut[3:])
@@ -363,13 +355,6 @@ def service_motion_torque(req):
             rate.sleep()
 
 
-    return_data = "OK" # Simdilik
-
-    res = MotorBoostResponse()
-    res.out_data = return_data
-    return res
-
-
 
 
 # Subscriber
@@ -424,9 +409,11 @@ def main():
     rospy.Subscriber("motor_incoming_data", MotorInArray, callbackMotor) # Motor Incoming
     rospy.Subscriber("motor_head_position", IntArray, callbackHead) # Head Position
 
-    rospy.Service('service_motion_command', MotorBoost, service_motion_command) # Sistem Komutlari
-    rospy.Service('service_motion_torque', MotorBoost, service_motion_torque) # Motor Tork Komutlari
+    rospy.Subscriber('service_motion_command', String, service_motion_command) # Sistem Komutlari
+    rospy.Subscriber('service_motion_torque', String, service_motion_torque) # Motor Tork Komutlari
     
+    pub_tts = rospy.Publisher('/service_tts', String, queue_size=10)
+
     values()
     head_access = 0 # Default Value
 
@@ -434,6 +421,10 @@ def main():
     rate = rospy.Rate(80)
 
     rospy.loginfo("READY: Motion Control Server")
+
+    data = String()
+    data.data = "add:Hareket sistemi hazIr"
+    pub_tts.publish(data)
 
     rospy.spin()
 

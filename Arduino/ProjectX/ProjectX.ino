@@ -113,8 +113,7 @@ void msgMotorArrayIn( const projectx::IntArray& msg) {
 }
 
 void writeServoPos(int motor_id, int pos) {
-  Dynamixel.moveSpeed(motor_id, pos, 900);
-  delay(5);
+  Dynamixel.moveSpeed(motor_id, pos, 1000);
 }
 
 
@@ -302,6 +301,6 @@ void loop() {
   if (ok_motor == 1) publishServo();
 
   nh.spinOnce();
-  delay(1);
+  delay(5);
 }
 

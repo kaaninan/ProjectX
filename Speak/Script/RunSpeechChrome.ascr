@@ -9,7 +9,7 @@
     </actions>
     <parameters/>
     <script pauseBefore="0" pauseAfter="0">
-        <action name="ActionClick" comment="Open Chrome" pauseBefore="500" pauseAfter="35000">
+        <action name="ActionClick" comment="Open Chrome" pauseBefore="500" pauseAfter="70000">
             <exception id="0" action="0" line=""/>
             <exception id="1" action="0" line=""/>
             <exception id="2" action="1" line=""/>

@@ -5,14 +5,16 @@
   <arg name="tts" value="true" />
   <arg name="speak" value="true" />
   <arg name="osc" value="false" />
-  <arg name="arduino" value="false" />
-  <arg name="motor" value="false" />
-  <arg name="camera" value="false" />
+  <arg name="arduino" value="true" />
+  <arg name="motor" value="true" />
+  <arg name="camera" value="true" />
 
 
-  <!-- Kamera Secimi -->
-  <arg name="cam" value="true" /> <!-- Plantronics -->
-  <arg name="cam2" value="false" /> <!-- Logitech -->
+
+  <!-- # VALUES -->
+  <arg name="arduino_port" value="/dev/ttyACM0" /> <!-- Arduino Port -->
+  <arg name="cam" value="false" /> <!-- Logitech -->
+  <arg name="cam_plantronics" value="true" /> <!-- Plantronics -->
 
 
 
@@ -94,9 +96,12 @@
 
 
   <!-- ARDUINO -->
-  <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino" if="$(arg arduino)"/>
+  <node pkg="rosserial_python" type="serial_node.py" name="serial_arduino" if="$(arg arduino)">
+    <param name="port" value="$(arg arduino_port)" />
+  </node>
   <node pkg="projectx" type="arduino_out_data_server.py" name="arduino_out_data_server" output="screen" if="$(arg arduino)"/>
   <node pkg="projectx" type="arduino_data_control.py" name="arduino_data_control" output="screen" if="$(arg arduino)"/>
+  <node pkg="projectx" type="rgb_server.py" name="rgb_server" output="screen" if="$(arg arduino)"/>
 
 
 
@@ -124,7 +129,7 @@
   <!-- Usb Cam -->
   <node name="camera" pkg="usb_cam" type="usb_cam_node" if="$(arg camera)">
     <param name="video_device" value="/dev/video1" if="$(arg cam)" />
-    <param name="video_device" value="/dev/video0" if="$(arg cam2)" />
+    <param name="video_device" value="/dev/video0" if="$(arg cam_plantronics)" />
     <param name="image_width" value="640" />
     <param name="image_height" value="480" />
     <param name="pixel_format" value="yuyv" />
@@ -154,7 +159,7 @@
     <param name="output_image_size" value="1.0" />
   </node>
 
-  <node name="image_rotater_cam2" pkg="image_rotate" type="image_rotate" if="$(arg cam2)" args="image:=$(arg image) rotated/image:=$(arg rotated_image)">
+  <node name="image_rotater_cam_plantronics" pkg="image_rotate" type="image_rotate" if="$(arg cam_plantronics)" args="image:=$(arg image) rotated/image:=$(arg rotated_image)">
     <param name="target_frame_id" value="camera" />
     <param name="target_x" value="2.0" />
     <param name="target_y" value="4.0" />

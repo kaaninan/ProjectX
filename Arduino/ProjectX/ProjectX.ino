@@ -179,11 +179,11 @@ int pos = 0;
 
 void publishServo() {
   pos = Dynamixel.readPosition(motorId);
-  
+
   motorin_data.id = motorId;
   motorin_data.deger = pos;
   p_motor.publish(&motorin_data);
-  
+
   motorId++;
   if (motorId == 21) motorId = 1;
 }
@@ -227,6 +227,7 @@ ros::Subscriber<projectx::IntArray> sub_data_control("arduino_data_control", mes
 void setup() {
 
   gyro_start();
+  delay(500);
 
   // PIN MODE
   pinMode(buzzer, OUTPUT);
@@ -254,13 +255,28 @@ void setup() {
 
 
   // AYDINLATMA
-  analogWrite(power_led_1, 40);
-  analogWrite(power_led_2, 20);
-  analogWrite(power_led_3, 20);
+  for(int i = 0; i < 3; i++){
+    analogWrite(power_led_1, 0);
+    analogWrite(power_led_2, 0);
+    analogWrite(power_led_3, 0);
 
-  analogWrite(redPin, 240);
-  analogWrite(greenPin, 230);
-  analogWrite(bluePin, 230);
+    analogWrite(redPin, 255);
+    analogWrite(greenPin, 255);
+    analogWrite(bluePin, 255);
+    delay(100);
+
+
+    analogWrite(power_led_1, 40);
+    analogWrite(power_led_2, 20);
+    analogWrite(power_led_3, 20);
+
+    analogWrite(redPin, 170);
+    analogWrite(greenPin, 10);
+    analogWrite(bluePin, 30);
+    delay(100);
+  }
+
+
 
 
   nh.initNode();
@@ -286,7 +302,7 @@ void setup() {
   nh.subscribe(sub_out_gsm);
   nh.subscribe(sub_out_bt);
 
-  delay(1000);
+  delay(100);
 }
 
 
@@ -296,11 +312,14 @@ void setup() {
 
 void loop() {
   
+  gyro_loop();
+
   if (ok_sensor == 1) publishSensor();
-  if (ok_gyro == 1) gyro_loop();
   if (ok_motor == 1) publishServo();
 
   nh.spinOnce();
   delay(5);
 }
+
+
 

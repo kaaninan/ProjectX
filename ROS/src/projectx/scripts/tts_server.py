@@ -25,6 +25,7 @@ class My_Thread(threading.Thread):
         self.playing = 1
         cmd = [ "espeak", "-vtr", "-p"+self.kalinlik, "-s"+self.hiz, self.cumle]
         self.process = p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        time.sleep(2)
         p.wait()
         self.playing = 0
 
@@ -87,6 +88,8 @@ def main():
     rospy.Subscriber("service_tts", String, tts_callback)
     
     liste = list()
+
+    time.sleep(8)
 
     delay_time = rospy.get_param("/tts_server/tts_delay", 6) # Cumleler arasindaki bekleme suresi
 

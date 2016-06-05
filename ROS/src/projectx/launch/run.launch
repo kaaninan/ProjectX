@@ -3,11 +3,11 @@
 
   <!-- STARTUP -->
   <arg name="tts" value="true" />
-  <arg name="speak" value="true" />
-  <arg name="osc" value="false" />
+  <arg name="speak" value="false" />
+  <arg name="osc" value="true" />
   <arg name="arduino" value="true" />
   <arg name="motor" value="true" />
-  <arg name="camera" value="true" />
+  <arg name="camera" value="false" />
 
 
 
@@ -22,9 +22,9 @@
 
   <!-- TTS -->
   <node pkg="projectx" type="tts_server.py" name="tts_server" if="$(arg tts)" output="screen">
-    <param name="tts_hiz" value="160" />                            
-    <param name="tts_kalinlik" value="40"/>
-    <param name="tts_delay" value="6" />
+    <param name="tts_hiz" value="140" />                            
+    <param name="tts_kalinlik" value="30"/>
+    <param name="tts_delay" value="8" />
     <param name="tts_quiet" value="0" />
   </node>
 

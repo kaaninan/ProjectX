@@ -25,7 +25,7 @@ void loop() {
     Serial.print("  Position: ");
     Serial.println(Position);
 
-    delay(100);
+    delay(300);
   }
 
  

@@ -106,9 +106,6 @@ void gyro_start() {
 
   AN_OFFSET[5] -= GRAVITY * SENSOR_SIGN[5];
 
-  //Serial.println("Offset:");
-  for (int y = 0; y < 6; y++)
-    Serial.println(AN_OFFSET[y]);
 
   timer = millis();
   delay(20);
@@ -147,8 +144,10 @@ void gyro_loop() {
     Drift_correction();
     Euler_angles();
     // ***
-
-    publish_data();
+  
+    if(ok_gyro == 1){
+      publish_data();
+    }
   }
 }
 

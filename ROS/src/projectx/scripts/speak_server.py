@@ -15,6 +15,8 @@ def run(name):
 def start():
 	global pub
 
+	time.sleep(5)
+
 	try:
 		thread.start_new_thread( run, ("Thread_1",) )
 	except:

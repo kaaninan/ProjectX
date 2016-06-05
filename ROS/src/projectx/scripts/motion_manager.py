@@ -186,12 +186,14 @@ def service_motion_command(req):
         pub_single_data(pos_ayakta_durma)
 
     elif komut == "git":
+        rospy.loginfo("git")
         control("motor",0)
-        yeni = [219, 771, 703, 373, 381, 631]
+        yeni = [219, 820, 701, 372, 381, 629]
         pos_calculate_kol(now_pos, yeni, 50)
         control("motor",1)
 
     elif komut == "gel":
+        rospy.loginfo("gel")
         control("motor",0)
         yeni = [682, 326, 412, 564, 695, 287]
         pos_calculate_kol(now_pos, yeni, 50)
@@ -366,7 +368,7 @@ def callbackHead(data):
     head_x = data.deger[0]
     head_y = data.deger[1]
 
-    if head_access == 1:
+    if head_access == 0:
         data = MotorOut()
         data.id = 19
         data.pos = head_x
